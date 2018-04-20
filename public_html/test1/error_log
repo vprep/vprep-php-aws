@@ -1,0 +1,98 @@
+[15-Oct-2016 14:52:28 UTC] PHP Fatal error:  Can't use method return value in write context in /home/absolutprep/public_html/dev/application/views/templates/frontend_login.php on line 17
+[15-Oct-2016 14:52:32 UTC] PHP Fatal error:  Can't use method return value in write context in /home/absolutprep/public_html/dev/application/views/templates/frontend_login.php on line 17
+[17-Oct-2016 11:16:40 UTC] PHP Fatal error:  Using $this when not in object context in /home/absolutprep/public_html/dev/application/helpers/login_helper.php on line 55
+[17-Oct-2016 12:42:10 UTC] CSRF state token does not match one provided.
+[17-Oct-2016 15:11:48 UTC] CSRF state token does not match one provided.
+[17-Oct-2016 15:12:06 UTC] CSRF state token does not match one provided.
+[17-Oct-2016 15:12:18 UTC] CSRF state token does not match one provided.
+[17-Oct-2016 15:12:44 UTC] CSRF state token does not match one provided.
+[17-Oct-2016 15:12:52 UTC] CSRF state token does not match one provided.
+[18-Oct-2016 11:41:59 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[18-Oct-2016 11:42:05 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[18-Oct-2016 11:42:07 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[18-Oct-2016 11:46:48 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[18-Oct-2016 11:50:39 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[18-Oct-2016 11:54:36 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[18-Oct-2016 13:03:56 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/absolutprep/public_html/dev/application/views/frontend/student/search.php on line 28
+[08-Nov-2016 00:31:52 UTC] PHP Fatal error:  Call to undefined method Educational_model::searchHomeBox() in /home/absolutprep/public_html/test/application/controllers/Student.php on line 251
+[13-Nov-2016 14:33:19 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/absolutprep/public_html/test/application/models/Student_model.php on line 44
+[19-Apr-2017 07:18:36 UTC] PHP Fatal error:  Call to undefined method Student_model::loadInstituteData() in /home/absolutprep/public_html/test/application/controllers/Student.php on line 54
+[19-Apr-2017 15:06:42 UTC] PHP Fatal error:  Call to undefined method Student_model::showExamResultFull() in /home/absolutprep/public_html/test/application/controllers/Student.php on line 263
+[19-Apr-2017 15:07:17 UTC] PHP Fatal error:  Call to undefined method Student_model::showExamResultFull() in /home/absolutprep/public_html/test/application/controllers/Student.php on line 263
+[19-Apr-2017 15:17:11 UTC] PHP Fatal error:  Call to undefined method Student_model::showExamResultFull() in /home/absolutprep/public_html/test/application/controllers/Student.php on line 263
+[17-May-2017 11:02:04 UTC] PHP Fatal error:  Call to undefined function getModule() in /home/absolutprep/public_html/test/application/views/frontend/educational/add_test_questions.php on line 196
+[17-May-2017 11:02:31 UTC] PHP Fatal error:  Call to undefined function getModule() in /home/absolutprep/public_html/test/application/views/frontend/educational/add_test_questions.php on line 196
+[17-May-2017 16:55:17 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/absolutprep/public_html/test/application/views/frontend/educational/add_test_questions.php on line 254
+[18-May-2017 13:11:08 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/absolutprep/public_html/test1/application/third_party/PHPExcel/Reader/Excel2007.php on line 94
+[18-May-2017 13:11:53 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/absolutprep/public_html/test1/application/third_party/PHPExcel/Reader/Excel2007.php on line 94
+[18-May-2017 13:16:42 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/absolutprep/public_html/test1/application/third_party/PHPExcel/Reader/Excel2007.php on line 94
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/cache): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/config/controllers): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/config): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/controllers): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/helpers): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/libraries/PHPMailer-master): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/libraries/facebook-api): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/libraries): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/models): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/views/frontend): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/views/home): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/views/templates): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application/views): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:07 UTC] PHP Warning:  rmdir(application): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/cache): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/config/controllers): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/config): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/controllers): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/helpers): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/libraries/PHPMailer-master): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/libraries/facebook-api): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/libraries): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/models): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/views/frontend): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/views/home): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/views/templates): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application/views): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  rmdir(application): Directory not empty in /home/absolutprep/public_html/test1/zip_file.php on line 10
+[31-May-2017 13:04:46 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test1/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:04:46 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test1/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:04:47 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test1/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:04:47 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test1/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:22 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:22 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:22 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:22 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/cache): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/config/controllers): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/config): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/controllers): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/helpers): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/libraries/PHPMailer-master): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/libraries/facebook-api): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/libraries): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/models): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/views/frontend): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/views/home): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/views/templates): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application/views): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:24 UTC] PHP Warning:  rmdir(application): Directory not empty in /home/absolutprep/public_html/test/zip_file.php on line 10
+[31-May-2017 13:05:28 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:28 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:28 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[31-May-2017 13:05:28 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:56:08 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test1/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:56:08 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test1/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:56:09 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test1/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:56:09 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test1/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:58:40 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test1/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:58:40 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test1/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:58:40 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test1/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:58:40 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test1/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test1/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:59:41 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:59:41 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:59:41 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 08:59:41 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 09:00:39 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 09:00:39 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 09:00:39 UTC] PHP Warning:  require_once(/home/absolutprep/public_html/test/application/config/constants.php): failed to open stream: No such file or directory in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70
+[24-Dec-2017 09:00:39 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/absolutprep/public_html/test/application/config/constants.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/absolutprep/public_html/test/system/core/CodeIgniter.php on line 70

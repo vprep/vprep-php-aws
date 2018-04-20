@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 Jul, 2015, 12:36:16 PM
+    Author     : admin
+*/
+
+html,body{height:100%;}
+.custom-slider .carousel,.item,.active{height:100%;}
+.custom-slider .carousel-inner{height:100%; }
+.custom-slider .carousel-caption{top:190px; left:0px; padding-left: 50px; padding-top: 20px;padding-bottom: 20px;color: #fff;text-align: justify;text-shadow: 0 1px 2px rgba(0,0,0,.6); font-size: 18px}
+.custom-slider .carousel {min-height: 725px}
+
+.custom-slider .carousel-caption h1{font-size: 28px; text-transform: uppercase}
+.custom-slider .carousel-caption p{padding-top:10px; line-height: 165%}
+
+
+.custom-container-center{height:100%; position: relative}
+.custom-slider{padding-right: 0px;padding-left: 0px;height: 100%}
+
+.login-box-footer{text-align: center; color: #102a45;margin-top: 30px;line-height: .8em;}
+.custom-logo p {color: #fff; font-size: 34px; padding-top: 15px;padding-left: 50px;}
+.custom-login-wrapper{position: relative; top:-100%  }
+.custom-login-box{padding-top:107px}
+
+.carousel-inner .item:first-child{background: url(../img/slider/img1.jpg)}
+.carousel-inner .item:nth-child(2){background: url(../img/slider/img2.jpg)}
+.carousel-inner .item:nth-child(3){background: url(../img/slider/img3.jpg)}
+.carousel-inner .item{background-size: cover!important}
+
+.forgot-detail-error{margin-top: 10px}
+.register-box-body .checkbox{margin-top: 0px}
+
+
+/*Media Css*/
+@media (max-width: 1199px) and (min-width: 992px){
+
+}
+
+@media ( max-width: 991px) and (min-width: 768px){
+.custom-login-box {padding-top: 60px;}
+.custom-slider .carousel-caption{top:140px;}
+
+}
+
+@media ( max-width: 767px){
+.custom-slider .carousel-caption{top:60px;}
+.custom-slider .carousel-caption h1{font-size: 24px; text-transform: uppercase}
+.custom-slider .carousel-caption p{padding-top:10px; line-height: 150%; font-size: 16px}
+.custom-login-box {padding-top: 190px; width: 320px; margin: 0 auto}
+}
+
+@media ( max-width: 767px) and (min-width: 481px){
+    
+}
+
+@media (max-width: 480px){
+.custom-slider .carousel-caption p{padding-top:10px; line-height: 125%; font-size: 14px}
+}
+
+/*Media Css End*/

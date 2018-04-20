@@ -1,0 +1,310 @@
+  <!-- Main row -->
+  <div class='row'>
+    <div class="col-md-4">
+      <!-- TABLE: Form -->
+        
+        <div class="box box-primary">
+                <div class="box-header">
+                  <h3 class="box-title">Add Events</h3>
+                </div>
+            <?php echo form_open('events/submit_events', 'class="events" id="eventform"');?>
+                <div class="box-body custom-box-addevent">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-check"></i>
+                      </div>
+                        <?php 
+                        $data = array(
+                                'name'          => 'title',
+                                'placeholder'     => 'Event Title',
+                                'data-inputmask'=> '&quot;mask&quot;: &quot;(999) 999-9999&quot;',
+                                'class'         => 'form-control',
+                                'required'=>'required'
+                        );
+                        echo form_input($data);
+                        $this->form_validation->set_rules($data);?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+				  
+				  <!-- Date dd/mm/yyyy -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                        <?php 
+                        $data = array(
+                                'name'          => 'date',
+                                'data-inputmask'=> "alias': 'dd/mm/yyyy'",
+                                'class'         => 'form-control datepicker',
+                                'required'=>'required'
+                        );
+                        echo form_input($data);?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+
+                  <div class="bootstrap-timepicker">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                          <?php
+                          $data = array(
+                                'name'    => 'time',
+                                'class'   => 'form-control timepicker',
+                                'id'      =>  'timepicker',
+                                'required'=>'required'
+                        );
+                        echo form_input($data);?>
+                        
+                      </div><!-- /.input group -->
+                    </div><!-- /.form group -->
+                  </div>
+
+                  <!-- IP mask -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-pencil"></i>
+                      </div>
+                        <?php
+                          $data = array(
+                                'name'    => 'notes',
+                                'class'   => 'form-control',
+                                'required'=>'required'
+                        );
+                        echo form_textarea($data);
+                        $this->form_validation->set_rules($data);?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                  
+                  <div class="form-group">
+                      <?php
+                          $data = array(
+                                'value'    => 'Submit',
+                                'class'   => 'btn btn-primary pull-right',
+                        );
+                        echo form_submit($data);?>
+                      
+                  </div>
+                  <div class="clearfix"></div>
+                <div id="add-event-message" class="alert custom-hidden"></div>
+            </div><!-- /.box-body -->
+                
+            <?php echo form_close(); ?>
+        </div><!-- /.box -->
+        <div class="box box-primary custom-box-calender">
+            <div class="box box-solid bg-green-gradient ">
+                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                  <i class="fa fa-calendar"></i>
+                  <h3 class="box-title">Calendar</h3>
+                  <!-- tools box -->
+                  <div class="pull-right box-tools">
+                        <!-- button with a dropdown -->
+                        <div class="btn-group">
+                          <button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                          <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="#">Add new event</a></li>
+                                <li><a href="#">Clear events</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">View calendar</a></li>
+                          </ul>
+                        </div>
+                        <button class="btn btn-primary btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button class="btn btn-primary btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div><!-- /. tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <!--The calendar -->
+                  <div id="calendar" style="width: 100%">
+                      
+                  </div>
+                </div><!-- /.box-body -->
+            </div>
+        </div><!-- /.box -->
+      <!-- /.box -->
+    </div><!-- /.col -->  
+     <?php //prn($events_list) ;?>
+    <div class='col-md-8'>
+      <!-- USERS LIST -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Timeline</h3>
+        </div><!-- /.box-header -->
+        <?php //prn($events_list); ?>
+        <div class="box-body custom-box-timeline">
+            <ul class="timeline">
+                
+                <!-- timeline time label -->
+                <li class="time-label">
+                  <span class="bg-red">
+                    <?php ;echo $events_list['search_date'];?>
+                  </span>
+                </li>
+                <!-- /.timeline-label -->
+                <!-- timeline item -->
+                <?php foreach($events_list['data'] as $key=>$value): ?>
+                <li>
+                  <i class="fa fa-envelope bg-blue"></i>
+                  <div class="timeline-item">
+                    <span class="time"><i class="fa fa-clock-o"></i> <?php echo $value['time'];?></span>
+                    <h3 class="timeline-header"><a href="#"><?php echo $value['title'];?></a></h3>
+                    <div class="timeline-body">
+                      <?php echo $value['note'];?>
+                    </div>
+                    <div class="timeline-footer">
+                      <a href="#" data-toggle="modal" data-target="#ReadMore" data-id="<?php echo $value['id'];?>" class="btn btn-default text-light-blue btn-sm"><i class="fa fa-ellipsis-h" ></i></a>
+<<<<<<< HEAD
+                      <a href="#" data-toggle="modal" data-target="#EditForm" data-id="<?php echo $value['id'];?>" class="btn btn-default  text-yellow btn-sm"><i class="fa fa-pencil-square-o"></i></a>
+                      <a class="btn btn-default text-red btn-sm"><i class="fa fa-trash-o"></i></a>
+=======
+                      <a class="btn btn-default  text-yellow btn-sm"><i class="fa fa-pencil-square-o"></i></a>
+                      <a href="<?=site_url('events/delete_events')?>" data-id="<?php echo $value['id'];?>" class="btn btn-default text-red btn-sm custom-delete-event"><i class="fa fa-trash-o"></i></a>
+>>>>>>> ec-17
+                    </div>
+                  </div>
+                </li>
+                <?php endforeach; ?>
+                
+                <!-- END timeline item -->
+                <li>
+                  <i class="fa fa-clock-o bg-gray"></i>
+                </li>
+              </ul>
+        </div><!-- /.box-body -->
+      </div><!--/.box -->
+    </div><!-- /.col -->    
+  </div><!-- /.row -->
+  
+<!-- Modal readmore-->
+<div class="modal fade " id="ReadMore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal edit -->
+<div class="modal fade" id="EditForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Enter your new details</h4>
+      </div>
+        <?php echo form_open('events/update_timeline_events', 'class="events" id="editeventform"');?>
+        <div class="modal-body">
+              <div class="box-body custom-box-addevent">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <?php
+                         echo form_input(array('name' => 'id', 'type'=>'hidden', 'class' =>'event-id'));
+                      ?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+                  
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-check"></i>
+                      </div>
+                        <?php 
+                        $data = array(
+                                'name'          => 'title',
+                                'placeholder'     => 'Event Title',
+                                'data-inputmask'=> '&quot;mask&quot;: &quot;(999) 999-9999&quot;',
+                                'class'         => 'form-control event-title',
+                                'required'=>'required',
+                                
+                        );
+                        echo form_input($data);
+                        $this->form_validation->set_rules($data);?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+				  
+				  <!-- Date dd/mm/yyyy -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                        <?php 
+                        $data = array(
+                                'name'          => 'date',
+                                'data-inputmask'=> "alias': 'dd/mm/yyyy'",
+                                'class'         => 'form-control event-date datepicker',
+                                'required'=>'required'
+                        );
+                        echo form_input($data);?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+
+                  <div class="bootstrap-timepicker">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                          <?php
+                          $data = array(
+                                'name'    => 'time',
+                                'class'   => 'form-control timepicker event-time',
+                                'id'      =>  'timepicker',
+                                'required'=>'required'
+                        );
+                        echo form_input($data);?>
+                        
+                      </div><!-- /.input group -->
+                    </div><!-- /.form group -->
+                  </div>
+
+                  <!-- IP mask -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-pencil"></i>
+                      </div>
+                        <?php
+                          $data = array(
+                                'name'    => 'note',
+                                'class'   => 'form-control event-note',
+                                'required'=>'required'
+                        );
+                        echo form_textarea($data);
+                        $this->form_validation->set_rules($data);?>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+            </div><!-- /.box-body -->           
+        </div>
+        <div class="modal-footer custom-modal-footer">            
+          <div class="be-overlay col-xs-12 text-center hide"><i class="fa fa-refresh fa-spin"></i></div>
+          <div id="update-event-message" class="alert custom-hidden"></div>  
+          <button type="button" class="btn btn-primary btn-flat" data-dismiss="modal">Close</button>
+            
+          <?php
+          $data= array(
+              'class'=>'btn btn-primary btn-flat',
+              'value'=>'Upadte Details',
+              );
+          echo form_submit($data); 
+          $this->form_validation->set_rules($data);?>
+            
+            
+        </div>
+        
+        <?php echo form_close(); ?>
+    </div>
+  </div>
+</div>

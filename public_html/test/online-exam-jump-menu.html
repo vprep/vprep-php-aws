@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+.ScrollStyle
+{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+</style>
+<title>Vprep | Online Exam</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- LIBRARY FONT-->
+<link type="text/css" rel="stylesheet" href="assets/font/font.css">
+<link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-awesome-4.4.0/css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="assets/font/font-icon/font-svg/css/Glyphter.css">
+<!-- LIBRARY CSS-->
+<link rel="stylesheet" type="text/css" href="flaticons/flaticon.css">
+<link type="text/css" rel="stylesheet" href="assets/libs/animate/animate.css">
+<link type="text/css" rel="stylesheet" href="assets/css/webslidemenu.css">
+<link type="text/css" rel="stylesheet" href="assets/libs/bootstrap-3.3.5/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="assets/libs/owl-carousel-2.0/assets/owl.carousel.css">
+<link type="text/css" rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.min.css">
+<script src="assets/libs/jquery/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<!-- HEADER-->
+<!-- HEADER-->
+<header>
+  <div class="header-topbar hidden-xs">
+    <div class="container">
+      <div class="topbar-left pull-left">
+        <div class="smllogo"><a href="#"><img alt="" src="assets/images/splash-logo.png"></a></div>
+      </div>
+      <div class="topbar-right pull-right">
+        <div class="group-sign-in"><a class="login" href="#"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="wsmenucontainer clearfix" style="background:#ef961e;">
+  <div class="overlapblackbg"></div>
+  <div class="wsmobileheader clearfix"> <a id="wsnavtoggle" class="animated-arrow"><span></span></a> <a class="smallogo"> <img src="assets/images/logo-color-1.png" alt="" width="160"></a> <a class="callusicon" href="#" data-toggle="modal" data-target="#myModal"><img src="assets/images/tool.png"> </a>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="search-input">
+              <div class="container">
+                <div class="search-input-wrapper">
+                  <form>
+                    <input type="text" class="form-input" placeholder="Exams" >
+                    <input type="text" class="form-input" placeholder="Subjects" >
+                    <input type="text" class="form-input" placeholder="Location">
+                    <div class="clearfix" style="height:50px;"> </div>
+                    <div class="register-submit"> <a class="btn btn-blue" href="list.html" role="button" ><span>Search <i class="fa fa-search"></i></span></a> </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!--Main Menu HTML Code-->
+    <div class="wsmain">
+      <!--  <div class="smllogo"><a href="#"><img alt="" src="assets/images/logo-color-1.png"></a></div>-->
+      <nav class="wsmenu clearfix">
+        <ul class="mobile-sub wsmenu-list">
+          <li><a href="home.html"><i class="flaticon-building hidden-lg"></i> Home </a></li>
+          <li><a href="search.html"><i class="flaticon-magnifying-glass hidden-lg"></i> Search </a></li>
+          <li><a href="profile.html"><i class="flaticon-social hidden-lg"></i> Profile </a></li>
+          <li><a href="list.html"><i class="flaticon-office hidden-lg"></i> Institutes </a></li>
+          <li><a href="notifications.html"><i class="flaticon-notification-bell-outline-interface-symbol hidden-lg"></i> Notifications </a></li>
+          <li><a href="ebook.html"><i class="flaticon-book-with-bookmark hidden-lg"></i> Ebooks </a></li>
+          <li><a href="online-exam.html"><i class="flaticon-test-quiz hidden-lg"></i> Online Exams </a></li>
+          <li><a href="leaderboard.html"><i class="flaticon-man hidden-lg"></i> My Leaderboaard </a></li>
+          <li><a href="#"><i class="flaticon-technology hidden-lg"></i> Support </a></li>
+          <li><a href="post-question.html"><i class="flaticon-support-speech-bubble hidden-lg"></i> Post a question </a></li>
+          <li><a href="contact-us.html"><i class="flaticon-business-card-of-a-man-with-contact-info hidden-lg"></i> Contact us </a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- HEADER-->
+<div id="wrapper-content">
+  <div id="o-wrapper" class="o-wrapper">
+    <main class="o-content">
+      <div class="o-container">
+        <div class="c-buttons">
+          <!--    <button id="c-button--push-right" class="btn btn-success c-button" type="submit">Jump</button>-->
+        </div>
+        <div id="github-icons"></div>
+      </div>
+    </main>
+  </div>
+  
+  
+  <nav id="c-menu--push-right" class="c-menu c-menu--push-right">
+    <button class="c-menu__close"><i aria-hidden="true" class="fa fa-times-circle-o fa-3x"></i></button>
+    <div class="edugate-layout-1">
+    <div class="ScrollStyle">
+      <h4> Question Palette</h4>
+      <a href="#">
+      <button type="button" class="btn btn-success btn-circle" style="padding:10px;">1</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-danger btn-circle">2</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-danger btn-circle">3</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-danger btn-circle">4</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-danger btn-circle">5</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-success btn-circle">6</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-success btn-circle">7</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">8</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">9</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">10</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">11</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-success btn-circle">12</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-danger btn-circle">13</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-danger btn-circle" >14</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">15</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">16</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">17</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">18</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">19</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">20</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">21</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">22</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">23</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">24</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">25</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">26</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">27</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">28</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">29</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">30</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">31</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">32</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">33</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">34</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">35</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">36</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">37</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">38</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">39</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">40</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">41</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">42</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">43</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">44</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">45</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">46</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">47</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">48</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">49</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">50</button>
+      </a>
+      <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">15</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">16</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">17</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">18</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">19</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">20</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">21</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">22</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">23</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">24</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">25</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">26</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">27</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">28</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">29</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">30</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">31</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">32</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">33</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">34</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">35</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">36</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">37</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">38</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">39</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">40</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">41</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">42</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">43</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">44</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">45</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">46</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">47</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">48</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">49</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">50</button>
+      </a>
+      <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">51</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">52</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">53</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">53</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">55</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">56</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">57</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">58</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">59</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">60</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">61</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">62</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">63</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">64</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">65</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">66</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">67</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">68</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">69</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">70</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">71</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">72</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">73</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;"74</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">75</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">76</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">77</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">78</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">79</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">80</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">81</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">82</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">83</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">84</button>
+      </a> <a href="#">
+      <button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">85</button>
+      </a> 
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">87</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">88</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">89</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">90</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">91</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">92</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">93</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">94</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">95</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">96</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">97</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">98</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">99</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">100</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">101</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">102</button></a>
+            <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">103</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">104</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">105</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">106</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">107</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">108</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">109</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">110</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">111</button></a>
+            <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">112</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">113</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">114</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">115</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">116</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">117</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">118</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">119</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">120</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">121</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">122</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">123</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">124</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">125</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">126</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">127</button></a>
+            <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">128</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">129</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">130</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">131</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">132</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">133</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">134</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">135</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">136</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">137</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">138</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">139</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">140</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">141</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">142</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">143</button></a>
+            <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">144</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">145</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">146</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">147</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">148</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">149</button></a>
+      <a href="#"><button type="button" class="btn btn-default btn-circle" style="background:#fff; border:1px solid #ccc; color:#737373;">150</button></a>
+
+      </div>
+      <div class="clearfix"> </div>
+      <hr>
+      <span class="label label-success">Answered</span> <span class="label label-danger">Not Answered</span> <span class="label label-info">Marked</span> <span class="label label-default" style="background:#fff; border:1px solid #ccc; color:#737373;">Not Visited</span> </div>
+  </nav>
+  
+  
+  
+  
+  <div id="c-mask" class="c-mask"></div>
+  <div id="page-wrapper">
+    <div class="main-content">
+      <div class="content">
+        <div class="section section-padding">
+          <div class="container">
+            <div class="col-md-9"> <span class="button-checkbox">
+              <button data-color="primary" class="btn btn-warning" type="button"><i aria-hidden="true" class="fa fa-flag-o"></i></button>
+              <input type="checkbox" checked="" class="hidden">
+              </span>
+              <button class="btn btn-warning text-center" type="button"> 00:17 <i aria-hidden="true" class="fa fa-hourglass-start"></i></button>
+              <button id="c-button--push-right" class="btn btn-warning c-button" type="submit">Jump</button>
+              <div class="edugate-layout-1">
+                <div class="col-xs-2">
+                  <button class="btn btn-success btn-circle" type="button">1</button>
+                </div>
+                <div class="col-xs-10">
+                  <h5 style="padding:0px; margin:0px;"> <strong> Which of the following systems of units is not  based  on units of mass, length and time alone? </strong></h5>
+                </div>
+                <div class="clearfix" style="height:80px;"> </div>
+                <div class="col-md-12 down">
+                  <button class="btn btn-warning btn-circle" type="button">A</button>
+                  <input type="radio"  value="1" name="radio" id="checkbox1">
+                  <label for="checkbox1"><span></span>SI</label>
+                </div>
+                <div  class="col-md-12 down">
+                  <button class="btn btn-warning btn-circle" type="button">B</button>
+                  <input type="radio"  value="1" name="radio" id="checkbox1">
+                  <label for="checkbox2"><span></span> MKS </label>
+                </div>
+                <div  class="col-md-12 down">
+                  <button class="btn btn-warning btn-circle" type="button">C</button>
+                  <input type="radio"  value="1" name="radio" id="checkbox1">
+                  <label for="checkbox3"><span></span>CGS</label>
+                </div>
+                <div  class="col-md-12 down">
+                  <button class="btn btn-warning btn-circle" type="button">D</button>
+                  <input type="radio"  value="1" name="radio" id="checkbox1">
+                  <label for="checkbox4"><span></span>FPS</label>
+                </div>
+                <a href="online-exam-2.html" class="btn icon-btn btn-success btn-contact">Next</a> </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="hyperlink">
+        <div class="hyper-right">© 2016 AbsolutPrep</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<!--<script src="assets/libs/smooth-scroll/jquery-smoothscroll.js"></script>
+<script src="assets/libs/owl-carousel-2.0/owl.carousel.min.js"></script>-->
+<script type="text/javascript" src="assets/js/webslidemenu.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/menu.js"></script>
+<script>
+  var pushRight = new Menu({
+    wrapper: '#o-wrapper',
+    type: 'push-right',
+    menuOpenerClass: '.c-button',
+    maskId: '#c-mask'
+  });
+
+  var pushRightBtn = document.querySelector('#c-button--push-right');
+  
+  pushRightBtn.addEventListener('click', function(e) {
+    e.preventDefault;
+    pushRight.open();
+  });
+</script>
+</body>
+</html>

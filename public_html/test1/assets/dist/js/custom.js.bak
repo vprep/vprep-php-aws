@@ -1,0 +1,277 @@
+$('.user_forget').click(function(){
+    var email=$('.user_email').val();
+    if((email==='') || (!validateEmail(email))){
+        if(email==='') alert('Please Enter Your Email Address');
+        else if(!validateEmail(email)) alert('Please enter valid Email Address');
+    }
+    else{
+        $('.be-overlay').removeClass('hide');
+        $.ajax({
+            url: 'http://localhost/kurt/admin/general/forget_password',
+            data: $('#forget_password').serialize(),
+            type: 'POST',
+            success: function(data){
+                alert(data);
+                location.reload();
+            }
+        });
+    }
+    event.preventDefault();
+    
+    return false;
+});
+
+function validateEmail(sEmail) {
+    var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+    if (filter.test(sEmail)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+$(document).ready(function() {
+
+    var time = $(".timepicker").timepicker({
+          showInputs: false,
+            minuteStep: 1
+        });
+    
+    //('#timepicker').timepicker('setTime', '12:45 AM');
+    
+    $( ".datepicker_input" ).datepicker({
+        "format": 'dd/mm/yyyy'
+    }).on('changeDate', function(ev){
+        $(this).datepicker('hide');
+    });
+    
+    $( ".datepicker_input" ).datepicker('update',Date());
+    
+     //The Calender
+    $(".calendar").datepicker();
+    
+    onadd_event();
+    
+    $("body").on('click','.custom-delete-event',function(evt){
+        evt.preventDefault();
+        var c = confirm('Are you sure you want to delete?');
+            if (c==false)
+                return false;
+        delete_events(this);
+        
+    });
+    
+    //Pick date from calendar
+    $('.calendar').datepicker()
+    .on('changeDate', function(r){
+        //console.log(r);
+        if(r.date !== undefined){
+            update_timeline(r.date);
+        }
+    });
+    
+    today = new Date();
+    today = today.getFullYear()+ "-" + (today.getMonth() + 1) + "-" + today.getDate() ;
+    update_timeline(today);
+    
+	$('#ReadMore').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var id = button.data('id'); // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        add_readmore(id);
+        
+    });
+    
+    $("#editeventform").submit(function(evt){
+        edit_timeline_events(this);
+        evt.preventDefault();
+    });
+    
+	//Edit events details
+    $('#EditForm').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        if(!(button.hasClass('custom-btn-edit-event'))) return false;
+        var id = button.data('id'); // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        load_eventsform(id);
+        
+    }); 
+    
+    $(document).on("click",".custom-focus", function() { 
+        $(this).closest('div.form-group').find('.form-control').focus();
+    });
+    
+    $('.custom-focus').click(function(){
+        //$(this).parent().find('.form-control').focus();
+    });
+   
+});
+
+function onadd_event(){
+            
+    $("#eventform").submit(function(evt){
+        
+      evt.preventDefault();
+      var url = $(this).attr('action');
+      var postData =$(this).serialize();
+      date_obj = new Date($( ".datepicker_input" ).datepicker('getDate'));
+      
+        date = date_obj.getFullYear()+ "-" + (date_obj.getMonth() + 1) + "-" + date_obj.getDate() ;
+//      console.log(date);
+//      return false ;
+      console.log($('input[name="csrf_test_name"]').val()); $.post(url, postData, function(o){
+          if(o.result===1){
+              show_alert('#add-event-message', o.message,'success');
+              
+              document.getElementById("eventform").reset();
+              
+              dt = new Date();
+              $( ".datepicker_input" ).datepicker('update',dt.toDateString());
+              $(".timepicker").timepicker('setTime',dt.toLocaleTimeString('en-us',{hour : "2-digit",minute:"2-digit"}));
+           }else{
+              show_alert('#add-event-message',o.message,'error');
+          }
+      },'json').always(function(data){
+           $('input[name="csrf_test_name"]').val(data.hash);
+           //console.log(date);
+           update_timeline(date);
+              
+      });
+    });
+}
+
+function show_alert(id,message, type){
+    $(id).addClass('alert-' + type);
+    $(id).html(message);
+    $(id).fadeIn();
+    
+    setTimeout(function(){ $(id).fadeOut();
+        
+        setTimeout(function (){ $(id).removeClass('alert-error, alert-success').delay(500).html('');}, 1000);
+    }, 5000);
+}
+
+
+function update_timeline(date){
+    
+    //var newURL = window.location.protocol + "//" + window.location.host + "/" + ;
+    date_obj = new Date(date);
+    //console.log(date_obj);
+    date = date_obj.getFullYear()+ "-" + (date_obj.getMonth() + 1) + "-" + date_obj.getDate() ;
+    
+    var url = 'events/get_timeline/' + date ;
+    csrf = "csrf_test_name=" +  $('input[name="csrf_test_name"]').val();
+    
+    console.log($('input[name="csrf_test_name"]').val()); $.post(url, csrf , function(data){
+            $(".timeline").html(data.content);
+        },'json').always(function(data){
+            $('input[name="csrf_test_name"]').val(data.hash);    
+        });
+        
+}
+
+function add_readmore(id){
+    
+    var url ='events/readmore_events/' + id ;
+    csrf = "csrf_test_name=" +  $('input[name="csrf_test_name"]').val();
+    
+    console.log($('input[name="csrf_test_name"]').val()); $.post(url, csrf , function(data){
+            $("#ReadMore .modal-body").html(data.note);
+            $("#ReadMore .modal-title").html(data.title);
+    },'json').always(function(data){
+            $('input[name="csrf_test_name"]').val(data.hash);    
+        });
+}
+/* Load data from database , send to form*/
+function load_eventsform(id){
+    var url ='events/load_events/' + id ;
+    //console.log(url);
+    csrf = "csrf_test_name=" +  $('input[name="csrf_test_name"]').val();
+    
+    console.log($('input[name="csrf_test_name"]').val()); $.post(url, csrf , function(data){
+            $("#EditForm .modal-body").find('.event-id').val(data.id);
+            $("#EditForm .modal-body").find('.event-title').val(data.title);
+            $("#EditForm .modal-body").find('.event-note').val(data.note);
+            $("#EditForm .modal-body").find('.event-date').val(data.date);
+            $("#EditForm .modal-body").find('.event-time').val(data.time);
+    },'json').always(function(data){
+            $('input[name="csrf_test_name"]').val(data.hash);    
+        });
+}
+
+function edit_timeline_events(handle){
+      
+      var url = $(handle).attr('action');
+      var postData =$(handle).serialize();
+      date_obj = new Date($( ".event-date" ).datepicker('getDate'));
+      date = date_obj.getFullYear()+ "-" + (date_obj.getMonth() + 1) + "-" + date_obj.getDate() ;
+      
+      console.log($('input[name="csrf_test_name"]').val()); $.post(url, postData, function(o){
+          if(o.result===1){
+              show_alert('#update-event-message',o.message,'success');
+              
+<<<<<<< HEAD
+              document.getElementById("editeventform").reset();
+              
+              dt = new Date();
+              //$( ".datepicker" ).datepicker('update',dt.toDateString());
+              $(".timepicker").timepicker('setTime',dt.toLocaleTimeString('en-us',{hour : "2-digit",minute:"2-digit"}));
+=======
+>>>>>>> ec-19
+           }else{
+              show_alert('#update-event-message',o.message,'error');
+          }
+      },'json').always(function(data){
+           $('input[name="csrf_test_name"]').val(data.hash);
+           update_timeline(date);
+              
+      });
+    
+    
+}
+
+/* Delete events */ 
+function delete_events(handle){
+    
+      var url = $(handle).attr('href') + "/" + $(handle).attr('data-id');
+      var csrf = "csrf_test_name=" + $('input[name="csrf_test_name"]').val();
+      
+      date_obj = new Date($( ".datepicker" ).datepicker('getDate'));
+      date = date_obj.getFullYear()+ "-" + (date_obj.getMonth() + 1) + "-" + date_obj.getDate() ;
+      
+        console.log($('input[name="csrf_test_name"]').val()); $.post(url, csrf, function(o){
+          if(o.result===1){
+             
+             $(handle).parents('.timeline-item').parent().css({height:$(handle).parents('.timeline-item').parent().height() + 'px'});
+             $(handle).parents('.timeline-item').parent().css({opacity:0});
+             setTimeout(function(){
+                
+                 $(handle).parents('.timeline-item').parent().css({height:'0px'});
+                 $(handle).parents('.timeline-item').parent().css({margin:'0px'});
+                 
+                 
+             
+             },500);
+             
+             setTimeout(function(){
+                    $(handle).parents('.timeline-item').parent().remove();
+                },1000);
+             
+             $('input[name="csrf_test_name"]').val(o.hash);
+             //setTimeout(update_timeline(date),2000);
+           }else{
+              alert('Error deleting event!!');
+          }
+      },'json').always(function(data){
+           $('input[name="csrf_test_name"]').val(data.hash);
+           //console.log(date);
+           
+           
+            
+      });
+       
+}

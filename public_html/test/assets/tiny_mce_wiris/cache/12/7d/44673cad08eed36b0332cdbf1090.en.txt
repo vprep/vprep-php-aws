@@ -1,0 +1,1 @@
+open vertical bar table row 1 2 row 3 4 end table close vertical bar asterisk times open vertical bar table row 1 2 row 3 4 end table close vertical bar equals space ?

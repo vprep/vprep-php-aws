@@ -1,0 +1,1 @@
+sin open parentheses 30 close parentheses asterisk times cos open parentheses 45 close parentheses divided by tan open parentheses 90 close parentheses

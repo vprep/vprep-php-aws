@@ -1,0 +1,1 @@
+r space equals space square root of open parentheses 100 close parentheses squared plus open parentheses 1200 close parentheses squared end root space equals 1204 space m space asymptotically equal to space 1200 space m

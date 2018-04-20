@@ -1,0 +1,1 @@
+straight a union straight b space open curly brackets table attributes columnalign left columnspacing 1.4ex end attributes row 1 2 row 3 4 end table close open parentheses table row cell open table attributes columnalign right end attributes row 1 row 2 end table close curly brackets end cell row 3 end table close parentheses

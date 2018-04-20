@@ -1,0 +1,331 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Display Widgets SEO Plus v1.1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-26 17:42+0000\n"
+"PO-Revision-Date: 2016-11-26 17:26+0000\n"
+"Last-Translator: David Law <davidlseo@gmail.com>\n"
+"Language-Team: David Law <davidlseo@gmail.com>\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: display-widgets-seo-plus.php:617
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Display Widgets SEO Plus</a> Options"
+msgstr ""
+
+#: display-widgets-seo-plus.php:621
+msgid "Hide OR Show For Everyone"
+msgstr ""
+
+#: display-widgets-seo-plus.php:622
+msgid "Hide For Logged In Users + Logged Out Users Use Options Below"
+msgstr ""
+
+#: display-widgets-seo-plus.php:623
+msgid "Hide For Logged Out Users + Logged In Users Use Options Below"
+msgstr ""
+
+#: display-widgets-seo-plus.php:627
+msgid "Hide OR Show Widget"
+msgstr ""
+
+#: display-widgets-seo-plus.php:629
+msgid "Hide On Ticked"
+msgstr ""
+
+#: display-widgets-seo-plus.php:630
+msgid "Show On Ticked"
+msgstr ""
+
+#: display-widgets-seo-plus.php:634
+msgid "Categories"
+msgstr ""
+
+#: display-widgets-seo-plus.php:638
+msgid "Show On Ticked or Hide On Ticked"
+msgstr ""
+
+#: display-widgets-seo-plus.php:641
+msgid "Category Page 1 and All it's Posts"
+msgstr ""
+
+#: display-widgets-seo-plus.php:642
+msgid "Category Pages 1,2,3... and All it's Posts"
+msgstr ""
+
+#: display-widgets-seo-plus.php:643
+msgid "Category Page 1 and NOT it's Posts"
+msgstr ""
+
+#: display-widgets-seo-plus.php:644
+msgid "Category Pages 1,2,3... and NOT it's Posts"
+msgstr ""
+
+#: display-widgets-seo-plus.php:645
+msgid "Categories Posts ONLY Page 1"
+msgstr ""
+
+#: display-widgets-seo-plus.php:646
+msgid "Categories Posts ONLY Pages 1,2,3..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:648
+msgid "Set a Condition Above to Act on the Ticked Categories Below"
+msgstr ""
+
+#: display-widgets-seo-plus.php:696
+msgid "Content Types"
+msgstr ""
+
+#: display-widgets-seo-plus.php:710
+msgid "Static Pages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:728
+msgid "Custom Post Types"
+msgstr ""
+
+#: display-widgets-seo-plus.php:748
+msgid "Custom Post Type Archives"
+msgstr ""
+
+#: display-widgets-seo-plus.php:760
+msgid "Archive"
+msgstr ""
+
+#: display-widgets-seo-plus.php:767
+msgid "Custom Taxonomy Archives"
+msgstr ""
+
+#: display-widgets-seo-plus.php:788
+msgid "WordPress Posts"
+msgstr ""
+
+#: display-widgets-seo-plus.php:790
+msgid "Comma Separated list of IDs of posts not listed above"
+msgstr ""
+
+#: display-widgets-seo-plus.php:796
+msgid "Languages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:799
+msgid "Show On Ticked Languages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:801
+msgid "Language Support OFF"
+msgstr ""
+
+#: display-widgets-seo-plus.php:802
+msgid "Ignore Above Options : Ticked Languages ONLY"
+msgstr ""
+
+#: display-widgets-seo-plus.php:803
+msgid "Use Above Options : AND Ticked Languages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:805
+msgid "Set a Condition Above to Act on"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1017
+msgid "Static Front Page"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1018
+msgid "Home Page Archives - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1019
+msgid "Home Page Archives - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1020
+msgid "All Category Archives - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1021
+msgid "All Category Archives - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1022
+msgid "All Tag Archives - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1023
+msgid "All Tag Archives - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1024
+msgid "All Dated Archives - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1025
+msgid "All Dated Archives - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1026
+msgid "All Author Archives - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1027
+msgid "All Author Archives - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1028
+msgid "All Search Results - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1029
+msgid "All Search Results - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1030
+msgid "All Archives - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1031
+msgid "All Archives - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1032
+msgid "All Posts - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1033
+msgid "All Posts - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1034
+msgid "All Static Pages - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1035
+msgid "All Static Pages - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1036
+msgid "All Attachment Pages - Page 1 Only"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1037
+msgid "All Attachment Pages - Pages 2,3,4..."
+msgstr ""
+
+#: display-widgets-seo-plus.php:1038
+msgid "404 Error Page"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1043
+msgid "ALL BuddyPress Pages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1044
+msgid "BuddyPress Members Directory"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1045
+msgid "BuddyPress User Pages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1046
+msgid "BuddyPress Activity Streams Directory"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1047
+msgid "BuddyPress Activity Streams Item"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1048
+msgid "BuddyPress Groups Directory"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1049
+msgid "BuddyPress Group"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1050
+msgid "- BuddyPress Group Forum"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1051
+msgid "- BuddyPress Group Forum Topic"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1052
+msgid "BuddyPress Registration Page"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1053
+msgid "BuddyPress Activation Page"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1061
+msgid "ALL bbPress Pages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1062
+msgid "bbPress User Pages"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1063
+msgid "bbPress Forum Archive"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1064
+msgid "bbPress Category Forum "
+msgstr ""
+
+#: display-widgets-seo-plus.php:1065
+msgid "bbPress Forum"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1066
+msgid "bbPress Forum Topic"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1067
+msgid "bbPress Topic Tag"
+msgstr ""
+
+#: display-widgets-seo-plus.php:1221
+#, php-format
+msgid "#%d (no title)"
+msgstr ""
+
+#. Name of the plugin
+msgid "Display Widgets SEO Plus"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Based on the popular Display Widgets plugin with MANY more conditional "
+"arguments including full WPML language support and BuddyPress/bbPress "
+"support. Set widgets to be shown/hidden via the following conditions: Is "
+"Specific WPML Language, multiple BuddyPress/bbPress conditions, Is Logged "
+"In, Is Logged Out, Is Front Page, Is Home Page Archives, Is Category "
+"Archive, Is Tag Archive, Is Custom Taxonomy Archive, Is Date Archive, Is "
+"Search Results Archive, Is Any Archive, Is Any Post, Is Specific Post, Is "
+"Any Static Page, Is Specific Static Page, Is Attachment Page, Is 404 Error "
+"Page, Is Specific Category Archive, Is Specific Category Archive AND It's "
+"Posts, Is The Posts From a Specific Category. Plus most of the above "
+"conditions with: Is First Page, Is Pages 2,3,4,... of Paged Archive/Comments."
+msgstr ""
+
+#. URI of the plugin
+msgid "http://stallion-theme.co.uk/display-widgets-seo-plus-plugin/"
+msgstr ""
+
+#. Author of the plugin
+msgid "David Law"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://stallion-theme.co.uk/"
+msgstr ""

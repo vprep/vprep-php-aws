@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 Jun, 2015, 4:45:39 PM
+    Author     : admin
+*/
+
+/*Events*/
+.custom-box-addevent{overflow: hidden;}
+.custom-hidden{display: none;}
+
+/*Timeline*/
+.custom-box-timeline .btn-default, .custom-box-timeline .btn-default:focus{border:0px; margin-right:3px; transition:all .5s; background: #f4f4f4 }
+.custom-box-timeline .btn-default:hover,  .custom-box-timeline .btn-default:active, .custom-box-timeline .btn-default.hover{background-color:#fff !important; border: 0px; box-shadow:1px 1px 4px RGBA(0,0,0,.5)}
+.custom-box-timeline .timeline>li>.timeline-item{background: #E1EBFD;}
+.custom-box-timeline{padding-bottom: 30px}
+.custom-box-timeline.btn-group-sm>.btn, .custom-box-timeline.btn-sm{font-size: 14px;}
+.custom-box-calender .bg-green-gradient{background: #fff !important; color: #000; }
+.custom-box-calender .box-title ,.custom-box-calender .fa-calendar {color: #000;}
+.custom-box-calender {color: #000;}
+.custom-box-addevent .alert{margin-top: 16px; margin-bottom: 5px}
+.custom-box-timeline .timeline-header, .custom-box-timeline .timeline>li, .custom-box-timeline .timeline-header a, .custom-box-timeline .time {transition: all 500ms;}
+
+/*model*/
+.modal-dialog{z-index: 100000;}
+
+#update-event-message {position: absolute;bottom: -6px;margin-left: 10px;}
+
+/* Login Page */
+
+#custom-checkout{display:none;}
+
+.modal-dialog{z-index: 10000}
+.modal-header { border-bottom-color: #ECECEC; }
+.modal-footer { border-top-color: #ECECEC;}
+
+.datepicker .active {border:0px}
+.datepicker .day {line-height: 21px}
+
+.custom-check-box{position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);}
+
+/*Calendar*/
+.hasEvents .fa{font-size: 10px;color: #5cb85c; }
+
+.blog_image{position:relative;}
+.blog_image a{display: block;position: absolute;top:-14px;right: -7px;font-size: 30px;}
