@@ -13,5 +13,5 @@
 out/
 *.MF
 *.pdf
-*config.php
-*database.php
+*.idea/
+/config
