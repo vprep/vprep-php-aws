@@ -14,4 +14,4 @@ out/
 *.MF
 *.pdf
 *.idea/
-/config
+/public_html/test/application/config
