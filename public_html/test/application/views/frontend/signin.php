@@ -35,7 +35,7 @@
                             <hr>
                             <div class="social-buttons"> 
                                 <a class="btn btn-fb btn-block" href="<?php echo $fbauthUrl; ?>">
-                                    <i class="fa fa-facebook-square"></i> Sign i n with Facebook
+                                    <i class="fa fa-facebook-square"></i> Sign in with Facebook
                                 </a>
                                 <a class="btn btn-tw btn-block" href="#">
                                     <i class="fa fa-google-plus-square"></i> Sign in wth Google +
