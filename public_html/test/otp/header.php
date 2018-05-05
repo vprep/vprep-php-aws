@@ -79,7 +79,6 @@
                 <div id="navbar"  class="navbar-collapse collapse" style="background: linear-gradient(90deg,rgba(33, 16, 17, 0.9), rgba(55, 43, 71, 0.9) );
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);">
                     <ul id="common-nav" class="nav navbar-nav navbar-right" >
-                        <!--   <ul class="nav navbar-nav navbar-right" style="margin-right: 1%">-->
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63 green-hover home-head"><a href="http://vprep.in/">Home</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63 green-hover price-head"><a href="http://vprep.in/pricing.php" >Pricing</a></li>
                         <li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63 material-head"><a href="http://vprep.in/materials.php">Study Material</a></li>

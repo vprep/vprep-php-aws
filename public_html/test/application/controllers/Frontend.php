@@ -26,6 +26,10 @@ class Frontend extends CI_Controller {
         $data['fbauthUrl'] = $facebook->getLoginUrl(array('redirect_uri' => base_url('fb_auth.html'), 'scope' => FB_PERMISSIONS));
         $this->template->load('frontend_login','frontend/signin',$data);
     }
+
+    function new_home(){
+        $this->template->load('','frontend/new_home');
+    }
     
     # function for user sign up page
     function user_signup(){
@@ -80,7 +84,7 @@ class Frontend extends CI_Controller {
             }
         }
         else{
-            $this->template->load('educational','frontend/change_password',$data);
+            $this->load->model('Login_model','frontend/change_password');
         }
         
     }
@@ -185,8 +189,7 @@ class Frontend extends CI_Controller {
         $this->form_validation->set_rules('phone', 'Phone', 'required');
         
         $this->form_validation->set_rules('city', 'City', 'required');
-        
-        
+
         if ($this->form_validation->run() == FALSE){
             $this->template->load('frontend_login','frontend/user_signup',$data);
         }

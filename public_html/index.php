@@ -471,7 +471,7 @@
                 $("#secondForgot").hide();
                 $('#thirdForgot').show();
             } else {
-                $('#forgotOTPError').show();
+                showMessage("Entered OTP is not matched","error");
             }
         });
 

@@ -46,6 +46,7 @@ $route['save_mail_settings']='mail_settings/save_record';
 $route['frontend_logout']='frontend/logout';
 
 $route['sign-in']='frontend/signin';
+$route['new-home']='frontend/new_home';
 
 $route['user-sign-up']='frontend/user_signup';
 $route['tutor-sign-up']='frontend/tutor_signup';

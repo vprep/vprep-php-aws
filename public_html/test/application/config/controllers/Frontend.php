@@ -26,6 +26,11 @@ class Frontend extends CI_Controller {
         $data['fbauthUrl'] = $facebook->getLoginUrl(array('redirect_uri' => base_url('fb_auth.html'), 'scope' => FB_PERMISSIONS));
         $this->template->load('frontend_login','frontend/signin',$data);
     }
+
+    function new_home(){
+        //Call Facebook API
+        $this->template->load('frontend_login','frontend/new_home');
+    }
     
     # function for user sign up page
     function user_signup(){
