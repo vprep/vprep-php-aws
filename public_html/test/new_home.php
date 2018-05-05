@@ -1725,7 +1725,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a  data-section="outlook"  href='#outlookForm'>Outlook</a>
+                            <a  data-section="outlook"  href='#outlookForm'>Vprep Inside</a>
                         </li>
                         <li>
                             <a  data-section="contact"  href='#contactForm'>Contact Us</a>
@@ -1950,7 +1950,7 @@
 
                 <div class='container' >
                     <h1>Everything you need to drive student engagement</h1>
-                    <p>Vprep helps you centralize your programming and resources on mobile and gather critical data</p>
+                    <p>Vprep helps you centralize your programming and resources on web and gather critical data</p>
                     <ul class='steps'>
                         <li class='first'>
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.2s' data-wow-duration='0.4s' src='library/img/com.png' width="250px" height="180px">
@@ -1962,7 +1962,7 @@
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.3s' data-wow-duration='0.4s' src='library/img/sc.png' width="250px" height="190px">
                             <h2>Assessments and Analysis</h2>
 
-                            <p>Build an engaged community on mobile
+                            <p>Build an engaged community on web
                             </p>
 
                             <a class='btn mint lg' href='#'>Learn More</a>
