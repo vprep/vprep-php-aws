@@ -993,7 +993,7 @@
             $('#otpId').show();
             $('#buttonOTP').show();
             $.ajax({
-                url: "/otp/sendotp.php?phone="+filterVO.phone,
+                url: "http://test.vprep.in/otp/sendotp.php?phone="+filterVO.phone,
                 method: "GET",
                 success: function(data) {
                     n=data.search("Your Vprep OTP is:");
@@ -1189,7 +1189,7 @@
 
         function sendForgotOTP(mobile){
             $.ajax({
-                url: "/test/otp/sendotp.php?phone="+mobile,
+                url: "http://test.vprep.in/test/otp/sendotp.php?phone="+mobile,
                 method: "GET",
                 success: function(data) {
                     n=data.search("Your Vprep OTP is:");
@@ -1725,7 +1725,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href='#'>Blog</a>
+                            <a  data-section="outlook"  href='#outlookForm'>Outlook</a>
                         </li>
                         <li>
                             <a  data-section="contact"  href='#contactForm'>Contact Us</a>
@@ -1747,7 +1747,7 @@
                     </ul>
                         <ul id="showSignUp"class="dropdown-menu dropdown-lr animated flipInX green-back" role="menu" style="display: none;background: darkslategrey;">
                             <div class="col-lg-12">
-                                <form id="ajax-register-form" action="/add_student" method="post" role="form" autocomplete="off" style="width: 100%">
+                                <form id="ajax-register-form" action="http://test.vprep.in/add_student" method="post" role="form" autocomplete="off" style="width: 100%">
                                     <div class="form-group">
                                         <input type="text" style="border-color:white;width: 100%;" name="first_name"  required="required" id="fullName" tabindex="1" class="form-control" placeholder="Full Name" value="">
                                     </div>
@@ -1803,14 +1803,14 @@
                     <ul id="showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
                         <div class="col-lg-12">
                             <div class="text-center" style="color: #0c0c0c">
-                                <form name="loginForm" id="ajax-login-form" action="/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
+                                <form name="loginForm" id="ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
                                     <div class="form-group" style="margin: 2px;">
                                         <input type="text" style="padding: 7px;width: 100%;" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
                                         <span type="hidden" style="color:red;display: none;width: 100%;" id="userBlank">username should not be blank</span>
                                     </div>
 
                                     <div class="form-group" style="margin: 2px;">
-                                        <input id="regpassword" style="padding: 7px;width: 100%;" type="password" name="password"  tabindex="2" class="form-control form-input" placeholder="Password">
+                                        <input id="regpassword" style="padding: 7px;width: 100%;" type="password" name="password"  tabindex="1" class="form-control" placeholder="Password">
                                         <span id="credId" style="color:red;display: none;width: 100%;">invalid username/password entered</span>
                                     </div>
 
@@ -1856,45 +1856,78 @@
             <section class='header-ctas container' >
                 <h1>
                     Are you engineering student /campus ?
-                    <p>Vprep helps your college or university drive student engagement from orientation to graduation using the power of mobile.</p>
+                    <p>Vprep helps your college or university drive student engagement from orientation to graduation using the power of web.</p>
                 </h1>
             </section>
             <button class='learn' id='learnMore'>Learn More</button>
         </div>
-        <section class='platform' style="background: #565a5f;">
-
+        <div class="form-area " data-section="outlook" >
+        <section class='platform' id="outlookForm" style="background: #565a5f;padding-top: 5%;">
             <div class="slideshow-container"  style="display: block;margin-left: auto;margin-right: auto;width: 60%;">
+
                 <div class="mySlides fade">
-                   <!-- <div class="numbertext">1 / 6</div>-->
-                    <img src='library/img/Analysis.png' >
-                    <div class="text">Analysis</div>
+                    <div class="row">
+                        <div class="col-sm-12" style="color: #FFFFff;">
+                              <h2>Analysis</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src='library/img/Analysis.png' >
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <div class="mySlides fade">
-                   <!-- <div class="numbertext">2 / 6</div>-->
-                    <img src='library/img/Assignments.png'>
-                    <div class="text">Assignments</div>
+                    <div class="row">
+                        <div class="col-sm-12" style="color: #FFFFff;">
+                            <h2>Assignments</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src='library/img/Assignments.png' >
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mySlides fade">
-                    <!--<div class="numbertext">3 / 6</div>-->
-                    <img src='library/img/EngagementFeed.png'>
-                    <div class="text">Engagement Feed</div>
+                    <div class="row">
+                        <div class="col-sm-12" style="color: #FFFFff;">
+                            <h2>Engagement Feed</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src='library/img/EngagementFeed.png' >
+                        </div>
+                    </div>
                 </div>
                 <div class="mySlides fade">
-                   <!-- <div class="numbertext">4 / 6</div>-->
-                    <img src='library/img/ManageExams.png'>
-                    <div class="text">Manage Exams</div>
+                    <div class="row">
+                        <div class="col-sm-12" style="color: #FFFFff;">
+                            <h2>Manage Exams</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src='library/img/ManageExams.png' >
+                        </div>
+                    </div>
                 </div>
                 <div class="mySlides fade">
-                   <!-- <div class="numbertext">5 / 6</div>-->
-                    <img src='library/img/QuestionBank.png'>
-                    <div class="text">Question Bank</div>
+                    <div class="row">
+                        <div class="col-sm-12" style="color: #FFFFff;">
+                            <h2>Question Bank</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src='library/img/QuestionBank.png' >
+                        </div>
+                    </div>
                 </div>
                 <div class="mySlides fade">
-                   <!-- <div class="numbertext">6 / 6</div>-->
-                    <img src='library/img/Scores.png'>
-                    <div class="text">Scores</div>
+                    <div class="row">
+                        <div class="col-sm-12" style="color: #FFFFff;">
+                            <h2>Scores</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src='library/img/Scores.png' >
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -1909,6 +1942,7 @@
                 <span class="dot"></span>
             </div>
         </section>
+        </div>
         <div class="form-area " data-section="college_engage">
             <div id="collEngage" >
         <section class='engagement bg-grey' id='learn-more' >
@@ -1953,9 +1987,7 @@
             <div class='container'>
                 <h1>Reach your students from orientation to graduation</h1>
                 <p class='desc'>
-                    Vprep meets your students when they arrive on campus for orientation and grows with them all the way through graduation. Using
-                    <a class='b' href='./tour.html#fomo'>FOMO Fighter™</a>, it automatically makes personalized recommendations by analyzing their changing interests.
-                </p>
+                    Vprep meets your students when they arrive on campus for orientation and grows with them all the way through graduation.
                 <ul class='fading-steps'>
                     <li>
                         <div class='home1 step1'>
@@ -2385,7 +2417,7 @@
                                             <p>Enter New Password</p>
                                             <div class="panel-body">
 
-                                                <form id="forgot-password-form"  action="http://test.vprep.in/frontend/update_password" role="form" autocomplete="off" class="form" method="post">
+                                                <form id="forgot-password-form"  action="frontend/update_password" role="form" autocomplete="off" class="form" method="post">
 
                                                     <div class="form-group">
                                                         <div class="input-group">
