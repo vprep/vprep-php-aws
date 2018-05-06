@@ -1308,6 +1308,11 @@
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
 
+        jQuery(document).on('click', '.dot', function (e) {
+            var dotValue = $(this).attr("data-value");
+            slideIndex = dotValue;
+        });
+
     </script>
     <script src="http://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
     <script src="http://cdn.jotfor.ms/static/jotform.forms.js?3.3.2455" type="text/javascript"></script>
@@ -1724,9 +1729,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <!--<li>
                             <a  data-section="outlook"  href='#outlookForm'>Vprep Inside</a>
-                        </li>
+                        </li>-->
                         <li>
                             <a  data-section="contact"  href='#contactForm'>Contact Us</a>
                         </li>
@@ -1863,28 +1868,43 @@
         </div>
         <div class="form-area " data-section="outlook" >
         <section class='platform' id="outlookForm" style="background: #565a5f;padding-top: 5%;">
-            <div class="slideshow-container"  style="display: block;margin-left: auto;margin-right: auto;width: 60%;">
+            <div class="slideshow-container"  style="display: block;margin-left: auto;margin-right: auto;">
 
                 <div class="mySlides fade">
                     <div class="row">
                         <div class="col-sm-12" style="color: #FFFFff;">
-                              <h2>Analysis</h2>
+                            <h2>Analysis</h2>
                         </div>
-                        <div class="col-sm-12">
-                            <img src='library/img/Analysis.png' >
+                        <div style="display: inline-block;width: 65%;float: left;">
+                            <img style="width: 100%;" src='library/img/Analysis.png' >
+
+                        </div>
+                        <div  style="color: white;display: inline-block;float: right;width: 30%;margin-left: 2%;">
+                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                <li style="color: #FFFFff!important;">Get detailed analysis of students.</li>
+                                <li style="color: #FFFFff!important;">Know their strong and weak areas.</li>
+                            </ul>
+
                         </div>
                     </div>
-
-
                 </div>
+
 
                 <div class="mySlides fade">
                     <div class="row">
                         <div class="col-sm-12" style="color: #FFFFff;">
                             <h2>Assignments</h2>
                         </div>
-                        <div class="col-sm-12">
-                            <img src='library/img/Assignments.png' >
+                        <div style="display: inline-block;width: 65%;float: left;">
+                            <img style="width: 100%;" src='library/img/Assignments.png' >
+
+                        </div>
+                        <div  style="color: white;display: inline-block;float: right;width: 30%;">
+                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                <li style="color: #FFFFff!important;">Complete assignment management.</li>
+                                <li style="color: #FFFFff!important;">Create and receive assignments directly within the platform.</li>
+                                <li style="color: #FFFFff!important;">Review and download assignments.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1894,8 +1914,16 @@
                         <div class="col-sm-12" style="color: #FFFFff;">
                             <h2>Engagement Feed</h2>
                         </div>
-                        <div class="col-sm-12">
-                            <img src='library/img/EngagementFeed.png' >
+                        <div style="display: inline-block;width: 65%;float: left;">
+                            <img style="width: 100%;" src='library/img/EngagementFeed.png' >
+
+                        </div>
+                        <div  style="color: white;display: inline-block;float: right;width: 30%;">
+                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                <li style="color: #FFFFff!important;">Engagement platform with a difference.</li>
+                                <li style="color: #FFFFff!important;">Wiki and Facebook like interface Q&A platform.</li>
+                                <li style="color: #FFFFff!important;">Drive better engagement between students and professors.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1904,8 +1932,17 @@
                         <div class="col-sm-12" style="color: #FFFFff;">
                             <h2>Manage Exams</h2>
                         </div>
-                        <div class="col-sm-12">
-                            <img src='library/img/ManageExams.png' >
+                        <div style="display: inline-block;width: 65%;float: left;">
+                            <img style="width: 100%;" src='library/img/ManageExams.png' >
+
+                        </div>
+                        <div  style="color: white;display: inline-block;float: right;width:30%;">
+                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                <li style="color: #FFFFff!important;">Exam management built-in.</li>
+                                <li style="color: #FFFFff!important;">Set active and de-active time for every exam.</li>
+                                <li style="color: #FFFFff!important;">Share exam to relevant students.</li>
+                                <li style="color: #FFFFff!important;">Check complete reports for every exams.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1914,18 +1951,16 @@
                         <div class="col-sm-12" style="color: #FFFFff;">
                             <h2>Question Bank</h2>
                         </div>
-                        <div class="col-sm-12">
-                            <img src='library/img/QuestionBank.png' >
+                        <div style="display: inline-block;width: 65%;float: left;">
+                            <img style="width: 100%;" src='library/img/QuestionBank.png' >
+
                         </div>
-                    </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="row">
-                        <div class="col-sm-12" style="color: #FFFFff;">
-                            <h2>Scores</h2>
-                        </div>
-                        <div class="col-sm-12">
-                            <img src='library/img/Scores.png' >
+                        <div  style="color: white;display: inline-block;float: right;width:30%;">
+                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                <li style="color: #FFFFff!important;">Your question bank hosted on cloud.</li>
+                                <li style="color: #FFFFff!important;">Access our question directly within the platform.</li>
+                                <li style="color: #FFFFff!important;">Create online tests in minutes.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1933,13 +1968,12 @@
             </div>
             <br>
 
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <div style="text-align:center;">
+                <span class="dot" data-value="0"></span>
+                <span class="dot" data-value="1"></span>
+                <span class="dot" data-value="2"></span>
+                <span class="dot" data-value="3"></span>
+                <span class="dot" data-value="4"></span>
             </div>
         </section>
         </div>
@@ -1954,9 +1988,8 @@
                     <ul class='steps'>
                         <li class='first'>
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.2s' data-wow-duration='0.4s' src='library/img/com.png' width="250px" height="180px">
-                            <h2>Communication-Engagement platform</h2>
+                            <h2>Engagement platform</h2>
                             <p>Give your students a strong start</p>
-                            <a class='btn mint lg' href='#'>Learn More</a>
                         </li>
                         <li class='middle'>
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.3s' data-wow-duration='0.4s' src='library/img/sc.png' width="250px" height="190px">
@@ -1965,14 +1998,12 @@
                             <p>Build an engaged community on web
                             </p>
 
-                            <a class='btn mint lg' href='#'>Learn More</a>
                         </li>
                         <li class='last'>
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.4s' data-wow-duration='0.4s' src='library/img/adm.png' width="250px" height="180px">
                             <h2>Admin Tools</h2>
                             <p>Gather insight and increase your efficiency</p>
 
-                            <a class='btn mint lg' href='#'>Learn More</a>
                         </li>
                     </ul>
                 </div>
@@ -2077,7 +2108,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type='text/javascript' src='http://vprep.in/wp-includes/js/typeahead/typeahead.js'></script>
     </head>
-    <footer class='footer'>
+    <footer class='footer' style="background: #565a5f;">
         <div class='top'>
             <div class="container">
                 <div class="form-area " data-section="contact" >
@@ -2121,11 +2152,6 @@
                                 <li style="display:none"> Should be Empty: <input type="text" name="website" value=""> </li>
                             </ul>
                         </div>
-                        <div style="
-    padding-right: 10%;
-    float: right;
-    color: green; margin-top: 1%;
-">Contact Us:<br>info@vprep.in<br>+91-9582428210</div>
                         <script> JotForm.showJotFormPowered = "new_footer"; </script> <input type="hidden" id="simple_spc" name="simple_spc" value="73070252224445"> <script type="text/javascript"> document.getElementById("si" + "mple" + "_spc").value = "73070252224445-73070252224445"; </script>
                         <div class="formFooter-heightMask"> </div>
                     </form>
@@ -2205,6 +2231,7 @@
             </div>
             <div class='container legal'>
                 <hr>
+                <p style="font-size: 16px;">Contact Us: info@vprep.in</p>
                 <p>Vprep &copy; 2018 </p>
             </div>
         </div>
