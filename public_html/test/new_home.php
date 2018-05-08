@@ -1860,8 +1860,10 @@
             <!-- ctas -->
             <section class='header-ctas container' >
                 <h1>
-                    Are you engineering student /campus ?
-                    <p>Vprep helps your college or university drive student engagement from orientation to graduation using the power of web.</p>
+                    Bring your Assessments and Engagements online
+                    <p>Technology-enabled Assessments helps you identify actionable areas for students. Digital engagements fills the communication gap and brings every stakeholder in institute to same platform.</p>
+                    <!--Are you engineering student /campus ?
+                    <p>Vprep helps your college or university drive student engagement from orientation to graduation using the power of web.</p>-->
                 </h1>
             </section>
             <!--<button class='learn' id='learnMore'>Learn More</button>-->
@@ -2122,7 +2124,7 @@
                             <ul class="form-section page-section" style="background: #565a5f;">
                                 <li id="cid_10" class="form-input-wide" data-type="control_head" style="margin-top: 1%">
                                     <div class="form-header-group ">
-                                        <div class="header-text httac htvam">
+                                        <div class="header-text httac htvam" style="background-color: #5277c8;">
                                             <h1 id="header_10" class="form-header" data-component="header" > Contact Us </h1>
                                         </div>
                                     </div>
@@ -2131,22 +2133,22 @@
                                     <label class="form-label  form-label-left form-label-auto" id="label_3" for="input_3" style="color: #FFFFff;"> Name <span class="form-required"> * </span> </label>
                                     <div id="cid_3" class="form-input jf-required"> <input type="text" id="input_3" name="q3_name" data-type="input-textbox" class="form-textbox validate[required]" size="35" value="" placeholder=" " data-component="textbox" required=""> </div>
                                 </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_4">
+                                <li class="form-line jf-required" data-type="control_textbox" id="id_4" style="padding-top: 4px;">
                                     <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4" style="color: #FFFFff;"> E-mail <span class="form-required"> * </span> </label>
                                     <div id="cid_4" class="form-input jf-required"> <input type="text" id="input_4" name="q4_email" data-type="input-textbox" class="form-textbox validate[required]" size="35" value="" placeholder=" " data-component="textbox" required=""> </div>
                                 </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_5">
-                                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5" style="color: #FFFFff;"> Contact Number <span class="form-required"> * </span> </label>
+                                <li class="form-line jf-required" data-type="control_textbox" id="id_5" style="padding-top: 4px;">
+                                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5" style="color: #FFFFff;padding-top: 4px;"> Contact Number <span class="form-required"> * </span> </label>
                                     <div id="cid_5" class="form-input jf-required"> <input type="text" id="input_5" name="q5_contactNumber" data-type="input-textbox" class="form-textbox validate[required]" size="35" value="" placeholder=" " data-component="textbox" required=""> </div>
                                 </li>
 
-                                <li class="form-line jf-required" data-type="control_textarea" id="id_7">
-                                    <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7" style="color: #FFFFff;"> Message <span class="form-required"> * </span> </label>
+                                <li class="form-line jf-required" data-type="control_textarea" id="id_7" style="padding-top: 4px;">
+                                    <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7" style="color: #FFFFff;padding-top: 4px;"> Message <span class="form-required"> * </span> </label>
                                     <div id="cid_7" class="form-input jf-required"> <textarea id="input_7" class="form-textarea validate[required]" name="q7_message" cols="38" rows="7" data-component="textarea" required=""></textarea> </div>
                                 </li>
-                                <li class="form-line" data-type="control_button" id="id_2" style="margin: 4%;">
+                                <li class="form-line" id="id_2" style="margin: 4%;">
                                     <div id="cid_2" class="form-input-wide">
-                                        <div style="text-align:center;" class="form-buttons-wrapper"> <button id="input_2" type="submit" class="form-submit-button form-submit-button-book_blue2" data-component="button"> Submit </button> </div>
+                                        <div style="text-align:center;" class="form-buttons-wrapper"> <button id="input_2" type="submit" style="background-color: #5277c8;" class="form-submit-button form-submit-button-book_blue2" data-component="button"> Submit </button> </div>
                                     </div>
                                 </li>
                                 <li style="display:none"> Should be Empty: <input type="text" name="website" value=""> </li>
