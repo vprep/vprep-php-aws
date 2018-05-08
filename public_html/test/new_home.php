@@ -1722,10 +1722,10 @@
                             <a href='#'>Campus Solutions</a>
                             <ul>
                                 <li class="">
-                                    <a data-section="college_engage"  href='#collEngage' style="font-size: 12px!important;">College Engagement</a>
+                                    <a data-section="college_engage"  href='#collEngage' style="font-size: 12px!important;">Assessment Platform</a>
                                 </li>
                                 <li>
-                                    <a data-section="student_engage"  href='#stuEngage' style="font-size: 12px!important;">Student Engagement</a>
+                                    <a data-section="student_engage"  href='#stuEngage' style="font-size: 12px!important;">Engagement Platform</a>
                                 </li>
                             </ul>
                         </li>
@@ -1985,20 +1985,19 @@
             <header class='intro' >
 
                 <div class='container' >
-                    <h1>Everything you need to drive student engagement</h1>
-                    <p>Vprep helps you centralize your programming and resources on web and gather critical data</p>
+                    <h1>Everything you need to conduct online assessment</h1>
+                    <p>Vprep is the new centralized examination center you need. Host your question bank on cloud or alternatively use our question bank to create online tests in minutes.     </p>
                     <ul class='steps'>
                         <li class='first'>
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.2s' data-wow-duration='0.4s' src='library/img/com.png' width="250px" height="180px">
                             <h2>Engagement platform</h2>
-                            <p>Give your students a strong start</p>
+                            <p>All you need to bring every stakeholder at one place</p>
                         </li>
                         <li class='middle'>
                             <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.3s' data-wow-duration='0.4s' src='library/img/sc.png' width="250px" height="190px">
                             <h2>Assessments and Analysis</h2>
 
-                            <p>Build an engaged community on web
-                            </p>
+                            <p>Identify who’s lacking where and take action accordingly</p>
 
                         </li>
                         <li class='last'>
@@ -2018,30 +2017,30 @@
             <div id="stuEngage" >
         <section class='illustrated-features bg-grey'>
             <div class='container'>
-                <h1>Reach your students from orientation to graduation</h1>
+                <h1>Digital engagements between every stakeholder</h1>
                 <p class='desc'>
-                    Vprep meets your students when they arrive on campus for orientation and grows with them all the way through graduation.
+                    Vprep’s engagement platform act as a Q&A platform for the college and helps students in getting their doubts resolved quickly through collaboration. It also helps teachers to remain connected with students even after working hours.
                 <ul class='fading-steps'>
                     <li>
                         <div class='home1 step1'>
                             <img alt='' class='ill' src='library/img/comm.png' width="200px" height="280px">
                         </div>
                         <h2>Communication</h2>
-                        <p>During the craziness of Communication, Vprep quickly connects your students to campus and to each other.</p>
+                        <p>During the craziness of examination prep time, vprep quickly helps students get connected with each other and the faculty and get their doubts resolved.</p>
                     </li>
                     <li>
                         <div class='home2 step2'>
                             <img alt='' class='ill' src='library/img/col.png' width="200px" height="280px">
                         </div>
                         <h2>Collaboration</h2>
-                        <p>The platform encourages continued involvement by putting every single event at your students' fingertips.</p>
+                        <p>The platform encourages continuous collaboration between students and the faculty thereby increasing productivity and growth.</p>
                     </li>
                     <li>
                         <div class='step3'>
                             <img alt='' class='ill' src='library/img/g.png' width="200px" height="280px">
                         </div>
                         <h2>Graduation</h2>
-                        <p>Vprep adapts to changing interests all the way through graduation and even allows you to engage alumni.</p>
+                        <p>Vprep helps students to get connected with the alumni and seek potential growth opportunities.</p>
                     </li>
                 </ul>
             </div>
@@ -2115,7 +2114,7 @@
             <div class="container">
                 <div class="form-area " data-section="contact" >
                 <div class="row" >
-                    <form class="jotform-form" action="/mail_contact_us.php" method="post" name="form_73070252224445" id="73070252224445" accept-charset="utf-8">
+                    <form class="jotform-form" action="http://vprep.in/mail_contact_us.php" method="post" name="form_73070252224445" id="73070252224445" accept-charset="utf-8">
                     <div class="col-md-4"></div>
                     <div class="col-md-4" id="contactForm" style="padding-top: 100px;">
 
@@ -2148,7 +2147,7 @@
                                 </li>
                                 <li class="form-line" id="id_2" style="margin: 4%;">
                                     <div id="cid_2" class="form-input-wide">
-                                        <div style="text-align:center;" class="form-buttons-wrapper"> <button id="input_2" type="submit" style="background-color: #5277c8;" class="form-submit-button form-submit-button-book_blue2" data-component="button"> Submit </button> </div>
+                                        <div style="text-align:center;" class="form-buttons-wrapper"> <button id="input_2" type="submit" style="background-color: #5277c8;font-weight: bold;" class="form-submit-button form-submit-button-book_blue2" data-component="button"> Submit </button> </div>
                                     </div>
                                 </li>
                                 <li style="display:none"> Should be Empty: <input type="text" name="website" value=""> </li>
@@ -2164,7 +2163,7 @@
         </div>
         <script type="text/javascript">JotForm.ownerView=true;</script></body></html>
 
-        <div class='bottom'>
+        <div class='bottom' style="background: rgba(8,16,37,0.8);">
             <div class='container'>
                 <!--<nav>
 
