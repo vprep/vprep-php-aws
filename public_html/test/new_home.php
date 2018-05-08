@@ -2047,63 +2047,17 @@
         </section>
             </div>
         </div>
-        <section class='trusted-by dark' style="display: none;">
-            <h1>Trusted By</h1>
+    <section class='trusted-by dark' >
+            <h1>Recognitions</h1>
             <div class='owl-carousel owl-theme'>
                 <div class='item'>
-                    <img alt='Drexel' src='library/img/school-drexel.svg'>
+                    <img alt='Drexel' src='library/img/10000Startups-Logo-2.png'>
                 </div>
                 <div class='item'>
-                    <img alt='RISD' src='library/img/school-risd.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Johnson &amp;amp; Whales' src='library/img/school-johnson-whales.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='RIT' src='library/img/school-rit.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Rowan' src='library/img/school-rowan.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Texas A &amp;amp; M' src='library/img/school-taam.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='UMass' src='library/img/school-umass.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Vanderbilt' src='library/img/school-vanderbilt.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Washu' src='library/img/school-washu.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Whittier' src='library/img/school-whittier.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Yale' src='library/img/school-yale.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Laurentian' src='library/img/school-laurentian.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Drew' src='library/img/school-drew.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Gordon' src='library/img/school-gordon.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='HPU' src='library/img/school-hpu.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Lehigh' src='library/img/school-lehigh.svg'>
-                </div>
-                <div class='item'>
-                    <img alt='Tiffin' src='library/img/school-tiffin.svg'>
+                    <img alt='Johnson &amp;amp; Whales' src='library/img/smart-50.png'>
                 </div>
             </div>
-        </section>
-    </div>
+        </section></div>
     <!-- footer -->
     <head>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
