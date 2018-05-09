@@ -1740,9 +1740,9 @@
                 <nav>
 
                     <ul style="margin-top: 18px !important">
-                        <li class='has-icon'>
+                        <!--<li class='has-icon'>
                             <a href="#" id="sign-up-id"class="dropdown-toggle" data-toggle="dropdown">Sign Up<span class="caret"></span></a>
-                        </li>
+                        </li>-->
                         <li class='has-icon'>
                             <a href="#" id="sign-in-id"class="dropdown-toggle" data-toggle="dropdown">Sign In<span class="caret"></span></a>
                         </li>
@@ -2047,7 +2047,7 @@
         </section>
             </div>
         </div>
-    <section class='trusted-by dark' >
+    <section class='trusted-by dark' style="background: lightgray;" >
             <h1>Recognitions</h1>
             <div class='owl-carousel owl-theme'>
                 <div class='item'>
@@ -2082,22 +2082,25 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_3">
-                                    <label class="form-label  form-label-left form-label-auto" id="label_3" for="input_3" style="color: #FFFFff;"> Name <span class="form-required"> * </span> </label>
-                                    <div id="cid_3" class="form-input jf-required"> <input type="text" id="input_3" name="q3_name" data-type="input-textbox" class="form-textbox validate[required]" size="35" value="" placeholder=" " data-component="textbox" required=""> </div>
+                                <li class="form-line jf-required" data-type="control_textbox" id="id_3" style="width:100%!important;padding-top: 4px;">
+                                    <!--<td><label for="startDateId" style="color: #FFFFff;">Name</label></td>
+                                    <td><input class="inner-text date-picker" style="width: 100%;" name="startDate" type="text" id="startDateId"
+                                           required="required"/></td>-->
+                                   <!-- <label class="form-label  form-label-left form-label-auto" id="label_3" for="input_3" style="color: #FFFFff;"> Name <span class="form-required"> * </span> </label>-->
+                                    <div id="cid_3" class="form-input jf-required"> <input type="text" id="input_3" name="q3_name" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="Name" data-component="textbox" required=""> </div>
                                 </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_4" style="padding-top: 4px;">
-                                    <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4" style="color: #FFFFff;"> E-mail <span class="form-required"> * </span> </label>
-                                    <div id="cid_4" class="form-input jf-required"> <input type="text" id="input_4" name="q4_email" data-type="input-textbox" class="form-textbox validate[required]" size="35" value="" placeholder=" " data-component="textbox" required=""> </div>
+                                <li class="form-line jf-required" data-type="control_textbox" id="id_4" style="width:100%!important;padding-top: 4px;">
+                                   <!-- <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4" style="color: #FFFFff;"> E-mail <span class="form-required"> * </span> </label>-->
+                                    <div id="cid_4" class="form-input jf-required"> <input type="text" id="input_4" name="q4_email" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="E-mail" data-component="textbox" required=""> </div>
                                 </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_5" style="padding-top: 4px;">
-                                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5" style="color: #FFFFff;padding-top: 4px;"> Contact Number <span class="form-required"> * </span> </label>
-                                    <div id="cid_5" class="form-input jf-required"> <input type="text" id="input_5" name="q5_contactNumber" data-type="input-textbox" class="form-textbox validate[required]" size="35" value="" placeholder=" " data-component="textbox" required=""> </div>
+                                <li class="form-line jf-required" data-type="control_textbox" id="id_5" style="width:100%!important;padding-top: 4px;">
+                                    <!--<label class="form-label form-label-left form-label-auto" id="label_5" for="input_5" style="color: #FFFFff;padding-top: 4px;"> Contact Number <span class="form-required"> * </span> </label>-->
+                                    <div id="cid_5" class="form-input jf-required"> <input type="text" id="input_5" name="q5_contactNumber" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="Contact Number" data-component="textbox" required=""> </div>
                                 </li>
 
-                                <li class="form-line jf-required" data-type="control_textarea" id="id_7" style="padding-top: 4px;">
-                                    <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7" style="color: #FFFFff;padding-top: 4px;"> Message <span class="form-required"> * </span> </label>
-                                    <div id="cid_7" class="form-input jf-required"> <textarea id="input_7" class="form-textarea validate[required]" name="q7_message" cols="38" rows="7" data-component="textarea" required=""></textarea> </div>
+                                <li class="form-line jf-required" data-type="control_textarea" id="id_7" style="width:100%!important;padding-top: 4px;">
+                                    <!--<label class="form-label form-label-left form-label-auto" id="label_7" for="input_7" style="color: #FFFFff;padding-top: 4px;"> Message <span class="form-required"> * </span> </label>-->
+                                    <div id="cid_7" class="form-input jf-required"> <textarea id="input_7" class="form-textarea validate[required]" name="q7_message" style="width: 100%;" rows="7" placeholder="Message" data-component="textarea" required=""></textarea> </div>
                                 </li>
                                 <li class="form-line" id="id_2" style="margin: 4%;">
                                     <div id="cid_2" class="form-input-wide">
