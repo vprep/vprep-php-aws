@@ -121,6 +121,21 @@ class Educational_model extends CI_Model {
        echo strtotime("-1 week");
     
     }
+
+    function getWeeklyPosts($topic, $subTopic, $startDate, $endDate,$searchInput){
+        $fetchData = "select * from college_post where created_at >='$startDate' and created_at < $endDate  ";
+        if($topic != null && strlen($topic) > 0 ){
+            $fetchData.=" and subject = '$topic' ";
+        }
+        if($subTopic != null  ){
+            $fetchData.=" and  type = '$subTopic' ";
+        }
+        if($searchInput != null && strlen($searchInput)>0){
+            $fetchData.=" and (heading like '$searchInput' or details like '$searchInput' ) ";
+        }
+        $fetchData.=" order by id desc ";
+        echo json_encode($this->db->query($fetchData)->result_array());
+    }
     
     function test_json(){
     $post_id = $_GET['post_id'];
@@ -129,7 +144,7 @@ class Educational_model extends CI_Model {
     $data["post_ans"] = $this->db->query("select cprh.id, cprh.post_id, cprh.post_response, cprh.is_student, cprh.user_id, cprh.created_at, cprh.updated_at, u.name, u.city from college_post_response_history cprh inner join users u on u.id = cprh.user_id where post_id = $post_id order by created_at desc")->result_array();
     $data['post_que'] = $post_que;
     $user_id = $this->session->userdata('userdata')['userid'];
-$data["post_user_name"] = $this->db->query("select name from users where id = $user_id limit 1")->row_array();
+    $data["post_user_name"] = $this->db->query("select name from users where id = $user_id limit 1")->row_array();
     header("Content-Type: application/json");
 
 

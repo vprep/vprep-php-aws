@@ -109,20 +109,12 @@ $userId = $this->getCurrentUserId();
     }
     
     function get_engineering_college(){
-    
-    
 
-    
-    
-   
     echo json_encode($this->edu->get_engineering_college());
-    
-    
-    
-    
-    
+
     }
-    
+
+
     function index(){
         $data[]=array();
         $this->template->load('educational','frontend/educational/home',$data);
@@ -2856,23 +2848,44 @@ $user_id = $this->session->userdata('userdata')['userid'];
 $data["post_user_name"] = $this->db->query("select name from users where id = $user_id limit 1")->row_array();
 $time = strtotime("-1 week");
 $data["current_week"] = $this->db->query("SELECT * FROM college_post where created_at >='$time' order by id desc ")->result_array();
+$time_2 = strtotime("-2 week");
+$time_3 = strtotime("-3 week");
+$time_4 = strtotime("-4 week");
+$time_5 = strtotime("-5 week");
+$data["prev_week_2_start"] = $time_2 * 1000;
+$data["prev_week_2_end"] = $time * 1000;
+$data["prev_week_3_start"] = $time_3 * 1000;
+$data["prev_week_3_end"] = $time_2 * 1000;
+$data["prev_week_4_start"] = $time_4 * 1000;
+$data["prev_week_4_end"] = $time_3 * 1000;
+$data["prev_week_5_start"] = $time_5 * 1000;
+$data["prev_week_5_end"] = $time_4 * 1000;
+$data["prev_week_2"] = $this->db->query("SELECT * FROM college_post where created_at >='$time_2' and created_at < '$time' order by id desc ")->result_array();
+
+$data["prev_week_3"] = $this->db->query("SELECT * FROM college_post where created_at >='$time_3' and created_at < '$time_2' order by id desc ")->result_array();
+
+$data["prev_week_4"] = $this->db->query("SELECT * FROM college_post where created_at >='$time_4' and created_at < '$time_3' order by id desc ")->result_array();
+
+$data["prev_week_5"] = $this->db->query("SELECT * FROM college_post where created_at >='$time_5' and created_at < '$time_4' order by id desc ")->result_array();
 
 $data["options"] = $this->db->query("select cpo.id, cpo.option, round((count(cprh.poll_response)/total_vote)*100) as percent from college_poll_options cpo left join college_post_response_history cprh on cpo.id = cprh.poll_response 
 left join (select post_id, count(*) as total_vote from college_post_response_history group by post_id ) a on a.post_id = cpo.poll_id 
 where poll_id = $post_id group by cpo.id, cpo.option")->result_array();
 
-
-
-
-    
     	$data["post_detail"] = $result;
-    	 
-    	
-   	
-    
-    	
+
   $this->template->load('frontend','frontend/home/engage_home',$data); 
  
+    }
+
+
+    function getWeeklyPosts(){
+        $topic = $_GET["topic"];
+        $subTopic = $_GET["sub_topic"];
+        $startDate = $_GET["start_date"];
+        $endDate = $_GET["end_date"];
+        $searchInput = $_GET["search_input"];
+        $this->edu->getWeeklyPosts($topic,$subTopic,$startDate,$endDate,$searchInput);
     }
     
     function test_json(){

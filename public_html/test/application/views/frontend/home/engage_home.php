@@ -78,7 +78,7 @@
         $(document).on('click','.inside-que',function (e) {
             var post_id = $(this).attr("data-id");
             $.ajax({
-                url: "http://test.vprep.in/test_json?post_id="+post_id,
+                url: "test_json?post_id="+post_id,
                 method: "GET",
                 contentType: "application/json",
                 dataType: "json",
@@ -127,7 +127,99 @@
                         '                    </div> ' +
                         '                </div> ' +
                         '            </div>' +
-                        '</div>';
+                        '</div></div>';
+                    postHtml += "<div class=\"row new-post-body\" style=\"display: none;padding:1px;\">\n" +
+                        "                <div class=\"panel panel-default\">\n" +
+                        "                    <div class=\"panel-heading\">\n" +
+                        "                        <div class=\"row\">\n" +
+                        "                            <div class=\"col-sm-2\"><span style=\"font-size: 12px;\">Post type</span></div>\n" +
+                        "                            <div class=\"col-sm-5\"><span style=\"font-size: 12px;\"><input id='postQuestionId' type=\"radio\" name=\"question\" value=\"male\" checked> Question </br>\n" +
+                        "                                [When you need an answer]</span></div>\n" +
+                        "                            <div class=\"col-sm-5\"><span style=\"font-size: 12px;\"><input id=\"postPollId\" type=\"radio\" name=\"question\" value=\"male\"> Poll </br>[When you need Votes from others]</span></div>\n" +
+                        "                        </div>\n" +
+                        "                    </div>\n" +
+                        "                    <div id=\"question-body\" class=\"panel-body\"  style=\"margin-top: 1%;\">\n" +
+                        "                        <div class=\"row\">\n" +
+                        "                            <div class=\"col-sm-2\">\n" +
+                        "                                <span>Heading</span>\n" +
+                        "                            </div>\n" +
+                        "                            <div class=\"col-sm-10\">\n" +
+                        "                                <span><input id=queHeading  type=\"text\" style=\"width: 100%;\"></span>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"row\" style=\"margin-top: 5%;\">\n" +
+                        "                            <div class=\"col-sm-2\">\n" +
+                        "                                <span>Details</span>\n" +
+                        "                            </div>\n" +
+                        "                            <div class=\"col-sm-10\">\n" +
+                        "                                <span><textarea id=queDetail rows=\"6\" style=\"width: 100%;\"></textarea></span>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"row\" style=\"margin-top: 5%;\">\n" +
+                        "                            <div class=\"col-sm-2\">\n" +
+                        "                                <span>Choose Topic</span>\n" +
+                        "                            </div>\n" +
+                        "                            <div class=\"col-sm-10\">\n" +
+                        "                                    <span>\n" +
+                        "                                    <select id=subListId style=\"width: 100%;\">\n" +
+                        "                                        <option value=\"Programming\">Programming</option>\n" +
+                        "                                        <option value=\"Aptitude\">Aptitude</option>\n" +
+                        "                                        <option value=\"Verbal\">Verbal</option>\n" +
+                        "                                        <option value=\"Data Structures\" selected>Data Structures</option>\n" +
+                        "                                    </select>\n" +
+                        "                                        </span>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "\n" +
+                        "                    </div>\n" +
+                        "                    <div id=\"poll-body\" class=\"panel-body\"  style=\"margin-top: 1%;display: none;\">\n" +
+                        "                        <div class=\"row\">\n" +
+                        "                            <div class=\"col-sm-2\">\n" +
+                        "                                <span>Heading</span>\n" +
+                        "                            </div>\n" +
+                        "                            <div class=\"col-sm-10\">\n" +
+                        "                                <span><input id =pollHeading type=\"text\" style=\"width: 100%;\"></span>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"row\" style=\"margin-top: 5%;\">\n" +
+                        "                            <div class=\"col-sm-2\">\n" +
+                        "                                <span>Details</span>\n" +
+                        "                            </div>\n" +
+                        "                            <div class=\"col-sm-10\">\n" +
+                        "                                <span><textarea  id=pollDetail rows=\"6\" style=\"width: 100%;\"></textarea></span>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                        <div class=\"row\" style=\"margin-top: 5%;\">\n" +
+                        "                            <div class=\"row-fluid\">\n" +
+                        "                                <div class=\"col-sm-2\">\n" +
+                        "                                    <span>Options</span>\n" +
+                        "                                </div>\n" +
+                        "                                <div class=\"col-sm-10\">\n" +
+                        "                                    <div class=\"col-sm-10\">\n" +
+                        "                                        <input class=\"option-value\" type=\"text\" style=\"width: 100%;\" name=\"optionValue\" value=\"\" required=\"required\" />\n" +
+                        "                                    </div>\n" +
+                        "                                    <div class=\"row-fluid col-sm-2\">\n" +
+                        "                                        <button type=\"button\" class=\"btn btn-default btn-sm add-option\" style=\"background-color: green;line-height: 8px;\">\n" +
+                        "                                            <span style=\"color: white;\">+</span>\n" +
+                        "                                        </button>\n" +
+                        "                                    </div>\n" +
+                        "                                </div>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "\n" +
+                        "                    </div>\n" +
+                        "                    <div class=\"panel-footer\" style=\"margin-top: 1%;\">\n" +
+                        "                        <div class=\"row\">\n" +
+                        "                            <div class=\"col-sm-2\"></div>\n" +
+                        "                            <div class=\"col-sm-10\">\n" +
+                        "                                <span class=\"col-sm-6\"><button id=\"postId\" type=\"button\" class=\"btn btn-primary\">Submit</button></span>\n" +
+                        "                                <span class=\"col-sm-4\"><button type=\"button\" class=\"btn btn-primary\" id=\"newPostCancelId\">Cancel</button></span>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                    </div>\n" +
+                        "                </div>\n" +
+                        "\n" +
+                        "            </div> ";
 
                     $('#post-content-id').html(postHtml);
                 },
@@ -160,7 +252,7 @@
 
                 /*   $(this).parent().parent().parent().insertBefore(html,this.firstChild);*/
                 $.ajax({
-                    url: "http://test.vprep.in/educational/add_post_reply?post_id=" + postId + "&post_response=" + response + "&is_student=" + isStudent,
+                    url: "educational/add_post_reply?post_id=" + postId + "&post_response=" + response + "&is_student=" + isStudent,
                     method: "GET",
                     contentType: "application/json",
                     dataType: "json",
@@ -205,7 +297,7 @@
             var vote_id = $('.poll-select:checked').val();
             var post_id = $('#post_id').val();
             var request = $.ajax({
-                url: "http://test.vprep.in/educational/add_vote?post_id=" + post_id + "&vote_id=" + vote_id,
+                url: "educational/add_vote?post_id=" + post_id + "&vote_id=" + vote_id,
                 method: "GET",
                 contentType: "application/json",
                 dataType: "json"
@@ -237,7 +329,7 @@
             } else
             if(heading != null && heading.length > 0 && detail != null && detail.length > 0 && subject != null && subject.length >0 ) {
                 $.ajax({
-                    url: "http://test.vprep.in/educational/add_new_post?post_type" + postType + "&subject=" + subject + "&heading=" + heading + "&detail=" + detail + "&is_student=true",
+                    url: "educational/add_new_post?post_type" + postType + "&subject=" + subject + "&heading=" + heading + "&detail=" + detail + "&is_student=true",
                     method: "GET",
                     contentType: "application/json",
                     dataType: "json",
@@ -267,7 +359,7 @@
             } else {
 
                 var request = $.ajax({
-                    url: "http://test.vprep.in/educational/add_new_post?post_type=" + postType + "&subject=NA" + "&heading=" + heading + "&detail=" + detail + "&is_student=true",
+                    url: "educational/add_new_post?post_type=" + postType + "&subject=Poll" + "&heading=" + heading + "&detail=" + detail + "&is_student=true",
                     method: "GET",
                     contentType: "application/json",
                     dataType: "json"
@@ -279,7 +371,7 @@
                 request.always(function () {
                     $('.option-value').each(function () {
                         var request = $.ajax({
-                            url: "http://test.vprep.in/educational/add_new_poll?options=" +$(this).val()+"&post_type" + postType + "&subject=NA" + "&heading=" + heading + "&detail=" + detail + "&is_student=true" ,
+                            url: "educational/add_new_poll?options=" +$(this).val()+"&post_type" + postType + "&subject=Poll" + "&heading=" + heading + "&detail=" + detail + "&is_student=true" ,
                             method: "GET",
                             contentType: "application/json",
                             dataType: "json"
@@ -326,21 +418,25 @@
         }
 
         window.setInterval(function(){
-            var addHtml = '';
+            var addHtml1 = '';
+            var startDate_1 = parseInt((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))/1000);
+            var endDate_1 = parseInt(new Date().getTime()/1000);
             $.ajax({
-                url: "http://test.vprep.in/educational/weekly_json",
+                url: "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic=&search_input=",
                 method: "GET",
-                contentType: "application/json",
-                dataType: "json",
+         //       contentType: "application/json",
+         //       dataType: "json",
                 success: function (data) {
+                    var res = JSON.parse(data);
 
-                    if(data.current_week.length >initialCount){
-                        for(var i=initialCount; i<data.current_week.length;i++){
-                            addHtml += '<div class="panel panel-default"> ' +
+
+                    if(res.length >initialCount){
+                        for(var i=(initialCount); i<res.length;i++){
+                           /* addHtml += '<div class="panel panel-default"> ' +
                                 '                            <div class="panel-heading"> ' +
                                 '                                <div class="row"> ' +
                                 '                                    <div class="col-sm-11"><div class="col-sm-10"> ' +
-                                '                                        <span style="float: left;">'+new Date(data.current_week[i].created_at*1000)+'testing</span> ' +
+                                '                                        <span style="float: left;">'+formatDate(res[i].created_at)+'testing</span> ' +
                                 '                                    </div> ' +
                                 '                                        <div class="col-sm-1"> ' +
                                 '                                            <button type="button" class="btn btn-danger" style="font-size: 8px;">P</button> ' +
@@ -348,14 +444,38 @@
                                 '                                    </div> ' +
                                 '                                </div> ' +
                                 '                            </div> ' +
-                                '                            <div class="panel-body inside-que" data-id="'+data.current_week[i].id+'"> ' +
-                                '                                <h5 style="font-weight: bold;">'+data.current_week[i].heading+'</h5> ' +
-                                '                                <p>'+data.current_week[i].details+'</p> ' +
+                                '                            <div class="panel-body inside-que" data-id="'+res[i].id+'"> ' +
+                                '                                <h5 style="font-weight: bold;">'+res[i].heading+'</h5> ' +
+                                '                                <p>'+res[i].details+'</p> ' +
                                 '                            </div> ' +
-                                '                        </div>'
+                                '                        </div>' */
+                            addHtml1 += "<div class=\"panel panel-default\" style=\"margin-bottom: 5px;\">\n" +
+                                "                                            <div class=\"panel-body\" style=\"padding: 0px;\">\n" +
+                                "                                                <div class=\"row-fluid\" >\n" +
+                                "                                                    <div class=\"panel-body inside-que row-fluid\" data-id=\""+res[i].id+"\" style=\"padding: 0px!important;max-height: 43px;\">\n" +
+                                "                                                        <div class=\"col-sm-10 row-fluid\" style=\"padding-left: 2px;\">\n" +
+                                "                                                            <div class=\"row\" style=\"font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].heading+"</div>\n" +
+                                "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
+                                "                                                        </div>\n" +
+                                "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
+                                "                                                            <div class=\"row\">\n" +
+                                "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                                "                                                            </div>\n" +
+                                "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                            if(res[i].is_student){
+                                addHtml1 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                            } else {
+                                addHtml1 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                            }
+                            addHtml1 +=  "                                                            </div>\n" +
+                                "                                                        </div>\n" +
+                                "                                                    </div>\n" +
+                                "                                                </div>\n" +
+                                "                                            </div>\n" +
+                                "                                        </div>";
                         }
-                        initialCount = data.current_week.length;
-                        $('#add-weekly-id').prepend(addHtml);
+                        initialCount = res.length;
+                        $('#current_week_div').prepend(addHtml1);
 
                     }
                 },
@@ -363,9 +483,309 @@
                     console.log("Product detail Request failed: ", textStatus);
                 }
             });
-        }, 5000);
+        }, 2000);
+
+        function formatWeek(start, end) {
+            var monthNames = [
+                "Jan", "Feb", "Mar",
+                "Apr", "May", "Jun", "Jul",
+                "Aug", "Sep", "Oct",
+                "Nov", "Dec"
+            ];
+
+            var startDay = new Date(start).getDate();
+
+            var startMonthIndex = new Date(start).getMonth();
+            var startYear = new Date(start).getFullYear();
+
+            var endDay = new Date(end).getDate();
+            var endMonthIndex = new Date(end).getMonth();
+            var endYear = new Date(end).getFullYear();
+            return document.write('Week('+startDay + ' ' + monthNames[startMonthIndex] + ' - ' + endDay + ' '+monthNames[endMonthIndex]+')');
+        }
+
+        function formatDate(start) {
+
+                var inputDate = start*1000;
+            var day = new Date(inputDate).getDate();
+
+            var month = new Date(inputDate).getMonth();
+            var year = new Date(inputDate).getFullYear();
+
+
+            return year+'/'+(month+1)+'/'+day;
+        }
+
+
+
+
+        function weeklyPostsQuery(type, qry) {
+            var topics = [
+                "Data Structures", "Verbal", "Aptitude",
+                "Programming"
+            ];
+            var subTopics = ["Poll",""];
+            var types = ["search","topic","sub_topic"]
+          //  var currentDate = 1526199604546 - (7 * 24 * 60 * 60 * 1000);
+            var startDate_1 = parseInt((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))/1000);
+            var endDate_1 = parseInt(new Date().getTime()/1000);
+            var startDate_2 =startDate_1 -(7*24*60*60);
+            var endDate_2 = startDate_1;
+            var startDate_3 = startDate_2 -(7*24*60*60);
+            var endDate_3 = startDate_2;
+            var startDate_4 = startDate_3 -(7*24*60*60);
+            var endDate_4 = startDate_3;
+            var startDate_5 = startDate_4 -(7*24*60*60);
+            var endDate_5 = startDate_4;
+            var url_1;
+            var url_2;
+            var url_3;
+            var url_4;
+            var url_5;
+            //http://localhost/weekly_posts?start_date=1500100108&end_date=1526120198&topic=Data%20Structures&sub_topic=&search_input=%Hel%
+            if(types[type] == 'search'){
+                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic=&search_input=%"+qry+"%";
+            } else if(types[type] == 'sub_topic') {
+                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
+            } else {
+                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic="+topics[qry]+"&sub_topic=&search_input=";
+            }
+            if(types[type] == 'search'){
+                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic=&sub_topic=&search_input=%"+qry+"%";
+            }else if(types[type] == 'sub_topic') {
+                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
+            } else {
+                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic="+topics[qry]+"&sub_topic=&search_input=";
+            }
+            if(types[type] == 'search'){
+                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic=&sub_topic=&search_input=%"+qry+"%";
+            } else if(types[type] == 'sub_topic') {
+                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
+            } else {
+                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic="+topics[qry]+"&sub_topic=&search_input=";
+            }
+            if(types[type] == 'search'){
+                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic=&sub_topic=&search_input=%"+qry+"%";
+            } else if(types[type] == 'sub_topic') {
+                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
+            } else {
+                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic="+topics[qry]+"&sub_topic=&search_input=";
+            }
+            if(types[type] == 'search'){
+                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic=&sub_topic=&search_input=%"+qry+"%";
+            }else if(types[type] == 'sub_topic') {
+                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
+            } else {
+                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic="+topics[qry]+"&sub_topic=&search_input=";
+            }
+
+
+
+            $.ajax({
+                url: url_1,
+                method: "GET",
+                success: function(data) {
+                    var res = JSON.parse(data);
+
+                    var addHtml1 = "";
+
+                    for ( var i in res) {
+
+
+                        addHtml1 += "<div class=\"panel panel-default\" style=\"margin-bottom: 5px;\">\n" +
+                            "                                            <div class=\"panel-body\" style=\"padding: 0px;\">\n" +
+                            "                                                <div class=\"row-fluid\" >\n" +
+                            "                                                    <div class=\"panel-body inside-que row-fluid\" data-id=\""+res[i].id+"\" style=\"padding: 0px!important;max-height: 43px;\">\n" +
+                            "                                                        <div class=\"col-sm-10 row-fluid\" style=\"padding-left: 2px;\">\n" +
+                            "                                                            <div class=\"row\" style=\"font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].heading+"</div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
+                            "                                                            <div class=\"row\">\n" +
+                            "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                            "                                                            </div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                        if(res[i].is_student){
+                            addHtml1 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                        } else {
+                            addHtml1 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                        }
+                        addHtml1 +=  "                                                            </div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                    </div>\n" +
+                            "                                                </div>\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>";
+
+                    }
+                    $("#current_week_div").html(addHtml1);
+
+                }});
+
+            $.ajax({
+                url: url_2,
+                method: "GET",
+                success: function(data) {
+                    var res = JSON.parse(data);
+
+                    var addHtml2 = "";
+                    for ( var i in res) {
+                        addHtml2 += "<div class=\"panel panel-default\" style=\"margin-bottom: 5px;\">\n" +
+                            "                                            <div class=\"panel-body\" style=\"padding: 0px;\">\n" +
+                            "                                                <div class=\"row-fluid\" >\n" +
+                            "                                                    <div class=\"panel-body inside-que row-fluid\" data-id=\""+res[i].id+"\" style=\"padding: 0px!important;max-height: 43px;\">\n" +
+                            "                                                        <div class=\"col-sm-10 row-fluid\" style=\"padding-left: 2px;\">\n" +
+                            "                                                            <div class=\"row\" style=\"font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].heading+"</div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
+                            "                                                            <div class=\"row\">\n" +
+                            "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                            "                                                            </div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                        if(res[i].is_student){
+                            addHtml2 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                        } else {
+                            addHtml2 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                        }
+                        addHtml2 +=  "                                                            </div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                    </div>\n" +
+                            "                                                </div>\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>";
+
+                    }
+                    $("#prev_week_div_2").html(addHtml2);
+
+                }});
+
+            $.ajax({
+                url: url_3,
+                method: "GET",
+                success: function(data) {
+                    var res = JSON.parse(data);
+
+                    var addHtml3 = "";
+                    for ( var i in res) {
+                        addHtml3 += "<div class=\"panel panel-default\" style=\"margin-bottom: 5px;\">\n" +
+                            "                                            <div class=\"panel-body\" style=\"padding: 0px;\">\n" +
+                            "                                                <div class=\"row-fluid\" >\n" +
+                            "                                                    <div class=\"panel-body inside-que row-fluid\" data-id=\""+res[i].id+"\" style=\"padding: 0px!important;max-height: 43px;\">\n" +
+                            "                                                        <div class=\"col-sm-10 row-fluid\" style=\"padding-left: 2px;\">\n" +
+                            "                                                            <div class=\"row\" style=\"font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].heading+"</div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
+                            "                                                            <div class=\"row\">\n" +
+                            "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                            "                                                            </div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                        if(res[i].is_student){
+                            addHtml3 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                        } else {
+                            addHtml3 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                        }
+                        addHtml3 +=  "                                                            </div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                    </div>\n" +
+                            "                                                </div>\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>";
+
+                    }
+                    $("#prev_week_div_3").html(addHtml3);
+
+                }});
+
+            $.ajax({
+                url: url_4,
+                method: "GET",
+                success: function(data) {
+                    var res = JSON.parse(data);
+                    var addHtml4 = "";
+                    for ( var i in res) {
+                        addHtml4 += "<div class=\"panel panel-default\" style=\"margin-bottom: 5px;\">\n" +
+                            "                                            <div class=\"panel-body\" style=\"padding: 0px;\">\n" +
+                            "                                                <div class=\"row-fluid\" >\n" +
+                            "                                                    <div class=\"panel-body inside-que row-fluid\" data-id=\""+res[i].id+"\" style=\"padding: 0px!important;max-height: 43px;\">\n" +
+                            "                                                        <div class=\"col-sm-10 row-fluid\" style=\"padding-left: 2px;\">\n" +
+                            "                                                            <div class=\"row\" style=\"font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].heading+"</div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
+                            "                                                            <div class=\"row\">\n" +
+                            "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                            "                                                            </div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                        if(res[i].is_student){
+                            addHtml4 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                        } else {
+                            addHtml4 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                        }
+                        addHtml4 +=  "                                                            </div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                    </div>\n" +
+                            "                                                </div>\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>";
+
+                    }
+                   $("#prev_week_div_4").html(addHtml4);
+
+                }});
+
+            $.ajax({
+                url: url_5,
+                method: "GET",
+                success: function(data) {
+                    console.log("success response 5");
+                    var res = JSON.parse(data);
+                    var addHtml5 = "";
+                    for ( var i in res) {
+                        console.log("start_5: "+formatDate(res[i].created_at));
+                        addHtml5 += "<div class=\"panel panel-default\" style=\"margin-bottom: 5px;\">\n" +
+                            "                                            <div class=\"panel-body\" style=\"padding: 0px;\">\n" +
+                            "                                                <div class=\"row-fluid\" >\n" +
+                            "                                                    <div class=\"panel-body inside-que row-fluid\" data-id=\""+res[i].id+"\" style=\"padding: 0px!important;max-height: 43px;\">\n" +
+                            "                                                        <div class=\"col-sm-10 row-fluid\" style=\"padding-left: 2px;\">\n" +
+                            "                                                            <div class=\"row\" style=\"font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].heading+"</div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
+                            "                                                            <div class=\"row\">\n" +
+                            "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                            "                                                            </div>\n" +
+                            "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                        if(res[i].is_student){
+                            addHtml5 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                        } else {
+                            addHtml5 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                        }
+                          addHtml5 +=  "                                                            </div>\n" +
+                            "                                                        </div>\n" +
+                            "                                                    </div>\n" +
+                            "                                                </div>\n" +
+                            "                                            </div>\n" +
+                            "                                        </div>";
+
+                    }
+            $("#prev_week_div_5").html(addHtml5);
+
+                }});
+
+        }
+
+        $(document).keypress(function(e) {
+            var searchInput = $("#searchPostId").val();
+            if(e.which == 13 && searchInput != null && searchInput.length > 0 ) {
+                weeklyPostsQuery(0,searchInput)
+            }
+        });
+
 
     </script>
+
 
 </head>
 <body>
@@ -374,13 +794,13 @@
     <div class="row-fluid" style="padding-top: 1%;">
         <div class="col-sm-3" >
             <div class="row">
-                <div class="col-sm-4 other">
+                <div class="col-sm-3 other">
                     <button id="newPostId" type="button" style="padding:3px 8px;" class="btn btn-primary">New Post</button>
                 </div>
-                <div class="col-sm-8 other2">
+                <div class="col-sm-9 other2">
                     <div id="custom-search-input">
-                        <div class="input-group col-md-12">
-                            <input type="text" class="form-control input-sm" placeholder="Search Post" />
+                        <div class="input-group col-md-12" style="margin-top: 1%;">
+                            <input id="searchPostId" type="text" class="form-control input-sm" placeholder="Search Post" />
                         </div>
                     </div>
                 </div>
@@ -388,108 +808,241 @@
             <div class="row" style="margin-top: 1%;">
                 <div class="col-sm-6">
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" style="padding: 2px 12px;" data-toggle="dropdown">Data Structures
-                            <span class="caret"></span></button>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" style="padding: 2px 12px;width: 100%;" data-toggle="dropdown">All
+                            <span class="caret" style="padding-bottom: 8%;"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,0)'>Data Structures</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,1)'>Verbal</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,2)'>Aptitude</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,3)'>Programming</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" style="padding: 2px 12px;" data-toggle="dropdown">Filter
-                            <span class="caret"></span></button>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" style="padding: 2px 12px;width: 100%;" data-toggle="dropdown">Filter
+                            <span class="caret" style="padding-bottom: 8%;"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(2,0)'>Poll</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(2,1)'>Post</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="row"  style="margin-top: 1%;">
-                <div class="panel panel-success">
-                    <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
-                        <h3 class="panel-title side-bar-tab">This Week</h3>
-                    </div>
-                    <div id="add-weekly-id" class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
-                        <?php if (!empty($current_week)): ?>
-                        <?php foreach ($current_week as $val): ?>
-                        <div class="panel panel-default" style="margin-bottom: 5px;">
-                            <div class="panel-body" style="padding: 0px;">
-                                <div class="row-fluid" >
-                                    <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
-                                        <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
-                                            <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
-                                            <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
-                                        </div>
-                                        <div class="col-sm-2 row-fluid" >
-                                            <div class="row">
-                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
-                                            </div>
-                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
-                                                <?php if ($val['is_student']): ?>
-                                                <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;">S</button>
-                                                <?php endif; ?>
-                                                <?php if (!$val['is_student']): ?>
-                                                <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;">P</button>
-                                                <?php endif; ?>
-                                            </div>
+            <div id="weeklyPost" style="margin: 4%;">
+                <div class="row"  style="margin-top: 1%;">
+                    <div class="panel panel-success">
+                        <input type="hidden" id="prev_week_2_start_id" value="<?php echo $prev_week_2_start/1000 ?>">
+                        <input type="hidden" id="prev_weel_2_end_id" value="<?php echo $prev_week_2_end/1000 ?>">
+                        <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
+                            <h3 class="panel-title side-bar-tab">This Week</h3>
+                        </div>
+                        <div id="current_week_div" class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
+                            <?php if (!empty($current_week)): ?>
+                                <?php foreach ($current_week as $val): ?>
+                                    <div class="panel panel-default" style="margin-bottom: 5px;">
+                                        <div class="panel-body" style="padding: 0px;">
+                                            <div class="row-fluid" >
+                                                <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
+                                                    <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
+                                                        <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
+                                                        <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
+                                                    </div>
+                                                    <div class="col-sm-2 row-fluid" >
+                                                        <div class="row">
+                                                            <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                        </div>
+                                                        <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                            <?php if ($val['is_student']): ?>
+                                                                <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                            <?php endif; ?>
+                                                            <?php if (!$val['is_student']): ?>
+                                                                <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                            <?php endif; ?>
+                                                        </div>
 
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
                     </div>
                 </div>
-            </div>
-            <div class="row"  style="margin-top: 1%;">
-                <div class="panel panel-success">
-                    <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
-                        <h3 class="panel-title side-bar-tab">Week(11 Feb - 17 Feb)</h3>
-                    </div>
-                    <div class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
-                        <?php if (!empty($current_week)): ?>
-                        <?php foreach ($current_week as $val): ?>
-                        <div class="panel panel-default" style="margin-bottom: 5px;">
-                            <div class="panel-body" style="padding: 0px;">
-                                <div class="row-fluid" >
-                                    <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
-                                        <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
-                                            <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
-                                            <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
-                                        </div>
-                                        <div class="col-sm-2 row-fluid" >
-                                            <div class="row">
-                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
-                                            </div>
-                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
-                                                <?php if ($val['is_student']): ?>
-                                                <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;">S</button>
-                                                <?php endif; ?>
-                                                <?php if (!$val['is_student']): ?>
-                                                <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;">P</button>
-                                                <?php endif; ?>
-                                            </div>
+                <?php if (!empty($prev_week_2)): ?>
+                <div id="prev_week_2_div" class="row"  style="margin-top: 1%;">
+                    <input type="hidden" id="prev_week_2_start_id" value="<?php echo $prev_week_2_start/1000 ?>">
+                    <input type="hidden" id="prev_weel_2_end_id" value="<?php echo $prev_week_2_end/1000 ?>">
+                    <div class="panel panel-success">
+                        <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
+                            <h3 class="panel-title side-bar-tab"><script>formatWeek(<?php echo $prev_week_2_start.','.$prev_week_2_end ?>);</script></h3>
+                        </div>
+                        <div id="prev_week_div_2" class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
+                            <?php if (!empty($prev_week_2)): ?>
+                                <?php foreach ($prev_week_2 as $val): ?>
+                                    <div class="panel panel-default" style="margin-bottom: 5px;">
+                                        <div class="panel-body" style="padding: 0px;">
+                                            <div class="row-fluid" >
+                                                <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
+                                                    <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
+                                                        <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
+                                                        <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
+                                                    </div>
+                                                    <div class="col-sm-2 row-fluid" >
+                                                        <div class="row">
+                                                            <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                        </div>
+                                                        <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                            <?php if ($val['is_student']): ?>
+                                                                <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                            <?php endif; ?>
+                                                            <?php if (!$val['is_student']): ?>
+                                                                <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                            <?php endif; ?>
+                                                        </div>
 
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php if (!empty($prev_week_3)): ?>
+                    <div id="prev_week_3_div" class="row"  style="margin-top: 1%;">
+                        <div class="panel panel-success">
+                            <input type="hidden" id="prev_week_3_start_id" value="<?php echo $prev_week_3_start/1000 ?>">
+                            <input type="hidden" id="prev_weel_3_end_id" value="<?php echo $prev_week_3_end/1000 ?>">
+                            <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
+                                <h3 class="panel-title side-bar-tab"><script>formatWeek(<?php echo $prev_week_3_start.','.$prev_week_3_end ?>);</script></h3>
+                            </div>
+                            <div id="prev_week_div_3" class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
+                                <?php if (!empty($prev_week_3)): ?>
+                                    <?php foreach ($prev_week_3 as $val): ?>
+                                        <div class="panel panel-default" style="margin-bottom: 5px;">
+                                            <div class="panel-body" style="padding: 0px;">
+                                                <div class="row-fluid" >
+                                                    <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
+                                                        <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
+                                                            <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
+                                                            <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
+                                                        </div>
+                                                        <div class="col-sm-2 row-fluid" >
+                                                            <div class="row">
+                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            </div>
+                                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                                <?php if ($val['is_student']): ?>
+                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                <?php endif; ?>
+                                                                <?php if (!$val['is_student']): ?>
+                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                <?php endif; ?>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($prev_week_4)): ?>
+                    <div id="prev_week_4_div" class="row"  style="margin-top: 1%;">
+                        <div class="panel panel-success">div
+                            <input type="hidden" id="prev_week_4_start_id" value="<?php echo $prev_week_4_start/1000 ?>">
+                            <input type="hidden" id="prev_weel_4_end_id" value="<?php echo $prev_week_4_end/1000 ?>">
+                            <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
+                                <h3 class="panel-title side-bar-tab"><script>formatWeek(<?php echo $prev_week_4_start.','.$prev_week_4_end ?>);</script></h3>
+                            </div>
+                            <div id="prev_week_div_4" class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
+                                <?php if (!empty($prev_week_4)): ?>
+                                    <?php foreach ($prev_week_4 as $val): ?>
+                                        <div class="panel panel-default" style="margin-bottom: 5px;">
+                                            <div class="panel-body" style="padding: 0px;">
+                                                <div class="row-fluid" >
+                                                    <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
+                                                        <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
+                                                            <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
+                                                            <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
+                                                        </div>
+                                                        <div class="col-sm-2 row-fluid" >
+                                                            <div class="row">
+                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            </div>
+                                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                                <?php if ($val['is_student']): ?>
+                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                <?php endif; ?>
+                                                                <?php if (!$val['is_student']): ?>
+                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                <?php endif; ?>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($prev_week_5)): ?>
+                    <div id="prev_week_5_div" class="row"  style="margin-top: 1%;">
+                        <div class="panel panel-success">
+                            <input type="hidden" id="prev_week_5_start_id" value="<?php echo $prev_week_5_start/1000 ?>">
+                            <input type="hidden" id="prev_weel_5_end_id" value="<?php echo $prev_week_5_end/1000 ?>">
+                            <div class="panel-heading need-collapse side-bar-panel" style="padding: 2px 7px;">
+                                <h3 class="panel-title side-bar-tab"><script>formatWeek(<?php echo $prev_week_5_start.','.$prev_week_5_end ?>);</script></h3>
+                            </div>
+                            <div id="prev_week_div_5" class="panel-body need-pointer row-fluid" style="height:280px;overflow:scroll;padding: 1px!important;">
+                                <?php if (!empty($prev_week_5)): ?>
+                                    <?php foreach ($prev_week_5 as $val): ?>
+                                        <div class="panel panel-default" style="margin-bottom: 5px;">
+                                            <div class="panel-body" style="padding: 0px;">
+                                                <div class="row-fluid" >
+                                                    <div class="panel-body inside-que row-fluid" data-id="<?php echo $val['id'];?>" style="padding: 0px!important;max-height: 43px;">
+                                                        <div class="col-sm-10 row-fluid" style="padding-left: 2px;">
+                                                            <div class="row" style="font-weight: bold;margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['heading'];?></div>
+                                                            <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
+                                                        </div>
+                                                        <div class="col-sm-2 row-fluid" >
+                                                            <div class="row">
+                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            </div>
+                                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                                <?php if ($val['is_student']): ?>
+                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                <?php endif; ?>
+                                                                <?php if (!$val['is_student']): ?>
+                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                <?php endif; ?>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="col-sm-9" id="post-content-id"  style="background-color: #d6e9c6;">
@@ -560,7 +1113,7 @@
                 </div>
             </div>
 
-            <div class="row new-post-body" style="display: none">
+            <div class="row new-post-body" style="display: none;padding: 1px;">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
@@ -594,9 +1147,9 @@
                             <div class="col-sm-10">
                                     <span>
                                     <select id=subListId style="width: 100%;">
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="vw">VW</option>
+                                        <option value="Programming">Programming</option>
+                                        <option value="Aptitude">Aptitude</option>
+                                        <option value="Verbal">Verbal</option>
                                         <option value="Data Structures" selected>Data Structures</option>
                                     </select>
                                         </span>
@@ -644,7 +1197,7 @@
                         <div class="row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
-                                <span class="col-sm-6"><button id="postId" type="button" class="btn btn-primary">Post Question to Data Structures</button></span>
+                                <span class="col-sm-6"><button id="postId" type="button" class="btn btn-primary">Submit</button></span>
                                 <span class="col-sm-4"><button type="button" class="btn btn-primary" id="newPostCancelId">Cancel</button></span>
                             </div>
                         </div>
