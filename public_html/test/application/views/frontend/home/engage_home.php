@@ -794,13 +794,13 @@
     <div class="row-fluid" style="padding-top: 1%;">
         <div class="col-sm-3" >
             <div class="row">
-                <div class="col-sm-3 other">
-                    <button id="newPostId" type="button" style="padding:3px 8px;" class="btn btn-primary">New Post</button>
+                <div class="col-sm-3 other" style="margin: 1px;">
+                    <button id="newPostId" type="button" style="padding:5px 8px;" class="btn btn-primary">New Post</button>
                 </div>
-                <div class="col-sm-9 other2">
+                <div class="col-sm-8 other2">
                     <div id="custom-search-input">
                         <div class="input-group col-md-12" style="margin-top: 1%;">
-                            <input id="searchPostId" type="text" class="form-control input-sm" placeholder="Search Post" />
+                            <input id="searchPostId" style="border-radius: 7px;height: 1%;" type="text" class="form-control input-sm" placeholder="Search Post" />
                         </div>
                     </div>
                 </div>
@@ -808,7 +808,7 @@
             <div class="row" style="margin-top: 1%;">
                 <div class="col-sm-6">
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" style="padding: 2px 12px;width: 100%;" data-toggle="dropdown">All
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" style="padding: 2px 12px;width: 100%;background: lightgrey;" data-toggle="dropdown">All
                             <span class="caret" style="padding-bottom: 8%;"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                             <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,0)'>Data Structures</a></li>
@@ -820,7 +820,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" style="padding: 2px 12px;width: 100%;" data-toggle="dropdown">Filter
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" style="padding: 2px 12px;width: 100%;background: lightgrey;" data-toggle="dropdown">Filter
                             <span class="caret" style="padding-bottom: 8%;"></span></button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                             <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(2,0)'>Poll</a></li>
