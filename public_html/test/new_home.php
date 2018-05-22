@@ -905,6 +905,7 @@
 
         });
         jQuery(document).on('click', '#mob-sign-in-id', function (e) {
+
             $('#showSignUp').hide();
             if($('#mob-showLogId').is(':visible')){
                 $('#mob-showLogId').hide();
@@ -913,6 +914,13 @@
             }
 
         });
+
+        $('*').click(function(event) {
+            if($('#mob-showLogId').is(':visible')){
+                $('#mob-showLogId').hide();
+            }
+        });
+
 
         jQuery(document).on('click','#sign-up-id',function (e) {
             $('#showLogId').hide();
@@ -1740,6 +1748,7 @@
         [data-type="control_authnet"] .form-address-table tbody tr + tr + tr td { padding-bottom : 0;
         } @media screen and (max-width:768px){ .form-all { margin : 0 auto !important; } [data-type=control_fullname] .form-sub-label-container:first-child { margin-right : 0; } } @media screen and (max-width:480px){ .jotform-form { padding : 0; } .form-input { width : 100% !important; } .form-label { width : 100% !important; float : none !important; } .form-line-column { width : 100% !important; } div.form-header-group { margin : 0 !important; padding : 24px 20px !important; } [data-type="control_datetime"] .form-sub-label-container { float : left; } [data-type=control_fullname] .form-sub-label-container:first-child { margin-right : 0; } } /* Injected CSS Code */
     </style> <link type="text/css" rel="stylesheet" href="http://cdn.jotfor.ms/css/styles/buttons/form-submit-button-book_blue2.css?3.3.2455">
+
 </head>
 
 <body class='marketing is-home' >
@@ -1942,7 +1951,7 @@
                     <p>Vprep helps your college or university drive student engagement from orientation to graduation using the power of web.</p>-->
                 </h1>
             </section>
-            <!--<button class='learn' id='learnMore'>Learn More</button>-->
+            <button class='learn' id='learnMore'>Learn More</button>
         </div>
         <div class="form-area " data-section="outlook" >
             <section class='platform' id="outlookForm" style="background: #565a5f;padding-top: 5%;">
