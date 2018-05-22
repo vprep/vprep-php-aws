@@ -886,8 +886,13 @@
             .dropdown-lr label {
                 color: #eee;
             }
+            .mobSignLook {
+                display: block!important;
+            }
 
         }
+
+
     </style>
     <script>
         jQuery(document).on('click', '#sign-in-id', function (e) {
@@ -896,6 +901,15 @@
                 $('#showLogId').hide();
             } else {
                 $('#showLogId').show();
+            }
+
+        });
+        jQuery(document).on('click', '#mob-sign-in-id', function (e) {
+            $('#showSignUp').hide();
+            if($('#mob-showLogId').is(':visible')){
+                $('#mob-showLogId').hide();
+            } else {
+                $('#mob-showLogId').show();
             }
 
         });
@@ -1095,6 +1109,29 @@
                     success: function (data) {
                         if(data==='success'){
                             $( "#ajax-login-form" ).submit();
+                        } else {
+                            showMessage("invalid username/password entered","error");
+                        }
+                    }
+                });
+            }
+        });
+        jQuery(document).on('click', '#mob-showLoginId', function (e) {
+            var cred = {};
+            cred.username = $('#mob-username').val();
+            cred.password = $("#mob-regpassword", $("#mob-ajax-login-form")).val();
+            var link = 'http://test.vprep.in/frontend/login_validate?username=' + cred.username + '&userpass=' + cred.password ;
+            if(cred.username==""){
+
+                showMessage("username should not be blank","error");
+            } else {
+
+                jQuery.ajax({
+                    type: "GET",
+                    url: link,
+                    success: function (data) {
+                        if(data==='success'){
+                            $( "#mob-ajax-login-form" ).submit();
                         } else {
                             showMessage("invalid username/password entered","error");
                         }
@@ -1813,7 +1850,7 @@
                                 </form>
                             </div>
                         </ul>
-                    <ul id="showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
+                 <ul id="showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
                         <div class="col-lg-12">
                             <div class="text-center" style="color: #0c0c0c">
                                 <form name="loginForm" id="ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
@@ -1843,9 +1880,40 @@
                             </div>
                     </ul>
                 </nav>
-                <button class='btn toggle toggleNav'>
-                    <i class='icon-menu'></i>
-                </button>
+                <!--<button class='btn toggle toggleNav'>-->
+                    <li  class='has-icon mobSignLook' style="float: right;display: none;">
+                        <a href="#" id="mob-sign-in-id"class="dropdown-toggle" data-toggle="dropdown">Sign In<span class="caret"></span></a>
+                    </li>
+            <ul id="mob-showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
+                <div class="col-lg-12">
+                    <div class="text-center" style="color: #0c0c0c">
+                        <form name="loginForm" id="mob-ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
+                            <div class="form-group" style="margin: 2px;">
+                                <input type="text" style="padding: 7px;width: 100%;" name="username" id="mob-username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+                                <span type="hidden" style="color:red;display: none;width: 100%;" id="userBlank">username should not be blank</span>
+                            </div>
+
+                            <div class="form-group" style="margin: 2px;">
+                                <input id="mob-regpassword" style="padding: 7px;width: 100%;" type="password" name="password"  tabindex="1" class="form-control" placeholder="Password">
+                                <span id="credId" style="color:red;display: none;width: 100%;">invalid username/password entered</span>
+                            </div>
+
+                            <div class="form-group" style="margin: 2px;">
+                                <input type="hidden" name="signin" id="loginId" tabindex="4" class="form-control btn btn-success" value="Sign In form">
+                                <input type=button name="signin2" style="width: 100%;" id="mob-showLoginId" tabindex="4" class="form-control btn btn-success" value="Sign In">
+                            </div>
+                            <!--<div class="form-group" style="margin: 2px;">
+                                <button class="btn btn-success"
+                                        data-toggle="modal"
+                                        data-target="#fsModal" style="margin-top: -2%;width: 100%;">
+                                    Forgot Password?
+                                </button>
+                            </div>-->
+                        </form>
+
+                    </div>
+            </ul>
+               <!-- </button>-->
             </div>
         </header>
         <script src='//platform.twitter.com/oct.js' type='text/javascript'></script>
