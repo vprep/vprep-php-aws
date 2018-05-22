@@ -1746,12 +1746,12 @@
 <div class='wrapper' >
     <div class='sticky-wrapper'>
         <!-- header -->
-      <!--  <header class='cap'>
-            <div class='container' >
+        <!--  <header class='cap'>
+              <div class='container' >
 
-                <a href='#contactForm'>Request a Demo</a>
-            </div>
-        </header>-->
+                  <a href='#contactForm'>Request a Demo</a>
+              </div>
+          </header>-->
         <header class='header' role='banner'>
             <div>
                 <p class='logo'>
@@ -1795,62 +1795,62 @@
                             <a class='btn ac' data-section="contact"  href='#contactForm'>Request a Demo</a>
                         </li>
                     </ul>
-                        <ul id="showSignUp"class="dropdown-menu dropdown-lr animated flipInX green-back" role="menu" style="display: none;background: darkslategrey;">
-                            <div class="col-lg-12">
-                                <form id="ajax-register-form" action="http://test.vprep.in/add_student" method="post" role="form" autocomplete="off" style="width: 100%">
-                                    <div class="form-group">
-                                        <input type="text" style="border-color:white;width: 100%;" name="first_name"  required="required" id="fullName" tabindex="1" class="form-control" placeholder="Full Name" value="">
-                                    </div>
-                                    <div id="the-basics" class="form-group" style="padding: 0px;">
-                                        <input id="collegeId" class="typeahead form-control" type="text" style="boder-color:white !important;width:100%!important;" placeholder="college name">
-                                        <input id="collegeRefId" name="engineering_college_id" class="typeahead form-control" type="hidden" style="boder-color:black !important; font-size:10px;">
-                                    </div>
-                                    <div class="form-group" style="margin-top: -19px;">
-                                        <input type="text" style="border-color:white;width: 100%;" name="username"  required="required" id="upusername" tabindex="1" class="form-control" placeholder="Username" value="">
-                                        <span id="userNameError" style="color:red;display: none;">username already exists. please try with other username</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" style="border-color:white;width: 100%;" name="email"  required="required" id="email" tabindex="2" class="form-control" placeholder="Email">
-                                        <span id="emailError" style="color:red;display: none;">please enter valid email Id</span>
-                                        <span id="emailError2" style="color:red;display: none;">email id already exists. please try with other email id</span>
-                                    </div>
-                                    <div class="form-group">
+                    <ul id="showSignUp"class="dropdown-menu dropdown-lr animated flipInX green-back" role="menu" style="display: none;background: darkslategrey;">
+                        <div class="col-lg-12">
+                            <form id="ajax-register-form" action="http://test.vprep.in/add_student" method="post" role="form" autocomplete="off" style="width: 100%">
+                                <div class="form-group">
+                                    <input type="text" style="border-color:white;width: 100%;" name="first_name"  required="required" id="fullName" tabindex="1" class="form-control" placeholder="Full Name" value="">
+                                </div>
+                                <div id="the-basics" class="form-group" style="padding: 0px;">
+                                    <input id="collegeId" class="typeahead form-control" type="text" style="boder-color:white !important;width:100%!important;" placeholder="college name">
+                                    <input id="collegeRefId" name="engineering_college_id" class="typeahead form-control" type="hidden" style="boder-color:black !important; font-size:10px;">
+                                </div>
+                                <div class="form-group" style="margin-top: -19px;">
+                                    <input type="text" style="border-color:white;width: 100%;" name="username"  required="required" id="upusername" tabindex="1" class="form-control" placeholder="Username" value="">
+                                    <span id="userNameError" style="color:red;display: none;">username already exists. please try with other username</span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" style="border-color:white;width: 100%;" name="email"  required="required" id="email" tabindex="2" class="form-control" placeholder="Email">
+                                    <span id="emailError" style="color:red;display: none;">please enter valid email Id</span>
+                                    <span id="emailError2" style="color:red;display: none;">email id already exists. please try with other email id</span>
+                                </div>
+                                <div class="form-group">
 
-                                        <input id="regpassword" style="border-color:white;width: 100%;" type="password" name="password" required="required"  tabindex="1" class="form-control" placeholder="password" value="">
-
-
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" style="border-color:white;width: 100%;" name="phone"  id="phone" required="required" tabindex="1" class="form-control" placeholder="phone" value="">
-                                        <span type="hidden" id="phoneError" style="color:red;display: none;">please enter valid phone number</span>
-                                        <span id="phoneError2" style="color:red;font-size: 90%;display: none;">This number is already registered.</span>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" style="border-color:white;width: 100%;"  name="city"  id="city" required="required" tabindex="1" class="form-control" placeholder="city" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="btn btn-primary" style="width: 49%;">
-                                            <input type="radio" name="gender" id="inlineRadio1" value="male" style="-webkit-appearance: radio;" checked="checked"> Male
-                                        </div>
-                                        <label class="btn btn-primary" style="width: 49%;">
-                                            <input type="radio" name="gender" id="inlineRadio2" style="-webkit-appearance: radio;" value="female"> Female
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="form-control btn btn-success" id="testId" type=button style="width: 100%;" >Generate OTP</button>
-                                        <input type="text" style="border-color:white;width: 100%;display: none;" name="otp" id="otpId" placeholder="Enter OTP"></input>
-                                        <span id="otpError" style="color:red;display: none;">OTP did not match. Try Again</span>
-                                        <button class="form-control btn btn-success" id="retryOTP" type=button style="display:none;width: 100%;">Retry OTP</button>
-                                        <button class="form-control btn btn-success" id="buttonOTP" type=button style="display: none;width: 100%;">Validate & Sign Up</button>
+                                    <input id="regpassword" style="border-color:white;width: 100%;" type="password" name="password" required="required"  tabindex="1" class="form-control" placeholder="password" value="">
 
 
-                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" style="border-color:white;width: 100%;" name="phone"  id="phone" required="required" tabindex="1" class="form-control" placeholder="phone" value="">
+                                    <span type="hidden" id="phoneError" style="color:red;display: none;">please enter valid phone number</span>
+                                    <span id="phoneError2" style="color:red;font-size: 90%;display: none;">This number is already registered.</span>
+                                </div>
 
-                                </form>
-                            </div>
-                        </ul>
-                 <ul id="showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
+                                <div class="form-group">
+                                    <input type="text" style="border-color:white;width: 100%;"  name="city"  id="city" required="required" tabindex="1" class="form-control" placeholder="city" value="">
+                                </div>
+                                <div class="form-group">
+                                    <div class="btn btn-primary" style="width: 49%;">
+                                        <input type="radio" name="gender" id="inlineRadio1" value="male" style="-webkit-appearance: radio;" checked="checked"> Male
+                                    </div>
+                                    <label class="btn btn-primary" style="width: 49%;">
+                                        <input type="radio" name="gender" id="inlineRadio2" style="-webkit-appearance: radio;" value="female"> Female
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <button class="form-control btn btn-success" id="testId" type=button style="width: 100%;" >Generate OTP</button>
+                                    <input type="text" style="border-color:white;width: 100%;display: none;" name="otp" id="otpId" placeholder="Enter OTP"></input>
+                                    <span id="otpError" style="color:red;display: none;">OTP did not match. Try Again</span>
+                                    <button class="form-control btn btn-success" id="retryOTP" type=button style="display:none;width: 100%;">Retry OTP</button>
+                                    <button class="form-control btn btn-success" id="buttonOTP" type=button style="display: none;width: 100%;">Validate & Sign Up</button>
+
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </ul>
+                    <ul id="showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
                         <div class="col-lg-12">
                             <div class="text-center" style="color: #0c0c0c">
                                 <form name="loginForm" id="ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
@@ -1881,39 +1881,39 @@
                     </ul>
                 </nav>
                 <!--<button class='btn toggle toggleNav'>-->
-                    <li  class='has-icon mobSignLook' style="float: right;display: none;">
-                        <a href="#" id="mob-sign-in-id"class="dropdown-toggle" data-toggle="dropdown">Sign In<span class="caret"></span></a>
-                    </li>
-            <ul id="mob-showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
-                <div class="col-lg-12">
-                    <div class="text-center" style="color: #0c0c0c">
-                        <form name="loginForm" id="mob-ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
-                            <div class="form-group" style="margin: 2px;">
-                                <input type="text" style="padding: 7px;width: 100%;" name="username" id="mob-username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
-                                <span type="hidden" style="color:red;display: none;width: 100%;" id="userBlank">username should not be blank</span>
-                            </div>
+                <li  class='has-icon mobSignLook' style="float: right;display: none;">
+                    <a href="#" id="mob-sign-in-id"class="dropdown-toggle" data-toggle="dropdown">Sign In<span class="caret"></span></a>
+                </li>
+                <ul id="mob-showLogId" class="dropdown-menu dropdown-lr animated flipInX" role="menu" style="display: none;background: darkslategrey;">
+                    <div class="col-lg-12">
+                        <div class="text-center" style="color: #0c0c0c">
+                            <form name="loginForm" id="mob-ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
+                                <div class="form-group" style="margin: 2px;">
+                                    <input type="text" style="padding: 7px;width: 100%;" name="username" id="mob-username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+                                    <span type="hidden" style="color:red;display: none;width: 100%;" id="userBlank">username should not be blank</span>
+                                </div>
 
-                            <div class="form-group" style="margin: 2px;">
-                                <input id="mob-regpassword" style="padding: 7px;width: 100%;" type="password" name="password"  tabindex="1" class="form-control" placeholder="Password">
-                                <span id="credId" style="color:red;display: none;width: 100%;">invalid username/password entered</span>
-                            </div>
+                                <div class="form-group" style="margin: 2px;">
+                                    <input id="mob-regpassword" style="padding: 7px;width: 100%;" type="password" name="password"  tabindex="1" class="form-control" placeholder="Password">
+                                    <span id="credId" style="color:red;display: none;width: 100%;">invalid username/password entered</span>
+                                </div>
 
-                            <div class="form-group" style="margin: 2px;">
-                                <input type="hidden" name="signin" id="loginId" tabindex="4" class="form-control btn btn-success" value="Sign In form">
-                                <input type=button name="signin2" style="width: 100%;" id="mob-showLoginId" tabindex="4" class="form-control btn btn-success" value="Sign In">
-                            </div>
-                            <!--<div class="form-group" style="margin: 2px;">
-                                <button class="btn btn-success"
-                                        data-toggle="modal"
-                                        data-target="#fsModal" style="margin-top: -2%;width: 100%;">
-                                    Forgot Password?
-                                </button>
-                            </div>-->
-                        </form>
+                                <div class="form-group" style="margin: 2px;">
+                                    <input type="hidden" name="signin" id="loginId" tabindex="4" class="form-control btn btn-success" value="Sign In form">
+                                    <input type=button name="signin2" style="width: 100%;" id="mob-showLoginId" tabindex="4" class="form-control btn btn-success" value="Sign In">
+                                </div>
+                                <!--<div class="form-group" style="margin: 2px;">
+                                    <button class="btn btn-success"
+                                            data-toggle="modal"
+                                            data-target="#fsModal" style="margin-top: -2%;width: 100%;">
+                                        Forgot Password?
+                                    </button>
+                                </div>-->
+                            </form>
 
-                    </div>
-            </ul>
-               <!-- </button>-->
+                        </div>
+                </ul>
+                <!-- </button>-->
             </div>
         </header>
         <script src='//platform.twitter.com/oct.js' type='text/javascript'></script>
@@ -1945,185 +1945,185 @@
             <!--<button class='learn' id='learnMore'>Learn More</button>-->
         </div>
         <div class="form-area " data-section="outlook" >
-        <section class='platform' id="outlookForm" style="background: #565a5f;padding-top: 5%;">
-            <div class="slideshow-container"  style="display: block;margin-left: auto;margin-right: auto;">
+            <section class='platform' id="outlookForm" style="background: #565a5f;padding-top: 5%;">
+                <div class="slideshow-container"  style="display: block;margin-left: auto;margin-right: auto;">
 
-                <div class="mySlides fade">
-                    <div class="row">
-                        <div class="col-sm-12" style="color: #FFFFff;">
-                            <h2>Analysis</h2>
-                        </div>
-                        <div style="display: inline-block;width: 65%;float: left;">
-                            <img style="width: 100%;" src='library/img/Analysis.png' >
+                    <div class="mySlides fade">
+                        <div class="row">
+                            <div class="col-sm-12" style="color: #FFFFff;">
+                                <h2>Analysis</h2>
+                            </div>
+                            <div style="display: inline-block;width: 65%;float: left;">
+                                <img style="width: 100%;" src='library/img/Analysis.png' >
 
-                        </div>
-                        <div  style="color: white;display: inline-block;float: right;width: 30%;margin-left: 2%;">
-                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
-                                <li style="color: #FFFFff!important;">Get detailed analysis of students.</li>
-                                <li style="color: #FFFFff!important;">Know their strong and weak areas.</li>
-                            </ul>
+                            </div>
+                            <div  style="color: white;display: inline-block;float: right;width: 30%;margin-left: 2%;">
+                                <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                    <li style="color: #FFFFff!important;">Get detailed analysis of students.</li>
+                                    <li style="color: #FFFFff!important;">Know their strong and weak areas.</li>
+                                </ul>
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="mySlides fade">
-                    <div class="row">
-                        <div class="col-sm-12" style="color: #FFFFff;">
-                            <h2>Assignments</h2>
-                        </div>
-                        <div style="display: inline-block;width: 65%;float: left;">
-                            <img style="width: 100%;" src='library/img/Assignments.png' >
+                    <div class="mySlides fade">
+                        <div class="row">
+                            <div class="col-sm-12" style="color: #FFFFff;">
+                                <h2>Assignments</h2>
+                            </div>
+                            <div style="display: inline-block;width: 65%;float: left;">
+                                <img style="width: 100%;" src='library/img/Assignments.png' >
 
-                        </div>
-                        <div  style="color: white;display: inline-block;float: right;width: 30%;">
-                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
-                                <li style="color: #FFFFff!important;">Complete assignment management.</li>
-                                <li style="color: #FFFFff!important;">Create and receive assignments directly within the platform.</li>
-                                <li style="color: #FFFFff!important;">Review and download assignments.</li>
-                            </ul>
+                            </div>
+                            <div  style="color: white;display: inline-block;float: right;width: 30%;">
+                                <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                    <li style="color: #FFFFff!important;">Complete assignment management.</li>
+                                    <li style="color: #FFFFff!important;">Create and receive assignments directly within the platform.</li>
+                                    <li style="color: #FFFFff!important;">Review and download assignments.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="mySlides fade">
-                    <div class="row">
-                        <div class="col-sm-12" style="color: #FFFFff;">
-                            <h2>Engagement Feed</h2>
-                        </div>
-                        <div style="display: inline-block;width: 65%;float: left;">
-                            <img style="width: 100%;" src='library/img/EngagementFeed.png' >
+                    <div class="mySlides fade">
+                        <div class="row">
+                            <div class="col-sm-12" style="color: #FFFFff;">
+                                <h2>Engagement Feed</h2>
+                            </div>
+                            <div style="display: inline-block;width: 65%;float: left;">
+                                <img style="width: 100%;" src='library/img/EngagementFeed.png' >
 
-                        </div>
-                        <div  style="color: white;display: inline-block;float: right;width: 30%;">
-                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
-                                <li style="color: #FFFFff!important;">Engagement platform with a difference.</li>
-                                <li style="color: #FFFFff!important;">Wiki and Facebook like interface Q&A platform.</li>
-                                <li style="color: #FFFFff!important;">Drive better engagement between students and professors.</li>
-                            </ul>
+                            </div>
+                            <div  style="color: white;display: inline-block;float: right;width: 30%;">
+                                <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                    <li style="color: #FFFFff!important;">Engagement platform with a difference.</li>
+                                    <li style="color: #FFFFff!important;">Wiki and Facebook like interface Q&A platform.</li>
+                                    <li style="color: #FFFFff!important;">Drive better engagement between students and professors.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="row">
-                        <div class="col-sm-12" style="color: #FFFFff;">
-                            <h2>Manage Exams</h2>
-                        </div>
-                        <div style="display: inline-block;width: 65%;float: left;">
-                            <img style="width: 100%;" src='library/img/ManageExams.png' >
+                    <div class="mySlides fade">
+                        <div class="row">
+                            <div class="col-sm-12" style="color: #FFFFff;">
+                                <h2>Manage Exams</h2>
+                            </div>
+                            <div style="display: inline-block;width: 65%;float: left;">
+                                <img style="width: 100%;" src='library/img/ManageExams.png' >
 
-                        </div>
-                        <div  style="color: white;display: inline-block;float: right;width:30%;">
-                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
-                                <li style="color: #FFFFff!important;">Exam management built-in.</li>
-                                <li style="color: #FFFFff!important;">Set active and de-active time for every exam.</li>
-                                <li style="color: #FFFFff!important;">Share exam to relevant students.</li>
-                                <li style="color: #FFFFff!important;">Check complete reports for every exams.</li>
-                            </ul>
+                            </div>
+                            <div  style="color: white;display: inline-block;float: right;width:30%;">
+                                <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                    <li style="color: #FFFFff!important;">Exam management built-in.</li>
+                                    <li style="color: #FFFFff!important;">Set active and de-active time for every exam.</li>
+                                    <li style="color: #FFFFff!important;">Share exam to relevant students.</li>
+                                    <li style="color: #FFFFff!important;">Check complete reports for every exams.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="row">
-                        <div class="col-sm-12" style="color: #FFFFff;">
-                            <h2>Question Bank</h2>
-                        </div>
-                        <div style="display: inline-block;width: 65%;float: left;">
-                            <img style="width: 100%;" src='library/img/QuestionBank.png' >
+                    <div class="mySlides fade">
+                        <div class="row">
+                            <div class="col-sm-12" style="color: #FFFFff;">
+                                <h2>Question Bank</h2>
+                            </div>
+                            <div style="display: inline-block;width: 65%;float: left;">
+                                <img style="width: 100%;" src='library/img/QuestionBank.png' >
 
-                        </div>
-                        <div  style="color: white;display: inline-block;float: right;width:30%;">
-                            <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
-                                <li style="color: #FFFFff!important;">Your question bank hosted on cloud.</li>
-                                <li style="color: #FFFFff!important;">Access our question directly within the platform.</li>
-                                <li style="color: #FFFFff!important;">Create online tests in minutes.</li>
-                            </ul>
+                            </div>
+                            <div  style="color: white;display: inline-block;float: right;width:30%;">
+                                <ul style="list-style-type: circle;font-weight: bold;padding-top: 30%;">
+                                    <li style="color: #FFFFff!important;">Your question bank hosted on cloud.</li>
+                                    <li style="color: #FFFFff!important;">Access our question directly within the platform.</li>
+                                    <li style="color: #FFFFff!important;">Create online tests in minutes.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+                <br>
 
-            </div>
-            <br>
-
-            <div style="text-align:center;">
-                <span class="dot" data-value="0"></span>
-                <span class="dot" data-value="1"></span>
-                <span class="dot" data-value="2"></span>
-                <span class="dot" data-value="3"></span>
-                <span class="dot" data-value="4"></span>
-            </div>
-        </section>
+                <div style="text-align:center;">
+                    <span class="dot" data-value="0"></span>
+                    <span class="dot" data-value="1"></span>
+                    <span class="dot" data-value="2"></span>
+                    <span class="dot" data-value="3"></span>
+                    <span class="dot" data-value="4"></span>
+                </div>
+            </section>
         </div>
         <div class="form-area " data-section="college_engage">
             <div id="collEngage" >
-        <section class='engagement bg-grey' id='learn-more' >
-            <header class='intro' >
+                <section class='engagement bg-grey' id='learn-more' >
+                    <header class='intro' >
 
-                <div class='container' >
-                    <h1>Everything you need to conduct online assessment</h1>
-                    <p>Vprep is the new centralized examination center you need. Host your question bank on cloud or alternatively use our question bank to create online tests in minutes.     </p>
-                    <ul class='steps'>
-                        <li class='first'>
-                            <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.2s' data-wow-duration='0.4s' src='library/img/com.png' width="250px" height="180px">
-                            <h2>Engagement platform</h2>
-                            <p>All you need to bring every stakeholder at one place</p>
-                        </li>
-                        <li class='middle'>
-                            <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.3s' data-wow-duration='0.4s' src='library/img/sc.png' width="250px" height="190px">
-                            <h2>Assessments and Analysis</h2>
+                        <div class='container' >
+                            <h1>Everything you need to conduct online assessment</h1>
+                            <p>Vprep is the new centralized examination center you need. Host your question bank on cloud or alternatively use our question bank to create online tests in minutes.     </p>
+                            <ul class='steps'>
+                                <li class='first'>
+                                    <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.2s' data-wow-duration='0.4s' src='library/img/com.png' width="250px" height="180px">
+                                    <h2>Engagement platform</h2>
+                                    <p>All you need to bring every stakeholder at one place</p>
+                                </li>
+                                <li class='middle'>
+                                    <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.3s' data-wow-duration='0.4s' src='library/img/sc.png' width="250px" height="190px">
+                                    <h2>Assessments and Analysis</h2>
 
-                            <p>Identify who’s lacking where and take action accordingly</p>
+                                    <p>Identify who’s lacking where and take action accordingly</p>
 
-                        </li>
-                        <li class='last'>
-                            <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.4s' data-wow-duration='0.4s' src='library/img/adm.png' width="250px" height="180px">
-                            <h2>Admin Tools</h2>
-                            <p>Gather insight and increase your efficiency</p>
+                                </li>
+                                <li class='last'>
+                                    <img alt='' class='no-inline-svg icon wow fadeInDown' data-wow-delay='0.4s' data-wow-duration='0.4s' src='library/img/adm.png' width="250px" height="180px">
+                                    <h2>Admin Tools</h2>
+                                    <p>Gather insight and increase your efficiency</p>
 
-                        </li>
-                    </ul>
-                </div>
+                                </li>
+                            </ul>
+                        </div>
 
-            </header>
-        </section>
+                    </header>
+                </section>
             </div>
         </div>
         <div class="form-area " data-section="student_engage">
             <div id="stuEngage" >
-        <section class='illustrated-features bg-grey'>
-            <div class='container'>
-                <h1>Digital engagements between every stakeholder</h1>
-                <p class='desc'>
-                    Vprep’s engagement platform act as a Q&A platform for the college and helps students in getting their doubts resolved quickly through collaboration. It also helps teachers to remain connected with students even after working hours.
-                <ul class='fading-steps'>
-                    <li>
-                        <div class='home1 step1'>
-                            <img alt='' class='ill' src='library/img/comm.png' width="200px" height="280px">
-                        </div>
-                        <h2>Communication</h2>
+                <section class='illustrated-features bg-grey'>
+                    <div class='container'>
+                        <h1>Digital engagements between every stakeholder</h1>
+                        <p class='desc'>
+                            Vprep’s engagement platform act as a Q&A platform for the college and helps students in getting their doubts resolved quickly through collaboration. It also helps teachers to remain connected with students even after working hours.
+                            <ul class='fading-steps'>
+                                <li>
+                                    <div class='home1 step1'>
+                                        <img alt='' class='ill' src='library/img/comm.png' width="200px" height="280px">
+                                    </div>
+                                    <h2>Communication</h2>
                         <p>During the craziness of examination prep time, vprep quickly helps students get connected with each other and the faculty and get their doubts resolved.</p>
-                    </li>
-                    <li>
-                        <div class='home2 step2'>
-                            <img alt='' class='ill' src='library/img/col.png' width="200px" height="280px">
-                        </div>
-                        <h2>Collaboration</h2>
-                        <p>The platform encourages continuous collaboration between students and the faculty thereby increasing productivity and growth.</p>
-                    </li>
-                    <li>
-                        <div class='step3'>
-                            <img alt='' class='ill' src='library/img/g.png' width="200px" height="280px">
-                        </div>
-                        <h2>Graduation</h2>
-                        <p>Vprep helps students to get connected with the alumni and seek potential growth opportunities.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                        </li>
+                        <li>
+                            <div class='home2 step2'>
+                                <img alt='' class='ill' src='library/img/col.png' width="200px" height="280px">
+                            </div>
+                            <h2>Collaboration</h2>
+                            <p>The platform encourages continuous collaboration between students and the faculty thereby increasing productivity and growth.</p>
+                        </li>
+                        <li>
+                            <div class='step3'>
+                                <img alt='' class='ill' src='library/img/g.png' width="200px" height="280px">
+                            </div>
+                            <h2>Graduation</h2>
+                            <p>Vprep helps students to get connected with the alumni and seek potential growth opportunities.</p>
+                        </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
         </div>
-    <section class='trusted-by dark' style="background: lightgray;" >
+        <section class='trusted-by dark' style="background: lightgray;" >
             <h1>Recognitions</h1>
             <div class='owl-carousel owl-theme'>
                 <div class='item'>
@@ -2143,358 +2143,357 @@
         <div class='top'>
             <div class="container">
                 <div class="form-area " data-section="contact" >
-                <div class="row" >
-                    <form class="jotform-form" action="http://vprep.in/mail_contact_us.php" method="post" name="form_73070252224445" id="73070252224445" accept-charset="utf-8">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4" id="contactForm" style="padding-top: 100px;">
+                    <div class="row" >
+                        <form class="jotform-form" action="http://vprep.in/mail_contact_us.php" method="post" name="form_73070252224445" id="73070252224445" accept-charset="utf-8">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4" id="contactForm" style="padding-top: 100px;">
 
-                        <input type="hidden" name="formID" value="73070252224445">
-                        <div class="form-all" style="width: 47%;margin-left: 24%;">
-                            <ul class="form-section page-section" style="background: #565a5f;">
-                                <li id="cid_10" class="form-input-wide" data-type="control_head" style="margin-top: 1%">
-                                    <div class="form-header-group ">
-                                        <div class="header-text httac htvam" style="background-color: #5277c8;">
-                                            <h1 id="header_10" class="form-header" data-component="header" > Contact Us </h1>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_3" style="width:100%!important;padding-top: 4px;">
-                                    <!--<td><label for="startDateId" style="color: #FFFFff;">Name</label></td>
-                                    <td><input class="inner-text date-picker" style="width: 100%;" name="startDate" type="text" id="startDateId"
-                                           required="required"/></td>-->
-                                   <!-- <label class="form-label  form-label-left form-label-auto" id="label_3" for="input_3" style="color: #FFFFff;"> Name <span class="form-required"> * </span> </label>-->
-                                    <div id="cid_3" class="form-input jf-required"> <input type="text" id="input_3" name="q3_name" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="Name" data-component="textbox" required=""> </div>
-                                </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_4" style="width:100%!important;padding-top: 4px;">
-                                   <!-- <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4" style="color: #FFFFff;"> E-mail <span class="form-required"> * </span> </label>-->
-                                    <div id="cid_4" class="form-input jf-required"> <input type="text" id="input_4" name="q4_email" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="E-mail" data-component="textbox" required=""> </div>
-                                </li>
-                                <li class="form-line jf-required" data-type="control_textbox" id="id_5" style="width:100%!important;padding-top: 4px;">
-                                    <!--<label class="form-label form-label-left form-label-auto" id="label_5" for="input_5" style="color: #FFFFff;padding-top: 4px;"> Contact Number <span class="form-required"> * </span> </label>-->
-                                    <div id="cid_5" class="form-input jf-required"> <input type="text" id="input_5" name="q5_contactNumber" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="Contact Number" data-component="textbox" required=""> </div>
-                                </li>
+                                <input type="hidden" name="formID" value="73070252224445">
+                                <div class="form-all" style="width: 47%;margin-left: 24%;">
+                                    <ul class="form-section page-section" style="background: #565a5f;">
+                                        <li id="cid_10" class="form-input-wide" data-type="control_head" style="margin-top: 1%">
+                                            <div class="form-header-group ">
+                                                <div class="header-text httac htvam" style="background-color: #5277c8;">
+                                                    <h1 id="header_10" class="form-header" data-component="header" > Contact Us </h1>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="form-line jf-required" data-type="control_textbox" id="id_3" style="width:100%!important;padding-top: 4px;">
+                                            <!--<td><label for="startDateId" style="color: #FFFFff;">Name</label></td>
+                                            <td><input class="inner-text date-picker" style="width: 100%;" name="startDate" type="text" id="startDateId"
+                                                   required="required"/></td>-->
+                                            <!-- <label class="form-label  form-label-left form-label-auto" id="label_3" for="input_3" style="color: #FFFFff;"> Name <span class="form-required"> * </span> </label>-->
+                                            <div id="cid_3" class="form-input jf-required"> <input type="text" id="input_3" name="q3_name" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="Name" data-component="textbox" required=""> </div>
+                                        </li>
+                                        <li class="form-line jf-required" data-type="control_textbox" id="id_4" style="width:100%!important;padding-top: 4px;">
+                                            <!-- <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4" style="color: #FFFFff;"> E-mail <span class="form-required"> * </span> </label>-->
+                                            <div id="cid_4" class="form-input jf-required"> <input type="text" id="input_4" name="q4_email" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="E-mail" data-component="textbox" required=""> </div>
+                                        </li>
+                                        <li class="form-line jf-required" data-type="control_textbox" id="id_5" style="width:100%!important;padding-top: 4px;">
+                                            <!--<label class="form-label form-label-left form-label-auto" id="label_5" for="input_5" style="color: #FFFFff;padding-top: 4px;"> Contact Number <span class="form-required"> * </span> </label>-->
+                                            <div id="cid_5" class="form-input jf-required"> <input type="text" id="input_5" name="q5_contactNumber" data-type="input-textbox" class="form-textbox validate[required]" style="width: 100%;" value="" placeholder="Contact Number" data-component="textbox" required=""> </div>
+                                        </li>
 
-                                <li class="form-line jf-required" data-type="control_textarea" id="id_7" style="width:100%!important;padding-top: 4px;">
-                                    <!--<label class="form-label form-label-left form-label-auto" id="label_7" for="input_7" style="color: #FFFFff;padding-top: 4px;"> Message <span class="form-required"> * </span> </label>-->
-                                    <div id="cid_7" class="form-input jf-required"> <textarea id="input_7" class="form-textarea validate[required]" name="q7_message" style="width: 100%;" rows="7" placeholder="Message" data-component="textarea" required=""></textarea> </div>
-                                </li>
-                                <li class="form-line" id="id_2" style="margin: 4%;">
-                                    <div id="cid_2" class="form-input-wide">
-                                        <div style="text-align:center;" class="form-buttons-wrapper"> <button id="input_2" type="submit" style="background-color: #5277c8;font-weight: bold;" class="form-submit-button form-submit-button-book_blue2" data-component="button"> Submit </button> </div>
-                                    </div>
-                                </li>
-                                <li style="display:none"> Should be Empty: <input type="text" name="website" value=""> </li>
-                            </ul>
-                        </div>
-                        <script> JotForm.showJotFormPowered = "new_footer"; </script> <input type="hidden" id="simple_spc" name="simple_spc" value="73070252224445"> <script type="text/javascript"> document.getElementById("si" + "mple" + "_spc").value = "73070252224445-73070252224445"; </script>
-                        <div class="formFooter-heightMask"> </div>
-                    </form>
+                                        <li class="form-line jf-required" data-type="control_textarea" id="id_7" style="width:100%!important;padding-top: 4px;">
+                                            <!--<label class="form-label form-label-left form-label-auto" id="label_7" for="input_7" style="color: #FFFFff;padding-top: 4px;"> Message <span class="form-required"> * </span> </label>-->
+                                            <div id="cid_7" class="form-input jf-required"> <textarea id="input_7" class="form-textarea validate[required]" name="q7_message" style="width: 100%;" rows="7" placeholder="Message" data-component="textarea" required=""></textarea> </div>
+                                        </li>
+                                        <li class="form-line" id="id_2" style="margin: 4%;">
+                                            <div id="cid_2" class="form-input-wide">
+                                                <div style="text-align:center;" class="form-buttons-wrapper"> <button id="input_2" type="submit" style="background-color: #5277c8;font-weight: bold;" class="form-submit-button form-submit-button-book_blue2" data-component="button"> Submit </button> </div>
+                                            </div>
+                                        </li>
+                                        <li style="display:none"> Should be Empty: <input type="text" name="website" value=""> </li>
+                                    </ul>
+                                </div>
+                                <script> JotForm.showJotFormPowered = "new_footer"; </script> <input type="hidden" id="simple_spc" name="simple_spc" value="73070252224445"> <script type="text/javascript"> document.getElementById("si" + "mple" + "_spc").value = "73070252224445-73070252224445"; </script>
+                                <div class="formFooter-heightMask"> </div>
+                        </form>
                     </div>
-                    </div></div>
-            </div>
-
-        </div>
-        <script type="text/javascript">JotForm.ownerView=true;</script></body></html>
-
-        <div class='bottom' style="background: rgba(8,16,37,0.8);">
-            <div class='container'>
-                <!--<nav>
-
-                    <ul>
-                        <li class='m-only'>
-                            <a href='#'>Home</a>
-                        </li>
-                        <li class='m-only'>
-                            <a href='#'>School Year App</a>
-                        </li>
-                        <li class='m-only'>
-                            <a href='#'>Admin Tools</a>
-                        </li>
-                        <li class='m-only'>
-                            <a href='#'>Orientation App</a>
-                        </li>
-                        <li class='m-only'>
-                            <a href='#'>Attendance</a>
-                        </li>
-                        <li class='m-only'>
-                            <a href='#'>Blog</a>
-                        </li>
-                        <li>
-                            <a href='#'>About</a>
-                        </li>
-                        <li>
-                            <a href='#'>Terms</a>
-                        </li>
-                        <li>
-                            <a href='#'>Privacy</a>
-                        </li>
-                        <li>
-                            <a data-modal='contactUs' href='#'>Contact Us</a>
-                        </li>
-                        <li class='m-only'>
-                            <a data-modal='dualLogin' href='#'>Login</a>
-                        </li>
-                    </ul>
-                </nav>-->
-                <ul class='social' style="display: none;">
-                    <li>
-                        <a class='btn' href='http://www.facebook.com/vprep.in1' rel='noopener noreferrer' target='_blank'>
-                            <i class='et-social-icon et-social-facebook'></i>
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class='btn' href='#' rel='noopener noreferrer' target='_blank' style="display: none;">
-                            <i class='icon-twitter'></i>
-                            <span>Twitter</span>
-                        </a>
-                    </li>
-                    <li class='instagram' style="display: none;">
-                        <a class='btn' href='#' rel='noopener noreferrer' target='_blank'>
-                            <svg id='insta' space='preserve' style='enable-background:new 0 0 48 48;' version='1.1' viewbox='0 0 48 48' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-                                <g>
-                                    <path class='st0' d='M24,10.9c4.3,0,4.8,0,6.5,0.1c1.8,0.1,3.5,0.4,4.8,1.7s1.7,3,1.7,4.8c0.1,1.7,0.1,2.2,0.1,6.5s0,4.8-0.1,6.5&#x000A;		c-0.1,1.8-0.4,3.5-1.7,4.8s-3,1.7-4.8,1.7c-1.7,0.1-2.2,0.1-6.5,0.1s-4.8,0-6.5-0.1c-1.8-0.1-3.5-0.4-4.8-1.7s-1.7-3-1.7-4.8&#x000A;		c-0.1-1.7-0.1-2.2-0.1-6.5s0-4.8,0.1-6.5c0.1-1.8,0.4-3.5,1.7-4.8s3-1.7,4.8-1.7C19.2,10.9,19.7,10.9,24,10.9 M24,8&#x000A;		c-4.3,0-4.9,0-6.6,0.1c-2.6,0.1-4.9,0.8-6.7,2.6c-1.8,1.8-2.5,4.1-2.6,6.7C8,19.1,8,19.7,8,24s0,4.9,0.1,6.6&#x000A;		c0.1,2.6,0.8,4.9,2.6,6.7c1.8,1.8,4.1,2.5,6.7,2.6C19.1,40,19.7,40,24,40s4.9,0,6.6-0.1c2.6-0.1,4.9-0.8,6.7-2.6&#x000A;		c1.8-1.8,2.5-4.1,2.6-6.7C40,28.9,40,28.3,40,24s0-4.9-0.1-6.6c-0.1-2.6-0.8-4.9-2.6-6.7c-1.8-1.8-4.1-2.5-6.7-2.6&#x000A;		C28.9,8,28.3,8,24,8L24,8z'></path>
-                                    <path class='st0' d='M24,15.8c-4.5,0-8.2,3.7-8.2,8.2s3.7,8.2,8.2,8.2s8.2-3.7,8.2-8.2S28.5,15.8,24,15.8z M24,29.3&#x000A;		c-2.9,0-5.3-2.4-5.3-5.3c0-2.9,2.4-5.3,5.3-5.3c2.9,0,5.3,2.4,5.3,5.3C29.3,26.9,26.9,29.3,24,29.3z'></path>
-                                    <circle class='st0' cx='32.5' cy='15.5' r='1.9'></circle>
-                                </g>
-                            </svg>
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class='container legal'>
-                <hr>
-                <p style="font-size: 16px;">Contact Us: info@vprep.in</p>
-                <p>Vprep &copy; 2018 </p>
-            </div>
+                </div></div>
         </div>
 
-    </footer>
-    <div class='modal-container'>
-        <div class='container'>
-            <section class='modal contact-us' id='contactUs'>
-                <h1>Contact us</h1>
-                <ul>
-                    <li>
-                        <i class='icon-email'></i>
-                        <p>
-                            <a href='#'>hello@involvio.com</a>
-                        </p>
-                    </li>
-                    <li>
-                        <i class='icon-phone'></i>
-                        <p>(212) 729-6670</p>
-                    </li>
-                    <li>
-                        <i class='icon-location'></i>
-                        <p>
-                            261 Madison Ave
-                            <br> 9th Floor
-                            <br> New York, NY 10016
-                        </p>
-                    </li>
-                    <li>
-                        <i class='icon-facebook'></i>
-                        <p>
-                            <a href='#' rel='noopener noreferrer' target='_blank'>Vprep on Facebook</a>
-                        </p>
-                    </li>
-                    <li>
-                        <i class='icon-twitter'></i>
-                        <p>
-                            <a href='#' rel='noopener noreferrer' target='_blank'>Vprep on Twitter</a>
-                        </p>
-                    </li>
-                </ul>
-                <div class='right'>
-                    <p>Like what you see?</p>
-                    <a class='btn lg solid-green scheduleDemoLink' href='#'>Request a Demo</a>
-                </div>
-            </section>
-            <section class='modal schedule' id='scheduleDemo'>
-                <h1>Schedule a Demo</h1>
-                <form accept-charset='UTF-8' action='#' autocomplete='off' class='wufoo topLabel page' enctype='multipart/form-data' id='form122' method='post' name='form122' novalidate=''>
-                    <div class='row'>
-                        <div class='input half'>
-                            <input class='field text fn' id='Field1' name='Field1' required='' size='8' tabindex='1' type='text' value=''>
-                            <label for='Field1'>First Name</label>
-                        </div>
-                        <div class='input half'>
-                            <input class='field text ln' id='Field2' name='Field2' required='' size='14' tabindex='2' type='text' value=''>
-                            <label for='Field2'>Last Name</label>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='input half'>
-                            <label class='desc' for='Field3' id='title3'>
-                                Email
-                                <span class='req' id='req_3'>*</span>
-                            </label>
-                            <input class='field text medium' data-validation='email' id='Field3' maxlength='255' name='Field3' spellcheck='false' tabindex='3' type='email' value=''>
-                        </div>
-                        <div class='input half'>
-                            <input class='three' id='Field4' maxlength='3' name='Field4' size='3' tabindex='4' type='tel' value=''>
-                            <input class='three' id='Field4' maxlength='3' name='Field4-1' size='3' tabindex='5' type='tel' value=''>
-                            <input class='four' data-validation='number' id='Field4' maxlength='4' name='Field4-2' size='4' tabindex='6' type='tel' value=''>
-                            <label for=''>Phone Number</label>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='input half has-search'>
-                            <input class='field text medium searchSchools' data-validation='required' id='Field5' maxlength='255' name='Field5' onkeyup='' tabindex='7' type='text' value=''>
-                            <label class='desc' for='Field5' id='title5'>
-                                School/Organization
-                                <span class='req' id='req_5'>*</span>
-                            </label>
-                            <i class='icon-search'></i>
-                        </div>
-                        <div class='input half'>
-                            <label class='desc' for='Field6' id='title6'>
-                                Role on Campus
-                                <span class='req' id='req_6'>*</span>
-                            </label>
-                            <div>
-                                <input class='field text medium' data-validation='required' id='Field6' maxlength='255' name='Field6' onkeyup='' tabindex='8' type='text' value=''>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='input'>
-                            <textarea class='field textarea medium' cols='50' data-validation='required' id='Field8' name='Field8' onkeyup='' rows='10' spellcheck='true' tabindex='10'></textarea>
-                            <label class='desc' for='Field8' id='title8'>
-                                What are you interested in accomplishing with Vprep?
-                                <span class='req' id='req_8'>*</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class='buttons'>
-                        <div>
-                            <input class='btTxt submit btn lg solid-green' id='saveForm' name='saveForm' type='submit' value='Submit'>
-                            <button class='closeModal btn lg dull'>Cancel</button>
-                        </div>
-                    </div>
-                    <li class='wufoo-idstamp'>
-                        <label for='comment'>Do Not Fill This Out</label>
-                        <textarea cols='1' id='comment' name='comment' rows='1'></textarea>
-                        <input id='idstamp' name='idstamp' type='hidden' value='VkpWZ9xsUiTFhq5QblWkD0WS8vbSW7CfY0+O3+H6qVI='>
-                    </li>
-                </form>
-            </section>
-            <section class='modal sm schedule' id='scheduleDemoSuccess'>
-                <h1>Awesome!</h1>
-                <p>
-                    We're thrilled that you're excited to learn more about Vprep. Our team will be reaching out to you shortly!
-                </p>
-            </section>
+</div>
+<script type="text/javascript">JotForm.ownerView=true;</script></body></html>
 
-            <link href="library/css/marketing_home.css" media="screen" rel="stylesheet" type="text/css" />
+<div class='bottom' style="background: rgba(8,16,37,0.8);">
+    <div class='container'>
+        <!--<nav>
 
-        </div>
+            <ul>
+                <li class='m-only'>
+                    <a href='#'>Home</a>
+                </li>
+                <li class='m-only'>
+                    <a href='#'>School Year App</a>
+                </li>
+                <li class='m-only'>
+                    <a href='#'>Admin Tools</a>
+                </li>
+                <li class='m-only'>
+                    <a href='#'>Orientation App</a>
+                </li>
+                <li class='m-only'>
+                    <a href='#'>Attendance</a>
+                </li>
+                <li class='m-only'>
+                    <a href='#'>Blog</a>
+                </li>
+                <li>
+                    <a href='#'>About</a>
+                </li>
+                <li>
+                    <a href='#'>Terms</a>
+                </li>
+                <li>
+                    <a href='#'>Privacy</a>
+                </li>
+                <li>
+                    <a data-modal='contactUs' href='#'>Contact Us</a>
+                </li>
+                <li class='m-only'>
+                    <a data-modal='dualLogin' href='#'>Login</a>
+                </li>
+            </ul>
+        </nav>-->
+        <ul class='social' style="display: none;">
+            <li>
+                <a class='btn' href='http://www.facebook.com/vprep.in1' rel='noopener noreferrer' target='_blank'>
+                    <i class='et-social-icon et-social-facebook'></i>
+                    <span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a class='btn' href='#' rel='noopener noreferrer' target='_blank' style="display: none;">
+                    <i class='icon-twitter'></i>
+                    <span>Twitter</span>
+                </a>
+            </li>
+            <li class='instagram' style="display: none;">
+                <a class='btn' href='#' rel='noopener noreferrer' target='_blank'>
+                    <svg id='insta' space='preserve' style='enable-background:new 0 0 48 48;' version='1.1' viewbox='0 0 48 48' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                        <g>
+                            <path class='st0' d='M24,10.9c4.3,0,4.8,0,6.5,0.1c1.8,0.1,3.5,0.4,4.8,1.7s1.7,3,1.7,4.8c0.1,1.7,0.1,2.2,0.1,6.5s0,4.8-0.1,6.5&#x000A;		c-0.1,1.8-0.4,3.5-1.7,4.8s-3,1.7-4.8,1.7c-1.7,0.1-2.2,0.1-6.5,0.1s-4.8,0-6.5-0.1c-1.8-0.1-3.5-0.4-4.8-1.7s-1.7-3-1.7-4.8&#x000A;		c-0.1-1.7-0.1-2.2-0.1-6.5s0-4.8,0.1-6.5c0.1-1.8,0.4-3.5,1.7-4.8s3-1.7,4.8-1.7C19.2,10.9,19.7,10.9,24,10.9 M24,8&#x000A;		c-4.3,0-4.9,0-6.6,0.1c-2.6,0.1-4.9,0.8-6.7,2.6c-1.8,1.8-2.5,4.1-2.6,6.7C8,19.1,8,19.7,8,24s0,4.9,0.1,6.6&#x000A;		c0.1,2.6,0.8,4.9,2.6,6.7c1.8,1.8,4.1,2.5,6.7,2.6C19.1,40,19.7,40,24,40s4.9,0,6.6-0.1c2.6-0.1,4.9-0.8,6.7-2.6&#x000A;		c1.8-1.8,2.5-4.1,2.6-6.7C40,28.9,40,28.3,40,24s0-4.9-0.1-6.6c-0.1-2.6-0.8-4.9-2.6-6.7c-1.8-1.8-4.1-2.5-6.7-2.6&#x000A;		C28.9,8,28.3,8,24,8L24,8z'></path>
+                            <path class='st0' d='M24,15.8c-4.5,0-8.2,3.7-8.2,8.2s3.7,8.2,8.2,8.2s8.2-3.7,8.2-8.2S28.5,15.8,24,15.8z M24,29.3&#x000A;		c-2.9,0-5.3-2.4-5.3-5.3c0-2.9,2.4-5.3,5.3-5.3c2.9,0,5.3,2.4,5.3,5.3C29.3,26.9,26.9,29.3,24,29.3z'></path>
+                            <circle class='st0' cx='32.5' cy='15.5' r='1.9'></circle>
+                        </g>
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+            </li>
+        </ul>
     </div>
-    <div id="fsModal"
-         class="modal animated bounceIn"
-         tabindex="-1"
-         role="dialog"
-         aria-labelledby="myModalLabel"
-         aria-hidden="true">
+    <div class='container legal'>
+        <hr>
+        <p style="font-size: 16px;">Contact Us: info@vprep.in</p>
+        <p>Vprep &copy; 2018 </p>
+    </div>
+</div>
 
-        <!-- dialog -->
-        <div class="modal-dialog">
-
-            <!-- content -->
-            <div class="modal-content">
-
-                <!-- header -->
-                <div class="modal-header">
-                    <h1 id="myModalLabel"
-                        class="modal-title">
-                        Modal title
-                    </h1>
+</footer>
+<div class='modal-container'>
+    <div class='container'>
+        <section class='modal contact-us' id='contactUs'>
+            <h1>Contact us</h1>
+            <ul>
+                <li>
+                    <i class='icon-email'></i>
+                    <p>
+                        <a href='#'>hello@involvio.com</a>
+                    </p>
+                </li>
+                <li>
+                    <i class='icon-phone'></i>
+                    <p>(212) 729-6670</p>
+                </li>
+                <li>
+                    <i class='icon-location'></i>
+                    <p>
+                        261 Madison Ave
+                        <br> 9th Floor
+                        <br> New York, NY 10016
+                    </p>
+                </li>
+                <li>
+                    <i class='icon-facebook'></i>
+                    <p>
+                        <a href='#' rel='noopener noreferrer' target='_blank'>Vprep on Facebook</a>
+                    </p>
+                </li>
+                <li>
+                    <i class='icon-twitter'></i>
+                    <p>
+                        <a href='#' rel='noopener noreferrer' target='_blank'>Vprep on Twitter</a>
+                    </p>
+                </li>
+            </ul>
+            <div class='right'>
+                <p>Like what you see?</p>
+                <a class='btn lg solid-green scheduleDemoLink' href='#'>Request a Demo</a>
+            </div>
+        </section>
+        <section class='modal schedule' id='scheduleDemo'>
+            <h1>Schedule a Demo</h1>
+            <form accept-charset='UTF-8' action='#' autocomplete='off' class='wufoo topLabel page' enctype='multipart/form-data' id='form122' method='post' name='form122' novalidate=''>
+                <div class='row'>
+                    <div class='input half'>
+                        <input class='field text fn' id='Field1' name='Field1' required='' size='8' tabindex='1' type='text' value=''>
+                        <label for='Field1'>First Name</label>
+                    </div>
+                    <div class='input half'>
+                        <input class='field text ln' id='Field2' name='Field2' required='' size='14' tabindex='2' type='text' value=''>
+                        <label for='Field2'>Last Name</label>
+                    </div>
                 </div>
-                <!-- header -->
+                <div class='row'>
+                    <div class='input half'>
+                        <label class='desc' for='Field3' id='title3'>
+                            Email
+                            <span class='req' id='req_3'>*</span>
+                        </label>
+                        <input class='field text medium' data-validation='email' id='Field3' maxlength='255' name='Field3' spellcheck='false' tabindex='3' type='email' value=''>
+                    </div>
+                    <div class='input half'>
+                        <input class='three' id='Field4' maxlength='3' name='Field4' size='3' tabindex='4' type='tel' value=''>
+                        <input class='three' id='Field4' maxlength='3' name='Field4-1' size='3' tabindex='5' type='tel' value=''>
+                        <input class='four' data-validation='number' id='Field4' maxlength='4' name='Field4-2' size='4' tabindex='6' type='tel' value=''>
+                        <label for=''>Phone Number</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='input half has-search'>
+                        <input class='field text medium searchSchools' data-validation='required' id='Field5' maxlength='255' name='Field5' onkeyup='' tabindex='7' type='text' value=''>
+                        <label class='desc' for='Field5' id='title5'>
+                            School/Organization
+                            <span class='req' id='req_5'>*</span>
+                        </label>
+                        <i class='icon-search'></i>
+                    </div>
+                    <div class='input half'>
+                        <label class='desc' for='Field6' id='title6'>
+                            Role on Campus
+                            <span class='req' id='req_6'>*</span>
+                        </label>
+                        <div>
+                            <input class='field text medium' data-validation='required' id='Field6' maxlength='255' name='Field6' onkeyup='' tabindex='8' type='text' value=''>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='input'>
+                        <textarea class='field textarea medium' cols='50' data-validation='required' id='Field8' name='Field8' onkeyup='' rows='10' spellcheck='true' tabindex='10'></textarea>
+                        <label class='desc' for='Field8' id='title8'>
+                            What are you interested in accomplishing with Vprep?
+                            <span class='req' id='req_8'>*</span>
+                        </label>
+                    </div>
+                </div>
+                <div class='buttons'>
+                    <div>
+                        <input class='btTxt submit btn lg solid-green' id='saveForm' name='saveForm' type='submit' value='Submit'>
+                        <button class='closeModal btn lg dull'>Cancel</button>
+                    </div>
+                </div>
+                <li class='wufoo-idstamp'>
+                    <label for='comment'>Do Not Fill This Out</label>
+                    <textarea cols='1' id='comment' name='comment' rows='1'></textarea>
+                    <input id='idstamp' name='idstamp' type='hidden' value='VkpWZ9xsUiTFhq5QblWkD0WS8vbSW7CfY0+O3+H6qVI='>
+                </li>
+            </form>
+        </section>
+        <section class='modal sm schedule' id='scheduleDemoSuccess'>
+            <h1>Awesome!</h1>
+            <p>
+                We're thrilled that you're excited to learn more about Vprep. Our team will be reaching out to you shortly!
+            </p>
+        </section>
 
-                <!-- body -->
-                <div class="modal-body">
-                    <div class="container" style="padding-top: 60px">
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-4">
-                                <div class="panel panel-default">
-                                    <div class="panel-body" id="firstForgot">
-                                        <div class="text-center">
-                                            <h3><i class="fa fa-lock fa-4x"></i></h3>
-                                            <h2 class="text-center">Forgot Password?</h2>
-                                            <p>Please enter your registered mobile number here.</p>
-                                            <div class="panel-body">
+        <link href="library/css/marketing_home.css" media="screen" rel="stylesheet" type="text/css" />
 
-                                                <form  role="form" autocomplete="off" class="form" method="post">
+    </div>
+</div>
+<div id="fsModal"
+     class="modal animated bounceIn"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
 
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon"><i class="fa fa-mobile" style="font-size:20px;"></i></span>
-                                                            <input id="forgotMobile" name="email" placeholder="mobile number" class="form-control"  type="number">
-                                                            <span id="forgotMobileError" style="color:red">Entered mobile is not registered. Please enter registered mobile.</span>
-                                                        </div>
+    <!-- dialog -->
+    <div class="modal-dialog">
+
+        <!-- content -->
+        <div class="modal-content">
+
+            <!-- header -->
+            <div class="modal-header">
+                <h1 id="myModalLabel"
+                    class="modal-title">
+                    Modal title
+                </h1>
+            </div>
+            <!-- header -->
+
+            <!-- body -->
+            <div class="modal-body">
+                <div class="container" style="padding-top: 60px">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body" id="firstForgot">
+                                    <div class="text-center">
+                                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                        <h2 class="text-center">Forgot Password?</h2>
+                                        <p>Please enter your registered mobile number here.</p>
+                                        <div class="panel-body">
+
+                                            <form  role="form" autocomplete="off" class="form" method="post">
+
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-mobile" style="font-size:20px;"></i></span>
+                                                        <input id="forgotMobile" name="email" placeholder="mobile number" class="form-control"  type="number">
+                                                        <span id="forgotMobileError" style="color:red">Entered mobile is not registered. Please enter registered mobile.</span>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" id="nextId" value="Next" type="button">
-                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input name="recover-submit" class="btn btn-lg btn-primary btn-block" id="nextId" value="Next" type="button">
+                                                </div>
 
-                                                    <input type="hidden" class="hide" name="token" id="token" value="">
-                                                </form>
+                                                <input type="hidden" class="hide" name="token" id="token" value="">
+                                            </form>
 
-                                            </div>
                                         </div>
                                     </div>
-                                    <div class="panel-body" id="secondForgot">
-                                        <div class="text-center">
-                                            <h3><i class="fa fa-lock fa-4x"></i></h3>
-                                            <h2 class="text-center">Forgot Password?</h2>
-                                            <p>Enter your generated OTP</p>
-                                            <div class="panel-body">
+                                </div>
+                                <div class="panel-body" id="secondForgot">
+                                    <div class="text-center">
+                                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                        <h2 class="text-center">Forgot Password?</h2>
+                                        <p>Enter your generated OTP</p>
+                                        <div class="panel-body">
 
-                                                <form role="form" autocomplete="off" class="form" method="post">
+                                            <form role="form" autocomplete="off" class="form" method="post">
 
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon"><i class="fa fa-mobile" style="font-size:20px;"></i></span>
-                                                            <input id="forgotOTP" name="email" placeholder="Enter OTP" class="form-control"  type="number">
-                                                            <span id="forgotOTPError" style="color:red">Entered OTP is not matched</span>
-                                                        </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-mobile" style="font-size:20px;"></i></span>
+                                                        <input id="forgotOTP" name="email" placeholder="Enter OTP" class="form-control"  type="number">
+                                                        <span id="forgotOTPError" style="color:red">Entered OTP is not matched</span>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" id="nextId2" value="Next" type="button">
-                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input name="recover-submit" class="btn btn-lg btn-primary btn-block" id="nextId2" value="Next" type="button">
+                                                </div>
 
-                                                </form>
+                                            </form>
 
-                                            </div>
                                         </div>
                                     </div>
-                                    <div class="panel-body" id="thirdForgot">
-                                        <div class="text-center">
-                                            <h3><i class="fa fa-lock fa-4x"></i></h3>
-                                            <h2 class="text-center">Forgot Password?</h2>
-                                            <p>Enter New Password</p>
-                                            <div class="panel-body">
+                                </div>
+                                <div class="panel-body" id="thirdForgot">
+                                    <div class="text-center">
+                                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                        <h2 class="text-center">Forgot Password?</h2>
+                                        <p>Enter New Password</p>
+                                        <div class="panel-body">
 
-                                                <form id="forgot-password-form"  action="frontend/update_password" role="form" autocomplete="off" class="form" method="post">
+                                            <form id="forgot-password-form"  action="frontend/update_password" role="form" autocomplete="off" class="form" method="post">
 
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon"><i class="fa fa-mobile" style="font-size:20px;"></i></span>
-                                                            <input id="forgotPhoneId" name="phone" type="hidden">
-                                                            <input id="forgotPassword" name="password" placeholder="Enter New Password" class="form-control"  type="password">
-                                                            <span id="forgotPasswordError" style="color:red">password should not be blank.</span>
-                                                        </div>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-mobile" style="font-size:20px;"></i></span>
+                                                        <input id="forgotPhoneId" name="phone" type="hidden">
+                                                        <input id="forgotPassword" name="password" placeholder="Enter New Password" class="form-control"  type="password">
+                                                        <span id="forgotPasswordError" style="color:red">password should not be blank.</span>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" id="nextId3" value="Finish" type="submit">
-                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input name="recover-submit" class="btn btn-lg btn-primary btn-block" id="nextId3" value="Finish" type="submit">
+                                                </div>
 
-                                                </form>
+                                            </form>
 
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2502,31 +2501,32 @@
                         </div>
                     </div>
                 </div>
-                <!-- body -->
-
-                <!-- footer -->
-                <div class="modal-footer">
-                    <button class="btn btn-secondary"
-                            data-dismiss="modal" id="modalClose">
-                        close
-                    </button>
-                    <button class="btn btn-default">
-                        Default
-                    </button>
-                    <button class="btn btn-primary">
-                        Primary
-                    </button>
-                </div>
-                <!-- footer -->
-
             </div>
-            <!-- content -->
+            <!-- body -->
+
+            <!-- footer -->
+            <div class="modal-footer">
+                <button class="btn btn-secondary"
+                        data-dismiss="modal" id="modalClose">
+                    close
+                </button>
+                <button class="btn btn-default">
+                    Default
+                </button>
+                <button class="btn btn-primary">
+                    Primary
+                </button>
+            </div>
+            <!-- footer -->
 
         </div>
-        <!-- dialog -->
+        <!-- content -->
 
     </div>
-    <script src="library/js/marketing.js" type="text/javascript"></script>
+    <!-- dialog -->
+
+</div>
+<script src="library/js/marketing.js" type="text/javascript"></script>
 
 </div>
 <!-- build:js -->

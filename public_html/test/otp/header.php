@@ -30,7 +30,7 @@
         var cred = {};
         cred.username = $('#mobUsername').val();
         cred.password = $("#mobRegpassword", $("#mob-ajax-login-form")).val();
-        var link = 'http://test.vprep.in/frontend/login_validate?username=' + cred.username + '&userpass=' + cred.password ;
+        var link = 'frontend/login_validate?username=' + cred.username + '&userpass=' + cred.password ;
         if(cred.username==""){
 
             $('#mobUserBlank').show();
@@ -66,12 +66,7 @@
             <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: white" role="navigation">
                 <!--         <div class="container-fluid">-->
                 <div class="navbar-header">
-                    <button id="mobNavId" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+
                     <a href="http://vprep.in/">
                         <img src="http://vprep.in/wp-content/uploads/2017/04/logo.png" alt="vPrep" id="logo" data-height-percentage="30" />
                     </a>
@@ -89,7 +84,7 @@
                             <a id="signUpCheckId" href="http://test.vprep.in"  class="dropdown-toggle" data-toggle="dropdown">Sign Up <span class="caret"></span></a>
                             <ul id="sign-up-menu"class="dropdown-menu dropdown-lr animated flipInX green-back" role="menu">
                                 <div class="col-lg-12">
-                                    <form id="ajax-register-form" action="http://test.vprep.in/add_student.html" method="post" role="form" autocomplete="off" style="width: 100%">
+                                    <form id="ajax-register-form" action="add_student.html" method="post" role="form" autocomplete="off" style="width: 100%">
                                         <div class="form-group">
                                             <input type="text" style="border-color:black" name="first_name"  required="required" id="fullName" tabindex="1" class="form-control" placeholder="Full Name" value="">
                                         </div>
@@ -159,7 +154,7 @@
                                 <div class="col-lg-12">
                                     <div class="text-center" style="color: #0c0c0c">
                                         <h3><b>Sign In</b></h3></div>
-                                    <form name="loginForm"id="ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
+                                    <form name="loginForm"id="ajax-login-form" action="login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
                                         <div class="form-group">
                                             <label for="username">Username</label>
                                             <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
@@ -244,7 +239,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-lg-12">
-                        <form name="loginForm"id="mob-ajax-login-form" action="http://test.vprep.in/login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
+                        <form name="loginForm"id="mob-ajax-login-form" action="login/checkLogin" accept-charset="utf-8" method="post"  role="form" autocomplete="off">
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" name="username" id="mobUsername" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">

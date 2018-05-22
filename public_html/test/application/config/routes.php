@@ -72,6 +72,7 @@ $route['about_exam/(:any)']='student/about_exam/$1';
 $route['start_exam/(:any)']='student/start_exam/$1';
 $route['sample_test/(:any)']='student/sample_test/$1';
 $route['testForAll/start']='student/open_test';
+$route['weekly_posts']='educational/getWeeklyPosts';
 
 $route['read_exam_data']='student/read_exam_data';
 $route['read_ans_json']='student/read_ans_json';

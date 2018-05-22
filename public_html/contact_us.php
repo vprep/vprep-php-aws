@@ -806,7 +806,7 @@
     <link type="text/css" media="print" rel="stylesheet" href="http://cdn.jotfor.ms/css/printForm.css?3.3.2455">
     <link type="text/css" rel="stylesheet" href="http://cdn.jotfor.ms/css/styles/nova.css?3.3.2455">
     <link type="text/css" rel="stylesheet" href="http://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=58c6459d9a11c7136a8b4567">
-    <style type="text/css"> .form-label-left{ width:150px; } .form-line{ padding-top:12px; padding-bottom:12px; } .form-label-right{ width:150px; } .form-all{ width:472px; color:#555 !important; font-family:'Copse'; font-size:16px; } .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{ color: #57ad22; } </style> <style type="text/css" id="form-designer-style"> /* Injected CSS Code */
+    <style type="text/css"> .form-label-{ width:150px; } .form-line{ padding-top:12px; padding-bottom:12px; } .form-label-right{ width:150px; } .form-all{ width:472px; color:#555 !important; font-family:'Copse'; font-size:16px; } .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{ color: #57ad22; } </style> <style type="text/css" id="form-designer-style"> /* Injected CSS Code */
         @import "http://fonts.googleapis.com/css?family=Copse:light,lightitalic,normal,italic,bold,bolditalic";
         .form-all { font-family: "Copse", sans-serif;
         }

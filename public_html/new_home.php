@@ -742,6 +742,17 @@
     <meta content='p0UYCigDjAU3Wspw_TZjmsLp21JpXteI-qUNVqpjNGM' name='google-site-verification'>
     <link href='img/favicon.png' rel='icon' type='image/x-icon'>
     <script src='js/picturefill.js'></script>
+    <style>
+        @media (max-width: 768px) {
+            .dropdown-lr h3 {
+                color: #eee;
+            }
+            .dropdown-lr label {
+                color: #eee;
+            }
+
+        }
+    </style>
 </head>
 
 <body class='marketing is-home' >
