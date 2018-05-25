@@ -1,4 +1,4 @@
-This is test and delete once you see this :)1
+
 <style>
     #example_iframe
     {
@@ -530,7 +530,11 @@ This is test and delete once you see this :)1
                                                         <div class="form-group" id="text_question" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
                                                             <label class="pull-left" style="margin-top:5px">Question ?</label>
 
-
+                                                            <p  contenteditable="true" class="doc_class" style="
+    WIDTH: 100%;
+    FLOAT: LEFT;
+    text-align: initial;
+"></p>
                                                             <p  contenteditable="true" class="doc_class" style="
     WIDTH: 100%;
     FLOAT: LEFT;
