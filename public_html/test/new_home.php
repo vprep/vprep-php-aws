@@ -1951,9 +1951,10 @@
                     <p>Vprep helps your college or university drive student engagement from orientation to graduation using the power of web.</p>-->
                 </h1>
             </section>
-            <button class='learn' id='learnMore'>Learn More</button>
+            <button class='learn' id='learnMore'><a data-section="outlook"  href='#outlookid' style="font-size: 12px!important;">Learn More</a></button>
         </div>
         <div class="form-area " data-section="outlook" >
+            <div id="outlookid">
             <section class='platform' id="outlookForm" style="background: #565a5f;padding-top: 5%;">
                 <div class="slideshow-container"  style="display: block;margin-left: auto;margin-right: auto;">
 
@@ -2063,6 +2064,7 @@
                     <span class="dot" data-value="4"></span>
                 </div>
             </section>
+            </div>
         </div>
         <div class="form-area " data-section="college_engage">
             <div id="collEngage" >
