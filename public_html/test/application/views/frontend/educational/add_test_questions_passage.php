@@ -151,7 +151,7 @@
     }
 </script>
 
-
+<div class="col-md-3"><a href="javascript:;" class="btn btn-primary btn-lg" style="margin-top:21px;" id="add_dynamic_subject" onclick="getMoreSubjectData();"><i class="fa fa-plus-square"></i></a></div>
 
 
 <div id="wrapper-content">
