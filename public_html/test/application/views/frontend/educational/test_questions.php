@@ -487,8 +487,8 @@ if (!empty($test_ques) && !empty($test_ques['sub_module'])) {
                                     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="box">
-            <div class="box-body text-right add_question_tab">
-                <?php echo anchor('add_test_questions_passage','<i class="fa fa-plus-square"></i> &nbsp;Add Question passage',array("class"=>"btn btn-primary btn-lg")); ?>
+            <div class="box-body text-right add_question_tab" style="margin-top:15px;">
+                <?php echo anchor('add_test_questions_passage','<i class="fa fa-plus-square"></i> &nbsp;Add Passage',array("class"=>"btn btn-primary btn-lg")); ?>
             </div>
         </div>
     </div>
