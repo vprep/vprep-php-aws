@@ -705,7 +705,6 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                                 echo -1;
                                                             } ?>";
                                                         </script>
-                                                        <div class="col-md-3"><a href="javascript:;" class="btn btn-primary btn-lg" style="margin-top:21px;" id="add_dynamic_subject" onclick="getMoreSubjectData();"><i class="fa fa-plus-square"></i></a></div>
 
 
                                                         <div class="col-md-12" style="background-color:#eee;padding:10px;MARGIN-TOP: 21PX;">
@@ -1145,6 +1144,10 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="clearfix">&nbsp;</div>
+
+                                                            <div class="col-md-3"><a href="javascript:;" class="btn btn-primary btn-lg" style="margin-top:21px;" id="add_dynamic_subject" onclick="getMoreSubjectData();"><i class="fa fa-plus-square"></i></a></div>
+
+
                                                             <div class="col-md-12 pull-left">
 
                                                                 <button name="save" type="submit"  value="save_add" class="btn btn-success btn-lg custom-margin-5">Save & Add</button>
