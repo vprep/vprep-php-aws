@@ -408,6 +408,18 @@ $userId = $this->getCurrentUserId();
 
         $this->template->load('educational','frontend/educational/add_test_questions',$data);
     }
+    #function for test questions
+    function add_test_questions_passage(){
+
+        $userid=$this->getCurrentUserId();
+
+        // $data['exam_list'] = $this->edu->loadExamListAll($userid);
+        $data['subject_listing']=$this->edu->getSubjectList("1");
+
+        $data['test_cat_opt']=$this->edu->get_exam_category_opt($userid,0);
+
+        $this->template->load('educational','frontend/educational/add_test_questions_passage',$data);
+    }
      function add_test_questions_mock($eid,$course){
     
 		$userid=$this->getCurrentUserId();

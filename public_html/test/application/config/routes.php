@@ -127,6 +127,8 @@ $route['test_questions']='educational/test_questions';
 $route['educatioanl/test_questions/(:any)']='educational/test_questions/$1';
 
 $route['add_test_questions']='educational/add_test_questions';
+$route['add_test_questions_passage']='educational/add_test_questions_passage';
+
 $route['edit_test_questions/(:any)']='educational/edit_test_questions/$1';
 $route['save_test_questions']='educational/save_test_questions';
 $route['save_edited_test_questions']='educational/save_edited_test_questions';
