@@ -4826,6 +4826,8 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
     function myFunction_submit() {
         alert("submitted");
 
+            window.open('http://test.vprep.in/add_test_questions_passage');
+
     }
     </script>
 
