@@ -334,8 +334,17 @@
 
                                             return true;
                                         }</script>
-                                    <label class="pull-left">Total Questions</label>
-                                    <select style="float: left;width: 100px;">
+                                    <script>
+                                        $(".dropdown_option").change(){
+                                            alert("came here");
+                                        }
+
+                                    </script>
+                                    <label class="pull-left" style="
+    width: 100%;
+    text-align: left;
+">Total Questions</label>
+                                    <select class="dropdown_option" style="float: left;width: 100px;">
                                     <option>1</option>
                                        <option>2</option>
 
@@ -344,6 +353,8 @@
                                        <option>5</option>
                                        <option>6</option>
                                    </select>
+
+
 
                                     <div class="row">
                                         <div class="col-md-12 showback">
