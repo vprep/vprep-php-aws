@@ -540,7 +540,7 @@
 
 
 
-
+                                                            <label class="pull-left" style="margin-top:5px">Question</label>
 
                                                             <p  contenteditable="true" class="doc_class" style="
     WIDTH: 100%;
