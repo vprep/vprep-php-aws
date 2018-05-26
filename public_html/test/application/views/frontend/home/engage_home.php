@@ -520,11 +520,6 @@
 
 
         function weeklyPostsQuery(type, qry) {
-            var topics = [
-                "Data Structures", "Verbal", "Aptitude",
-                "Programming"
-            ];
-            var subTopics = ["Poll",""];
             var types = ["search","topic","sub_topic"]
             //  var currentDate = 1526199604546 - (7 * 24 * 60 * 60 * 1000);
             var startDate_1 = parseInt((new Date().getTime() - (7 * 24 * 60 * 60 * 1000))/1000);
@@ -543,43 +538,32 @@
             var url_4;
             var url_5;
             //http://localhost/weekly_posts?start_date=1500100108&end_date=1526120198&topic=Data%20Structures&sub_topic=&search_input=%Hel%
+            if(qry == 'All'){
+                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic=&search_input=";
+                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic=&sub_topic=&search_input=";
+                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic=&sub_topic=&search_input=";
+                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic=&sub_topic=&search_input=";
+                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic=&sub_topic=&search_input=";
+            } else
             if(types[type] == 'search'){
                 url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic=&search_input=%"+qry+"%";
-            } else if(types[type] == 'sub_topic') {
-                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
-            } else {
-                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic="+topics[qry]+"&sub_topic=&search_input=";
-            }
-            if(types[type] == 'search'){
                 url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic=&sub_topic=&search_input=%"+qry+"%";
-            }else if(types[type] == 'sub_topic') {
-                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
-            } else {
-                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic="+topics[qry]+"&sub_topic=&search_input=";
-            }
-            if(types[type] == 'search'){
                 url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic=&sub_topic=&search_input=%"+qry+"%";
-            } else if(types[type] == 'sub_topic') {
-                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
-            } else {
-                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic="+topics[qry]+"&sub_topic=&search_input=";
-            }
-            if(types[type] == 'search'){
                 url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic=&sub_topic=&search_input=%"+qry+"%";
-            } else if(types[type] == 'sub_topic') {
-                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
-            } else {
-                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic="+topics[qry]+"&sub_topic=&search_input=";
-            }
-            if(types[type] == 'search'){
                 url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic=&sub_topic=&search_input=%"+qry+"%";
-            }else if(types[type] == 'sub_topic') {
-                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic=&sub_topic="+subTopics[qry]+"&search_input=";
+            } else if(types[type] == 'sub_topic') {
+                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic=&sub_topic="+qry+"&search_input=";
+                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic=&sub_topic="+qry+"&search_input=";
+                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic=&sub_topic="+qry+"&search_input=";
+                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic=&sub_topic="+qry+"&search_input=";
+                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic=&sub_topic="+qry+"&search_input=";
             } else {
-                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic="+topics[qry]+"&sub_topic=&search_input=";
+                url_1 = "weekly_posts?start_date="+startDate_1+ "&end_date="+endDate_1+"&topic="+qry+"&sub_topic=&search_input=";
+                url_2 = "weekly_posts?start_date="+startDate_2+ "&end_date="+endDate_2+"&topic="+qry+"&sub_topic=&search_input=";
+                url_3 = "weekly_posts?start_date="+startDate_3+ "&end_date="+endDate_3+"&topic="+qry+"&sub_topic=&search_input=";
+                url_4 = "weekly_posts?start_date="+startDate_4+ "&end_date="+endDate_4+"&topic="+qry+"&sub_topic=&search_input=";
+                url_5 = "weekly_posts?start_date="+startDate_5+ "&end_date="+endDate_5+"&topic="+qry+"&sub_topic=&search_input=";
             }
-
-
 
             $.ajax({
                 url: url_1,
@@ -666,8 +650,29 @@
             return addHtml1;
         }
 
+        $(document).on('click', '.widgetFilter .subject-filter-type-li', function () {
+            var self = $(this);
+            $(self).parents('.widgetFilter').find('.subject-filter-type-label').html($(self).text());
+            weeklyPostsQuery(1,$(self).text());
+        });
+
+        $(document).on('click', '.widgetFilter .type-filter-type-li', function () {
+            var self = $(this);
+            $(self).parents('.widgetFilter').find('.type-filter-type-label').html($(self).text());
+            weeklyPostsQuery(2,$(self).text());
+        });
 
     </script>
+    <style>
+        @media (max-width: 768px) {
+          .post-mob {
+              margin-top: 59px!important;
+              width: 100%;
+          }
+        }
+
+
+    </style>
 
 
 </head>
@@ -677,42 +682,63 @@
     <div class="row-fluid" style="padding-top: 1%;">
         <div class="col-sm-3" >
             <div class="row">
-                <div class="col-sm-3 other" style="margin: 1px;">
-                    <button id="newPostId" type="button" style="padding:5px 8px;" class="btn btn-primary">New Post</button>
+                <div class="col-sm-3 other post-mob" style="margin: 1px;">
+                    <button id="newPostId" type="button" style="padding:5px 0px;width: 100%;" class="btn btn-primary">New Post</button>
                 </div>
                 <div class="col-sm-8 other2">
                     <div id="custom-search-input">
-                        <div class="input-group col-md-12" style="margin-top: 1%;">
+                        <div class="input-group col-md-12" style="margin-top: 1%;width: 100%;">
                             <input id="searchPostId" style="border-radius: 7px;height: 1%;" type="text" class="form-control input-sm" placeholder="Search Post" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-top: 1%;">
-                <div class="col-sm-6">
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" style="padding: 2px 12px;width: 100%;background: lightgrey;" data-toggle="dropdown">All
-                            <span class="caret" style="padding-bottom: 8%;"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,0)'>Data Structures</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,1)'>Verbal</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,2)'>Aptitude</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(1,3)'>Programming</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" style="padding: 2px 12px;width: 100%;background: lightgrey;" data-toggle="dropdown">Filter
-                            <span class="caret" style="padding-bottom: 8%;"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(2,0)'>Poll</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" onclick='weeklyPostsQuery(2,1)'>Post</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div id="weeklyPost" style="margin: 4%;">
+                <div class="row" style="margin-top: 1%;">
+                    <div class="panel panel-default" id="filterPanel" >
+                        <div class="panel-heading need-collapse">
+                            <h3 class="panel-title">Filters</h3>
+                        </div>
+                        <div class="panel-body" style="padding-bottom: 5px;">
+                            <div class="row">
+                                <div id="collapseExample" aria-expanded="true">
+                                    <div class="form-group col-sm-12">
+                                        <div class="form-group col-sm-6">
+                                            <label for="subjectFilterLabel">Subject</label>
+                                            <div class="dropdown widgetFilter">
+                                                <button class="btn btn-default btn-sm dropdown-toggle subject-filter-type-btn" type="button" data-toggle="dropdown" aria-haspopup="true" style="width:100%;">
+                                                <span class="subject-filter-type-label">All</span>
+                                                <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" style="width: 100%;">
+                                                    <li class="subject-filter-type-li"><a href="javascript:void(0);">All</a></li>
+                                                    <li class="subject-filter-type-li"><a href="javascript:void(0);">Data Structures</a></li>
+                                                    <li class="subject-filter-type-li"><a href="javascript:void(0);">Verbal</a></li>
+                                                    <li class="subject-filter-type-li"><a href="javascript:void(0);">Aptitude</a></li>
+                                                    <li class="subject-filter-type-li"><a href="javascript:void(0);">Programming</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="subjectFilterLabel">Type</label>
+                                            <div class="dropdown widgetFilter">
+                                                <button class="btn btn-default btn-sm dropdown-toggle type-filter-type-btn" type="button" data-toggle="dropdown" aria-haspopup="true" style="width:100%;" >
+                                                    <span class="type-filter-type-label" >All</span>
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" style="width: 100%;">
+                                                    <li class="type-filter-type-li"><a href="javascript:void(0);">All</a></li>
+                                                    <li class="type-filter-type-li"><a href="javascript:void(0);">Post</a></li>
+                                                    <li class="type-filter-type-li"><a href="javascript:void(0);">Poll</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row"  style="margin-top: 1%;">
                     <div class="panel panel-success">
                         <input type="hidden" id="prev_week_2_start_id" value="<?php echo $prev_week_2_start/1000 ?>">
