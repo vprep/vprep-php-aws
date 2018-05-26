@@ -3859,7 +3859,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                         </div>
                                         <?php echo form_close(); ?>
                                     </div>
-                                    <div class="row">
+                                    <div class="hide_question row">
                                         <div class="col-md-12 showback">
                                             <div class="box box-primary">
                                                 <div class="box-body">
@@ -4583,12 +4583,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
     }
     </script>
 
-                                                            <div class="col-md-12 pull-left">
 
-                                                                <button name="save" type="submit"  value="save_add" onclick="myFunction_submit()" class="btn btn-success btn-lg custom-margin-5">Save & Add</button>
-                                                                <button name="save" type="submit" value="save_exit" class="btn btn-success btn-lg custom-margin-5">Save & Exit </button>
-                                                                <a href="<?php echo base_url("educational/questionbank"); ?>" class="btn btn-danger btn-lg custom-margin-5">Discard</a>
-                                                            </div>
                                                             <div class="clearfix">&nbsp;</div>
                                                         </div>
                                                     </div>
@@ -4596,6 +4591,12 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                             </div>
                                         </div>
                                         <?php echo form_close(); ?>
+                                    </div>
+                                    <div class="col-md-12 pull-left">
+
+                                        <button name="save" type="submit"  value="save_add" onclick="myFunction_submit()" class="btn btn-success btn-lg custom-margin-5">Save & Add</button>
+                                        <button name="save" type="submit" value="save_exit" class="btn btn-success btn-lg custom-margin-5">Save & Exit </button>
+                                        <a href="<?php echo base_url("educational/questionbank"); ?>" class="btn btn-danger btn-lg custom-margin-5">Discard</a>
                                     </div>
 
                             </div>
