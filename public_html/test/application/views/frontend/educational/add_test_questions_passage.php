@@ -387,6 +387,92 @@
 
                                                             <?php echo form_error('subject_id', '<div class="text-red">* ', '</div>'); ?>
                                                         </div>
+                                                        <div class=" form-group" id="show_subject_id"></div>
+                                                        <div class=" form-group" id="show_exam_id"></div>
+                                                        <div class="adding_dropdown_in_one_line form-group" id="show_module_id">
+
+                                                            <?php
+                                                            if (!empty($test_ques) && !empty($test_ques['module'])) {
+
+                                                            $mi = $test_ques['module'];
+                                                            $mn = '';
+
+                                                            $marr = array();
+
+                                                            if (!empty($mi)) {
+
+                                                            foreach ($smods as $te) {
+                                                                if ($te->module_id === $mi)
+                                                                    $mn = $te->module_title;
+                                                                else {
+                                                                    $marr[] = $te;
+                                                                }
+                                                            }
+                                                            ?>
+
+                                                            <label class="pull-left">Select Module</label>
+                                                            <select name="module" class="form-control" required="required" id="module_id" onchange="getSubModule(this.value)" >
+
+                                                                <option value="<?php echo $mi; ?>" selected="selected"><?php echo $mn; ?></option>
+                                                                <?php } else { ?>
+                                                                    <option value="" selected="selected">Choose Module</option>
+                                                                <?php } ?>
+                                                                <?php
+                                                                if (count($marr) > 0) {
+                                                                    foreach ($marr as $tec) {
+                                                                        ?>
+                                                                        <option value="<?php echo $tec->module_id; ?>" ><?php echo $tec->module_title; ?></option>
+                                                                        <?php
+                                                                    }
+                                                                }
+                                                                }
+                                                                ?>
+
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="adding_dropdown_in_one_line form-group" id="show_sub_module_id">
+
+                                                            <?php
+                                                            if (!empty($test_ques) && !empty($test_ques['sub_module'])) {
+
+                                                            $smi = $test_ques['sub_module'];
+                                                            $smn = '';
+
+                                                            $smarr = array();
+
+                                                            if (!empty($smi)) {
+
+                                                            foreach ($ssmods as $te) {
+                                                                if ($te->module_id === $smi)
+                                                                    $smn = $te->module_title;
+                                                                else {
+                                                                    $smarr[] = $te;
+                                                                }
+                                                            }
+                                                            ?>
+
+                                                            <label class="pull-left">Select Sub Module</label>
+                                                            <select name="sub_module" class="form-control" required="required" id="module_id" >
+
+                                                                <option value="<?php echo $smi; ?>" selected="selected"><?php echo $smn; ?></option>
+                                                                <?php } else { ?>
+                                                                    <option value="" selected="selected">Choose Module</option>
+                                                                <?php } ?>
+                                                                <?php
+                                                                if (count($smarr) > 0) {
+                                                                    foreach ($smarr as $tec) {
+                                                                        ?>
+                                                                        <option value="<?php echo $tec->module_id; ?>" ><?php echo $tec->module_title; ?></option>
+                                                                        <?php
+                                                                    }
+                                                                }
+                                                                }
+                                                                ?>
+
+                                                            </select>
+
+                                                        </div>
 
 
                                                         <div class="adding_dropdown_in_one_line form-group">
