@@ -342,46 +342,7 @@
                                                         echo form_error('module', '<div class="text-red">* ', '</div>');
                                                         ?>
 
-                                                        <div class="adding_dropdown_in_one_line form-group">
-                                                            <label class="pull-left">Choose Subject</label>
 
-
-                                                            <select name="subject_id" class="form-control" required onchange="getModule(this.value)">
-                                                                <?php
-
-                                                                $ssn = '';
-
-                                                                $sarr = array();
-
-                                                                foreach ($subject_listing as $te) {
-                                                                    if (false)
-                                                                        $ssn = $te->subject_title;
-
-                                                                    else {
-                                                                        $sarr[] = $te;
-
-                                                                    }
-                                                                }
-
-                                                                if (false) {
-                                                                    ?>
-                                                                    <option value="<?php echo $ssi; ?>" selected="selected"><?php echo $ssn; ?></option>
-                                                                <?php } else { ?>
-                                                                    <option value="" selected="selected">Choose Subject</option>
-                                                                <?php } ?>
-                                                                <?php
-                                                                if (count($sarr) > 0) {
-                                                                    foreach ($sarr as $tec) {
-                                                                        ?>
-                                                                        <option value="<?php echo $tec->subject_id; ?>" ><?php echo $tec->subject_title; ?></option>
-                                                                        <?php
-                                                                    }
-                                                                }
-                                                                ?>
-                                                            </select>
-
-                                                            <?php echo form_error('subject_id', '<div class="text-red">* ', '</div>'); ?>
-                                                        </div>
                                                         <div class=" form-group" id="show_subject_id"></div>
                                                         <div class=" form-group" id="show_exam_id"></div>
                                                         <div class="adding_dropdown_in_one_line form-group" id="show_module_id">
@@ -4513,46 +4474,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         echo form_error('module', '<div class="text-red">* ', '</div>');
                                                         ?>
 
-                                                        <div class="adding_dropdown_in_one_line form-group">
-                                                            <label class="pull-left">Choose Subject</label>
 
-
-                                                            <select name="subject_id" class="form-control" required onchange="getModule(this.value)">
-                                                                <?php
-
-                                                                $ssn = '';
-
-                                                                $sarr = array();
-
-                                                                foreach ($subject_listing as $te) {
-                                                                    if (false)
-                                                                        $ssn = $te->subject_title;
-
-                                                                    else {
-                                                                        $sarr[] = $te;
-
-                                                                    }
-                                                                }
-
-                                                                if (false) {
-                                                                    ?>
-                                                                    <option value="<?php echo $ssi; ?>" selected="selected"><?php echo $ssn; ?></option>
-                                                                <?php } else { ?>
-                                                                    <option value="" selected="selected">Choose Subject</option>
-                                                                <?php } ?>
-                                                                <?php
-                                                                if (count($sarr) > 0) {
-                                                                    foreach ($sarr as $tec) {
-                                                                        ?>
-                                                                        <option value="<?php echo $tec->subject_id; ?>" ><?php echo $tec->subject_title; ?></option>
-                                                                        <?php
-                                                                    }
-                                                                }
-                                                                ?>
-                                                            </select>
-
-                                                            <?php echo form_error('subject_id', '<div class="text-red">* ', '</div>'); ?>
-                                                        </div>
                                                         <div class=" form-group" id="show_subject_id"></div>
                                                         <div class=" form-group" id="show_exam_id"></div>
                                                         <div class="adding_dropdown_in_one_line form-group" id="show_module_id">
