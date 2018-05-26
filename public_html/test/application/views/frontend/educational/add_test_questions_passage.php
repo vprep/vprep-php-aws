@@ -13,6 +13,9 @@
         margin-bottom: 0px;
 
     }
+    input[type="file"] {
+        display: none;
+    }
 </style>
 
 
