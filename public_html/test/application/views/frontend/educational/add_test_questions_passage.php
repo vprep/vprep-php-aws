@@ -1017,7 +1017,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         echo form_error('module', '<div class="text-red">* ', '</div>');
                                                         ?>
 
-                                                       
+
 
 
 
@@ -4822,11 +4822,16 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                             </div>
                                                             <div class="clearfix">&nbsp;</div>
 
+<script>
+    function myFunction_submit() {
+        alert("submitted");
 
+    }
+    </script>
 
                                                             <div class="col-md-12 pull-left">
 
-                                                                <button name="save" type="submit"  value="save_add" class="btn btn-success btn-lg custom-margin-5">Save & Add</button>
+                                                                <button name="save" type="submit"  value="save_add" onclick="myFunction_submit()" class="btn btn-success btn-lg custom-margin-5">Save & Add</button>
                                                                 <button name="save" type="submit" value="save_exit" class="btn btn-success btn-lg custom-margin-5">Save & Exit </button>
                                                                 <a href="<?php echo base_url("educational/questionbank"); ?>" class="btn btn-danger btn-lg custom-margin-5">Discard</a>
                                                             </div>
