@@ -150,11 +150,6 @@
         }
     }
 </script>
-<p  contenteditable="true" class="doc_class" style="
-    WIDTH: 100%;
-    FLOAT: LEFT;
-    text-align: initial;
-"></p>
 
 
 
@@ -539,7 +534,11 @@
     FLOAT: LEFT;
     text-align: initial;
 "></p>
-
+                                                            <p  contenteditable="true" class="doc_class" style="
+    WIDTH: 100%;
+    FLOAT: LEFT;
+    text-align: initial;display: block;
+"></p>
                                                             <input type="hidden" name="title" value="test">
                                                             <style>
                                                                 .doc_class {
