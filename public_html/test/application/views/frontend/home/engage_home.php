@@ -669,7 +669,23 @@
               margin-top: 59px!important;
               width: 100%;
           }
+
+            .mob-feed {
+                margin-top: -37%!important;
+                margin-left: 92%!important;
+            }
+
+            .date-feed {
+                margin-top: -9%!important;
+            }
+
+            .mob-row-feed {
+                margin-top: 0px!important;
+            }
+
         }
+
+
 
 
     </style>
@@ -763,10 +779,10 @@
                                                         </div>
                                                         <div class="row" style="margin-top: 27px;margin-left: 7px;">
                                                             <?php if ($val['is_student']): ?>
-                                                                <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                             <?php endif; ?>
                                                             <?php if (!$val['is_student']): ?>
-                                                                <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                <button type="button" class="btn btn-danger mob-feed" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
                                                             <?php endif; ?>
                                                         </div>
 
@@ -805,10 +821,10 @@
                                                             </div>
                                                             <div class="row" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                    <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>
                                                                 <?php if (!$val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                    <button type="button" class="btn btn-danger mob-feed" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
                                                                 <?php endif; ?>
                                                             </div>
 
@@ -848,10 +864,10 @@
                                                             </div>
                                                             <div class="row" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                    <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>
                                                                 <?php if (!$val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                    <button type="button" class="btn btn-danger mob-feed" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
                                                                 <?php endif; ?>
                                                             </div>
 
@@ -891,10 +907,10 @@
                                                             </div>
                                                             <div class="row" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                    <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>
                                                                 <?php if (!$val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                    <button type="button" class="btn btn-danger mob-feed" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
                                                                 <?php endif; ?>
                                                             </div>
 
@@ -934,10 +950,10 @@
                                                             </div>
                                                             <div class="row" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-success" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
+                                                                    <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>
                                                                 <?php if (!$val['is_student']): ?>
-                                                                    <button type="button" class="btn btn-danger" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
+                                                                    <button type="button" class="btn btn-danger mob-feed" style="font-size: 9px;padding: 4px 8px;font-weight: bold;">P</button>
                                                                 <?php endif; ?>
                                                             </div>
 
