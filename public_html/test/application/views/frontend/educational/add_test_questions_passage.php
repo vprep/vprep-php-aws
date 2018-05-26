@@ -1121,44 +1121,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 "></p>
                                                             <input type="hidden" name="solution" value="test"></div>
                                                         <div class="col-md-12">&nbsp;</div>
-                                                        <div class="col-md-12">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Difficulty Level</label>
-                                                                    <?php
-                                                                    $dl_opt = array(
-                                                                        'easy' => 'Easy',
-                                                                        'medium' => 'Medium',
-                                                                        'difficult' => 'Difficult'
-                                                                    );
-                                                                    echo form_dropdown('difficulty_level', $dl_opt, !empty($test_ques['difficulty_level']) ? $test_ques['difficulty_level'] : '', 'class="form-control"')
-                                                                    ?>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Correct Answer</label>
-                                                                    <?php
-                                                                    $opt = array(
-                                                                        '' => 'Select',
-                                                                        '1' => 'Option 1',
-                                                                        '2' => 'Option 2',
-                                                                        '3' => 'Option 3',
-                                                                        '4' => 'Option 4',
-                                                                    );
-                                                                    echo form_dropdown('correct_ans', $opt, !empty($test_ques['correct_ans']) ? $test_ques['correct_ans'] : '', 'class="form-control"');
-                                                                    ?>
-                                                                    <?php echo form_error('correct_ans', '<div class="text-red">* ', '</div>'); ?>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix">&nbsp;</div>
-
-
-
-
-                                                            <div class="clearfix">&nbsp;</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1957,43 +1920,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 "></p>
                                                             <input type="hidden" name="solution" value="test"></div>
                                                         <div class="col-md-12">&nbsp;</div>
-                                                        <div class="col-md-12">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Difficulty Level</label>
-                                                                    <?php
-                                                                    $dl_opt = array(
-                                                                        'easy' => 'Easy',
-                                                                        'medium' => 'Medium',
-                                                                        'difficult' => 'Difficult'
-                                                                    );
-                                                                    echo form_dropdown('difficulty_level', $dl_opt, !empty($test_ques['difficulty_level']) ? $test_ques['difficulty_level'] : '', 'class="form-control"')
-                                                                    ?>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Correct Answer</label>
-                                                                    <?php
-                                                                    $opt = array(
-                                                                        '' => 'Select',
-                                                                        '1' => 'Option 1',
-                                                                        '2' => 'Option 2',
-                                                                        '3' => 'Option 3',
-                                                                        '4' => 'Option 4',
-                                                                    );
-                                                                    echo form_dropdown('correct_ans', $opt, !empty($test_ques['correct_ans']) ? $test_ques['correct_ans'] : '', 'class="form-control"');
-                                                                    ?>
-                                                                    <?php echo form_error('correct_ans', '<div class="text-red">* ', '</div>'); ?>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix">&nbsp;</div>
-
-
-
-                                                            <div class="clearfix">&nbsp;</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2753,44 +2680,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 "></p>
                                                             <input type="hidden" name="solution" value="test"></div>
                                                         <div class="col-md-12">&nbsp;</div>
-                                                        <div class="col-md-12">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Difficulty Level</label>
-                                                                    <?php
-                                                                    $dl_opt = array(
-                                                                        'easy' => 'Easy',
-                                                                        'medium' => 'Medium',
-                                                                        'difficult' => 'Difficult'
-                                                                    );
-                                                                    echo form_dropdown('difficulty_level', $dl_opt, !empty($test_ques['difficulty_level']) ? $test_ques['difficulty_level'] : '', 'class="form-control"')
-                                                                    ?>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Correct Answer</label>
-                                                                    <?php
-                                                                    $opt = array(
-                                                                        '' => 'Select',
-                                                                        '1' => 'Option 1',
-                                                                        '2' => 'Option 2',
-                                                                        '3' => 'Option 3',
-                                                                        '4' => 'Option 4',
-                                                                    );
-                                                                    echo form_dropdown('correct_ans', $opt, !empty($test_ques['correct_ans']) ? $test_ques['correct_ans'] : '', 'class="form-control"');
-                                                                    ?>
-                                                                    <?php echo form_error('correct_ans', '<div class="text-red">* ', '</div>'); ?>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix">&nbsp;</div>
-
-
-
-
-                                                            <div class="clearfix">&nbsp;</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3589,43 +3479,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 "></p>
                                                             <input type="hidden" name="solution" value="test"></div>
                                                         <div class="col-md-12">&nbsp;</div>
-                                                        <div class="col-md-12">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Difficulty Level</label>
-                                                                    <?php
-                                                                    $dl_opt = array(
-                                                                        'easy' => 'Easy',
-                                                                        'medium' => 'Medium',
-                                                                        'difficult' => 'Difficult'
-                                                                    );
-                                                                    echo form_dropdown('difficulty_level', $dl_opt, !empty($test_ques['difficulty_level']) ? $test_ques['difficulty_level'] : '', 'class="form-control"')
-                                                                    ?>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Correct Answer</label>
-                                                                    <?php
-                                                                    $opt = array(
-                                                                        '' => 'Select',
-                                                                        '1' => 'Option 1',
-                                                                        '2' => 'Option 2',
-                                                                        '3' => 'Option 3',
-                                                                        '4' => 'Option 4',
-                                                                    );
-                                                                    echo form_dropdown('correct_ans', $opt, !empty($test_ques['correct_ans']) ? $test_ques['correct_ans'] : '', 'class="form-control"');
-                                                                    ?>
-                                                                    <?php echo form_error('correct_ans', '<div class="text-red">* ', '</div>'); ?>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix">&nbsp;</div>
-
-
-
-                                                            <div class="clearfix">&nbsp;</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4424,44 +4278,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 "></p>
                                                             <input type="hidden" name="solution" value="test"></div>
                                                         <div class="col-md-12">&nbsp;</div>
-                                                        <div class="col-md-12">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Difficulty Level</label>
-                                                                    <?php
-                                                                    $dl_opt = array(
-                                                                        'easy' => 'Easy',
-                                                                        'medium' => 'Medium',
-                                                                        'difficult' => 'Difficult'
-                                                                    );
-                                                                    echo form_dropdown('difficulty_level', $dl_opt, !empty($test_ques['difficulty_level']) ? $test_ques['difficulty_level'] : '', 'class="form-control"')
-                                                                    ?>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="pull-left">Correct Answer</label>
-                                                                    <?php
-                                                                    $opt = array(
-                                                                        '' => 'Select',
-                                                                        '1' => 'Option 1',
-                                                                        '2' => 'Option 2',
-                                                                        '3' => 'Option 3',
-                                                                        '4' => 'Option 4',
-                                                                    );
-                                                                    echo form_dropdown('correct_ans', $opt, !empty($test_ques['correct_ans']) ? $test_ques['correct_ans'] : '', 'class="form-control"');
-                                                                    ?>
-                                                                    <?php echo form_error('correct_ans', '<div class="text-red">* ', '</div>'); ?>
-                                                                </div>
-                                                            </div>
-                                                            <div class="clearfix">&nbsp;</div>
-
-
-
-
-                                                            <div class="clearfix">&nbsp;</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -5254,7 +5071,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                             </div>
                                                             <div class="clearfix">&nbsp;</div>
 
-                                                        
+
 
                                                             <div class="col-md-12 pull-left">
 
