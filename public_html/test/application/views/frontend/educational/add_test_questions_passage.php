@@ -3859,7 +3859,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                         </div>
                                         <?php echo form_close(); ?>
                                     </div>
-                                    <div class="hide_question row">
+                                    <div class="row">
                                         <div class="col-md-12 showback">
                                             <div class="box box-primary">
                                                 <div class="box-body">
