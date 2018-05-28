@@ -255,7 +255,7 @@
     }
     .add_question_tab a{
     position:relative;
-    top:-100px;
+    top:-170px;
     }
     .footer-main {
     background-color: #242f3c;
