@@ -630,14 +630,14 @@
                     "                                                            <div class=\"row\" style=\"margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;\">"+res[i].details+"</div>\n" +
                     "                                                        </div>\n" +
                     "                                                        <div class=\"col-sm-2 row-fluid\" >\n" +
-                    "                                                            <div class=\"row\">\n" +
-                    "                                                                <span class=\"side-bar-tab\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
+                    "                                                            <div class=\"row date-feed\">\n" +
+                    "                                                                <span class=\"side-bar-tab date-inside-feed\" style=\"float: right;\">"+formatDate(res[i].created_at)+"</span>\n" +
                     "                                                            </div>\n" +
-                    "                                                            <div class=\"row\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
+                    "                                                            <div class=\"row mob-inside-feed\" style=\"margin-top: 27px;margin-left: 7px;\">\n" ;
                 if(res[i].is_student){
-                    addHtml1 += "  <button type=\"button\" class=\"btn btn-success\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
+                    addHtml1 += "  <button type=\"button\" class=\"btn btn-success mob-feed\" style=\"font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;\">S</button>\n" ;
                 } else {
-                    addHtml1 +=  " <button type=\"button\" class=\"btn btn-danger\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
+                    addHtml1 +=  " <button type=\"button\" class=\"btn btn-danger mob-feed\" style=\"font-size: 9px;padding: 4px 8px;font-weight: bold;\">P</button>\n" ;
                 }
                 addHtml1 +=  "                                                            </div>\n" +
                     "                                                        </div>\n" +
@@ -676,7 +676,16 @@
             }
 
             .date-feed {
-                margin-top: -9%!important;
+                margin-top: -15%!important;
+            }
+
+            .date-inside-feed {
+                margin-bottom: 12%!important;
+            }
+
+            .mob-inside-feed {
+                margin-top: 4%!important;
+                margin-right: 1%!important;
             }
 
             .mob-row-feed {
@@ -774,10 +783,10 @@
                                                         <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
                                                     </div>
                                                     <div class="col-sm-2 row-fluid" >
-                                                        <div class="row">
-                                                            <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                        <div class="row date-feed">
+                                                            <span class="side-bar-tab date-inside-feed" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
                                                         </div>
-                                                        <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                        <div class="row mob-inside-feed" style="margin-top: 27px;margin-left: 7px;">
                                                             <?php if ($val['is_student']): ?>
                                                                 <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                             <?php endif; ?>
@@ -816,10 +825,10 @@
                                                             <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
                                                         </div>
                                                         <div class="col-sm-2 row-fluid" >
-                                                            <div class="row">
-                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            <div class="row date-feed">
+                                                                <span class="side-bar-tab date-inside-feed" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
                                                             </div>
-                                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                            <div class="row mob-inside-feed" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
                                                                     <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>
@@ -859,10 +868,10 @@
                                                             <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
                                                         </div>
                                                         <div class="col-sm-2 row-fluid" >
-                                                            <div class="row">
-                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            <div class="row date-feed">
+                                                                <span class="side-bar-tab date-inside-feed" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
                                                             </div>
-                                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                            <div class="row mob-inside-feed" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
                                                                     <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>
@@ -902,8 +911,8 @@
                                                             <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
                                                         </div>
                                                         <div class="col-sm-2 row-fluid" >
-                                                            <div class="row">
-                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            <div class="row date-feed">
+                                                                <span class="side-bar-tab date-inside-feed" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
                                                             </div>
                                                             <div class="row" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
@@ -945,10 +954,10 @@
                                                             <div class="row" style="margin: 0px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><?php echo $val['details'];?></div>
                                                         </div>
                                                         <div class="col-sm-2 row-fluid" >
-                                                            <div class="row">
-                                                                <span class="side-bar-tab" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
+                                                            <div class="row date-feed">
+                                                                <span class="side-bar-tab date-inside-feed" style="float: right;"><?php echo date('Y/m/d', $val['created_at']); ?></span>
                                                             </div>
-                                                            <div class="row" style="margin-top: 27px;margin-left: 7px;">
+                                                            <div class="row mob-inside-feed" style="margin-top: 27px;margin-left: 7px;">
                                                                 <?php if ($val['is_student']): ?>
                                                                     <button type="button" class="btn btn-success mob-feed" style="font-size: 9px;padding: 4px 8px;margin-top: -26px;font-weight: bold;">S</button>
                                                                 <?php endif; ?>

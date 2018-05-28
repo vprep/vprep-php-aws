@@ -915,11 +915,11 @@
 
         });
 
-        $('*').click(function(event) {
+        /*$('*').click(function(event) {
             if($('#mob-showLogId').is(':visible')){
                 $('#mob-showLogId').hide();
             }
-        });
+        });*/
 
 
         jQuery(document).on('click','#sign-up-id',function (e) {
