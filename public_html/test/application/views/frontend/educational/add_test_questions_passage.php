@@ -723,7 +723,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group" id="image_question">
                                                             <label class="pull-left">Question Image ?</label>
-                                                            <input type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
+                                                            <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                             <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px; overflow: auto; width: 100%;">
                                                                 <img id="show_img" src="#" alt="your image"  /></div>
