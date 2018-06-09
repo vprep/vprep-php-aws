@@ -13,6 +13,9 @@
         margin-bottom: 0px;
 
     }
+    input[type="file"] {
+        display: none;
+    }
 
     .hide_question{
         display: none;
@@ -1140,7 +1143,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group hide_question" id="image_solution" style="display:none">
 
-                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
+                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this); style="display:block !important">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px;overflow: auto;"><img id="show_img_solution" src="#" style="display:none" alt="your image" /></div>
                                                         </div>
@@ -1784,7 +1787,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group hide_question" id="image_solution1" style="display:none">
 
-                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
+                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this); style="display:block !important"">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px;overflow: auto;"><img id="show_img_solution" src="#" style="display:none" alt="your image" /></div>
                                                         </div>
@@ -2514,7 +2517,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group hide_question" id="image_solution2" style="display:none">
 
-                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
+                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);" style="display:block !important">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px;overflow: auto;"><img id="show_img_solution" src="#" style="display:none" alt="your image" /></div>
                                                         </div>
@@ -3244,7 +3247,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group hide_question" id="image_solution3" style="display:none">
 
-                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
+                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);" style="display:block !important">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px;overflow: auto;"><img id="show_img_solution" src="#" style="display:none" alt="your image" /></div>
                                                         </div>
@@ -3973,7 +3976,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group hide_question" id="image_solution4" style="display:none">
 
-                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
+                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);" style="display:block !important">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px;overflow: auto;"><img id="show_img_solution" src="#" style="display:none" alt="your image" /></div>
                                                         </div>
@@ -4703,7 +4706,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                         <div class="form-group hide_question" id="image_solution5" style="display:none">
 
-                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
+                                                            <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);" style="display:block !important">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
                                                             <div id="blah" style="text-align:left;margin-top:10px;overflow: auto;"><img id="show_img_solution" src="#" style="display:none" alt="your image" /></div>
                                                         </div>
