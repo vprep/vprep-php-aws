@@ -562,7 +562,7 @@
     FLOAT: LEFT;
     text-align: initial;display: block;
 "></p>
-                                                            <div class="form-group" id="image_question">
+                                                            <div class="form-group hide_question" id="image_question">
                                                                 <label class="pull-left">Passage Image ?</label>
                                                                 <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                                 <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
@@ -734,7 +734,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         </div>
 
 
-                                                        <div class="form-group" id="image_question">
+                                                        <div class="form-group hide_question" id="image_question">
                                                             <label class="pull-left">Question Image ?</label>
                                                             <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                             <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
@@ -1473,7 +1473,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 "></p>
                                                                         <input type="hidden" name="option1" value="test"></div>
 
-                                                                    <div class="form-group" id="image_option1">
+                                                                    <div class="form-group hide_question" id="image_option1">
                                                                         <label class="pull-left">Option 1</label>
                                                                         <input  type="file" name="option1_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL1(this);">
                                                                         <?php echo form_error('option1_img', '<div class="text-red">* ', '</div>'); ?>
@@ -2106,7 +2106,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                             <?php echo form_error('title', '<div class="text-red">* ', '</div>'); ?>
                                                         </div>
 
-                                                        <div class="form-group" id="image_question2">
+                                                        <div class="form-group hide_question" id="image_question2">
                                                             <label class="pull-left">Question Image ?</label>
                                                             <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                             <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
@@ -2829,7 +2829,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                                 });
                                                             </script>
 
-                                                            <div class="form-group" id="image_question3">
+                                                            <div class="form-group hide_question" id="image_question3">
                                                                 <label class="pull-left">Question Image ?</label>
                                                                 <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                                 <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
@@ -3557,7 +3557,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                                     }
                                                                 });
                                                             </script>
-                                                            <div class="form-group" id="image_question">
+                                                            <div class="form-group hide_question" id="image_question">
                                                                 <label class="pull-left">Question Image ?</label>
                                                                 <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                                 <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
@@ -4288,7 +4288,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                                 });
                                                             </script>
 
-                                                            <div class="form-group" id="image_question5">
+                                                            <div class="form-group hide_question" id="image_question5">
                                                                 <label class="pull-left">Question Image ?</label>
                                                                 <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                                 <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
