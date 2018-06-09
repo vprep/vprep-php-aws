@@ -1712,7 +1712,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         <div class="adding_dropdown_in_one_line form-group">
                                                             <label class="pull-left">Solution Type</label>
 
-                                                            <select name="solution_type" class="form-control" onchange="SolutionType(this.value)" >
+                                                            <select name="solution_type" class="form-control" onchange="SolutionType1(this.value)" >
 
                                                                 <?php
                                                                 if (!empty($test_ques) && array_key_exists('solution_type', $test_ques)) {
@@ -2442,7 +2442,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         <div class="adding_dropdown_in_one_line form-group">
                                                             <label class="pull-left">Solution Type</label>
 
-                                                            <select name="solution_type" class="form-control" onchange="SolutionType(this.value)" >
+                                                            <select name="solution_type" class="form-control" onchange="SolutionType2(this.value)" >
 
                                                                 <?php
                                                                 if (!empty($test_ques) && array_key_exists('solution_type', $test_ques)) {
@@ -3172,7 +3172,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         <div class="adding_dropdown_in_one_line form-group">
                                                             <label class="pull-left">Solution Type</label>
 
-                                                            <select name="solution_type" class="form-control" onchange="SolutionType(this.value)" >
+                                                            <select name="solution_type" class="form-control" onchange="SolutionType3(this.value)" >
 
                                                                 <?php
                                                                 if (!empty($test_ques) && array_key_exists('solution_type', $test_ques)) {
@@ -3901,7 +3901,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         <div class="adding_dropdown_in_one_line form-group">
                                                             <label class="pull-left">Solution Type</label>
 
-                                                            <select name="solution_type" class="form-control" onchange="SolutionType(this.value)" >
+                                                            <select name="solution_type" class="form-control" onchange="SolutionType4(this.value)" >
 
                                                                 <?php
                                                                 if (!empty($test_ques) && array_key_exists('solution_type', $test_ques)) {
@@ -4631,7 +4631,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
                                                         <div class="adding_dropdown_in_one_line form-group">
                                                             <label class="pull-left">Solution Type</label>
 
-                                                            <select name="solution_type" class="form-control" onchange="SolutionType(this.value)" >
+                                                            <select name="solution_type" class="form-control" onchange="SolutionType5(this.value)" >
 
                                                                 <?php
                                                                 if (!empty($test_ques) && array_key_exists('solution_type', $test_ques)) {
