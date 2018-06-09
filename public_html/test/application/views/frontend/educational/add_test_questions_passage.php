@@ -1374,7 +1374,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
                                                             <?php echo form_error('title', '<div class="text-red">* ', '</div>'); ?>
                                                         </div>
-                                                        <div class="form-group" id="image_question1">
+                                                        <div class="form-group" id="image_question1" style="display: none">
                                                             <label class="pull-left">Question Image ?</label>
                                                             <input style="display: block; "type="file" name="ques_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readURL(this);">
                                                             <?php echo form_error('ques_img', '<div class="text-red">* ', '</div>'); ?>
@@ -4843,6 +4843,86 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
             {
                 $("#image_question").css("display", "block");
                 $("#text_question").css("display", "block");
+            }
+        }
+        function QuesType1(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_question1").css("display", "none");
+                $("#text_question1").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_question1").css("display", "block");
+                $("#text_question1").css("display", "none");
+            } else
+            {
+                $("#image_question1").css("display", "block");
+                $("#text_question1").css("display", "block");
+            }
+        }
+        function QuesType2(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_question2").css("display", "none");
+                $("#text_question2").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_question2").css("display", "block");
+                $("#text_question2").css("display", "none");
+            } else
+            {
+                $("#image_question2").css("display", "block");
+                $("#text_question2").css("display", "block");
+            }
+        }
+        function QuesType3(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_question3").css("display", "none");
+                $("#text_question3").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_question3").css("display", "block");
+                $("#text_question3").css("display", "none");
+            } else
+            {
+                $("#image_question3").css("display", "block");
+                $("#text_question3").css("display", "block");
+            }
+        }
+        function QuesType4(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_question4").css("display", "none");
+                $("#text_question4").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_question4").css("display", "block");
+                $("#text_question4").css("display", "none");
+            } else
+            {
+                $("#image_question4").css("display", "block");
+                $("#text_question4").css("display", "block");
+            }
+        }
+        function QuesType5(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_question5").css("display", "none");
+                $("#text_question5").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_question5").css("display", "block");
+                $("#text_question5").css("display", "none");
+            } else
+            {
+                $("#image_question5").css("display", "block");
+                $("#text_question5").css("display", "block");
             }
         }
         function SolutionType(getinput)
