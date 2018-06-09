@@ -1784,7 +1784,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="image_solution" style="display:none">
+                                                        <div class="form-group" id="image_solution1" style="display:none">
 
                                                             <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
@@ -1794,7 +1794,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="text_solution" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
+                                                        <div class="form-group" id="text_solution1" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
                                                             <label class="pull-left" style="margin-top:5px">Solution</label>
 
 
@@ -2514,7 +2514,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="image_solution" style="display:none">
+                                                        <div class="form-group" id="image_solution2" style="display:none">
 
                                                             <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
@@ -2524,7 +2524,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="text_solution" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
+                                                        <div class="form-group" id="text_solution2" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
                                                             <label class="pull-left" style="margin-top:5px">Solution</label>
 
 
@@ -3244,7 +3244,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="image_solution" style="display:none">
+                                                        <div class="form-group" id="image_solution3" style="display:none">
 
                                                             <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
@@ -3254,7 +3254,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="text_solution" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
+                                                        <div class="form-group" id="text_solution3" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
                                                             <label class="pull-left" style="margin-top:5px">Solution</label>
 
 
@@ -3973,7 +3973,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="image_solution" style="display:none">
+                                                        <div class="form-group" id="image_solution4" style="display:none">
 
                                                             <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
@@ -3983,7 +3983,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="text_solution" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
+                                                        <div class="form-group" id="text_solution4" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
                                                             <label class="pull-left" style="margin-top:5px">Solution</label>
 
 
@@ -4703,7 +4703,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="image_solution" style="display:none">
+                                                        <div class="form-group" id="image_solution5" style="display:none">
 
                                                             <input  type="file" name="solution_img" class="form-control" data-title="Question" accept="image/gif, image/jpeg, image/png" onchange="readSolution(this);">
                                                             <?php echo form_error('solution_img', '<div class="text-red">* ', '</div>'); ?>
@@ -4713,7 +4713,7 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
 
 
 
-                                                        <div class="form-group" id="text_solution" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
+                                                        <div class="form-group" id="text_solution5" style="display: block;FLOAT: LEFT;WIDTH: 100%;">
                                                             <label class="pull-left" style="margin-top:5px">Solution</label>
 
 
@@ -4939,6 +4939,86 @@ visibility:hidden; position:absolute; top:0; left: 0"></div>
             {
                 $("#image_solution").css("display", "block");
                 $("#text_solution").css("display", "block");
+            }
+        }
+        function SolutionType1(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_solution1").css("display", "none");
+                $("#text_solution1").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_solution1").css("display", "block");
+                $("#text_solution1").css("display", "none");
+            } else
+            {
+                $("#image_solution1").css("display", "block");
+                $("#text_solution1").css("display", "block");
+            }
+        }
+        function SolutionType2(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_solution2").css("display", "none");
+                $("#text_solution2").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_solution2").css("display", "block");
+                $("#text_solution2").css("display", "none");
+            } else
+            {
+                $("#image_solution2").css("display", "block");
+                $("#text_solution2").css("display", "block");
+            }
+        }
+        function SolutionType3(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_solution3").css("display", "none");
+                $("#text_solution3").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_solution3").css("display", "block");
+                $("#text_solution3").css("display", "none");
+            } else
+            {
+                $("#image_solution3").css("display", "block");
+                $("#text_solution3").css("display", "block");
+            }
+        }
+        function SolutionType4(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_solution4").css("display", "none");
+                $("#text_solution4").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_solution4").css("display", "block");
+                $("#text_solution4").css("display", "none");
+            } else
+            {
+                $("#image_solution4").css("display", "block");
+                $("#text_solution4").css("display", "block");
+            }
+        }
+        function SolutionType5(getinput)
+        {
+            if (getinput == 0)
+            {
+                $("#image_solution5").css("display", "none");
+                $("#text_solution5").css("display", "block");
+            } else if (getinput == 1)
+            {
+                $("#image_solution5").css("display", "block");
+                $("#text_solution5").css("display", "none");
+            } else
+            {
+                $("#image_solution5").css("display", "block");
+                $("#text_solution5").css("display", "block");
             }
         }
 
