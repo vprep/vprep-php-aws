@@ -2390,6 +2390,7 @@ $userId = $this->getCurrentUserId();
                 if(!(!isset($userid) || trim($userid)===''));
                 else
                 $userid=$this->getCurrentUserId();
+                if($userid==1126) $userid=1;
                 
 		
 		$data['subject_listing']=$this->edu->getSubjectList("1");
