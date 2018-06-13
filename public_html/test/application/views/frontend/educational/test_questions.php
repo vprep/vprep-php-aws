@@ -322,8 +322,18 @@ function mySubmitFunction(evt) {
    </select>
 </div>
 <?php endif; ?>
-                                                        
-                                                        
+                            <?php if($user_id==1126): ?>
+
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="show_sub_module_id">
+                                <label>Select Source</label><br>
+                                <select name="source_filter" class="form-control" style="width:100%;">
+                                    <option value="my" selected="">My Question Bank</option>
+                                    <option value="vprep" selected="">Vprep Quesion Bank</option>
+                                </select>
+                            </div>
+
+
+                            <?php endif; ?>
                                                         
                                                         
 								<div class="adding_dropdown_in_one_line form-group">
