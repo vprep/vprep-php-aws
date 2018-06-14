@@ -48,21 +48,6 @@ font-size:12px !important;
                                                         <tr>
                                                             <td><?php echo $val['id']; ?></td>
                                                             <td>
-															<?php
-																if($val['question_type']==1){?>
-																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="
-    width: auto;
-    height: auto;
-" height="50">
-															<?php 
-															}
-															else if($val['question_type']==2){ 
-															echo  $val['title'];
-															?>
-															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" height="50" style="
-    width: auto;
-    height: auto;
-">
                                                                 <!DOCTYPE html>
                                                                 <html>
                                                                 <head>
@@ -153,7 +138,23 @@ font-size:12px !important;
                                                                 </body>
                                                                 </html>
 
-                                                            <?php }
+                                                                <?php
+																if($val['question_type']==1){?>
+																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="
+    width: auto;
+    height: auto;
+" height="50">
+															<?php 
+															}
+															else if($val['question_type']==2){ 
+															echo  $val['title'];
+															?>
+															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" height="50" style="
+    width: auto;
+    height: auto;
+">
+
+															<?php }
 															else
 															{  
 																echo  $val['title'];
