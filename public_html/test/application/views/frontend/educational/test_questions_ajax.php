@@ -134,7 +134,7 @@ font-size:12px !important;
 
                                                                 </body>
                                                                 </html>
-
+                                                                <div style="cursor:pointer" onclick="openNav()">
                                                                 <?php
 																if($val['question_type']==1){?>
 																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="
@@ -156,8 +156,9 @@ font-size:12px !important;
 															{  
 																echo  $val['title'];
 															}
-															?>
+															?></div>
                                                             </td>
+
                                                             <td>
                                                                 <?php echo $val['subject_title']; ?>
                                                             </td>
