@@ -61,7 +61,7 @@ font-size:12px !important;
                                                                             height: 100%;
                                                                             width: 0%;
                                                                             position: fixed;
-                                                                            z-index: 1;
+                                                                            z-index: 100;
                                                                             top: 0;
                                                                             left: 100;
                                                                             background-color: rgb(0,0,0);
