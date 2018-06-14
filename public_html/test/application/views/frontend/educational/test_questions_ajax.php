@@ -37,7 +37,7 @@ font-size:12px !important;
                                                             <th class="text-center">Subject</th>
                                                             <th class="text-center">Module</th>
                                                             <th class="text-center">Sub Module</th>
-                                                            <?php if($user_id!=1126): ?>
+                                                            <?php if(!($user_id==1126||$user_id==1127)): ?>
                                                             <th class="text-center">Action</th>
                                                             <?php endif; ?>
                                                         </tr>
@@ -172,7 +172,7 @@ font-size:12px !important;
                                                             <td><?php echo $val['module_title']; ?></td>
                                                             <td><?php echo $val['sb_module_title']; ?></td>
 
-                                                            <?php if($user_id!=1126): ?>
+                                                            <?php if(!($user_id==1126||$user_id==1127)): ?>
                                                             <td>
 															
 															<?php echo anchor('edit_test_questions/'.$val['id'],'<i class="fa fa-pencil-square-o"></i>',array("class"=>"btn btn-warning btn-lg")); ?>

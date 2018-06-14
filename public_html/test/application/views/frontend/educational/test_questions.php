@@ -322,7 +322,7 @@ function mySubmitFunction(evt) {
    </select>
 </div>
 <?php endif; ?>
-                            <?php if($user_id==1126): ?>
+                            <?php if($user_id==1126||$user_id==1127): ?>
 
                             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" >
                                 <label>Select Source</label><br>
