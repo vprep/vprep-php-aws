@@ -1621,7 +1621,7 @@ on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('
         
         
         
-        if($user_id==1126||$user_id==1127){
+        if($userId==1126||$userId==1127){
             $userId=1;
         }
         $this->db->where('q.created_by',$userId);
