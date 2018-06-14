@@ -72,7 +72,7 @@ font-size:12px !important;
 
                                                                         .overlay-content {
                                                                             position: relative;
-                                                                            top: 25%;
+                                                                            top: 5%;
                                                                             width: 100%;
                                                                             text-align: center;
                                                                             margin-top: 30px;
@@ -93,7 +93,7 @@ font-size:12px !important;
 
                                                                         .overlay<?php echo $val['id']; ?> .closebtn {
                                                                             position: absolute;
-                                                                            top: 20px;
+                                                                            top: 1px;
                                                                             right: 45px;
                                                                             font-size: 60px;
                                                                         }
