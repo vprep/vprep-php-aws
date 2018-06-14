@@ -113,7 +113,7 @@ font-size:12px !important;
                                                                 </head>
                                                                 <body>
 
-                                                                <div id="myNav" class="overlay overlay<?php echo $val['id']; ?>">
+                                                                <div id="myNav<?php echo $val['id']; ?>" class="overlay overlay<?php echo $val['id']; ?>">
                                                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav<?php echo $val['id']; ?>()">&times;</a>
                                                                     <div class="overlay-content">
 
