@@ -113,10 +113,10 @@ font-size:12px !important;
                                                                 <div id="myNav" class="overlay">
                                                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                                                                     <div class="overlay-content">
-                                                                        <a href="#">About</a>
-                                                                        <a href="#">Services</a>
-                                                                        <a href="#">Clients</a>
-                                                                        <a href="#">Contact</a>
+                                                                        <?php echo $val['id']; ?>
+                                                                        <?php echo $val['title']; ?>
+                                                                        <?php echo $val['solution']; ?>
+                                                                        <?php echo $val['option1']; ?>
                                                                     </div>
                                                                 </div>
 
