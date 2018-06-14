@@ -58,7 +58,7 @@ font-size:12px !important;
                                                                         }
 
                                                                         .overlay {
-                                                                            height: 80%;
+                                                                            height: 100%;
                                                                             width: 0%;
                                                                             position: fixed;
                                                                             z-index: 1;
@@ -131,7 +131,7 @@ font-size:12px !important;
 
                                                                 <script>
                                                                     function openNav() {
-                                                                        document.getElementById("myNav").style.width = "80%";
+                                                                        document.getElementById("myNav").style.width = "100%";
                                                                     }
 
                                                                     function closeNav() {
