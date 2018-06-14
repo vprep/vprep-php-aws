@@ -57,7 +57,7 @@ font-size:12px !important;
                                                                             font-family: 'Lato', sans-serif;
                                                                         }
 
-                                                                        .overlay {
+                                                                        .overlay<?php echo $val['id']; ?> {
                                                                             height: 80%;
                                                                             width: 0%;
                                                                             position: fixed;
@@ -78,7 +78,7 @@ font-size:12px !important;
                                                                             margin-top: 30px;
                                                                         }
 
-                                                                        .overlay a {
+                                                                        .overlay<?php echo $val['id']; ?> a {
                                                                             padding: 8px;
                                                                             text-decoration: none;
                                                                             font-size: 36px;
@@ -87,11 +87,11 @@ font-size:12px !important;
                                                                             transition: 0.3s;
                                                                         }
 
-                                                                        .overlay a:hover, .overlay a:focus {
+                                                                        .overlay<?php echo $val['id']; ?> a:hover, .overlay a:focus {
                                                                             color: #f1f1f1;
                                                                         }
 
-                                                                        .overlay .closebtn {
+                                                                        .overlay<?php echo $val['id']; ?> .closebtn {
                                                                             position: absolute;
                                                                             top: 20px;
                                                                             right: 45px;
@@ -113,8 +113,8 @@ font-size:12px !important;
                                                                 </head>
                                                                 <body>
 
-                                                                <div id="myNav" class="overlay">
-                                                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                                                <div id="myNav" class="overlay overlay<?php echo $val['id']; ?>">
+                                                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav<?php echo $val['id']; ?>()">&times;</a>
                                                                     <div class="overlay-content">
 
                                                                         <div style="color:white; text-align: left; padding-left:10px;"> <h2><?php echo $val['id']; ?>:</h2> <?php echo $val['title']; ?></div>
@@ -130,18 +130,18 @@ font-size:12px !important;
 
 
                                                                 <script>
-                                                                    function openNav() {
-                                                                        document.getElementById("myNav").style.width = "80%";
+                                                                    function openNav<?php echo $val['id']; ?>() {
+                                                                        document.getElementById("myNav<?php echo $val['id']; ?>").style.width = "80%";
                                                                     }
 
-                                                                    function closeNav() {
-                                                                        document.getElementById("myNav").style.width = "0%";
+                                                                    function closeNav<?php echo $val['id']; ?>() {
+                                                                        document.getElementById("myNav<?php echo $val['id']; ?>").style.width = "0%";
                                                                     }
                                                                 </script>
 
                                                                 </body>
                                                                 </html>
-                                                                <div style="cursor:pointer" onclick="openNav()">
+                                                                <div style="cursor:pointer" onclick="openNav<?php echo $val['id']; ?>()">
                                                                 <?php
 																if($val['question_type']==1){?>
 																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="
