@@ -37,7 +37,9 @@ font-size:12px !important;
                                                             <th class="text-center">Subject</th>
                                                             <th class="text-center">Module</th>
                                                             <th class="text-center">Sub Module</th>
+                                                            <?php if($user_id!=1126): ?>
                                                             <th class="text-center">Action</th>
+                                                            <?php endif; ?>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
