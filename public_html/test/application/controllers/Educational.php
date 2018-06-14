@@ -2395,7 +2395,7 @@ $userId = $this->getCurrentUserId();
 		
 		$data['subject_listing']=$this->edu->getSubjectList("1");
 		
-        $data['test_ques']=$this->edu->get_test_questions($page_num,$userid,$subject_id,$module,$sub_module);
+
 		$data['test']="display:none";
 		 
          $data['test_ques']=$this->edu->get_test_questions($page_num,$userid,$subject_id,$module,$sub_module);
