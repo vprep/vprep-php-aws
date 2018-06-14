@@ -97,6 +97,9 @@ font-size:12px !important;
                                                                             right: 45px;
                                                                             font-size: 60px;
                                                                         }
+                                                                        .overlay-content span {
+                                                                            color: white !important;
+                                                                        }
 
                                                                         @media screen and (max-height: 450px) {
                                                                             .overlay a {font-size: 20px}
@@ -114,13 +117,13 @@ font-size:12px !important;
                                                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                                                                     <div class="overlay-content">
 
-                                                                        <div style="color:white; text-align: left;"> <?php echo $val['id']; ?>: <?php echo $val['title']; ?></div>
-                                                                        <div style="color:white;text-align: left;"> Solution: <?php echo $val['solution']; ?></div>
+                                                                        <div style="color:white; text-align: left; padding-left:10px;"> <h2><?php echo $val['id']; ?>:</h2> <?php echo $val['title']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2> Solution:</h2> <?php echo $val['solution']; ?></div>
 
-                                                                        <div style="color:white;text-align: left;">Option1:<?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left;">Option2:<?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left;">Option3:<?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left;">Option4:<?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2>Option1:</h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2>Option2:</h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2>Option3:</h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h2>Option4:<h2><?php echo $val['option1']; ?></div>
                                                                     </div>
                                                                 </div>
 
