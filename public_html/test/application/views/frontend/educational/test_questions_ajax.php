@@ -124,6 +124,7 @@ font-size:12px !important;
                                                                         <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option2:</h2><?php echo $val['option2']; ?></div>
                                                                         <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option3:</h2><?php echo $val['option3']; ?></div>
                                                                         <div style="color:white;text-align: left;padding-left:10px; "><h2 style="color: lightcoral;">Option4:</h2><?php echo $val['option4']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h2 style="color: lightcoral;">Correct Ans::</h2>Option<?php echo $val['correct_ans']; ?></div>
                                                                     </div>
                                                                 </div>
 
