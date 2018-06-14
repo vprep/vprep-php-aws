@@ -2404,7 +2404,8 @@ $userId = $this->getCurrentUserId();
         $data['total_no_of_question'] = $number_of_questions; 
         $data['pages']=get_froentend_pagination('educational/test_questions',$number_of_questions);
         //$echo $page;
-        $data['current_page']=$page_num; 
+        $data['current_page']=$page_num;
+        $data[$user_id]=$this->getCurrentUserId();
         
         $this->template->load('educational','frontend/educational/test_questions_ajax',$data);
     
