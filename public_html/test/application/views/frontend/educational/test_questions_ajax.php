@@ -74,6 +74,8 @@ font-size:12px !important;
                                                             </td>
                                                             <td><?php echo $val['module_title']; ?></td>
                                                             <td><?php echo $val['sb_module_title']; ?></td>
+
+                                                            <?php if($user_id!=1126): ?>
                                                             <td>
 															
 															<?php echo anchor('edit_test_questions/'.$val['id'],'<i class="fa fa-pencil-square-o"></i>',array("class"=>"btn btn-warning btn-lg")); ?>
@@ -81,6 +83,7 @@ font-size:12px !important;
 															<?php echo anchor('delete_test_question/'.urlencrypt($val['id']),'<i class="fa fa-trash-o"></i>',array("class"=>"btn btn-danger btn-lg")); ?>
 															
 															</td>
+                                                            <?php endif; ?>
                                                             <!-- <td><?php echo anchor('delete_test_question/'.urlencrypt($val['id']),'<i class="fa fa-edit"></i>',array("class"=>"btn btn-success btn-lg")); ?></td> -->
                                                         </tr>
                                                         <?php endforeach; ?>
