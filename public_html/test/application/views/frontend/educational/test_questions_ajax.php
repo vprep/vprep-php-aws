@@ -58,7 +58,7 @@ font-size:12px !important;
                                                                         }
 
                                                                         .overlay<?php echo $val['id']; ?> {
-                                                                            height: 80%;
+                                                                            height: 100%;
                                                                             width: 0%;
                                                                             position: fixed;
                                                                             z-index: 1;
@@ -117,13 +117,13 @@ font-size:12px !important;
                                                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav<?php echo $val['id']; ?>()">&times;</a>
                                                                     <div class="overlay-content">
 
-                                                                        <div style="color:white; text-align: left; padding-left:10px;"> <h2><?php echo $val['id']; ?>:</h2> <?php echo $val['title']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2> Solution:</h2> <?php echo $val['solution']; ?></div>
+                                                                        <div style="color:white; text-align: left; padding-left:10px;"> <h2 style="color: lightcoral;"><?php echo $val['id']; ?>:</h2> <?php echo $val['title']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;"> Solution:</h2> <?php echo $val['solution']; ?></div>
 
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2>Option1:</h2><?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2>Option2:</h2><?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2>Option3:</h2><?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h2>Option4:<h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option1:</h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option2:</h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option3:</h2><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h2 style="color: lightcoral;">Option4:<h2><?php echo $val['option1']; ?></div>
                                                                     </div>
                                                                 </div>
 
