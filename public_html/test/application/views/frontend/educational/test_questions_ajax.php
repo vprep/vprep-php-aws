@@ -117,14 +117,14 @@ font-size:12px !important;
                                                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav<?php echo $val['id']; ?>()">&times;</a>
                                                                     <div class="overlay-content">
 
-                                                                        <div style="color:white; text-align: left; padding-left:10px;"> <h2 style="color: lightcoral;"><?php echo $val['id']; ?>:</h2> <?php echo $val['title']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;"> Solution:</h2> <?php echo $val['solution']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Question-Level:</h2><?php echo $val['difficulty_level']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option1:</h2><?php echo $val['option1']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option2:</h2><?php echo $val['option2']; ?></div>
-                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option3:</h2><?php echo $val['option3']; ?></div>
-                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h2 style="color: lightcoral;">Option4:</h2><?php echo $val['option4']; ?></div>
-                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h2 style="color: lightcoral;">Correct Ans::</h2>Option<?php echo $val['correct_ans']; ?></div>
+                                                                        <div style="color:white; text-align: left; padding-left:10px;"> <h3 style="color: lightcoral;"><?php echo $val['id']; ?>:</h3> <?php echo $val['title']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;"> Solution:</h3> <?php echo $val['solution']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Question-Level:</h3><?php echo $val['difficulty_level']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Option1:</h3><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Option2:</h3><?php echo $val['option2']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Option3:</h3><?php echo $val['option3']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h3 style="color: lightcoral;">Option4:</h3><?php echo $val['option4']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h3 style="color: lightcoral;">Correct Ans::</h3>Option<?php echo $val['correct_ans']; ?></div>
                                                                     </div>
                                                                 </div>
 
