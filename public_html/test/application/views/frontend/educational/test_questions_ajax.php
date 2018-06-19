@@ -119,7 +119,7 @@ font-size:12px !important;
 
                                                                         <div style="color:white; text-align: left; padding-left:10px;"> <h2 style="color: lightcoral;"><?php echo $val['id']; ?>:</h2> <?php echo $val['title']; ?></div>
                                                                         <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;"> Solution:</h2> <?php echo $val['solution']; ?></div>
-
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Question-Level:</h2><?php echo $val['difficulty_level']; ?></div>
                                                                         <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option1:</h2><?php echo $val['option1']; ?></div>
                                                                         <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option2:</h2><?php echo $val['option2']; ?></div>
                                                                         <div style="color:white;text-align: left; padding-left:10px;"><h2 style="color: lightcoral;">Option3:</h2><?php echo $val['option3']; ?></div>
