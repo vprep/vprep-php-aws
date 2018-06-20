@@ -6,7 +6,7 @@
         float: left;
     }
     .col-xs-12.showback.bank1 td {
-        float: left;
+        max-width: 250px;
     }
     </style>
 <div id="wrapper-content">
