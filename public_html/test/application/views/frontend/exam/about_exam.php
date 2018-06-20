@@ -59,17 +59,17 @@
                                 </h5>
                                 <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/start_exam/'.urlencrypt($test_cat['exam_id']);?>">
                                 <input id=exam_url2 type="hidden" value="<?php echo 'http://test.vprep.in/progress_exam/'.urlencrypt($test_cat['exam_id']);?>">
-                                <?php if(!count($progress)>0) { ?>
-                                <a href="<?php echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);?>" class="btn icon-btn btn-success btn-contact btn-block"
+                                <?php /*if(!count($progress)>0) { */?><!--
+                                <a href="<?php /*echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);*/?>" class="btn icon-btn btn-success btn-contact btn-block"
                                    "><strong>Start Now</strong></a>
-                                    <?php }?>
-                                   <?php if(count($progress)>0) { ?>
+                                    <?php /*}*/?>
+                                   <?php /*if(count($progress)>0) { */?>
                                 
                                    <a href="javascript: void(0)" class="btn icon-btn btn-success btn-contact btn-block"
                                    onclick="popup2()"><strong>Resume Exam</strong></a> 
-                                   <?php }?>
-                                <?php /*echo anchor('start_exam/' . urlencrypt($test_cat['exam_id']),
-                                    '<strong>Start Now</strong>', array("class" => "btn icon-btn btn-success btn-contact btn-block")); */?>
+                                   --><?php /*}*/?>
+                                <?php echo anchor('start_exam/' . urlencrypt($test_cat['exam_id']),
+                                    '<strong>Start Now</strong>', array("class" => "btn icon-btn btn-success btn-contact btn-block")); ?>
 
 
                             </div>

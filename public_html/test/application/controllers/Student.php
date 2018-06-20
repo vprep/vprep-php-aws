@@ -287,9 +287,9 @@ class Student extends CI_Controller {
         } else {
     
                 $data['page']=0;
-                if($exam_id==71){
+             /*   if($exam_id==71){
                 $total_question=15;
-                    $data['test_time']=25;
+                $data['test_time']=25;
                     
                 }
                 if($exam_id==72){
@@ -302,16 +302,16 @@ class Student extends CI_Controller {
                 $total_question=40;
                     $data['test_time']=35;
                     
-                }
-               // $total_question=$this->edu->getTotalExamQuez($exam_id);
-               $total_question = 15;
+                }*/
+                $total_question=$this->edu->getTotalExamQuez($exam_id);
+          //     $total_question = 15;
 
 
                 $data['total_exam_question']= $total_question;
                 
-            //    $data['test_exam_questions'] = $this->edu//->get_test_exam_questions($exam_id, '0');
+                $data['test_exam_questions'] = $this->edu->get_test_exam_questions($exam_id, '0');
 
-            //    $data['test_time']=$this->edu->getExamInfo($exam_id)->exam_time;
+                $data['test_time']=$this->edu->getExamInfo($exam_id)->exam_time;
 
              
                 if(empty($this->session->userdata('exam_detail'))){
@@ -390,8 +390,7 @@ class Student extends CI_Controller {
                     
                 }
                 else {
-                    
-                    
+
                     
                     $this->stu->student_exam($exam_id,$userId,'1');
                     $total_exam_question_new = $this->edu->get_test_exam_questions($exam_id,$data['page']);
@@ -401,9 +400,10 @@ class Student extends CI_Controller {
                     $this->session->set_userdata('test_question_session',$total_exam_question_new);
                     $data['test_question']=$total_exam_question_new[0];
                     $data['test_exam_questions'] = $total_exam_question_new;
+
                     // echo count($data['test_question'][0]);
 
-                    $this->template->load('exam_frontend','frontend/exam/exam',$data);
+                    $this->template->load('exam_frontend','frontend/exam/exam1',$data);
                     
                      
                     // $this->load->view('frontend/exam/exam',$data);

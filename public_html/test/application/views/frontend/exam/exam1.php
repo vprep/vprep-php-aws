@@ -33,9 +33,9 @@
                         <button class="btn btn-warning pull-right" type="button"> 
                             <span id="strclock" style="font-size: 14px;"></span><i aria-hidden="true" class="fa fa-hourglass-start"></i>
                         </button>
-                        <?php echo form_open('exam_result1',array('id'=>'ol_exam_form')); ?>
+                        <?php echo form_open('exam_result',array('id'=>'ol_exam_form')); ?>
                         <div id="question">
-                            <?php $this->load->view('frontend/exam/single_question1'); ?>
+                            <?php $this->load->view('frontend/exam/single_question'); ?>
                         </div>
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-sm-12">

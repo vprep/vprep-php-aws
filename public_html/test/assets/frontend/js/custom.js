@@ -9,9 +9,9 @@ $('#question').on('click','a',function(e){
     //pdata={'page':$(this).attr('data-page-num')};
     // post url 
     var url=base_url + 'start_exam/'+$(this).attr('data-exam-id');
-   // jQuery.post(url, pdata).done(function(data) {
-     //   $("#question").html(data);
-    //});
+    jQuery.post(url, pdata).done(function(data) {
+        $("#question").html(data);
+    });
 });
 
 

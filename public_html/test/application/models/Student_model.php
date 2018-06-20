@@ -193,6 +193,8 @@ class Student_model extends CI_Model
             $this->db->update('test_answers',$update_data);
             
          //   $lastId = $this->db->insert_id();
+
+            $this->db->query("update exam_taken set taken_status = 2 where user_id = $exam_user_id and exam_id = $exam_test_category ");
             
            $updateId = $this->db->query("select id from test_answers where userid = '$exam_user_id' and test_category = '$exam_test_category' limit 1")->row_array();
            $lastId = $updateId['id'];
