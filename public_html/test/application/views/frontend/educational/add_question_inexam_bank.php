@@ -2,7 +2,7 @@
 <script type="text/javascript" async src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
 
 <style>
-    .col-xs-12.showback.bank1 {
+    .col-xs-12.showback.bank1 div {
         float: left;
     }
     </style>
