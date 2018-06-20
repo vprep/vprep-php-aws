@@ -7,6 +7,7 @@
     }
     .col-xs-12.showback.bank1 td {
         max-width: 250px;
+        overflow-x: scroll;
     }
     </style>
 <div id="wrapper-content">
