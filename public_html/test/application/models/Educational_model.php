@@ -1621,7 +1621,9 @@ on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('
         
         
         
-        
+        if($userId==1126||$userId==1127){
+            $userId=3;
+        }
         $this->db->where('q.created_by',$userId);
         $this->db->where('s.subject_id',$subject_id);
         $offset = ($page != 0) ? ((int) ($page-1) * DEFAULT_PER_PAGE) : 0;

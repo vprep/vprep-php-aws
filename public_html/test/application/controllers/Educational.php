@@ -2390,11 +2390,12 @@ $userId = $this->getCurrentUserId();
                 if(!(!isset($userid) || trim($userid)===''));
                 else
                 $userid=$this->getCurrentUserId();
+                if(($userid==1126||$userid==1127)) $userid=3;
                 
 		
 		$data['subject_listing']=$this->edu->getSubjectList("1");
 		
-        $data['test_ques']=$this->edu->get_test_questions($page_num,$userid,$subject_id,$module,$sub_module);
+
 		$data['test']="display:none";
 		 
          $data['test_ques']=$this->edu->get_test_questions($page_num,$userid,$subject_id,$module,$sub_module);
@@ -2403,7 +2404,8 @@ $userId = $this->getCurrentUserId();
         $data['total_no_of_question'] = $number_of_questions; 
         $data['pages']=get_froentend_pagination('educational/test_questions',$number_of_questions);
         //$echo $page;
-        $data['current_page']=$page_num; 
+        $data['current_page']=$page_num;
+        $data['user_id']=$this->getCurrentUserId();
         
         $this->template->load('educational','frontend/educational/test_questions_ajax',$data);
     

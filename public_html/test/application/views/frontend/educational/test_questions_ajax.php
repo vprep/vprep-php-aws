@@ -37,7 +37,9 @@ font-size:12px !important;
                                                             <th class="text-center">Subject</th>
                                                             <th class="text-center">Module</th>
                                                             <th class="text-center">Sub Module</th>
+                                                            <?php if(!($user_id==1126||$user_id==1127)): ?>
                                                             <th class="text-center">Action</th>
+                                                            <?php endif; ?>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -46,10 +48,105 @@ font-size:12px !important;
                                                         <tr>
                                                             <td><?php echo $val['id']; ?></td>
                                                             <td>
-															<?php
+                                                                <!DOCTYPE html>
+                                                                <html>
+                                                                <head>
+                                                                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                                                                    <style>
+                                                                        body {
+                                                                            font-family: 'Lato', sans-serif;
+                                                                        }
+
+                                                                        .overlay<?php echo $val['id']; ?> {
+                                                                            height: 100%;
+                                                                            width: 0%;
+                                                                            position: fixed;
+                                                                            z-index: 100;
+                                                                            top: 0;
+                                                                            left: 100;
+                                                                            background-color: rgb(0,0,0);
+                                                                            background-color: rgba(0,0,0, 0.9);
+                                                                            overflow-x: hidden;
+                                                                            transition: 0.5s;
+                                                                        }
+
+                                                                        .overlay-content {
+                                                                            position: relative;
+                                                                            top: 5%;
+                                                                            width: 100%;
+                                                                            text-align: center;
+                                                                            margin-top: 30px;
+                                                                        }
+
+                                                                        .overlay<?php echo $val['id']; ?> a {
+                                                                            padding: 8px;
+                                                                            text-decoration: none;
+                                                                            font-size: 36px;
+                                                                            color: #818181;
+                                                                            display: block;
+                                                                            transition: 0.3s;
+                                                                        }
+
+                                                                        .overlay<?php echo $val['id']; ?> a:hover, .overlay a:focus {
+                                                                            color: #f1f1f1;
+                                                                        }
+
+                                                                        .overlay<?php echo $val['id']; ?> .closebtn {
+                                                                            position: absolute;
+                                                                            top: 1px;
+                                                                            right: 45px;
+                                                                            font-size: 60px;
+                                                                        }
+                                                                        .overlay-content span {
+                                                                            color: white !important;
+                                                                        }
+
+                                                                        @media screen and (max-height: 450px) {
+                                                                            .overlay a {font-size: 20px}
+                                                                            .overlay .closebtn {
+                                                                                font-size: 40px;
+                                                                                top: 15px;
+                                                                                right: 35px;
+                                                                            }
+                                                                        }
+                                                                    </style>
+                                                                </head>
+                                                                <body>
+
+                                                                <div id="myNav<?php echo $val['id']; ?>" class="overlay overlay<?php echo $val['id']; ?>">
+                                                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav<?php echo $val['id']; ?>()">&times;</a>
+                                                                    <div class="overlay-content">
+
+                                                                        <div style="color:white; text-align: left; padding-left:10px;"> <h3 style="color: lightcoral;"><?php echo $val['id']; ?>:</h3> <?php echo $val['title']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;"> Solution:</h3> <?php echo $val['solution']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Question-Level:</h3><?php echo $val['difficulty_level']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Option1:</h3><?php echo $val['option1']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Option2:</h3><?php echo $val['option2']; ?></div>
+                                                                        <div style="color:white;text-align: left; padding-left:10px;"><h3 style="color: lightcoral;">Option3:</h3><?php echo $val['option3']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h3 style="color: lightcoral;">Option4:</h3><?php echo $val['option4']; ?></div>
+                                                                        <div style="color:white;text-align: left;padding-left:10px; "><h3 style="color: lightcoral;">Correct Ans::</h3>Option<?php echo $val['correct_ans']; ?></div>
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                                <script>
+                                                                    function openNav<?php echo $val['id']; ?>() {
+                                                                        document.getElementById("myNav<?php echo $val['id']; ?>").style.width = "80%";
+                                                                    }
+
+                                                                    function closeNav<?php echo $val['id']; ?>() {
+                                                                        document.getElementById("myNav<?php echo $val['id']; ?>").style.width = "0%";
+                                                                    }
+                                                                </script>
+
+                                                                </body>
+                                                                </html>
+                                                                <div style="cursor:pointer" onclick="openNav<?php echo $val['id']; ?>()">
+                                                                <?php
 																if($val['question_type']==1){?>
 																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="
-    width: auto;
+    width: 80%;
     height: auto;
 " height="50">
 															<?php 
@@ -58,22 +155,25 @@ font-size:12px !important;
 															echo  $val['title'];
 															?>
 															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" height="50" style="
-    width: auto;
+    width: 80%;
     height: auto;
 ">
-															
+
 															<?php }
 															else
 															{  
 																echo  $val['title'];
 															}
-															?>
+															?></div>
                                                             </td>
+
                                                             <td>
                                                                 <?php echo $val['subject_title']; ?>
                                                             </td>
                                                             <td><?php echo $val['module_title']; ?></td>
                                                             <td><?php echo $val['sb_module_title']; ?></td>
+
+                                                            <?php if(!($user_id==1126||$user_id==1127)): ?>
                                                             <td>
 															
 															<?php echo anchor('edit_test_questions/'.$val['id'],'<i class="fa fa-pencil-square-o"></i>',array("class"=>"btn btn-warning btn-lg")); ?>
@@ -81,6 +181,7 @@ font-size:12px !important;
 															<?php echo anchor('delete_test_question/'.urlencrypt($val['id']),'<i class="fa fa-trash-o"></i>',array("class"=>"btn btn-danger btn-lg")); ?>
 															
 															</td>
+                                                            <?php endif; ?>
                                                             <!-- <td><?php echo anchor('delete_test_question/'.urlencrypt($val['id']),'<i class="fa fa-edit"></i>',array("class"=>"btn btn-success btn-lg")); ?></td> -->
                                                         </tr>
                                                         <?php endforeach; ?>

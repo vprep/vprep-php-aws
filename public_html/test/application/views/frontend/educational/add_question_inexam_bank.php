@@ -1,7 +1,15 @@
 <script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
 <script type="text/javascript" async src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
 
-
+<style>
+    .col-xs-12.showback.bank1 div {
+        float: left;
+    }
+    .col-xs-12.showback.bank1 td {
+        max-width: 250px;
+        overflow-x: scroll;
+    }
+    </style>
 <div id="wrapper-content">
     <div id="page-wrapper">
         <div class="main-content">
@@ -20,7 +28,7 @@
 								  <input type="hidden" name="module" value="<?php echo $module; ?>">
 								  <div class="subject_id_num" style="display:none"><?php echo $subject_id; ?></div>
 								  <div class="row">
-                                    <div class="col-xs-12 showback">
+                                    <div class="col-xs-12 showback bank1">
                                         <div class="box box-primary">
                                             <div class="box-body">
                                                 <table class="table table-bordered table-hover text-center bank-table">
@@ -58,13 +66,13 @@
                                                             <td>
 															<?php
 																if($val['question_type'] == 1){?>
-																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:auto;height:auto" height="50">
+																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:149px;height:auto" height="50">
 															<?php 
 															}else if($val['question_type'] == 2){
 																echo  $val['title'];
 															?>
 
-															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:auto;height:auto" height="50">
+															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:149px;height:auto" height="50">
 															
 															<?php 	
 															}else
