@@ -146,7 +146,7 @@ font-size:12px !important;
                                                                 <?php
 																if($val['question_type']==1){?>
 																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="
-    width: auto;
+    width: 80%;
     height: auto;
 " height="50">
 															<?php 
@@ -155,7 +155,7 @@ font-size:12px !important;
 															echo  $val['title'];
 															?>
 															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" height="50" style="
-    width: auto;
+    width: 80%;
     height: auto;
 ">
 
