@@ -5,6 +5,9 @@
     .col-xs-12.showback.bank1 div {
         float: left;
     }
+    .col-xs-12.showback.bank1 td {
+        float: left;
+    }
     </style>
 <div id="wrapper-content">
     <div id="page-wrapper">
