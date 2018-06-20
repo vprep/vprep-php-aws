@@ -62,13 +62,13 @@
                                                             <td>
 															<?php
 																if($val['question_type'] == 1){?>
-																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:80%;height:auto" height="50">
+																<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:149px;height:auto" height="50">
 															<?php 
 															}else if($val['question_type'] == 2){
 																echo  $val['title'];
 															?>
 
-															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:80%;height:auto" height="50">
+															<img src="<?php echo base_url();?>/uploads/<?php echo $val['ques_img'];?>" style="width:149px;height:auto" height="50">
 															
 															<?php 	
 															}else
