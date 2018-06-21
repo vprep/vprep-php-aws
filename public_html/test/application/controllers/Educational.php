@@ -1246,7 +1246,7 @@ $userId = $this->getCurrentUserId();
         }
      
         if ($this->form_validation->run() == FALSE){
-            $this->template->load('educational','frontend/educational/add_student',$data);
+          //  $this->template->load('educational','frontend/educational/add_student',$data);
         }
         else
 		{
