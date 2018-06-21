@@ -144,6 +144,10 @@
 
                     </li>
                     <li>
+                        <?php echo anchor('educational/engage_home', '<i class="flaticon-test-quiz hidden-lg"></i> Engagement Platform'); ?>
+
+                    </li>
+                    <li>
                         <a href="http://vprep.in/materials.php">Study Material</a>
 
                     </li>
