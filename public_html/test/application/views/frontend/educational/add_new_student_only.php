@@ -133,7 +133,7 @@ input[type="file"] {
     
     
     
-    <form action="http://test.vprep.in/educational/save_student_new.html" id="save_student_new2" name="save_student_new2" method="post" accept-charset="utf-8">
+    <form action="http://test.vprep.in/educational/save_student_new" id="save_student_new2" name="save_student_new2" method="post" accept-charset="utf-8">
                             
 <input type="hidden" name="id" value="">
 							<input id="regname" type="hidden" name="current_institute" value="admin 01" class="form-control form-input">
