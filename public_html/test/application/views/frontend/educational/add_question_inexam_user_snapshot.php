@@ -34,7 +34,7 @@
                                                    <tbody>
                                                 <span style="color:green;font-size:20px;font-weight:bold;"> Total Question Added Successfully =  <?php echo count($test_ques); ?></span>
                                                 
-                                               <a href="exam_list.html"> <button style="
+                                               <a href="exam_list"> <button type="button" style="
     float: right;
     background: green;
     color: white;
