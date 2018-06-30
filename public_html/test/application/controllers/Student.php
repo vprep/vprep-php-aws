@@ -269,6 +269,7 @@ class Student extends CI_Controller {
     $testId = urldecrypt($exam_id);
         $data['test_cat']=$this->edu->getExamDetail(urldecrypt($exam_id));
         $data['progress']=$this->db->query("select id from exam_taken where exam_id = $testId && user_id = $userId and taken_status = '1' ")->result_array();
+        $data['exam_given'] = $this->session->userdata('attempt_exam');
         
         $this->template->load('frontend','frontend/exam/about_exam',$data);
     }
@@ -371,7 +372,7 @@ class Student extends CI_Controller {
 
                 if ($this->input->is_ajax_request())
                 {
-
+                    $this->session->set_userdata('attempt_exam',1);
                     $data['page']=$this->input->post('page');
 
                     $data['total_exam_question']= $total_question;

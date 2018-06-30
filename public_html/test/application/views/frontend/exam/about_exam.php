@@ -2,7 +2,15 @@
     $(document).ready(function() {
         if(window.performance.navigation.type == 2){
             console.log("back button called");
-            document.location.href = "http://test.vprep.in/exam_result";
+      //      document.location.href = "http://test.vprep.in/exam_result";
+            if($('#examGivenId').val() > 0){
+                <?php $this->session->set_userdata('attempt_exam',0); ?>
+                alert("You have clicked back button after attempting exam. So auto submitting your exam");
+                document.location.href = "http://test.vprep.in/exam_result";
+            } else {
+                alert("You clicked back button without attempting exam. Please start exam again");
+            }
+
 
 
         }
@@ -59,7 +67,8 @@
                                 </h5>
                                 <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/start_exam/'.urlencrypt($test_cat['exam_id']);?>">
                                 <input id=exam_url2 type="hidden" value="<?php echo 'http://test.vprep.in/progress_exam/'.urlencrypt($test_cat['exam_id']);?>">
-                                <?php /*if(!count($progress)>0) { */?><!--
+                                <input id="examGivenId" type="hidden" value="<?php echo $exam_given; ?>">
+                              <!--  <?php /*if(!count($progress)>0) { */?>
                                 <a href="<?php /*echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);*/?>" class="btn icon-btn btn-success btn-contact btn-block"
                                    "><strong>Start Now</strong></a>
                                     <?php /*}*/?>

@@ -22,6 +22,15 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/frontend/css/style.min.css">
     <script src="<?php echo base_url(); ?>assets/frontend/libs/jquery/jquery-2.1.4.min.js"></script>
     <script>
+        window.addEventListener("beforeunload", function (e) {
+            alert("event called");
+            var confirmationMessage = "Testing message";
+
+            e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
+            return confirmationMessage;              // Gecko, WebKit, Chrome <34
+        });
+    </script>
+    <script>
         /*    function myFunction() {
             $('#ol_exam_form').submit();
 
@@ -51,11 +60,21 @@
                  console.log("submit exam");
                  } */
         });
+
+
+
+    </script>
+
+    <script>
+        function myFunction() {
+            return "Write something clever here...";
+        }
     </script>
 
 
 </head>
-<body >
+<body onbeforeunload="myFunction()" >
+
 <header>
 
     <div class="header-topbar hidden-xs" style="background:#081025;color:#fff">
