@@ -427,7 +427,7 @@ public function sample_test($exam_id){
           
             $userId = $this->session->userdata('userdata')['userid'];
         
-             $result1 = $this->db->query("select * from exam_taken where exam_id = 71 and user_id = $userId and taken_status = '2' ")->result_array();
+             $result1 = $this->db->query("select * from exam_taken where exam_id = 96 and user_id = $userId and taken_status = '2' ")->result_array();
              
              if(sizeof($result1) > 0 ){
              
@@ -441,7 +441,7 @@ public function sample_test($exam_id){
              }          
           
         
-             $result2 = $this->db->query("select * from exam_taken where exam_id = 72 and user_id = $userId and taken_status = '2' ")->result_array();
+             $result2 = $this->db->query("select * from exam_taken where exam_id = 97 and user_id = $userId and taken_status = '2' ")->result_array();
              
              if(sizeof($result2) > 0 ){
             
@@ -456,7 +456,7 @@ public function sample_test($exam_id){
             }
             
    
-             $result3 = $this->db->query("select * from exam_taken where exam_id = 73 and user_id = $userId and taken_status = '2' ")->result_array();
+             $result3 = $this->db->query("select * from exam_taken where exam_id = 98 and user_id = $userId and taken_status = '2' ")->result_array();
              
              if(sizeof($result3) > 0 ){
              	
