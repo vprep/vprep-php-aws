@@ -38,7 +38,7 @@
                                                     
                                                     
                                            <?php  if($val['taken_status']== '1'){ ?>
-                                             <?php echo anchor('about_exam/'.  urlencrypt($val['exam_id']),'<span>In Progress</span>',array("class"=>"btn btn-green btn-bold btn-sm")); ?>
+                                             <?php echo anchor('sample_test/'.  urlencrypt($val['exam_id']),'<span>In Progress</span>',array("class"=>"btn btn-green btn-bold btn-sm")); ?>
                                            <?php  } else {   ?>      
                                                     <?php echo anchor('about_exam/'.  urlencrypt($val['exam_id']),'<span>Start</span>',array("class"=>"btn btn-green btn-bold btn-sm")); ?>
                                                 <?php    } ?>
