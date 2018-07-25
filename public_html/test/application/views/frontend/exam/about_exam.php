@@ -77,7 +77,7 @@
                                    <a href="javascript: void(0)" class="btn icon-btn btn-success btn-contact btn-block"
                                    onclick="popup2()"><strong>Resume Exam</strong></a> 
                                    --><?php /*}*/?>
-                                <?php echo anchor('start_exam/' . urlencrypt($test_cat['exam_id']),
+                                <?php echo anchor('sample_test/' . urlencrypt($test_cat['exam_id']),
                                     '<strong>Start Now</strong>', array("class" => "btn icon-btn btn-success btn-contact btn-block")); ?>
 
 
