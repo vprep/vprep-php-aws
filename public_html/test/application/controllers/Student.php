@@ -8,6 +8,7 @@ class Student extends CI_Controller {
         if(!check_student_login()){
             redirect(base_url());
         }
+// testing
         $this->load->model('educational_model','edu');
         $this->load->model('users_model','user');
     }
