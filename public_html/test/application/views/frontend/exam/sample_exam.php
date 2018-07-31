@@ -1,3 +1,19 @@
+<script>
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+//test
+
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+</script>
+
 <style>
 span {
     font-size: 14px !important;
@@ -38,7 +54,7 @@ span {
 
             if(exam_progress_71 < 2){
                 $.ajax({
-                    url: "http://test.vprep.in/read_ans_json?exam_id=71",
+                    url: "http://test.vprep.in/read_ans_json?exam_id=96",
                     method: "GET",
                     success: function(data) {
                         $('.global-loader').show();
@@ -53,7 +69,7 @@ span {
                             });
                         }
                          $.ajax({
-                            url: "http://test.vprep.in/read_exam_data?exam_id=71",
+                            url: "http://test.vprep.in/read_exam_data?exam_id=96",
                             method: "GET",
                             success: function(data) {
                                 min=25;
@@ -370,7 +386,7 @@ span {
                                             min = 35;
                                             sec = 0;
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id=71&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id=96&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2",
                                         method: "GET",
                                         success: function(data) {
                                             
@@ -416,7 +432,7 @@ span {
                     activeExam2();
                 }
                 $.ajax({
-                    url: "http://test.vprep.in/read_ans_json?exam_id=72",
+                    url: "http://test.vprep.in/read_ans_json?exam_id=97",
                     method: "GET",
                     success: function(data) {
                         var jsonObj_72 = new Object();
@@ -431,7 +447,7 @@ span {
 
 
                         $.ajax({
-                            url: "http://test.vprep.in/read_exam_data?exam_id=72",
+                            url: "http://test.vprep.in/read_exam_data?exam_id=97",
                             method: "GET",
                             success: function(data) {
                                 if((exam_progress_71 == 2)){
@@ -704,7 +720,7 @@ span {
                                     }
                                     var score = calculateScore(jsonObj_72,ansJson2_72, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id=72&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=1",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id=97&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=1",
                                         method: "GET",
                                         success: function(data) {
 
@@ -744,7 +760,7 @@ span {
                                             min = 35;
                                             sec = 0;
                                      $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id=72&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id=97&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2",
                                         method: "GET",
                                         success: function(data) {
                                            // alert("successfully submitted");
@@ -793,7 +809,7 @@ span {
                     activeExam3();
                 }
                 $.ajax({
-                    url: "http://test.vprep.in/read_ans_json?exam_id=73",
+                    url: "http://test.vprep.in/read_ans_json?exam_id=98",
                     method: "GET",
                     success: function(data) {
                         var resumeTime_73 = new Object();
@@ -806,7 +822,7 @@ span {
                         }
 
                         $.ajax({
-                            url: "http://test.vprep.in/read_exam_data?exam_id=73",
+                            url: "http://test.vprep.in/read_exam_data?exam_id=98",
                             method: "GET",
                             success: function(data) {
                                     if((exam_progress_72 == 2)){
@@ -1078,7 +1094,7 @@ span {
                                     }
                                     var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id=73&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=1",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id=98&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=1",
                                         method: "GET",
                                         success: function(data) {
 
@@ -1090,8 +1106,23 @@ span {
                                     })
                                 });
 
-
                                 $("#examSubmitId_3").click(function () {
+		if(1) {
+ 
+var atjid=getParameterByName("atjid");
+var cdid=getParameterByName("cdid");
+var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
+		       $.ajax({
+  type: "POST",
+  url: "http://api.passivereferral.com/index.php/api/submittestresult/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MjQzMzU0MDAsImFjY291bnQiOiJhdHMiLCJzdWIiOjE4MiwiaXNzIjoiaHR0cDovL2FwaS5wYXNzaXZlcmVmZXJyYWwuY29tL2luZGV4LnBocC9hcGkvYXV0aGVudGljYXRlIiwiaWF0IjoxNTI0MDM5NTA3LCJuYmYiOjE1MjQwMzk1MDcsImp0aSI6IjJVdGdXemZ2Rkc0NjEwdGwifQ.kzxSOGl4e88OsbP5tQFSB2a050R3IqrgGIHgFlSvL6Y",
+  data: {"atjid":atjid,"cdid":cdid,"score":score},
+  dataType: "json",
+  success:{}
+});	
+                       alert("successfully submitted");
+			window.location.href = "http://passivereferral.com";
+			
+}                                   
                                     var startTime = parseInt($('.'+lastDivId_73).data("start_time"));
                                     var endTime = Math.round(new Date() / 1000);
                                     var totalTime = parseInt($('.'+lastDivId_73).data("total_time"));
@@ -1109,7 +1140,7 @@ span {
                                     $('.all-div').hide();
                                     $('.global-loader').show();
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id=73&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id=98&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2",
                                         method: "GET",
                                         success: function(data) {
                                             alert("successfully submitted");
