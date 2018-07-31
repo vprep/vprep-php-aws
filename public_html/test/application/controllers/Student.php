@@ -427,8 +427,16 @@ public function sample_test($exam_id){
           	
           
             $userId = $this->session->userdata('userdata')['userid'];
+
+            $exam_1 = $exam_id;
+            $exam_2 = $exam_id+1;
+            $exam_3 = $exam_id+2;
+
+    $data['exam_1']=$exam_1;
+    $data['exam_2']=$exam_2;
+    $data['exam_3']=$exam_3;
         
-             $result1 = $this->db->query("select * from exam_taken where exam_id = 96 and user_id = $userId and taken_status = '2' ")->result_array();
+             $result1 = $this->db->query("select * from exam_taken where exam_id = $exam_1 and user_id = $userId and taken_status = '2' ")->result_array();
              
              if(sizeof($result1) > 0 ){
              
@@ -442,7 +450,7 @@ public function sample_test($exam_id){
              }          
           
         
-             $result2 = $this->db->query("select * from exam_taken where exam_id = 97 and user_id = $userId and taken_status = '2' ")->result_array();
+             $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
              
              if(sizeof($result2) > 0 ){
             
@@ -457,7 +465,7 @@ public function sample_test($exam_id){
             }
             
    
-             $result3 = $this->db->query("select * from exam_taken where exam_id = 98 and user_id = $userId and taken_status = '2' ")->result_array();
+             $result3 = $this->db->query("select * from exam_taken where exam_id = $exam_3 and user_id = $userId and taken_status = '2' ")->result_array();
              
              if(sizeof($result3) > 0 ){
              	
@@ -478,22 +486,13 @@ public function sample_test($exam_id){
             
             $exam_73 = $this->session->userdata('exam_progress_73');
             
-            
-          
-            	
-            
-            
-        
-                        
-            
-                        
-            
+
            if(($exam_71 == '2') && ($exam_72 == '2') && ($exam_73 == '2')){
                 redirect("my_score");
 
             } else {
 
-        $this->template->load('exam_frontend','frontend/exam/sample_exam'); 
+        $this->template->load('exam_frontend','frontend/exam/sample_exam',$data);
 
     } 
     }
