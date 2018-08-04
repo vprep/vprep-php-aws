@@ -1107,22 +1107,11 @@ span {
                                 });
 
                                 $("#examSubmitId_3").click(function () {
-		if(1) {
- 
-var atjid=getParameterByName("atjid");
-var cdid=getParameterByName("cdid");
-var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
-		       $.ajax({
-  type: "POST",
-  url: "http://api.passivereferral.com/index.php/api/submittestresult/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MjQzMzU0MDAsImFjY291bnQiOiJhdHMiLCJzdWIiOjE4MiwiaXNzIjoiaHR0cDovL2FwaS5wYXNzaXZlcmVmZXJyYWwuY29tL2luZGV4LnBocC9hcGkvYXV0aGVudGljYXRlIiwiaWF0IjoxNTI0MDM5NTA3LCJuYmYiOjE1MjQwMzk1MDcsImp0aSI6IjJVdGdXemZ2Rkc0NjEwdGwifQ.kzxSOGl4e88OsbP5tQFSB2a050R3IqrgGIHgFlSvL6Y",
-  data: {"atjid":atjid,"cdid":cdid,"score":score},
-  dataType: "json",
-  success:{}
-});	
-                       alert("successfully submitted");
-			window.location.href = "http://passivereferral.com";
+
+                                    var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
+
 			
-}                                   
+
                                     var startTime = parseInt($('.'+lastDivId_73).data("start_time"));
                                     var endTime = Math.round(new Date() / 1000);
                                     var totalTime = parseInt($('.'+lastDivId_73).data("total_time"));
