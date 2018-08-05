@@ -1491,7 +1491,7 @@ span {
                 $("#saveAns_3").click();
             }
 
-            setTimeout("saveResumeAns1()",1000);
+            setTimeout("saveResumeAns1()",10000);
         }
         saveResumeAns1();
 
