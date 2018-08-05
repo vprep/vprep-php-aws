@@ -43,13 +43,13 @@ span {
 
             $('.global-loader').show();
 
-    //        var exam_progress_71 = '<?php $this->session->userdata('exam_progress_71'); ?>';
-    //        var exam_progress_72 = '<?php $this->session->userdata('exam_progress_72'); ?>';
-    //        var exam_progress_73 = '<?php $this->session->userdata('exam_progress_73'); ?>';
+            var exam_progress_71 = '<?php echo $this->session->userdata('exam_progress_71'); ?>';
+            var exam_progress_72 = '<?php echo $this->session->userdata('exam_progress_72'); ?>';
+            var exam_progress_73 = '<?php echo $this->session->userdata('exam_progress_73'); ?>';
 
-	    var exam_progress_71 = 1;
-            var exam_progress_72 = 1;
-            var exam_progress_73 = 1;
+//	    var exam_progress_71 = 1;
+//            var exam_progress_72 = 1;
+//            var exam_progress_73 = 1;
 
 
             if(exam_progress_71 < 2){
