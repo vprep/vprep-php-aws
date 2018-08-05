@@ -67,11 +67,16 @@ html * {
                             jsonObj_71 = JSON.parse(data);
 
                             $.each(jsonObj_71, function (key,value) {
-                                resumeTime_71 += value["time"];
+                                if(parseInt(value["time"])<1400){
+                                    resumeTime_71+=parseInt(value["time"]);
+                                }
                             });
                             if(resumeTime_71>0){
                                 resumeTime_71+=60;
                             }
+
+
+
                         }
                         console.log("total resume time: "+resumeTime_71);
                          $.ajax({
@@ -445,7 +450,10 @@ html * {
                             console.log("json: "+JSON.stringify(jsonObj_72));
                             $.each(jsonObj_72, function (key,value) {
                                 console.log("time::::::"+value["time"]);
-                                resumeTime_72 += value["time"];
+                                if(parseInt(value["time"])<2000){
+                                    resumeTime_72+=parseInt(value["time"]);
+                                }
+
                             });
 
                             if(resumeTime_72>0){
@@ -488,10 +496,10 @@ html * {
 
                                     if(jsonObj_72[value.id]!= null) {
                                         if(jsonObj_72[value.id].time != null && jsonObj_72[value.id].time >0){
-                                            startTime = jsonObj_72[value.id].time;
+                                            startTime = parseInt(jsonObj_72[value.id].time);;
                                             console.log("72 start: "+startTime);
                                         } else {
-                                            console.log("72 null: "+jsonObj_71[value.id].time);
+                                            console.log("72 null: "+jsonObj_72[value.id].time);
                                         }
                                         $('.jump-72-'+index).removeClass("btn-default");
                                         $('.jump-72-'+index).addClass("btn-success");
@@ -830,7 +838,9 @@ html * {
 
                             jsonObj_73 = JSON.parse(data);
                             $.each(jsonObj_73, function (key,value) {
-                                resumeTime_73 += value["time"];
+                                if(parseInt(value["time"])<2000){
+                                    resumeTime_73+=parseInt(value["time"]);
+                                }
                             });
                             console.log("pre: "+resumeTime_73);
                             if(resumeTime_73>0){
@@ -868,7 +878,7 @@ html * {
 
                                     if(jsonObj_73[value.id]!= null) {
                                         if(jsonObj_73[value.id].time != null && jsonObj_73[value.id].time >0){
-                                            startTime = jsonObj_73[value.id].time;
+                                            startTime = parseInt(jsonObj_73[value.id].time);
                                             console.log("73 start: "+startTime);
                                         } else {
                                             console.log("73 null: "+jsonObj_71[value.id].time);
