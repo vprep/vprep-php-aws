@@ -22,6 +22,7 @@ span {
 html * {
     font-size: 14px !important;
     font-weight: 400 !important;
+    font-family: serif !important;
 }
 </style>
 <script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
