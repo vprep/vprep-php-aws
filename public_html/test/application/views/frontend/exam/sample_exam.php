@@ -19,9 +19,7 @@ span {
     font-size: 14px !important;
         font-weight:bold;
 }
-
-
-</style>    
+</style>
 <script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
     <script type="text/javascript" async src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
     <script>
@@ -43,13 +41,11 @@ span {
 
             $('.global-loader').show();
 
+
             var exam_progress_71 = '<?php echo $this->session->userdata('exam_progress_71'); ?>';
             var exam_progress_72 = '<?php echo $this->session->userdata('exam_progress_72'); ?>';
             var exam_progress_73 = '<?php echo $this->session->userdata('exam_progress_73'); ?>';
 
-//	    var exam_progress_71 = 1;
-//            var exam_progress_72 = 1;
-//            var exam_progress_73 = 1;
 
 
             if(exam_progress_71 < 2){
@@ -79,7 +75,6 @@ span {
                                     min = (25 - Math.floor(resumeTime_71/60));
 
                                 }
-
                                 sec = 0;
                                 activeExam1();
                                 var index = 1;
@@ -87,7 +82,6 @@ span {
                                 obj_71 = jQuery.parseJSON(data);
                                 var startTime = Math.round(new Date() / 1000);
                                 var html = "";
-
 
 
                                 html += '<input type="hidden" id="71" value="15"> ';
@@ -216,9 +210,6 @@ span {
                                         jsonObj_71[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-71-'+currentVal).removeClass("btn-default");
                                         $('.jump-71-'+currentVal).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_1").click();
-                                        }
 
                                     }
                                     $('.'+currentDiv).data("total_time",totalTime);
@@ -262,9 +253,6 @@ span {
                                         jsonObj_71[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-71-'+(currentVal)).removeClass("btn-default");
                                         $('.jump-71-'+(currentVal)).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_1").click();
-                                        }
 
                                     }
                                     $('.'+currentDiv).data("total_time",totalTime);
@@ -299,9 +287,6 @@ span {
                                         jsonObj_71[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-71-'+shownDiv).removeClass("btn-default");
                                         $('.jump-71-'+shownDiv).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_1").click();
-                                        }
 
                                     }
 
@@ -344,7 +329,7 @@ span {
                                     }
                                     var score = calculateScore(jsonObj_71,ansJson2_71, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=1",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=1&save_status=71",
                                         method: "GET",
                                         success: function(data) {
 
@@ -386,7 +371,7 @@ span {
                                             min = 35;
                                             sec = 0;
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71",
                                         method: "GET",
                                         success: function(data) {
                                             
@@ -599,9 +584,7 @@ span {
                                         jsonObj_72[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-72-'+currentVal).removeClass("btn-default");
                                         $('.jump-72-'+currentVal).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_2").click();
-                                        }
+
                                     }
                                     $('.'+currentDiv).data("total_time",totalTime);
                                     var nextDiv = 'div-72-'+(currentVal + 1);
@@ -641,9 +624,7 @@ span {
                                         jsonObj_72[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-72-'+(currentVal)).removeClass("btn-default");
                                         $('.jump-72-'+(currentVal)).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_2").click();
-                                        }
+
                                     }
                                     $('.'+currentDiv).data("total_time",totalTime);
                                     $('.'+prevDiv).data("start_time",Math.round(new Date()/1000));
@@ -677,9 +658,6 @@ span {
                                         jsonObj_72[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-72-'+shownDiv).removeClass("btn-default");
                                         $('.jump-72-'+shownDiv).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_2").click();
-                                        }
 
                                     }
 
@@ -720,7 +698,7 @@ span {
                                     }
                                     var score = calculateScore(jsonObj_72,ansJson2_72, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=1",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=1&save_status=72",
                                         method: "GET",
                                         success: function(data) {
 
@@ -760,7 +738,7 @@ span {
                                             min = 35;
                                             sec = 0;
                                      $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2&save_status=72",
                                         method: "GET",
                                         success: function(data) {
                                            // alert("successfully submitted");
@@ -970,9 +948,6 @@ span {
                                         jsonObj_73[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-73-'+currentVal).removeClass("btn-default");
                                         $('.jump-73-'+currentVal).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_3").click();
-                                        }
                                     }
                                     $('.'+currentDiv).data("total_time",totalTime);
                                     var nextDiv = 'div-73-'+(currentVal + 1);
@@ -1013,9 +988,7 @@ span {
                                         jsonObj_73[currentQueId] = {time: totalTime, option:selectedOption};
                                         $('.jump-73-'+(currentVal)).removeClass("btn-default");
                                         $('.jump-73-'+(currentVal)).addClass("btn-success");
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_2").click();
-                                        }
+
                                     }
                                     $('.'+currentDiv).data("total_time",totalTime);
                                     $('.'+prevDiv).data("start_time",Math.round(new Date()/1000));
@@ -1051,9 +1024,6 @@ span {
                                         $('.jump-73-'+shownDiv).removeClass("btn-default");
                                         $('.jump-73-'+shownDiv).addClass("btn-success");
 
-                                        if(min%5==0 && sec%5==0){
-                                            $("#saveAns_3").click();
-                                        }
 
                                     }
 
@@ -1094,7 +1064,7 @@ span {
                                     }
                                     var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=1",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=1&save_status=73",
                                         method: "GET",
                                         success: function(data) {
 
@@ -1129,7 +1099,7 @@ span {
                                     $('.all-div').hide();
                                     $('.global-loader').show();
                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2",
+                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2&save_status=73",
                                         method: "GET",
                                         success: function(data) {
                                             alert("successfully submitted");
@@ -1509,8 +1479,21 @@ span {
 
         countdown();
 
+        function saveResumeAns1() {
+            if(parseInt($('#progress_71').val())<2){
+                console.log("calling save1",progress_71);
+                $("#saveAns_1").click();
+            }else if(parseInt($('#progress_72').val()) <2){
+                console.log("calling save2",progress_72);
+                $("#saveAns_2").click();
+            } else if(parseInt($('#progress_73').val()) <2 ){
+                console.log("calling save3",progress_73);
+                $("#saveAns_3").click();
+            }
 
-
+            setTimeout("saveResumeAns1()",1000);
+        }
+        saveResumeAns1();
 
     </script>
     <script>

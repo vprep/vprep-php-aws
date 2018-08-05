@@ -1207,15 +1207,16 @@ public function sample_test($exam_id){
  	$score = $_GET["score"];
  	$start_at = $_GET["start_at"];
  	$taken_status = $_GET["taken_status"];
+ 	$save_status = $_GET["save_status"];
  	$userId = $this->session->userdata('userdata')['userid'];
  //	$userId = time()/1000;
  	
  	$result = $this->stu->save_exam_json($exam_id,$score,$ans_json,$start_at);
-	if($exam_id == 71) {
+	if($save_status == 71) {
 	 $this->session->set_userdata('exam_progress_71',"2");
-	} else if($exam_id == 72) {
+	} else if($save_status == 72) {
 	 $this->session->set_userdata('exam_progress_72',"2");
-	} else if($exam_id == 73) {
+	} else if($save_status == 73) {
 	 $this->session->set_userdata('exam_progress_73',"2");
 	}
  	
@@ -1228,17 +1229,17 @@ public function sample_test($exam_id){
 
 
   public function read_ans_json() {
- /*  $exam_id = $_GET["exam_id"];
+   $exam_id = $_GET["exam_id"];
  $userId = $this->session->userdata('userdata')['userid'];
  
  $ans = $this->db->query("select * from test_answers where test_category = $exam_id && userid = $userId ")->result_array();
  
  if(sizeof($ans) >0 ){
   echo stripslashes($ans[0]['test_answers']);
- } else {*/ 
+ } else {
  	echo '{}' ;
  
-// } 
+ }
 
  
  
