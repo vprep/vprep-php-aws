@@ -24,7 +24,7 @@ span {
     <script type="text/javascript" async src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
     <script>
 
-        var startTime = Math.round(new Date() / 1000);
+
         $(document).ready(function() {
             var jsonObj_71 = new Object();
             var ansJson2_71 = new Object();
@@ -38,6 +38,7 @@ span {
             var ansJson2_73 = new Object();
             var lastDivId_73 = 'div-73-1';
             var obj_73 = new Object();
+            var startTime = Math.round(new Date() / 1000);
 
             $('.global-loader').show();
 
@@ -63,7 +64,9 @@ span {
                             $.each(jsonObj_71, function (key,value) {
                                 resumeTime_71 += value["time"];
                             });
+                            resumeTime_71+=60;
                         }
+                        console.log("total resume time: "+resumeTime_71);
                          $.ajax({
                             url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_1;?>,
                             method: "GET",
@@ -81,6 +84,7 @@ span {
                                 var obj = jQuery.parseJSON(data);
                                 obj_71 = jQuery.parseJSON(data);
                                 var startTime = Math.round(new Date() / 1000);
+
                                 var html = "";
 
 
@@ -88,6 +92,13 @@ span {
                                 $.each(obj.total_questions, function(key,value) {
 
                                     if(jsonObj_71[value.id]!= null) {
+                                        if(jsonObj_71[value.id].time != null && jsonObj_71[value.id].time >0 ){
+                                            startTime = jsonObj_71[value.id].time;
+                                            console.log("start: "+startTime);
+                                        } else {
+                                            console.log("null: "+jsonObj_71[value.id].time);
+
+                                        }
                                         $('.jump-71-'+index).removeClass("btn-default");
                                         $('.jump-71-'+index).addClass("btn-success");
                                     }
@@ -420,15 +431,21 @@ span {
                     url: "http://test.vprep.in/read_ans_json?exam_id="+<?php echo $exam_2;?>,
                     method: "GET",
                     success: function(data) {
-                        var jsonObj_72 = new Object();
-                        var resumeTime_72 = new Object();
+                        var resumeTime_72 = 0;
                         if(data != null && data.length > 0){
 
                             jsonObj_72 = JSON.parse(data);
+                            console.log("json: "+JSON.stringify(jsonObj_72));
                             $.each(jsonObj_72, function (key,value) {
+                                console.log("time::::::"+value["time"]);
                                 resumeTime_72 += value["time"];
                             });
+
+                            resumeTime_72+=60;
+                            console.log("72 total resume time: "+resumeTime_72);
                         }
+
+
 
 
                         $.ajax({
@@ -448,6 +465,8 @@ span {
                                 var index = 1;
                                 var obj = jQuery.parseJSON(data);
                                 obj_72 = jQuery.parseJSON(data);
+                                var startTime = Math.round(new Date() / 1000);
+
                                 var html = "";
 
 
@@ -457,7 +476,14 @@ span {
                                 html += '<input type="hidden" id="72" value="10"> ';
                                 $.each(obj.total_questions, function(key,value) {
 
+
                                     if(jsonObj_72[value.id]!= null) {
+                                        if(jsonObj_72[value.id].time != null && jsonObj_72[value.id].time >0){
+                                            startTime = jsonObj_72[value.id].time;
+                                            console.log("72 start: "+startTime);
+                                        } else {
+                                            console.log("72 null: "+jsonObj_71[value.id].time);
+                                        }
                                         $('.jump-72-'+index).removeClass("btn-default");
                                         $('.jump-72-'+index).addClass("btn-success");
                                     }
@@ -790,14 +816,17 @@ span {
                     url: "http://test.vprep.in/read_ans_json?exam_id="+<?php echo $exam_3;?>,
                     method: "GET",
                     success: function(data) {
-                        var resumeTime_73 = new Object();
+                        var resumeTime_73 = 0;
                         if(data != null && data.length > 0){
 
                             jsonObj_73 = JSON.parse(data);
                             $.each(jsonObj_73, function (key,value) {
                                 resumeTime_73 += value["time"];
                             });
+                            console.log("pre: "+resumeTime_73);
+                            resumeTime_73+=60;
                         }
+                        console.log("73 total resume time: "+resumeTime_73);
 
                         $.ajax({
                             url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_3;?>,
@@ -816,6 +845,7 @@ span {
                                 var obj = jQuery.parseJSON(data);
                                 obj_73 = jQuery.parseJSON(data);
                                 var startTime = Math.round(new Date() / 1000);
+
                                 var html = "";
                                 var savedStart3 = Math.round(new Date() / 1000);
 
@@ -823,7 +853,14 @@ span {
                                 html += '<input type="hidden" id="73" value="40"> ';
                                 $.each(obj.total_questions, function(key,value) {
 
+
                                     if(jsonObj_73[value.id]!= null) {
+                                        if(jsonObj_73[value.id].time != null && jsonObj_73[value.id].time >0){
+                                            startTime = jsonObj_73[value.id].time;
+                                            console.log("73 start: "+startTime);
+                                        } else {
+                                            console.log("73 null: "+jsonObj_71[value.id].time);
+                                        }
                                         $('.jump-73-'+index).removeClass("btn-default");
                                         $('.jump-73-'+index).addClass("btn-success");
                                     }
@@ -1163,6 +1200,7 @@ span {
             }
 
             function activeExam2() {
+                $('#progress_71').val('2');
                 $("#exam-tab-id-2").css( "background-color", "green");
                 $("#exam-tab-id-1").css( "background-color", "grey");
                 $("#exam-tab-id-3").css( "background-color", "white");
@@ -1172,6 +1210,8 @@ span {
             }
 
             function activeExam3() {
+                $('#progress_71').val('2');
+                $('#progress_72').val('2');
                 $("#exam-tab-id-3").css( "background-color", "green");
                 $("#exam-tab-id-2").css( "background-color", "grey");
                 $("#exam-tab-id-1").css( "background-color", "grey");
@@ -1480,6 +1520,7 @@ span {
         countdown();
 
         function saveResumeAns1() {
+
             if(parseInt($('#progress_71').val())<2){
                 console.log("calling save1",progress_71);
                 $("#saveAns_1").click();
@@ -1489,6 +1530,8 @@ span {
             } else if(parseInt($('#progress_73').val()) <2 ){
                 console.log("calling save3",progress_73);
                 $("#saveAns_3").click();
+            } else {
+                console.log("none save");
             }
 
             setTimeout("saveResumeAns1()",10000);
