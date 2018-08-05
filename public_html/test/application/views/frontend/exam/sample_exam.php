@@ -67,7 +67,7 @@ html * {
                             jsonObj_71 = JSON.parse(data);
 
                             $.each(jsonObj_71, function (key,value) {
-                                if(parseInt(value["time"])<1400){
+                                if(parseInt(value["time"])<1400&&resumeTime_71<1400){
                                     resumeTime_71+=parseInt(value["time"]);
                                 }
                             });
@@ -450,7 +450,7 @@ html * {
                             console.log("json: "+JSON.stringify(jsonObj_72));
                             $.each(jsonObj_72, function (key,value) {
                                 console.log("time::::::"+value["time"]);
-                                if(parseInt(value["time"])<2000){
+                                if(parseInt(value["time"])<2000&&resumeTime_72<2000){
                                     resumeTime_72+=parseInt(value["time"]);
                                 }
 
@@ -838,7 +838,7 @@ html * {
 
                             jsonObj_73 = JSON.parse(data);
                             $.each(jsonObj_73, function (key,value) {
-                                if(parseInt(value["time"])<2000){
+                                if(parseInt(value["time"])<2000&&resumeTime_73<2000){
                                     resumeTime_73+=parseInt(value["time"]);
                                 }
                             });
@@ -1174,7 +1174,6 @@ html * {
                                     });
 
                                 })
-
 
 
                             }
@@ -1556,7 +1555,7 @@ html * {
                 console.log("none save");
             }
 
-            setTimeout("saveResumeAns1()",10000);
+            setTimeout("saveResumeAns1()",240000);
         }
         saveResumeAns1();
 
