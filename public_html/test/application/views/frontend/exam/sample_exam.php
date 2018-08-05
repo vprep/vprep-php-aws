@@ -69,7 +69,9 @@ html * {
                             $.each(jsonObj_71, function (key,value) {
                                 resumeTime_71 += value["time"];
                             });
-                            resumeTime_71+=60;
+                            if(resumeTime_71>0){
+                                resumeTime_71+=60;
+                            }
                         }
                         console.log("total resume time: "+resumeTime_71);
                          $.ajax({
@@ -446,7 +448,9 @@ html * {
                                 resumeTime_72 += value["time"];
                             });
 
-                            resumeTime_72+=60;
+                            if(resumeTime_72>0){
+                                resumeTime_72+=60;
+                            }
                             console.log("72 total resume time: "+resumeTime_72);
                         }
 
@@ -829,7 +833,10 @@ html * {
                                 resumeTime_73 += value["time"];
                             });
                             console.log("pre: "+resumeTime_73);
-                            resumeTime_73+=60;
+                            if(resumeTime_73>0){
+                                resumeTime_73+=60;
+                            }
+
                         }
                         console.log("73 total resume time: "+resumeTime_73);
 
