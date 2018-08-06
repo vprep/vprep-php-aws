@@ -773,7 +773,13 @@ html * {
 
                                     $('.all-div').hide();
                                     //$('.global-loader').show();
-
+                                    $('.div-73-1').show();
+                                    $('.div-73-1').data("start_time",Math.round(new Date()/1000));
+                                    activeExam3();
+                                    $(".nxt-btn-3").show();
+                                    //$(".prev-btn-3").show();
+                                    min = 35;
+                                    sec = 0;
                                     alert("successfully submitted");
 
                                      $.ajax({
