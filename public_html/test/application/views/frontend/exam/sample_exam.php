@@ -385,14 +385,15 @@ html * {
 
                                     $('.all-div').hide();
                                    // $('.global-loader').show();
+                                    $('.div-72-1').show();
+                                    $(".nxt-btn-2").show();
+                                    //$(".prev-btn-2").show();
+                                    $('.div-72-1').data("start_time",Math.round(new Date()/1000));
+                                    activeExam2();
+                                    min = 35;
+                                    sec = 0;
                                     alert("successfully submitted");
-                                            $('.div-72-1').show();
-                                            $(".nxt-btn-2").show();
-                                            //$(".prev-btn-2").show();
-                                            $('.div-72-1').data("start_time",Math.round(new Date()/1000));
-                                            activeExam2();
-                                            min = 35;
-                                            sec = 0;
+
                                     $.ajax({
                                         url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71",
                                         method: "GET",
@@ -772,14 +773,9 @@ html * {
 
                                     $('.all-div').hide();
                                     //$('.global-loader').show();
+
                                     alert("successfully submitted");
-                                            $('.div-73-1').show();
-                                            $('.div-73-1').data("start_time",Math.round(new Date()/1000));
-                                            activeExam3();
-                                            $(".nxt-btn-3").show();
-                                            //$(".prev-btn-3").show();
-                                            min = 35;
-                                            sec = 0;
+
                                      $.ajax({
                                         url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2&save_status=72",
                                         method: "GET",
