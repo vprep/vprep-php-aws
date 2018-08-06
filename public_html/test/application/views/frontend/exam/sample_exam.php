@@ -83,7 +83,7 @@ html * {
                             url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_1;?>,
                             method: "GET",
                             success: function(data) {
-                                min=25;
+                                min=1;
 
                                 if(resumeTime_71 != null && resumeTime_71 >0 ){
 
@@ -390,7 +390,7 @@ html * {
                                     //$(".prev-btn-2").show();
                                     $('.div-72-1').data("start_time",Math.round(new Date()/1000));
                                     activeExam2();
-                                    min = 35;
+                                    min = 1;
                                     sec = 0;
                                     alert("successfully submitted");
 
@@ -471,7 +471,7 @@ html * {
                             method: "GET",
                             success: function(data) {
                                 if((exam_progress_71 == 2)){
-                                    min = 35;
+                                    min = 1;
                                     if( resumeTime_72 != null && resumeTime_72 >0 ){
 
                                         min = (35 - Math.floor(resumeTime_72/60));
