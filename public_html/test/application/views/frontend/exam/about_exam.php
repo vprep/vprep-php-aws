@@ -77,10 +77,10 @@
                                    <a href="javascript: void(0)" class="btn icon-btn btn-success btn-contact btn-block"
                                    onclick="popup2()"><strong>Resume Exam</strong></a> 
                                    --><?php /*}*/?>
-                                <?php echo anchor('sample_test/' . urlencrypt($test_cat['exam_id']),
-                                    '<strong>Start Now</strong>', array("class" => "btn icon-btn btn-success btn-contact btn-block")); ?>
-                                <!--<a href="javascript: void(0)" class="btn icon-btn btn-success btn-contact btn-block"
-                                   onclick="popup()"><strong>Start Now</strong></a>-->
+                               <!-- --><?php /*echo anchor('sample_test/' . urlencrypt($test_cat['exam_id']),
+                                    '<strong>Start Now</strong>', array("class" => "btn icon-btn btn-success btn-contact btn-block")); */?>
+                                <a href="javascript: void(0)" class="btn icon-btn btn-success btn-contact btn-block"
+                                   onclick="popup()"><strong>Start Now</strong></a>
 
 
                             </div>
