@@ -25,7 +25,7 @@
                             
 <input type="hidden" name="id" value="">
 							<input id="regname" type="hidden" name="current_institute" value="admin 01" class="form-control form-input">
-							<input type="hidden" name="password" value="123456">
+							<input type="hidden" name="password" value="united">
 							<input type="hidden" name="prepairing_for" value="">
 							<input type="hidden" name="roll_no" value="kjdfhjdkjdk">
 							<input type="hidden" name="year_of_adm" value="2016">
