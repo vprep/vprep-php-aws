@@ -80,7 +80,7 @@
                             <?php echo form_open('educational/save_student'); ?>
                             <?php echo form_hidden('id',!empty($post_data['id'])?$post_data['id']:''); ?>
 							<input id="regname" type="hidden" name="current_institute" value="<?php echo !empty($this->session->userdata('userdata')['name'])?$this->session->userdata('userdata')['name']:''; ?>" class="form-control form-input" >
-							<input type="hidden" name="password" value="<?php // echo rand(9999,99999999); ?>123456" >
+							<input type="hidden" name="password" value="<?php // echo rand(9999,99999999); ?>united" >
 							<input type="hidden" name="prepairing_for" value="" >
 											   
                             <div class="register-form bg-w-form rlp-form">
