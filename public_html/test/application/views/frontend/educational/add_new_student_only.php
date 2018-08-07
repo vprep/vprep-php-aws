@@ -137,7 +137,7 @@ input[type="file"] {
                             
 <input type="hidden" name="id" value="">
 							<input id="regname" type="hidden" name="current_institute" value="admin 01" class="form-control form-input">
-							<input type="hidden" name="password" value="123456">
+							<input type="hidden" name="password" value="united">
 							<input  type="hidden"name="prepairing_for" value="" placeholder="">
 							<input type="submit" id="search" name="submit" alt="search" value="">
 							<input type="text" class="inputForm" name="roll_no" placeholder="roll_no">
