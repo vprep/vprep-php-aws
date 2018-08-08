@@ -105,8 +105,7 @@ if(isset($is_mock)): ?>
 																
 																
 															
-                                                                <?php echo anchor('educational/delete_exam/'.$val['exam_id'],'<i class="fa fa-trash-o"></i>',array("class"=>"btn btn-danger btn-lg", "onclick"=>"return confirm('Do you want delete this record')")); ?>
-																
+
                                                             </td>
                                                         </tr>
                                                         <?php endforeach; ?>
