@@ -69,7 +69,7 @@
                                 <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/start_exam/'.urlencrypt($test_cat['exam_id']);?>">
                                 <?php }else {?>
                                 <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);?>">
-                                <? } ?>
+                                <?php } ?>
                                 <input id=exam_url2 type="hidden" value="<?php echo 'http://test.vprep.in/progress_exam/'.urlencrypt($test_cat['exam_id']);?>">
                                 <input id="examGivenId" type="hidden" value="<?php echo $exam_given; ?>">
                               <!--  <?php /*if(!count($progress)>0) { */?>
