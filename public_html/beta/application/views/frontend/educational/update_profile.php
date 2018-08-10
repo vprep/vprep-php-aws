@@ -103,41 +103,41 @@ $getData = $this->edu->loadInstitute($this->session->userdata('userdata')['useri
 														 
 														<select name="state" id="regname" class="form-control form-input"  required="required">
 															<option value="">Select State</option>
-															<option value="Andaman and Nicobar Islands" <?php if($getData->state=="Andaman and Nicobar Islands") echo 'selected="selected"'; ?>>Andaman and Nicobar Islands</option>
-															<option value="Andhra Pradesh" <?php if($getData->state=="Andhra Pradesh") echo 'selected="selected"'; ?> >Andhra Pradesh</option>
-															<option value="Arunachal Pradesh" <?php if($getData->state=="Arunachal Pradesh") echo 'selected="selected"'; ?> >Arunachal Pradesh</option>
-															<option value="Assam" <?php if($getData->state=="Assam") echo 'selected="selected"'; ?> >Assam</option>
-															<option value="Bihar" <?php if($getData->state=="Bihar") echo 'selected="selected"'; ?> >Bihar</option>
-															<option value="Chandigarh" <?php if($getData->state=="Chandigarh") echo 'selected="selected"'; ?> >Chandigarh</option>
-															<option value="Chhattisgarh" <?php if($getData->state=="Chhattisgarh") echo 'selected="selected"'; ?> >Chhattisgarh</option>
-															<option value="Dadra and Nagar Haveli" <?php if($getData->state=="Dadra and Nagar Haveli") echo 'selected="selected"'; ?> >Dadra and Nagar Haveli</option>
-															<option value="Daman and Diu" <?php if($getData->state=="Daman and Diu") echo 'selected="selected"'; ?> >Daman and Diu</option>
-															<option value="Delhi" <?php if($getData->state=="Delhi") echo 'selected="selected"'; ?> >Delhi</option>
-															<option value="Goa" <?php if($getData->state=="Goa") echo 'selected="selected"'; ?> >Goa</option>
-															<option value="Gujarat" <?php if($getData->state=="Gujarat") echo 'selected="selected"'; ?> >Gujarat</option>
-															<option value="Haryana" <?php if($getData->state=="Haryana") echo 'selected="selected"'; ?> >Haryana</option>
-															<option value="Himachal Pradesh" <?php if($getData->state=="Himachal Pradesh") echo 'selected="selected"'; ?> >Himachal Pradesh</option>
-															<option value="Jammu and Kashmir" <?php if($getData->state=="Jammu and Kashmir") echo 'selected="selected"'; ?> >Jammu and Kashmir</option>
-															<option value="Jharkhand" <?php if($getData->state=="Jharkhand") echo 'selected="selected"'; ?> >Jharkhand</option>
-															<option value="Karnataka" <?php if($getData->state=="Karnataka") echo 'selected="selected"'; ?> >Karnataka</option>
-															<option value="Kerala" <?php if($getData->state=="Kerala") echo 'selected="selected"'; ?> >Kerala</option>
-															<option value="Lakshadweep" <?php if($getData->state=="Lakshadweep") echo 'selected="selected"'; ?> >Lakshadweep</option>
-															<option value="Madhya Pradesh" <?php if($getData->state=="Madhya Pradesh") echo 'selected="selected"'; ?> >Madhya Pradesh</option>
-															<option value="Maharashtra" <?php if($getData->state=="Maharashtra") echo 'selected="selected"'; ?> >Maharashtra</option>
-															<option value="Manipur" <?php if($getData->state=="Manipur") echo 'selected="selected"'; ?> >Manipur</option>
-															<option value="Meghalaya" <?php if($getData->state=="Meghalaya") echo 'selected="selected"'; ?> >Meghalaya</option>
-															<option value="Mizoram" <?php if($getData->state=="Mizoram") echo 'selected="selected"'; ?> >Mizoram</option>
-															<option value="Nagaland" <?php if($getData->state=="Nagaland") echo 'selected="selected"'; ?> >Nagaland</option>
-															<option value="Orissa" <?php if($getData->state=="Orissa") echo 'selected="selected"'; ?> >Orissa</option>
-															<option value="Pondicherry" <?php if($getData->state=="Pondicherry") echo 'selected="selected"'; ?> >Pondicherry</option>
-															<option value="Punjab" <?php if($getData->state=="Punjab") echo 'selected="selected"'; ?> >Punjab</option>
-															<option value="Rajasthan" <?php if($getData->state=="Rajasthan") echo 'selected="selected"'; ?> >Rajasthan</option>
-															<option value="Sikkim" <?php if($getData->state=="Sikkim") echo 'selected="selected"'; ?> >Sikkim</option>
-															<option value="Tamil Nadu" <?php if($getData->state=="Tamil Nadu") echo 'selected="selected"'; ?> >Tamil Nadu</option>
-															<option value="Tripura" <?php if($getData->state=="Tripura") echo 'selected="selected"'; ?> >Tripura</option>
-															<option value="Uttaranchal" <?php if($getData->state=="Uttaranchal") echo 'selected="selected"'; ?> >Uttaranchal</option>
-															<option value="Uttar Pradesh" <?php if($getData->state=="Uttar Pradesh") echo 'selected="selected"'; ?> >Uttar Pradesh</option>
-															<option value="West Bengal" <?php if($getData->state=="West Bengal") echo 'selected="selected"'; ?> >West Bengal</option>
+															<option value="Andaman and Nicobar Islands" <?php if($getData['state']=="Andaman and Nicobar Islands") echo 'selected="selected"'; ?>>Andaman and Nicobar Islands</option>
+															<option value="Andhra Pradesh" <?php if($getData['state']=="Andhra Pradesh") echo 'selected="selected"'; ?> >Andhra Pradesh</option>
+															<option value="Arunachal Pradesh" <?php if($getData['state']=="Arunachal Pradesh") echo 'selected="selected"'; ?> >Arunachal Pradesh</option>
+															<option value="Assam" <?php if($getData['state']=="Assam") echo 'selected="selected"'; ?> >Assam</option>
+															<option value="Bihar" <?php if($getData['state']=="Bihar") echo 'selected="selected"'; ?> >Bihar</option>
+															<option value="Chandigarh" <?php if($getData['state']=="Chandigarh") echo 'selected="selected"'; ?> >Chandigarh</option>
+															<option value="Chhattisgarh" <?php if($getData['state']=="Chhattisgarh") echo 'selected="selected"'; ?> >Chhattisgarh</option>
+															<option value="Dadra and Nagar Haveli" <?php if($getData['state']=="Dadra and Nagar Haveli") echo 'selected="selected"'; ?> >Dadra and Nagar Haveli</option>
+															<option value="Daman and Diu" <?php if($getData['state']=="Daman and Diu") echo 'selected="selected"'; ?> >Daman and Diu</option>
+															<option value="Delhi" <?php if($getData['state']=="Delhi") echo 'selected="selected"'; ?> >Delhi</option>
+															<option value="Goa" <?php if($getData['state']=="Goa") echo 'selected="selected"'; ?> >Goa</option>
+															<option value="Gujarat" <?php if($getData['state']=="Gujarat") echo 'selected="selected"'; ?> >Gujarat</option>
+															<option value="Haryana" <?php if($getData['state']=="Haryana") echo 'selected="selected"'; ?> >Haryana</option>
+															<option value="Himachal Pradesh" <?php if($getData['state']=="Himachal Pradesh") echo 'selected="selected"'; ?> >Himachal Pradesh</option>
+															<option value="Jammu and Kashmir" <?php if($getData['state']=="Jammu and Kashmir") echo 'selected="selected"'; ?> >Jammu and Kashmir</option>
+															<option value="Jharkhand" <?php if($getData['state']=="Jharkhand") echo 'selected="selected"'; ?> >Jharkhand</option>
+															<option value="Karnataka" <?php if($getData['state']=="Karnataka") echo 'selected="selected"'; ?> >Karnataka</option>
+															<option value="Kerala" <?php if($getData['state']=="Kerala") echo 'selected="selected"'; ?> >Kerala</option>
+															<option value="Lakshadweep" <?php if($getData['state']=="Lakshadweep") echo 'selected="selected"'; ?> >Lakshadweep</option>
+															<option value="Madhya Pradesh" <?php if($getData['state']=="Madhya Pradesh") echo 'selected="selected"'; ?> >Madhya Pradesh</option>
+															<option value="Maharashtra" <?php if($getData['state']=="Maharashtra") echo 'selected="selected"'; ?> >Maharashtra</option>
+															<option value="Manipur" <?php if($getData['state']=="Manipur") echo 'selected="selected"'; ?> >Manipur</option>
+															<option value="Meghalaya" <?php if($getData['state']=="Meghalaya") echo 'selected="selected"'; ?> >Meghalaya</option>
+															<option value="Mizoram" <?php if($getData['state']=="Mizoram") echo 'selected="selected"'; ?> >Mizoram</option>
+															<option value="Nagaland" <?php if($getData['state']=="Nagaland") echo 'selected="selected"'; ?> >Nagaland</option>
+															<option value="Orissa" <?php if($getData['state']=="Orissa") echo 'selected="selected"'; ?> >Orissa</option>
+															<option value="Pondicherry" <?php if($getData['state']=="Pondicherry") echo 'selected="selected"'; ?> >Pondicherry</option>
+															<option value="Punjab" <?php if($getData['state']=="Punjab") echo 'selected="selected"'; ?> >Punjab</option>
+															<option value="Rajasthan" <?php if($getData['state']=="Rajasthan") echo 'selected="selected"'; ?> >Rajasthan</option>
+															<option value="Sikkim" <?php if($getData['state']=="Sikkim") echo 'selected="selected"'; ?> >Sikkim</option>
+															<option value="Tamil Nadu" <?php if($getData['state']=="Tamil Nadu") echo 'selected="selected"'; ?> >Tamil Nadu</option>
+															<option value="Tripura" <?php if($getData['state']=="Tripura") echo 'selected="selected"'; ?> >Tripura</option>
+															<option value="Uttaranchal" <?php if($getData['state']=="Uttaranchal") echo 'selected="selected"'; ?> >Uttaranchal</option>
+															<option value="Uttar Pradesh" <?php if($getData['state']=="Uttar Pradesh") echo 'selected="selected"'; ?> >Uttar Pradesh</option>
+															<option value="West Bengal" <?php if($getData['state']=="West Bengal") echo 'selected="selected"'; ?> >West Bengal</option>
 														</select>
 														<?php echo form_error('state', '<div class="text-red">* ', '</div>'); ?>
 													</div>

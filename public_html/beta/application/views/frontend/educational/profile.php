@@ -90,7 +90,7 @@ $getData = $this->edu->loadInstitute($this->session->userdata('userdata')['useri
 													</div>
 													<div class="col-md-6" >
 														<label for="regname" class="control-label form-label">State</label>
-														<span class="form-control"><?php echo $getData->state; ?> </span>
+														<span class="form-control"><?php echo $getData['state']; ?> </span>
 														 
 														 
 													</div>
