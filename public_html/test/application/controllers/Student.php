@@ -194,6 +194,9 @@ class Student extends CI_Controller {
 
                     $data['msg'] = "Profile Updated Successfully !!";
                     $this->stu->updateStudentInfo($picName);
+                    $data['getData'] = $this->stu->loadStudentProfile($this->getCurrentUserId());
+                    $data['getInstituteData'] = $this->stu->loadAttachedInstituteData($this->getCurrentUserId());
+                    $this->template->load('frontend','frontend/student/update_profile',$data);
 
                 }
             }
@@ -201,8 +204,13 @@ class Student extends CI_Controller {
             {
                 $data['msg'] = "Profile Updated Successfully !!";
                 $this->stu->updateStudentInfo();
+                $data['getData'] = $this->stu->loadStudentProfile($this->getCurrentUserId());
+                $data['getInstituteData'] = $this->stu->loadAttachedInstituteData($this->getCurrentUserId());
+                $this->template->load('frontend','frontend/student/update_profile',$data);
             }
 
+            $data['getData'] = $this->stu->loadStudentProfile($this->getCurrentUserId());
+            $data['getInstituteData'] = $this->stu->loadAttachedInstituteData($this->getCurrentUserId());
 
 
             $this->template->load('frontend','frontend/student/update_profile',$data);
