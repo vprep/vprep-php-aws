@@ -13,14 +13,14 @@ $getData = $this->edu->loadInstitute($this->session->userdata('userdata')['useri
                                 <div class="staff-item2 customize">
                                     <div class="staff-item-wrapper">
                                         <div class="staff-info">
-                                            <a href="#" class="staff-avatar">
-                                               	<?php
-                                                echo json_encode($getData);
-												if($getData->image!="")	{ ?>
-													<img src="<?php echo base_url('uploads/profile_pic/'.$getData->image);?>" alt="" class="img-responsive"/>
-												<?php } else { ?>
-												<img src="<?php echo "http://www.tradiestart.com.au/assets/profile-cb7e79cf25aa447fa6410518d0c94abf3ff11184a3df4efeae1dfc5234884f61.png";?>" alt="" class="img-responsive"/>
-												<?php } ?>
+                                            <a href="javascript:;" class="staff-avatar">
+
+                                                <?php
+                                                if($getData->image!="")	{ ?>
+                                                    <img src="<?php echo base_url('uploads/profile_pic/'.$getData->image);?>" alt="" class="img-responsive"/>
+                                                <?php } else { ?>
+                                                    <img src="<?php echo "http://www.tradiestart.com.au/assets/profile-cb7e79cf25aa447fa6410518d0c94abf3ff11184a3df4efeae1dfc5234884f61.png";?>" alt="" class="img-responsive"/>
+                                                <?php } ?>
                                             </a>
                                              
                                         </div>
