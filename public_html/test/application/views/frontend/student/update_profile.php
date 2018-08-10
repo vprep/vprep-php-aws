@@ -1,5 +1,5 @@
 <?php
-$getData = $this->stu->loadStudent($this->session->userdata('userdata')['userid']);
+//$getData = $this->stu->loadStudent($this->session->userdata('userdata')['userid']);
 ?>
 <div id="wrapper-content">
     <div id="page-wrapper">
