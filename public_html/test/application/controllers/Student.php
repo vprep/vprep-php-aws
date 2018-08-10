@@ -138,7 +138,7 @@ class Student extends CI_Controller {
     }
 
     function update_profile(){
-        
+
         $data['getData'] = $this->stu->loadStudentProfile($this->getCurrentUserId());
         $data['getInstituteData'] = $this->stu->loadAttachedInstituteData($this->getCurrentUserId());
 

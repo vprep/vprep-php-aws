@@ -14,7 +14,8 @@ $getData = $this->edu->loadInstitute($this->session->userdata('userdata')['useri
                                     <div class="staff-item-wrapper">
                                         <div class="staff-info">
                                             <a href="#" class="staff-avatar">
-                                               	<?php 
+                                               	<?php
+                                                echo json_encode($getData);
 												if($getData->image!="")	{ ?>
 													<img src="<?php echo base_url('uploads/profile_pic/'.$getData->image);?>" alt="" class="img-responsive"/>
 												<?php } else { ?>
