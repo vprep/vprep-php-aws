@@ -14,7 +14,7 @@
                                         <div class="staff-info">
                                             <a href="#" class="staff-avatar">
                                                	<?php 
-												if($getData->image!="")	{ ?>
+												if($getData['image']="")	{ ?>
 													<img src="<?php echo base_url('uploads/profile_pic/'.$getData->image);?>" alt="" class="img-responsive"/>
 												<?php } else { ?>
 												<img src="<?php echo "http://www.tradiestart.com.au/assets/profile-cb7e79cf25aa447fa6410518d0c94abf3ff11184a3df4efeae1dfc5234884f61.png";?>" alt="" class="img-responsive"/>
@@ -25,7 +25,7 @@
                                     </div>
                                     <h3><?php echo!empty($this->session->userdata('userdata')) ? $this->session->userdata('userdata')['name'] : ''; ?></h3>
                                    
-									<!--<h4>Student, <?php echo $getData->current_institute; ?> </h4>-->
+									<!--<h4>Student, <?php echo $getData['current_institute']; ?> </h4>-->
                                     <?php /*
 									<div class="staff-socials">
 										<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -50,14 +50,14 @@
 													<div class="col-md-12 profile_head" >Account Information</div>
 													<div class="col-md-6">
 														<label for="regname" class="control-label form-label">Username</label>
-														<input id="regname" type="text" name="username" value="<?php echo $getData->username; ?>" placeholder=""
+														<input id="regname" type="text" name="username" value="<?php echo $getData['username']; ?>" placeholder=""
 															   class="form-control form-input" disabled style="background:#fff;">
 														 
 													</div>
 													
 													<div class="col-md-6">
 														<label for="regemail" class="control-label form-label">Email</label>
-														<input id="regemail" type="email" name="email" value="<?php echo $getData->email; ?>" placeholder="" 
+														<input id="regemail" type="email" name="email" value="<?php echo $getData['email']; ?>" placeholder=""
 															   class="form-control form-input"  disabled style="background:#fff;">
 													</div>
 													<!--<div class="col-md-6" style="margin-top:20px;" hidden>
@@ -76,22 +76,22 @@
 													<div class="col-md-12 profile_head">Personal Information</div>
 													<div class="col-md-6">
 														<label for="regname" class="control-label form-label">First Name <span class="highlight">*</span></label>
-														<input id="regname" type="text" name="first_name" value="<?php echo $getData->name; ?> " placeholder="" 
+														<input id="regname" type="text" name="first_name" value="<?php echo $getData['name']; ?> " placeholder=""
 															   class="form-control form-input"  required="required">
 														<?php echo form_error('first_name', '<div class="text-red">* ', '</div>'); ?>
 													</div>
  	 
 													<div class="col-md-6" >
 														<label for="regname" class="control-label form-label">Phone <span class="highlight">*</span></label>
-														<input id="regname" type="text" name="phone" required="" value="<?php echo $getData->phone; ?>" placeholder="" class="form-control form-input">
+														<input id="regname" type="text" name="phone" required="" value="<?php echo $getData['phone']; ?>" placeholder="" class="form-control form-input">
 													</div>
 													<div class="col-md-6" style="margin-top:20px;">
 														<label for="regname" class="control-label form-label">Address <span class="highlight">*</span></label>
-														<input id="regname" type="text" name="address" required="" value="<?php echo $getData->address; ?>" placeholder="" class="form-control form-input">
+														<input id="regname" type="text" name="address" required="" value="<?php echo $getData['address']; ?>" placeholder="" class="form-control form-input">
 													</div>
 													<div class="col-md-6" style="margin-top:20px;">
 														<label for="regname" class="control-label form-label">City <span class="highlight">*</span></label>
-														<input id="regname" type="text" name="city" value="<?php echo $getData->city; ?>" placeholder=""
+														<input id="regname" type="text" name="city" value="<?php echo $getData['city']; ?>" placeholder=""
 															   class="form-control form-input"  required="required">
 														<?php echo form_error('city', '<div class="text-red">* ', '</div>'); ?>
 													</div>
