@@ -668,6 +668,7 @@ class Student_model extends CI_Model
 				'state'     =>  $this->input->post('state'),
 				'zip'       =>  $this->input->post('zip'),
 				'gender'    =>  $this->input->post('gender'),
+                'email'    =>  $this->input->post('email'),
 				'dob'       =>  date('Y-m-d',strtotime($this->input->post('dob'))),
 				'updated_at'=>  time()
 			);
