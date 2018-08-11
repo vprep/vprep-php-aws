@@ -58,7 +58,7 @@
 													<div class="col-md-6">
 														<label for="regemail" class="control-label form-label">Email</label>
 														<input id="regemail" type="email" name="email" value="<?php echo $getData['email']; ?>" placeholder=""
-															   class="form-control form-input"  disabled style="background:#fff;">
+															   class="form-control form-input"   style="background:#fff;">
 													</div>
 													<!--<div class="col-md-6" style="margin-top:20px;" hidden>
 														<label for="regname" class="control-label form-label">Current Institute</label>
