@@ -653,7 +653,7 @@ class Student_model extends CI_Model
 				'gender'    =>  $this->input->post('gender'),
                  'email'    =>  $this->input->post('email'),
 				'dob'       =>  date('Y-m-d',strtotime($this->input->post('dob'))),
-				'image'     =>  $fil'gender'    =>  $this->input->post('gender'),eName,
+				'image'     =>  $fileName,
 				'updated_at'=>  time()
 			);
 		
