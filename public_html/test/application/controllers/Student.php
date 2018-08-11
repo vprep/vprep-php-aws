@@ -434,8 +434,8 @@ class Student extends CI_Controller {
     
 public function sample_test($exam_id){
 
-          	
-          
+
+
             $userId = $this->session->userdata('userdata')['userid'];
 
             $exam_1 = $exam_id;
@@ -506,6 +506,49 @@ public function sample_test($exam_id){
 
     } 
     }
+
+
+    public function generic_test($exam_id){
+
+        $userId = $this->session->userdata('userdata')['userid'];
+
+        $exam_1 = $exam_id;
+
+        $data['exam_1']=$exam_1;
+
+        $result1 = $this->db->query("select * from exam_taken where exam_id = $exam_1 and user_id = $userId and taken_status = '2' ")->result_array();
+
+        $exam_data = $this->db->query("select exam_name, exam_time, exam_max_ques from exam_list where exam_id = $exam_1 ")->result_array()[0];
+
+        $data['exam_1_name'] = $exam_data['exam_name'];
+        $data['exam_1_time'] =$exam_data['exam_time'];
+        $data['exam_1_max_ques'] = $exam_data['exam_max_ques'];
+
+        if(sizeof($result1) > 0 ){
+
+
+            $this->session->set_userdata('exam_progress_71',"2");
+            $this->session->set_userdata('score_flag', true);
+        }   else {
+
+            $this->session->set_userdata('exam_progress_71',"1");
+            $this->session->set_userdata('score_flag', false);
+        }
+
+
+        $exam_71 = $this->session->userdata('exam_progress_71');
+
+
+        if(($exam_71 == '2')){
+            redirect("my_score");
+
+        } else {
+
+            $this->template->load('exam_frontend','frontend/exam/generic-test',$data);
+
+        }
+
+}
     
     public function open_test(){
 
