@@ -393,22 +393,9 @@ html * {
                                     min = 35;
                                     sec = 0;
                                     alert("successfully submitted");
+                                    var includeUrl_1 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71";
 
-                                    $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71",
-                                        method: "GET",
-                                        success: function(data) {
-                                            
-                              
-                                        }
-                                        ,
-                                        error: function (jqXHR, textStatus) {
-                                            console.log("Advertiser detail Request failed: ", textStatus);
-                                        }
-                                    }).always(function () {
-                                        $('.global-loader').hide();
-                                        $('.div-72-1').show();
-                                    });
+                                    submitExam(includeUrl_1,false);
 
                                 })
 
@@ -781,28 +768,9 @@ html * {
                                     min = 35;
                                     sec = 0;
                                     alert("successfully submitted");
+                                    var includeUrl_2 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2&save_status=72";
 
-                                     $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2&save_status=72",
-                                        method: "GET",
-                                        success: function(data) {
-                                           // alert("successfully submitted");
-                                           // $('.div-73-1').show();
-                                           // $('.div-73-1').data("start_time",Math.round(new Date()/1000));
-                                           // activeExam3();
-                                           // $(".nxt-btn-3").show();
-                                            //$(".prev-btn-3").show();
-                                           // min = 35;
-                                           // sec = 0;
-                                        }
-                                        ,
-                                        error: function (jqXHR, textStatus) {
-                                            console.log("Advertiser detail Request failed: ", textStatus);
-                                        }
-                                    }).always(function () {
-                                        $('.global-loader').hide();
-                                        $('.div-73-1').show();
-                                    });
+                                     submitExam(includeUrl_2,false);
 
                                 })
 
@@ -1159,21 +1127,9 @@ html * {
 
                                     $('.all-div').hide();
                                     $('.global-loader').show();
-                                    $.ajax({
-                                        url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2&save_status=73",
-                                        method: "GET",
-                                        success: function(data) {
-                                            alert("successfully submitted");
-                                            document.location.href = "http://test.vprep.in/my_score.html";
 
-                                        }
-                                        ,
-                                        error: function (jqXHR, textStatus) {
-                                            console.log("Advertiser detail Request failed: ", textStatus);
-                                        }
-                                    }).always(function () {
-                                        $('.global-loader').hide();
-                                    });
+                                    var includeUrl_3 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2&save_status=73";
+                                    submitExam(includeUrl_3,true);
 
                                 })
 
@@ -1196,6 +1152,25 @@ html * {
                     }
                 });
 
+            }
+
+            function submitExam(inputUrl, flag) {
+                $.ajax({
+                    url: inputUrl,
+                    method: "GET",
+                    success: function(data) {
+                        if(flag){
+                            document.location.href = "http://test.vprep.in/my_score.html";
+                        }
+
+                    },
+                    error: function (jqXHR, textStatus) {
+                        alert("Your internet is disconnected. Please connect to internet.");
+                        submitExam(inputUrl);
+                    }
+                }).always(function () {
+
+                });
             }
 
 
@@ -1307,9 +1282,10 @@ html * {
                                         </div>
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-sm-12">
-                                                <button class="btn btn-warning pull-right" id="examSubmitId" type="submit">
+                                                <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#pop-up-section-1">Submit Test</button>
+                                                <!--<button class="btn btn-warning pull-right" id="examSubmitId" type="submit">
                                                     Submit Test
-                                                </button>
+                                                </button>-->
                                                 <button class="btn btn-warning pull-right" id="saveAns_1" type="submit" style="display: none;">
 
                                                 </button>
@@ -1372,9 +1348,10 @@ html * {
                                         </div>
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-sm-12">
-                                                <button class="btn btn-warning pull-right" id="examSubmitId_2" type="submit">
+                                                <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#pop-up-section-2">Submit Test</button>
+                                                <!--<button class="btn btn-warning pull-right" id="examSubmitId_2" type="submit">
                                                     Submit Test
-                                                </button>
+                                                </button>-->
                                                 <button class="btn btn-warning pull-right" id="saveAns_2" type="submit" style="display: none;">
 
                                                 </button>
@@ -1436,9 +1413,10 @@ html * {
                                         </div>
                                         <div class="row" style="margin-top: 20px;">
                                             <div class="col-sm-12">
-                                                <button class="btn btn-warning pull-right" id="examSubmitId_3" type="submit">
+                                                <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#pop-up-section-3">Submit Test</button>
+                                                <!--<button class="btn btn-warning pull-right" id="examSubmitId_3" type="submit">
                                                     Submit Test
-                                                </button>
+                                                </button>-->
                                                 <button class="btn btn-warning pull-right" id="saveAns_3" type="submit" style="display: none;">
 
                                                 </button>
@@ -1475,6 +1453,60 @@ html * {
                     <img src="http://vprep.in/wp-content/uploads/2018/03/load.gif"
                          style="height: 50px;position: relative;top:45%;"/>
                 </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pop-up-section-1" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Are you sure you want to submit Section-1?</h2>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" id="examSubmitId" type="submit">Yes</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="pop-up-section-2" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Are you sure you want to submit Section-2?</h2>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" id="examSubmitId_2" type="submit">Yes</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="pop-up-section-3" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Are you sure you want to submit Section-3?</h2>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" id="examSubmitId_3" type="submit">Yes</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
