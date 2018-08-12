@@ -37,7 +37,7 @@ Roll No.
 Name
 </td>
 <td>
-Year of Admission
+Username
 </td>
 <td>
 Branch
@@ -62,7 +62,7 @@ foreach($student as $key=>$val): ?>
                                                             <td><?php echo $key+1; ?></td>
                                                             <td class="text-left"><?php  echo $val['roll_no'];?></td>
                                                             <td class="text-left"><?php  echo $val['name'];?></td>
-                                                            <td class="text-left"><?php  echo $val['year_of_adm'];?></td>
+                                                            <td class="text-left"><?php  echo $val['username'];?></td>
                                                             <td class="text-left"><?php  echo $val['branch'];?></td>
                                                             <td class="text-left"><?php  echo $val['group'];?></td>
                                                             <td class="text-left"><?php  echo $val['sub_group'];?></td>
