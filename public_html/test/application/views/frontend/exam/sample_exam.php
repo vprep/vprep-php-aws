@@ -392,7 +392,7 @@ html * {
                                     activeExam2();
                                     min = 35;
                                     sec = 0;
-                                    alert("successfully submitted");
+
                                     var includeUrl_1 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71";
 
                                     submitExam(includeUrl_1,false);
@@ -767,7 +767,6 @@ html * {
                                     //$(".prev-btn-3").show();
                                     min = 35;
                                     sec = 0;
-                                    alert("successfully submitted");
                                     var includeUrl_2 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=2&save_status=72";
 
                                      submitExam(includeUrl_2,false);
@@ -1159,6 +1158,7 @@ html * {
                     url: inputUrl,
                     method: "GET",
                     success: function(data) {
+                        alert("successfully submitted");
                         if(flag){
                             document.location.href = "http://test.vprep.in/my_score.html";
                         }
