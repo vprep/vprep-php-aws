@@ -89,7 +89,7 @@ if(isset($is_mock)): ?>
 												
                                                             
                                                             <td>   
-                                                            <a href="http://test.vprep.in/educational/leaderboard/<?php echo $val['exam_id'].'/0';?>"><img src="http://png.icons8.com/color/50/000000/positive-dynamic.png"></a>
+                                                            <a href="http://test.vprep.in/educational/exam/leaderboard/<?php echo $val['exam_id'].'/0';?>"><img src="http://png.icons8.com/color/50/000000/positive-dynamic.png"></a>
                                                          <?php    if(isset($is_mock)): ?>
                                                            <a href="http://test.vprep.in/educational/show_snap_shot/<?php echo $val['exam_id']?>"> <img src="http://test.vprep.in/assets/frontend/images/logo/icon1.png" style="
     width: 64px;
