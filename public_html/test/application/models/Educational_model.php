@@ -2216,19 +2216,39 @@ on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('
 	function rankWiseList($examId){
         $userId = $this->session->userdata('userdata')['userid'];
 
-        $this->db->query("SET @rnk=0");
-        $this->db->query("set @rank=0 ");
-        $this->db->query("set @curscore=0 ");
-        $result = $this->db->query("SELECT username, name, city, score, rank, marks_for_correct, exam_max_ques, percent FROM (SELECT
-        u.username, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/(el.marks_for_correct*el.exam_max_ques))*100 as percent,
+        $max_score = $this->db->query("SELECT max(score) as cal_score from test_answers ta INNER join users u on u.id = ta.userid and u.created_by = $userId
+where ta.test_category = $examId")->result_array()[0];
+
+
+        if(count($max_score) > 0){
+            $compute_score = $max_score['cal_score'];
+        } else {
+            $compute_score = 0;
+        }
+
+
+        if($compute_score>0) {
+            $this->db->query("SET @rnk=0");
+            $this->db->query("set @rank=0 ");
+            $this->db->query("set @curscore=0 ");
+
+            $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile FROM (SELECT
+        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile,
         (@rnk := IF(@curscore = score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = score, @rank, @rnk))   rank,
         (@curscore := score)  newscore FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and u.created_by = $userId
         inner join exam_list el on el.exam_id = ta.test_category
       WHERE test_category = $examId ORDER BY score DESC ) a")->result_array();
+            return json_encode($result);
+
+
+        } else {
+            return '{}';
+        }
 
 
 
-        return json_encode($result);
+
+
 
     }
 }
