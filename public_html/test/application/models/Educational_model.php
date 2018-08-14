@@ -2211,5 +2211,25 @@ on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('
             
          
 	}
+
+
+	function rankWiseList($examId){
+        $userId = $this->session->userdata('userdata')['userid'];
+
+        $this->db->query("SET @rnk=0");
+        $this->db->query("set @rank=0 ");
+        $this->db->query("set @curscore=0 ");
+        $result = $this->db->query("SELECT username, name, city, score, rank, marks_for_correct, exam_max_ques, percent FROM (SELECT
+        u.username, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/(el.marks_for_correct*el.exam_max_ques))*100 as percent,
+        (@rnk := IF(@curscore = score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = score, @rank, @rnk))   rank,
+        (@curscore := score)  newscore FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and u.created_by = $userId
+        inner join exam_list el on el.exam_id = ta.test_category
+      WHERE test_category = $examId ORDER BY score DESC ) a")->result_array();
+
+
+
+        return json_encode($result);
+
+    }
 }
 
