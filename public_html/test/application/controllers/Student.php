@@ -229,7 +229,7 @@ class Student extends CI_Controller {
         $data["topic"]=$this->db->query("select topic from essayWriting where id=$essayId")->result_array();
 
 
-        echo $data["topic"]['id'];
+        echo count($data["topic"]);
         $this->template->load('frontend','frontend/student/essayWrite',$data);
 
     }
