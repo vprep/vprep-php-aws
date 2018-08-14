@@ -62,7 +62,7 @@
                             "data": result,
                             "dom": 'Bfrtip',
                             "buttons": [
-                                'copy', 'csv', 'excel', 'pdf', 'print'
+                                'csv', 'print'
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
@@ -155,7 +155,7 @@
                             "data": result,
                             "dom": 'Bfrtip',
                             "buttons": [
-                                'copy', 'csv', 'excel', 'pdf', 'print'
+                                'csv','print'
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
