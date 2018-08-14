@@ -61,10 +61,11 @@
                             "autoWidth": false,
                             "data": result,
                             "columnDefs": [
-                                {"width": "25%", "targets": 0},
-                                {"width": "25%", "targets": 1},
-                                {"width": "25%", "targets": 2},
-                                {"width": "25%", "targets": 3}
+                                {"width": "20%", "targets": 0},
+                                {"width": "20%", "targets": 1},
+                                {"width": "20%", "targets": 2},
+                                {"width": "20%", "targets": 3},
+                                {"width": "20%", "targets": 4}
                             ],
                             "columns": [
                                 {
