@@ -9,7 +9,39 @@ Students
 Profs
 </button>
 
+    <button onclick="exportTableToExcel('tblData', 'members-data')">Export Table Data To Excel File</button>
+    <script>
+        function exportTableToExcel(tableID, filename = ''){
+            var downloadLink;
+            var dataType = 'application/vnd.ms-excel';
+            var tableSelect = document.getElementById(tableID);
+            var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
 
+            // Specify file name
+            filename = filename?filename+'.xls':'excel_data.xls';
+
+            // Create download link element
+            downloadLink = document.createElement("a");
+
+            document.body.appendChild(downloadLink);
+
+            if(navigator.msSaveOrOpenBlob){
+                var blob = new Blob(['\ufeff', tableHTML], {
+                    type: dataType
+                });
+                navigator.msSaveOrOpenBlob( blob, filename);
+            }else{
+                // Create a link to the file
+                downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+                // Setting the file name
+                downloadLink.download = filename;
+
+                //triggering the function
+                downloadLink.click();
+            }
+        }
+        </script>
 
 
 
@@ -24,7 +56,7 @@ Profs
     <img src="http://test.vprep.in/assets/frontend/images/plus-button.png" alt="bottle" class="thumbnails">
 </a>
 </div>
-<table>
+<table id="tblData">
 <th>
 <tr>
 <td>
@@ -37,7 +69,7 @@ Roll No.
 Name
 </td>
 <td>
-Year of Admission
+Username
 </td>
 <td>
 Branch
@@ -62,7 +94,7 @@ foreach($student as $key=>$val): ?>
                                                             <td><?php echo $key+1; ?></td>
                                                             <td class="text-left"><?php  echo $val['roll_no'];?></td>
                                                             <td class="text-left"><?php  echo $val['name'];?></td>
-                                                            <td class="text-left"><?php  echo $val['year_of_adm'];?></td>
+                                                            <td class="text-left"><?php  echo $val['username'];?></td>
                                                             <td class="text-left"><?php  echo $val['branch'];?></td>
                                                             <td class="text-left"><?php  echo $val['group'];?></td>
                                                             <td class="text-left"><?php  echo $val['sub_group'];?></td>
