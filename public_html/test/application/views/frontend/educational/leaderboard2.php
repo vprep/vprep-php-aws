@@ -61,15 +61,19 @@
                             "autoWidth": false,
                             "data": result,
                             "columnDefs": [
-                                {"width": "20%", "targets": 0},
-                                {"width": "20%", "targets": 1},
+                                {"width": "10%", "targets": 0},
+                                {"width": "15", "targets": 1},
                                 {"width": "20%", "targets": 2},
                                 {"width": "20%", "targets": 3},
-                                {"width": "20%", "targets": 4}
+                                {"width": "15%", "targets": 4},
+                                {"width": "20%", "targets": 5}
                             ],
                             "columns": [
                                 {
                                     data: 'rank'
+                                },
+                                {
+                                  data:'group_name'
                                 },
                                 {
                                     data: 'username'
@@ -81,7 +85,7 @@
                                     data: 'score'
                                 },
                                 {
-                                    data: 'percent',
+                                    data: 'percentile',
                                     render: function (data, type, row) {
                                         return parseFloat(data).toFixed(2) + '%';
                                     }
@@ -118,10 +122,11 @@
                                 <thead>
                                 <tr>
                                     <th>Rank</th>
+                                    <th>Group</th>
                                     <th>Username</th>
                                     <th>Name</th>
                                     <th>Score</th>
-                                    <th>Percent</th>
+                                    <th>Percentile</th>
                                 </tr>
                                 </thead>
                             </table>
