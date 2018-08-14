@@ -234,10 +234,24 @@ $userId = $this->getCurrentUserId();
 
     function json_leaderboard_2($exam_id){
 
-        $data = $this->edu->rankWiseList($exam_id);
+        $data = $this->edu->rankWiseList($exam_id,"");
 
         echo $data;
 
+    }
+
+    function filterAutoCompleteLeaderboard(){
+        $data = $this->edu->filterAutoCompleteLeaderboard();
+
+        echo $data;
+    }
+
+    function getLeaderboardByFilter($exam_id){
+        $group = $_GET['group'];
+
+        $data = $this->edu->rankWiseList($exam_id,$group);
+
+        echo $data;
     }
 
     function exam_leaderboard_2($exam_id){
