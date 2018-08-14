@@ -225,6 +225,15 @@ class Student extends CI_Controller {
         $this->template->load('frontend','frontend/student/pricing',$data);
 
     }
+    function essayWriting($essayId){
+        $data["topic"]=$this->db->query("select topic from essayWriting where id=$essayId")->result_array()[0];
+
+
+  //      echo count($data["topic"]);
+        echo $data["topic"]['topic'];
+        $this->template->load('exam_frontend','frontend/student/essayWrite',$data);
+
+    }
 
 
 
