@@ -230,6 +230,7 @@ class Student extends CI_Controller {
 
 
         echo count($data["topic"]);
+        echo $data["topic"]->id;
         $this->template->load('frontend','frontend/student/essayWrite',$data);
 
     }
