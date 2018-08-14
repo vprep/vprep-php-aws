@@ -226,11 +226,11 @@ class Student extends CI_Controller {
 
     }
     function essayWriting($essayId){
-        $data["topic"]=$this->db->query("select topic from essayWriting where id=$essayId")->result_array();
+        $data["topic"]=$this->db->query("select topic from essayWriting where id=$essayId")->result_array()[0];
 
 
-        echo count($data["topic"]);
-        echo $data["topic"]->topic;
+  //      echo count($data["topic"]);
+        echo $data["topic"];
         $this->template->load('frontend','frontend/student/essayWrite',$data);
 
     }
