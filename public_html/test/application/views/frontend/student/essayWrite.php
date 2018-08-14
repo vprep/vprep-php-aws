@@ -1,5 +1,5 @@
 this is good.
 
 <?php
-echo $topic->topic;
+echo $topic['topic'];
 ?>
