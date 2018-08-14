@@ -213,7 +213,7 @@ $userId = $this->getCurrentUserId();
     
   
     
-    function exam_leaderboard($exam_id, $page){
+    function exam_leaderboard($exam_id, $page) {
     	
     	$data["exam_data"]=$this->edu->top_ten_scorer($exam_id,$page);  
     	$current = $page;
@@ -230,6 +230,20 @@ $userId = $this->getCurrentUserId();
 //echo json_encode($data["exam_data"]);
 
         $this->template->load('educational','frontend/educational/leaderboard',$data);
+    }
+
+    function json_leaderboard_2($exam_id){
+
+        $data = $this->edu->rankWiseList($exam_id);
+
+        echo $data;
+
+    }
+
+    function exam_leaderboard_2($exam_id){
+        $data["exam_id"] = $exam_id;
+
+        $this->template->load('educational','frontend/educational/leaderboard2',$data);
     }
 	
     #function for test categories 
