@@ -198,11 +198,13 @@
 
 <div class="container">
     <div class="row-fluid" style="">
-        <div id="actionPanel" class="col-md-12" style="text-align: right;margin-bottom: 7px;margin-top: 1%;">
+        <!--<div id="actionPanel" class="col-md-12" style="text-align: right;margin-bottom: 7px;margin-top: 1%;">
             <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="filterButton">
                 Filter <i class="fa fa-filter sorting-button" aria-hidden="true"></i>
             </button>
-        </div>
+        </div>-->
+        <br/>
+        <br/>
     </div>
        <div class="row-fluid">
            <div class="col-sm-12">
