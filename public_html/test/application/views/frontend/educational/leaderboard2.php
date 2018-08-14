@@ -101,6 +101,7 @@
       //      changePaginationCSS();
     //        closeLoader();
         });
+        $('.global-loader').show();
 
         $.ajax({
             url: "/educational/filter/autocomplete/leaderboard",
@@ -120,14 +121,15 @@
 
             },
             error: function (jqXHR, textStatus) {
+                alert("Something went wrong.Please refresh page.");
                 console.log("Leaderboard detail Request failed: ", textStatus);
             }
         }).always(function () {
-            //      changePaginationCSS();
-            //        closeLoader();
+            $('.global-loader').hide();
         });
 
         $('#groupSelectId').on('change', function() {
+            $('.global-loader').show();
             var request2 = $.ajax({
                 url: "/educational/filter/leaderboard/"+<?php echo $exam_id;?>+"?group="+this.value,
                 method: "GET",
@@ -183,10 +185,10 @@
                 },
                 error: function (jqXHR, textStatus) {
                     console.log("Leaderboard detail Request failed: ", textStatus);
+                    alert("Something went wrong. Please refresh page.");
                 }
             }).always(function () {
-                //      changePaginationCSS();
-                //        closeLoader();
+               $('.global-loader').hide();
             });
 
         });
@@ -266,5 +268,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="text-center global-loader" style="display: none;">
+        <img src="http://vprep.in/wp-content/uploads/2018/03/load.gif"
+             style="height: 50px;position: relative;top:45%;"/>
     </div>
 </div>
