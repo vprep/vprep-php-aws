@@ -60,6 +60,10 @@
                             "lengthMenu": [[25, 50, 100], [25, 50, 100]],
                             "autoWidth": false,
                             "data": result,
+                            "dom": 'Bfrtip',
+                            "buttons": [
+                                'copy', 'csv', 'excel', 'pdf', 'print'
+                            ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
                                 {"width": "15", "targets": 1},
@@ -149,6 +153,10 @@
                             "lengthMenu": [[25, 50, 100], [25, 50, 100]],
                             "autoWidth": false,
                             "data": result,
+                            "dom": 'Bfrtip',
+                            "buttons": [
+                                'copy', 'csv', 'excel', 'pdf', 'print'
+                            ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
                                 {"width": "15", "targets": 1},
