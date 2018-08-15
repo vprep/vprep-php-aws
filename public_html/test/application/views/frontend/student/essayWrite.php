@@ -12,7 +12,7 @@
 
     ?></div>
 
-<form action="/essay_evalution">
+<form method="post" id="formessay" action="http://test.vprep.in/student/essay_evalution">
 
     <div style="
     padding-bottom: 1px;
@@ -21,14 +21,17 @@
     font-weight: bold;
     color: lightblue;
 "> Write here:</div><br>
-    <input type="hidden" value="$essayId"  />
-    <input align="top" type="text" name="lastname" style="
+    <input type="hidden" value=<?php
+    echo $essayId;
+
+    ?> name="essayId" />
+    <textarea align="top" type="text" name="answer" form="formessay" style="
     width: 80%;
     height: 500px;
     margin-left: 10%;
-    align: top;
-    padding-top: 250px;
-">
+
+
+"></textarea>>
     <br><br>
     <input type="submit" style="
     text-align: center;
