@@ -240,7 +240,7 @@ class Student extends CI_Controller {
         $essay_writing_id=$this->input->post('essayId');
         $userId = $this->session->userdata('userdata')['userid'];
         $answer=$this->input->post('answer');
-        $this->db->query("update essay_results set essay_writing_id=$essay_writing_id, user_id=$userId ,answer=$answer " );
+        $this->db->query("update essay_results set essay_writing_id=$essay_writing_id, user_id=$userId ,answer='$answer' " );
         echo "done";
     }
 
