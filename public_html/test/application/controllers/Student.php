@@ -235,6 +235,17 @@ class Student extends CI_Controller {
         $this->template->load('exam_frontend','frontend/student/essayWrite',$data);
 
     }
+    function essayResult($essayId){
+        $userId = $this->session->userdata('userdata')['userid'];
+        $data["topic"]=$this->db->query("select * from essay_result where user_id=$userId and essay_writing_id=$essayId")->result_array()[0];
+        $data["essayId"]=$essayId;
+
+
+        //      echo count($data["topic"]);
+
+        $this->template->load('exam_frontend','frontend/student/essay_result',$data);
+
+    }
     function essay_evalution(){
         echo "came here";
         $essay_writing_id=$this->input->post('essayId');
