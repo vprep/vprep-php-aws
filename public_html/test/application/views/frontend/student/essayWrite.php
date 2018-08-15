@@ -12,7 +12,7 @@
 
     ?></div>
 
-<form method="post" action="http://test.vprep.in/student/essay_evalution">
+<form method="post" id="formessay" action="http://test.vprep.in/student/essay_evalution">
 
     <div style="
     padding-bottom: 1px;
@@ -25,12 +25,12 @@
     echo $essayId;
 
     ?> name="essayId" />
-    <input align="top" type="text" name="answer" style="
+    <textarea align="top" type="text" name="answer" form="formessay" style="
     width: 80%;
     height: 500px;
     margin-left: 10%;
-    align: top;
-    padding-top: 250px;
+
+
 ">
     <br><br>
     <input type="submit" style="
