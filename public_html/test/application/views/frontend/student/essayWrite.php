@@ -12,7 +12,7 @@
 
     ?></div>
 
-<form action="/action_page.php">
+<form action="/essay_evalution">
 
     <div style="
     padding-bottom: 1px;
@@ -21,6 +21,7 @@
     font-weight: bold;
     color: lightblue;
 "> Write here:</div><br>
+    <input type="hidden" value="$essayId"  />
     <input align="top" type="text" name="lastname" style="
     width: 80%;
     height: 500px;
