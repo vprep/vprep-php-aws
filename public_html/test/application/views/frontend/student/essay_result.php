@@ -23,7 +23,7 @@ Answer: <?php echo $topic['answer']; ?>
         var html1=json1.check_grammar_feedback[i]["context"]+" "+json1.check_grammar_feedback[i]["error_grammar"]+" "+json1.check_grammar_feedback[i]["feedback_grammar"]+json1.check_grammar_feedback[i]["feedback_grammar_suggestion"];
         div.innerHTML=html1;
        var  feedback1 =document.getElementsByClassName("feedback");
-        feedback1.appendChild(div);
+        feedback1[0].appendChild(div);
 
     }
 
