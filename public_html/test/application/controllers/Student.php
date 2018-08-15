@@ -237,7 +237,7 @@ class Student extends CI_Controller {
     }
     function essayResult($essayId){
         $userId = $this->session->userdata('userdata')['userid'];
-        $data["topic"]=$this->db->query("select * from essay_result where user_id=$userId and essay_writing_id=$essayId")->result_array()[0];
+        $data["topic"]=$this->db->query("select * from essay_results where user_id=$userId and essay_writing_id=$essayId")->result_array()[0];
         $data["essayId"]=$essayId;
 
 
