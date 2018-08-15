@@ -60,6 +60,10 @@
                             "lengthMenu": [[25, 50, 100], [25, 50, 100]],
                             "autoWidth": false,
                             "data": result,
+                            "dom": 'Bfrtip',
+                            "buttons": [
+                                'csv', 'print'
+                            ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
                                 {"width": "15", "targets": 1},
@@ -101,17 +105,154 @@
       //      changePaginationCSS();
     //        closeLoader();
         });
+        $('.global-loader').show();
+
+        $.ajax({
+            url: "/educational/filter/autocomplete/leaderboard",
+            method: "POST",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (result) {
+                $('#groupSelectId').append('<option value="">All</option>');
+                $.each(result, function(index,jsonObject){
+                    $.each(jsonObject, function(key,val){
+                        $('#groupSelectId').append('<option value="' + val + '">' + val + '</option>');
+                        console.log("key : "+key+" ; value : "+val);
+                    });
+                });
+
+
+
+            },
+            error: function (jqXHR, textStatus) {
+                alert("Something went wrong.Please refresh page.");
+                console.log("Leaderboard detail Request failed: ", textStatus);
+            }
+        }).always(function () {
+            $('.global-loader').hide();
+        });
+
+        $('#groupSelectId').on('change', function() {
+            $('.global-loader').show();
+            var request2 = $.ajax({
+                url: "/educational/filter/leaderboard/"+<?php echo $exam_id;?>+"?group="+this.value,
+                method: "GET",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (result) {
+
+                    if (tableContent != null) {
+                        tableContent.fnClearTable();
+                        tableContent = $('#leaderboardDetail').dataTable();
+                        if (result.length > 0) {
+                            tableContent.fnAddData(result);
+
+                        }
+                    } else {
+                        tableContent = $('#leaderboardDetail').dataTable({
+                            "lengthMenu": [[25, 50, 100], [25, 50, 100]],
+                            "autoWidth": false,
+                            "data": result,
+                            "dom": 'Bfrtip',
+                            "buttons": [
+                                'csv','print'
+                            ],
+                            "columnDefs": [
+                                {"width": "10%", "targets": 0},
+                                {"width": "15", "targets": 1},
+                                {"width": "20%", "targets": 2},
+                                {"width": "20%", "targets": 3},
+                                {"width": "15%", "targets": 4},
+                                {"width": "20%", "targets": 5}
+                            ],
+                            "columns": [
+                                {
+                                    data: 'rank'
+                                },
+                                {
+                                    data:'group_name'
+                                },
+                                {
+                                    data: 'username'
+                                },
+                                {
+                                    data: 'name'
+                                },
+                                {
+                                    data: 'score'
+                                },
+                                {
+                                    data: 'percentile',
+                                    render: function (data, type, row) {
+                                        return parseFloat(data).toFixed(2) + '%';
+                                    }
+                                },
+                            ]
+                        });
+                    }
+                },
+                error: function (jqXHR, textStatus) {
+                    console.log("Leaderboard detail Request failed: ", textStatus);
+                    alert("Something went wrong. Please refresh page.");
+                }
+            }).always(function () {
+               $('.global-loader').hide();
+            });
+
+        });
+
+
 
     });
 </script>
 
 <div class="container">
+    <div class="row-fluid" style="">
+        <!--<div id="actionPanel" class="col-md-12" style="text-align: right;margin-bottom: 7px;margin-top: 1%;">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="filterButton">
+                Filter <i class="fa fa-filter sorting-button" aria-hidden="true"></i>
+            </button>
+        </div>-->
+        <br/>
+        <br/>
+    </div>
        <div class="row-fluid">
+           <div class="col-sm-12">
+               <div class="panel panel-default" id="filterPanel" style="display: none;">
+                   <div class="panel-heading">
+                       <h3 class="panel-title">Filters</h3>
+                   </div>
+                   <div class="panel-body" style="padding-bottom: 5px;">
+                       <div class="row">
+                           <div id="collapseExample" aria-expanded="true">
+                               <div class="form-group col-sm-12">
+                                   <div class="form-group col-sm-9">
+                                       <label>Group</label>
+                                       <select id="groupId" class="form-control">
+                                           <option value="-1" >All Retargeting</option>
+                                       </select>
+                                   </div>
+                                   <div class="form-group col-sm-3">
+                                       <button type="button" id="filterSearch" class="btn btn-default searchSubmit" style="margin-top: 24px;">Search</button>
+                                       <button type="button" id="resetSearch" class="btn btn-default reset " style="margin-top: 24px;">Reset</button>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
         <div class="col-sm-12">
-            <br/><br/>
-            <div class="row panel panel-default" style="width: 106%;">
-                <div class="panel-heading filterContainer">
-                    <h2 class="panel-title" style="text-align: center;" id="topScoreId">Leaderboard</h2>
+            <div class="row panel panel-default">
+                <div class="panel-heading ">
+                    <h2 class="panel-title" style="text-align: center;" id="topScoreId">Leaderboard
+                        <span class="dropdown pull-right widgetFilter row-fluid">
+                        <select id="groupSelectId">
+
+                        </select>
+                    </span>
+                    </h2>
+
                 </div>
                 <div class="panel-body" id="campaignWidget">
                     <div class="row-fluid">
@@ -135,5 +276,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="text-center global-loader" style="display: none;">
+        <img src="http://vprep.in/wp-content/uploads/2018/03/load.gif"
+             style="height: 50px;position: relative;top:45%;"/>
     </div>
 </div>
