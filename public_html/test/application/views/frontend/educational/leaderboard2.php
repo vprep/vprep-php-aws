@@ -62,7 +62,11 @@
                             "data": result,
                             "dom": 'Bfrtip',
                             "buttons": [
-                                'csv', 'print'
+                                {
+                                    extend: 'csvHtml5',
+                                    text: 'Download',
+                                    title: 'Vprep Online Test'
+                                }, 'print'
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
@@ -154,7 +158,11 @@
                             "data": result,
                             "dom": 'Bfrtip',
                             "buttons": [
-                                'csv','print'
+                                {
+                                    extend: 'csvHtml5',
+                                    text: 'Download',
+                                    title: 'Vprep Online Test'
+                                },'print'
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
