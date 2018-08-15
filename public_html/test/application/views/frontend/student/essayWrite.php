@@ -12,7 +12,7 @@
 
     ?></div>
 
-<form action="student/essay_evalution">
+<form action="http://test.vprep.in/student/essay_evalution">
 
     <div style="
     padding-bottom: 1px;
