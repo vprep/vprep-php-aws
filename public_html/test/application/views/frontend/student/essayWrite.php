@@ -1,9 +1,16 @@
-this is good.
 
-<?php
-echo $topic['topic'];
 
-?>
+
+<div style="
+    padding-left: 10%;
+    font-size: 20px;
+">
+    Topic:
+
+    <?php
+    echo $topic['topic'];
+
+    ?></div>
 
 <form action="/action_page.php">
 
