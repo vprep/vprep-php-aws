@@ -257,6 +257,9 @@ $userId = $this->getCurrentUserId();
     function exam_leaderboard_2($exam_id){
         $data["exam_id"] = $exam_id;
 
+        $exam_data = $this->db->query("select exam_name from exam_list where exam_id = $exam_id ")->result_array()[0];
+        $data["exam_name"] = $exam_data["exam_name"];
+
         $this->template->load('educational','frontend/educational/leaderboard2',$data);
     }
 	
