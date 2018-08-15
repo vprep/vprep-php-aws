@@ -38,7 +38,7 @@
 <script>
     var tableContent = null;
     $(document).ready(function() {
-    //    startLoader();
+        $('.global-loader').show();
 
 
         var request = $.ajax({
@@ -99,13 +99,13 @@
                 }
             },
             error: function (jqXHR, textStatus) {
+                alert("Something went wrong. Please refresh page.");
                 console.log("Leaderboard detail Request failed: ", textStatus);
             }
         }).always(function () {
-      //      changePaginationCSS();
-    //        closeLoader();
+                $('.global-loader').hide();
         });
-        $('.global-loader').show();
+
 
         $.ajax({
             url: "/educational/filter/autocomplete/leaderboard",
@@ -129,7 +129,6 @@
                 console.log("Leaderboard detail Request failed: ", textStatus);
             }
         }).always(function () {
-            $('.global-loader').hide();
         });
 
         $('#groupSelectId').on('change', function() {
