@@ -249,12 +249,12 @@ class Student extends CI_Controller {
 
     }
     function essay_evalution(){
-        echo "came here";
+
         $essay_writing_id=$this->input->post('essayId');
         $userId = $this->session->userdata('userdata')['userid'];
         $answer=$this->input->post('answer');
         $this->db->query("insert into essay_results(essay_writing_id,user_id,answer) values ($essay_writing_id,$userId,'$answer') " );
-        echo "done";
+        echo "Successfully Submitted. Please close this window.";
     }
 
 
