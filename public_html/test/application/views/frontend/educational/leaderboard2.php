@@ -65,7 +65,7 @@
                                 {
                                     extend: 'csvHtml5',
                                     text: 'Download',
-                                    title: 'Vprep Online Test'
+                                    title: '<?php echo $exam_name;?>'
                                 }, 'print'
                             ],
                             "columnDefs": [
@@ -161,7 +161,7 @@
                                 {
                                     extend: 'csvHtml5',
                                     text: 'Download',
-                                    title: 'Vprep Online Test'
+                                    title: '<?php echo $exam_name;?>'
                                 },'print'
                             ],
                             "columnDefs": [
@@ -221,7 +221,6 @@
             </button>
         </div>-->
         <br/>
-        <br/>
     </div>
        <div class="row-fluid">
            <div class="col-sm-12">
@@ -250,10 +249,13 @@
                </div>
            </div>
         <div class="col-sm-12">
+            <h1 style="text-align: center;">Leaderboard</h1>
+            <br/>
             <div class="row panel panel-default">
                 <div class="panel-heading ">
-                    <h2 class="panel-title" style="text-align: center;" id="topScoreId">Leaderboard
+                    <h2 class="panel-title" style="text-align: center;" id="topScoreId"><?php echo $exam_name;?>
                         <span class="dropdown pull-right widgetFilter row-fluid">
+                            <span>Group:</span>
                         <select id="groupSelectId">
 
                         </select>
