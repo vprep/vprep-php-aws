@@ -25,6 +25,13 @@ topic:
     else {
 
         alert("not generated");
+        $.ajax({
+            url: "https://virtualwritingtutor.com/API/checkgrammar.php",
+            data: { signature: authHeader },
+            type: "GET",
+            beforeSend: function(xhr){xhr.setRequestHeader('X-Test-Header', 'test-value');},
+            success: function() { alert('Success!' + authHeader); }
+        });
     }
 
     </script>
