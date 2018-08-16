@@ -2234,8 +2234,8 @@ where ta.test_category = $examId")->result_array()[0];
 
             if($group != null && strlen($group) > 0){
 
-                $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile FROM (SELECT
-        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile,
+                $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile, start_at FROM (SELECT
+        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile, ta.start_at,
         (@rnk := IF(@curscore = score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = score, @rank, @rnk))   rank,
         (@curscore := score)  newscore FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and u.created_by = $userId
         inner join exam_list el on el.exam_id = ta.test_category
@@ -2243,8 +2243,8 @@ where ta.test_category = $examId")->result_array()[0];
 
                 return json_encode($result);
             } else {
-                $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile FROM (SELECT
-        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile,
+                $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile, start_at FROM (SELECT
+        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile, ta.start_at,
         (@rnk := IF(@curscore = score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = score, @rank, @rnk))   rank,
         (@curscore := score)  newscore FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and u.created_by = $userId
         inner join exam_list el on el.exam_id = ta.test_category
