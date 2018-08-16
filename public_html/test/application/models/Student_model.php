@@ -432,10 +432,8 @@ class Student_model extends CI_Model
         );
         
         $this->db->insert('exam_taken',$save_data);
-        } else {
-        
-        $this->db->query("update exam_taken set taken_status = $status where exam_id = $exam and user_id = $userId ");
-        
+        } else if($status>1) {
+            $this->db->query("update exam_taken set taken_status = $status where exam_id = $exam and user_id = $userId ");
         }
 
 	}
