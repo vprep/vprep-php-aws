@@ -38,6 +38,26 @@
 <script>
     var tableContent = null;
     $(document).ready(function() {
+
+        function formatDate(value)
+        {
+            var inputDate = new Date(value*1000);
+            var dd = inputDate.getDate();
+
+            var mm = inputDate.getMonth()+1;
+            var yyyy = inputDate.getFullYear();
+            if(dd<10)
+            {
+                dd='0'+dd;
+            }
+
+            if(mm<10)
+            {
+                mm='0'+mm;
+            }
+            return dd +"-" + mm + "-" + yyyy;
+        }
+
         $('.global-loader').show();
 
 
@@ -70,15 +90,27 @@
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
-                                {"width": "15", "targets": 1},
-                                {"width": "20%", "targets": 2},
-                                {"width": "20%", "targets": 3},
+                                {"width": "15%", "targets": 1},
+                                {"width": "15%", "targets": 2},
+                                {"width": "15%", "targets": 3},
                                 {"width": "15%", "targets": 4},
-                                {"width": "20%", "targets": 5}
+                                {"width": "15%", "targets": 5},
+                                {"width": "15%", "targets": 6}
                             ],
                             "columns": [
                                 {
                                     data: 'rank'
+                                },
+                                {
+                                    data:'start_at',
+                                    render: function (data,type,row) {
+                                        if(data > 0){
+                                            return formatDate(data);
+                                        } else {
+                                            return '';
+                                        }
+
+                                    }
                                 },
                                 {
                                   data:'group_name'
@@ -121,7 +153,6 @@
                 $.each(result, function(index,jsonObject){
                     $.each(jsonObject, function(key,val){
                         $('#groupSelectId').append('<option value="' + val + '">' + val + '</option>');
-                        console.log("key : "+key+" ; value : "+val);
                     });
                 });
 
@@ -166,15 +197,27 @@
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
-                                {"width": "15", "targets": 1},
-                                {"width": "20%", "targets": 2},
-                                {"width": "20%", "targets": 3},
+                                {"width": "15%", "targets": 1},
+                                {"width": "15%", "targets": 2},
+                                {"width": "15%", "targets": 3},
                                 {"width": "15%", "targets": 4},
-                                {"width": "20%", "targets": 5}
+                                {"width": "15%", "targets": 5},
+                                {"width": "15%", "targets": 6}
                             ],
                             "columns": [
                                 {
                                     data: 'rank'
+                                },
+                                {
+                                    data:'start_at',
+                                    render: function (data,type,row) {
+                                        if(data > 0){
+                                            return formatDate(data);
+                                        } else {
+                                            return '';
+                                        }
+
+                                    }
                                 },
                                 {
                                     data:'group_name'
@@ -272,6 +315,7 @@
                                 <thead>
                                 <tr>
                                     <th>Rank</th>
+                                    <th>Date</th>
                                     <th>Group</th>
                                     <th>Username</th>
                                     <th>Name</th>
