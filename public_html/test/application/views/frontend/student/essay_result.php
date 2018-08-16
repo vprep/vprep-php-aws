@@ -1,5 +1,5 @@
 topic:
-<div style="padding-left:10%;padding-right: 10%">Answer: <?php echo $topic['answer']; ?></div>div>
+<div style="padding-left:5%;padding-right: 5%">Answer: <?php echo $topic['answer']; ?></div>
 
 <div class="feedback" style="
     padding-left: 5%;
