@@ -488,59 +488,73 @@ public function sample_test($exam_id){
              
              	$this->session->set_userdata('exam_progress_71',"1");
              	$this->session->set_userdata('score_flag', false);
-             }          
+             }
+
+    $exam_71 = $this->session->userdata('exam_progress_71');
+
+             $createdByResult = $this->db->query("select created_by from users where id = $userId")->result_array()[0];
+
+             if($createdByResult["created_by"]==1126){
+                 $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
+
+                 if(sizeof($result2) > 0 ){
+
+                     $this->session->set_userdata('exam_progress_72',"2");
+                     $this->session->set_userdata('score_flag', true);
+
+                 } else {
+
+                     $this->session->set_userdata('exam_progress_72',"1");
+                     $this->session->set_userdata('score_flag', false);
+
+                 }
+
+
+                 $result3 = $this->db->query("select * from exam_taken where exam_id = $exam_3 and user_id = $userId and taken_status = '2' ")->result_array();
+
+                 if(sizeof($result3) > 0 ){
+
+                     $this->session->set_userdata('exam_progress_73',"2");
+                     $this->session->set_userdata('score_flag', true);
+
+                 } else {
+
+                     $this->session->set_userdata('exam_progress_73',"1");
+                     $this->session->set_userdata('score_flag', false);
+                 }
+
+
+
+
+                 $exam_72 = $this->session->userdata('exam_progress_72');
+
+                 $exam_73 = $this->session->userdata('exam_progress_73');
+
+
+
+                 if(($exam_71 == '2') && ($exam_72 == '2') && ($exam_73 == '2')){
+                     redirect("my_score");
+
+                 }     else {
+
+                     $this->template->load('exam_frontend','frontend/exam/combined-test',$data);
+
+                 }
+
+             } else {
+                 if(($exam_71 == '2')){
+                     redirect("my_score");
+
+                 }     else {
+
+                     $this->template->load('exam_frontend','frontend/exam/combined-test',$data);
+
+                 }
+
+             }
           
         
-             $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
-             
-             if(sizeof($result2) > 0 ){
-            
-             	$this->session->set_userdata('exam_progress_72',"2");
-             	$this->session->set_userdata('score_flag', true);
-             
-             } else {
-           
-             $this->session->set_userdata('exam_progress_72',"1");
-             $this->session->set_userdata('score_flag', false);
-                 
-            }
-            
-   
-             $result3 = $this->db->query("select * from exam_taken where exam_id = $exam_3 and user_id = $userId and taken_status = '2' ")->result_array();
-             
-             if(sizeof($result3) > 0 ){
-             	
-             	$this->session->set_userdata('exam_progress_73',"2");
-             	$this->session->set_userdata('score_flag', true);
-             
-             } else {
-             
-             $this->session->set_userdata('exam_progress_73',"1");
-             $this->session->set_userdata('score_flag', false);
-             }            
 
-            
-            
-            $exam_71 = $this->session->userdata('exam_progress_71');
-            
-            $exam_72 = $this->session->userdata('exam_progress_72');
-            
-            $exam_73 = $this->session->userdata('exam_progress_73');
-
-
-
-     /*      if(($exam_71 == '2') && ($exam_72 == '2') && ($exam_73 == '2')){
-                redirect("my_score");
-
-            }*/
-    if(($exam_71 == '2')){
-        redirect("my_score");
-
-    }     else {
-
-        $this->template->load('exam_frontend','frontend/exam/combined-test',$data);
-
-    } 
     }
 
 
