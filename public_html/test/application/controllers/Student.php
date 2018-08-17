@@ -492,9 +492,10 @@ public function sample_test($exam_id){
 
     $exam_71 = $this->session->userdata('exam_progress_71');
 
-             $createdByResult = $this->db->query("select created_by from users where id = $userId")->result_array()[0];
+             $result3 = $this->db->query("select * from users where created_by = 1126 ")->result_array();
 
-             if($createdByResult["created_by"]==1126){
+             if(sizeof($result3) > 0) {
+                 echo 'testing';
                  $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
 
                  if(sizeof($result2) > 0 ){
@@ -537,7 +538,7 @@ public function sample_test($exam_id){
 
                  }     else {
 
-                     $this->template->load('exam_frontend','frontend/exam/combined-test',$data);
+                     $this->template->load('exam_frontend','frontend/exam/sample_exam',$data);
 
                  }
 
