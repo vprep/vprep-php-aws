@@ -80,7 +80,7 @@
                         url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_1;?>,
                         method: "GET",
                         success: function(data) {
-                            min=25;
+                            min=1;
 
                             if(resumeTime_71 != null && resumeTime_71 >0 ){
 
@@ -662,7 +662,7 @@
 
 <script type="text/javascript">
     var hour =0;
-    var min =25;
+    var min =1;
 
     var sec =0;
 
