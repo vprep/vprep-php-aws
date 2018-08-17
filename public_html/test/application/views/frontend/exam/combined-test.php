@@ -97,7 +97,7 @@
                             var html = "";
 
 
-                            html += '<input type="hidden" id="71" value="15"> ';
+                            html += '<input type="hidden" id="71" value="32"> ';
                             $.each(obj.total_questions, function(key,value) {
 
                                 if(jsonObj_71[value.id]!= null) {
@@ -237,7 +237,7 @@
                                 $('.'+nextDiv).data('start_time',Math.round(new Date()/1000));
 
                                 var questionCount = $('#71').val();
-                                if(currentVal == 15){
+                                if(currentVal == 32){
                                     $(".nxt-btn").hide();
                                 }
                                 if((currentVal-2)==0){
@@ -568,7 +568,7 @@
 
                             <?php
 
-                            for($kp = 0; $kp < 15; $kp++){
+                            for($kp = 0; $kp < 32; $kp++){
 
                                 ?>
                                 <button type="button" class="btn btn-default btn-circle jump-71-<?php echo $kp+1; ?> jump-btn" data-jump="<?php echo $kp+1;?>"><?php echo $kp+1; ?></button>
