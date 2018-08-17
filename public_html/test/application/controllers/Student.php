@@ -492,7 +492,7 @@ public function sample_test($exam_id){
 
     $exam_71 = $this->session->userdata('exam_progress_71');
 
-             $result3 = $this->db->query("select * from users where created_by = 1126 ")->result_array();
+             $result3 = $this->db->query("select * from users where created_by = 1126 and id = $userId ")->result_array();
 
              if(sizeof($result3) > 0) {
                  $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
