@@ -526,12 +526,17 @@ public function sample_test($exam_id){
             $exam_72 = $this->session->userdata('exam_progress_72');
             
             $exam_73 = $this->session->userdata('exam_progress_73');
-            
 
-           if(($exam_71 == '2') && ($exam_72 == '2') && ($exam_73 == '2')){
+
+
+     /*      if(($exam_71 == '2') && ($exam_72 == '2') && ($exam_73 == '2')){
                 redirect("my_score");
 
-            } else {
+            }*/
+    if(($exam_71 == '2')){
+        redirect("my_score");
+
+    }     else {
 
         $this->template->load('exam_frontend','frontend/exam/combined-test',$data);
 
