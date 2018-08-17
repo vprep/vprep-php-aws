@@ -592,7 +592,7 @@
     padding-left: 10%;
     font-size: 20px;
 ">
-                Topic: Write about Independence day.
+                Topic: online shopping and its advantages.
 
                 </div>
 
