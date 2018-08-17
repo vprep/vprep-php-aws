@@ -512,10 +512,10 @@
     <ul class="nav">
         <li class="col-sm-6" id="exam-tab-id-1" style="position: relative;display: block;width: 33%;float: left;">  <a style="
     color: lightsalmon;
-">Arithmetic Reasoning and Analytical Thinking</a></li>
+">Aptitude</a></li>
         <li class="col-sm-6" id="exam-tab-id-2"> <a style="
     color: lightsalmon;
-" id="exam-tab-id-2" >Mathematical Critical Thinking and Logical Reasoning</a></li>
+" id="exam-tab-id-2" >Essay</a></li>
     </ul>
 
 
