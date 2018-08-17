@@ -254,7 +254,7 @@ class Student extends CI_Controller {
         $userId = $this->session->userdata('userdata')['userid'];
         $answer=$this->input->post('answer');
         $this->db->query("insert into essay_results(essay_writing_id,user_id,answer) values ($essay_writing_id,$userId,'$answer') " );
-        echo "Successfully Submitted. Please close this window.";
+        redirect("generic-test/121");
     }
 
 
