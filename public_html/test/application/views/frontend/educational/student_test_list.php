@@ -33,7 +33,7 @@
                                                         <?php 
 														foreach($student_listing as $key=>$val): 
 														
-														if(count($this->edu->my_score($val['id']))>0)
+														if(true)
 														{
 														?>
                                                         <tr>
