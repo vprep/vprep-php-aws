@@ -577,7 +577,7 @@ class Student_model extends CI_Model
             $this->db->where('created_by',(int)$for);
         }
         $offset = ($page != 0) ? ((int) ($page-1) * DEFAULT_PER_PAGE) : 0;
-        $this->db->limit(DEFAULT_PER_PAGE,10);
+      //  $this->db->limit(DEFAULT_PER_PAGE,10);
         $this->db->order_by('id','desc');
         return $this->db->get('users')->result_array();
     }
