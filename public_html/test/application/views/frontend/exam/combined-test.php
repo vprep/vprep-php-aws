@@ -592,7 +592,18 @@
     padding-left: 10%;
     font-size: 20px;
 ">
-                Topic: online shopping and its advantages.
+
+                <?php
+                $randnum=rand(1,6);
+                if($randnum==1) echo "Topic: Growing up in poverty.";
+                if($randnum==2) echo "Topic: Effects of Pollution.";
+                if($randnum==3) echo "Topic: The Changes in the Ocean.";
+                if($randnum==4) echo "Topic: Internet Influence on kids..";
+                if($randnum==5) echo "Topic: Causes and Effects of the Popularity of Fast Food Restaurants.";
+                if($randnum==6) echo "Topic: Domestic violence";
+                ?>
+
+
 
                 </div>
 
