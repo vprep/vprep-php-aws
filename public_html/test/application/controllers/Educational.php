@@ -1621,6 +1621,7 @@ $userId = $this->getCurrentUserId();
         }
 		
 		$data['student_listing']=$this->stu->get_students($page,$this->session->userdata('userdata')['userid']);
+        echo count($data['student_listing']);
 		$data['pages']=get_froentend_pagination('educational/students',$this->stu->total_student($this->session->userdata('userdata')['userid']));
 		$this->template->load('educational','frontend/educational/student_test_list',$data);
 	}
