@@ -64,7 +64,7 @@
 
                             if(resumeTime_71 != null && resumeTime_71 >0 ){
 
-                                min = (25 - Math.floor(resumeTime_71/60));
+                                min = (20 - Math.floor(resumeTime_71/60));
 
                             }
                             sec = 0;
@@ -561,7 +561,7 @@
 
 <script type="text/javascript">
     var hour =0;
-    var min =25;
+    var min =20;
 
     var sec =0;
 
