@@ -80,7 +80,7 @@
 
         if(exam_progress_71 < 2){
             $.ajax({
-                url: "http://localhost/read_ans_json?exam_id="+<?php echo $exam_1;?>,
+                url: "http://test.vprep.in/read_ans_json?exam_id="+<?php echo $exam_1;?>,
                 method: "GET",
                 success: function(data) {
                     $('.global-loader').show();
@@ -104,7 +104,7 @@
                     }
                     console.log("total resume time: "+resumeTime_71);
                     $.ajax({
-                        url: "http://localhost/read_exam_data?exam_id="+<?php echo $exam_1;?>,
+                        url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_1;?>,
                         method: "GET",
                         success: function(data) {
                             min=1;
@@ -376,7 +376,7 @@
                                 }
                                 var score = calculateScore(jsonObj_71,ansJson2_71, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                 $.ajax({
-                                    url: "http://localhost/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=1&save_status=71",
+                                    url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=1&save_status=71",
                                     method: "GET",
                                     success: function(data) {
 
@@ -417,7 +417,7 @@
                                 min = 35;
                                 sec = 0;
 
-                                var includeUrl_1 = "http://localhost/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71";
+                                var includeUrl_1 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71";
 
                                 submitExam(includeUrl_1,false);
 
@@ -452,7 +452,7 @@
                 activeExam2();
             }
             $.ajax({
-                url: "http://localhost/read_ans_json?exam_id="+<?php echo $exam_2;?>,
+                url: "http://test.vprep.in/read_ans_json?exam_id="+<?php echo $exam_2;?>,
                 method: "GET",
                 success: function(data) {
                     var resumeTime_72 = 0;
@@ -478,7 +478,7 @@
 
 
                     $.ajax({
-                        url: "http://localhost/read_exam_data?exam_id="+<?php echo $exam_2;?>,
+                        url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_2;?>,
                         method: "GET",
                         success: function(data) {
                             if((exam_progress_71 == 2)){
@@ -753,7 +753,7 @@
                                 }
                                 var score = calculateScore(jsonObj_72,ansJson2_72, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                 $.ajax({
-                                    url: "http://localhost/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=1&save_status=72",
+                                    url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_2;?>+"&ans_json="+JSON.stringify(jsonObj_72)+"&score="+score+"&start_at="+savedStart2+"&taken_status=1&save_status=72",
                                     method: "GET",
                                     success: function(data) {
 
@@ -818,7 +818,7 @@
                 activeExam3();
             }
             $.ajax({
-                url: "http://localhost/read_ans_json?exam_id="+<?php echo $exam_3;?>,
+                url: "http://test.vprep.in/read_ans_json?exam_id="+<?php echo $exam_3;?>,
                 method: "GET",
                 success: function(data) {
                     var resumeTime_73 = 0;
@@ -839,7 +839,7 @@
                     console.log("73 total resume time: "+resumeTime_73);
 
                     $.ajax({
-                        url: "http://localhost/read_exam_data?exam_id="+<?php echo $exam_3;?>,
+                        url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_3;?>,
                         method: "GET",
                         success: function(data) {
                             if((exam_progress_72 == 2)){
@@ -1111,7 +1111,7 @@
                                 }
                                 var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                 $.ajax({
-                                    url: "http://localhost/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=1&save_status=73",
+                                    url: "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=1&save_status=73",
                                     method: "GET",
                                     success: function(data) {
 
@@ -1176,7 +1176,7 @@
                 success: function(data) {
                     alert("successfully submitted");
                     if(flag){
-                        document.location.href = "http://localhost/my_score.html";
+                        document.location.href = "http://test.vprep.in/my_score.html";
                     }
 
                 },
