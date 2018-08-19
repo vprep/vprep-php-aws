@@ -768,9 +768,6 @@
 
 
                             $("#examSubmitId_2").click(function () {
-                                alert("clicked..")
-
-                                alert('exam2 clicked');
 
                                 var filterVO = {};
                                 filterVO.essayId = $("#essayId").val();
@@ -1124,27 +1121,30 @@
                             });
 
                             $("#examSubmitId_3").click(function () {
-                                alert("clicked..")
 
-                                alert('exam2 clicked');
+                                var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
 
-                                var filterVO = {};
-                                filterVO.essayId = $("#essayId").val();
-                                filterVO.essayAns = $("#essayAnsId").val();
 
-                                $.ajax({
-                                    url: "/student/essay_evalution",
-                                    method: "POST",
-                                    data: ({essayAns:$("#essayAnsId").val()}),
-                                    dataType: "json",
-                                    success: function (result) {
-                                        console.log("post successful");
-                                    },
-                                    error: function (jqXHR, textStatus) {
-                                        console.log("POST failed: ", textStatus);
-                                    }
-                                }).always(function () {
-                                });
+
+                                var startTime = parseInt($('.'+lastDivId_73).data("start_time"));
+                                var endTime = Math.round(new Date() / 1000);
+                                var totalTime = parseInt($('.'+lastDivId_73).data("total_time"));
+                                totalTime += (endTime-startTime);
+                                var currentQueId = $('.'+lastDivId_73).data("ques_id");
+                                var selectedOption = $('.'+currentQueId+':checked').val();
+                                if(selectedOption != null && selectedOption.length >0 ){
+                                    jsonObj_73[currentQueId] = {time: totalTime, option:selectedOption};
+                                }
+                                var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
+                                <?php $this->session->set_userdata('exam_progress_73',"2"); ?>
+                                $('#progress_73').val('2');
+                                exam_progress_73 =2;
+
+                                $('.all-div').hide();
+                                $('.global-loader').show();
+
+                                var includeUrl_3 = "http://localhost/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2&save_status=73";
+                                submitExam(includeUrl_3,true);
 
                             })
 
