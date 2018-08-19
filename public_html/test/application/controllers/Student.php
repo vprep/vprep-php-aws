@@ -250,11 +250,11 @@ class Student extends CI_Controller {
     }
     function essay_evalution(){
 
-        $essay_writing_id=$this->input->post('essayId');
+        $essay_writing_id=11;
         $userId = $this->session->userdata('userdata')['userid'];
-        $answer=$this->input->post('answer');
+        $answer=$_POST['essayAns'];
         $this->db->query("insert into essay_results(essay_writing_id,user_id,answer) values ($essay_writing_id,$userId,'$answer') " );
-        redirect("generic-test/127");
+        echo '{}';
     }
 
 
@@ -547,7 +547,7 @@ public function sample_test($exam_id){
 
                  }     else {
 
-                     $this->template->load('exam_frontend','frontend/exam/combined-test',$data);
+                     $this->template->load('exam_frontend','frontend/exam/combined-test-2',$data);
 
                  }
 
