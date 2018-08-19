@@ -1143,7 +1143,7 @@
                                 $('.all-div').hide();
                                 $('.global-loader').show();
 
-                                var includeUrl_3 = "http://localhost/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2&save_status=73";
+                                var includeUrl_3 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_3;?>+"&ans_json="+JSON.stringify(jsonObj_73)+"&score="+score+"&start_at="+savedStart3+"&taken_status=2&save_status=73";
                                 submitExam(includeUrl_3,true);
 
                             })
