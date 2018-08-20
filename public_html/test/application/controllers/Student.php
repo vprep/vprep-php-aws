@@ -547,7 +547,7 @@ public function sample_test($exam_id){
 
                  }     else {
 
-                     $this->template->load('exam_frontend','frontend/exam/combined-test-2',$data);
+                     $this->template->load('exam_frontend','frontend/exam/combined-test-4',$data);
 
                  }
 
