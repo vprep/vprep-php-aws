@@ -61,7 +61,8 @@
                 data: ({essayAns:$("#essayAnsId").val()}),
                 dataType: "json",
                 success: function (result) {
-                    alert("successfully submitted.")
+                    alert("successfully submitted.");
+                    document.location.href = "http://test.vprep.in/my_score.html";
                 },
                 error: function (jqXHR, textStatus) {
                     console.log("POST failed: ", textStatus);
@@ -783,7 +784,7 @@
                                         document.location.href = "http://test.vprep.in/my_score.html";
                                     },
                                     error: function (jqXHR, textStatus) {
-                                        console.log("POST failed: ", textStatus);
+                                        document.location.href = "http://test.vprep.in/my_score.html";
                                     }
                                 }).always(function () {
                                 });
