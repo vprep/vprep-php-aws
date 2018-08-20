@@ -108,11 +108,11 @@
                         url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_1;?>,
                         method: "GET",
                         success: function(data) {
-                            min = 30;
+                            min = 50;
 
                             if(resumeTime_71 != null && resumeTime_71 >0 ){
 
-                                min = (30 - Math.floor(resumeTime_71/60));
+                                min = (50 - Math.floor(resumeTime_71/60));
 
                             }
                             sec = 0;
@@ -415,7 +415,7 @@
                                 //$(".prev-btn-2").show();
                                 $('.div-72-1').data("start_time",Math.round(new Date()/1000));
                                 activeExam2();
-                                min = 50;
+                                min = 30;
                                 sec = 0;
 
                                 var includeUrl_1 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71";
@@ -483,10 +483,10 @@
                         method: "GET",
                         success: function(data) {
                             if((exam_progress_71 == 2)){
-                                min = 50;
+                                min = 30;
                                 if( resumeTime_72 != null && resumeTime_72 >0 ){
 
-                                    min = (50 - Math.floor(resumeTime_72/60));
+                                    min = (30 - Math.floor(resumeTime_72/60));
 
                                 }
                             }
@@ -1107,7 +1107,7 @@
 
 <script type="text/javascript">
     var hour =0;
-    var min =30;
+    var min =50;
 
     var sec =0;
 
