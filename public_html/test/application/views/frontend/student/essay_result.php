@@ -2,8 +2,8 @@
 <div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">Answer: <?php echo $topic['answer']; ?></div>
 
 
-    <Span>Total Mistake:<?php echo $topic['evaluation'].error_grammar_count_total; ?></Span>
-    <span> Error Percent:<?php echo $topic['evaluation'].error_grammar_percent; ?></span>
+    <Span id="totalmistake"> Total Mistake:</Span>
+    <span id="errorpercent"> Error Percent:</span>
     <span id="wordcount"> Total Words:</span>
     <span> Total Marks:</span>
 
@@ -14,10 +14,13 @@
 </div>
 <script>
     s1=<?php echo $topic['evaluation']; ?>
+
     s1 = s1.replace(/(^\s*)|(\s*$)/gi,"");
     s1 = s1.replace(/[ ]{2,}/gi," ");
     s1 = s1.replace(/\n /,"\n");
-    document.getElementById("wordcount").value = s1.split(' ').length;
+    document.getElementById("wordcount").innerHTML ="Total Words: " + s1.split(' ').length;
+    document.getElementById("totalmistake").innerHTML ="Total Mistake: " + s1.error_grammar_count_total;
+    document.getElementById("errorpercent").innerHTML ="Error Percent: " + s1.error_grammar_percent;
     if(<?php echo $topic['generated']; ?>==1)
     {
         var json1 =<?php echo $topic['evaluation']; ?>
