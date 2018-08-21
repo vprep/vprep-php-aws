@@ -19,8 +19,9 @@
     s1 = s1.replace(/[ ]{2,}/gi," ");
     s1 = s1.replace(/\n /,"\n");
     document.getElementById("wordcount").innerHTML ="Total Words: " + s1.split(' ').length;
-    document.getElementById("totalmistake").innerHTML ="Total Mistake: " + s1.error_grammar_count_total;
-    document.getElementById("errorpercent").innerHTML ="Error Percent: " + s1.error_grammar_percent;
+   var s11 =<?php echo $topic['evaluation']; ?>
+    document.getElementById("totalmistake").innerHTML ="Total Mistake: " + s11.error_grammar_count_total;
+    document.getElementById("errorpercent").innerHTML ="Error Percent: " + s11.error_grammar_percent;
     if(<?php echo $topic['generated']; ?>==1)
     {
         var json1 =<?php echo $topic['evaluation']; ?>
