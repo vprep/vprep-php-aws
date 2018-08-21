@@ -1,5 +1,11 @@
-topic:
+<div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">topic: Effect of pollution
 <div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">Answer: <?php echo $topic['answer']; ?></div>
+
+
+    <Span>Total Mistake:<?php echo $topic['evaluation'].error_grammar_count_total; ?></Span>
+    <span> Error Percent:<?php echo $topic['evaluation'].error_grammar_percent; ?></span>
+    <span id="wordcount"> Total Words:</span>
+    <span> Total Marks:</span>
 
 <div class="feedback" style="
     padding-left: 5%;
@@ -7,10 +13,15 @@ topic:
 
 </div>
 <script>
-
+    s1=<?php echo $topic['evaluation']; ?>
+    s1 = s1.replace(/(^\s*)|(\s*$)/gi,"");
+    s1 = s1.replace(/[ ]{2,}/gi," ");
+    s1 = s1.replace(/\n /,"\n");
+    document.getElementById("wordcount").value = s1.split(' ').length;
     if(<?php echo $topic['generated']; ?>==1)
     {
         var json1 =<?php echo $topic['evaluation']; ?>
+
 
         for (var i = 0; json1.check_grammar_feedback.length; i++) {
             var div = document.createElement('div');
