@@ -15,7 +15,7 @@
     <span style="
     font-size: 17px !important;
     color: green;
-"> id="wordcount"> Total Words:</span>
+" id="wordcount"> Total Words:</span>
     <span style="
     font-size: 17px !important;
     margin-left: 1%;
