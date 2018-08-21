@@ -1,9 +1,17 @@
-<div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">topic: Effect of pollution</div>
+<div style="margin-left: 5%;margin-right: 5%;background: darkgray;/* padding-left: 1%; */background: white;font-size: 20px;color: blue;">Topic: Effect of pollution</div>
 <div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">Answer: <?php echo $topic['answer']; ?></div>
 
 
-    <Span id="totalmistake"> Total Mistake:</Span>
-    <span id="errorpercent"> Error Percent:</span>
+    <Span style="
+          margin-left: 5%;
+          font-size: 17px !important;
+          margin-right: 1%;
+          color: red;" id="totalmistake"> Total Mistake:</Span>
+    <span style="
+          margin-left: 5%;
+          font-size: 17px !important;
+          margin-right: 1%;
+          color: red;" id="errorpercent"> Error Percent:</span>
     <span id="wordcount"> Total Words:</span>
     <span> Total Marks:</span>
 
