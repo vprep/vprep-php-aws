@@ -8,7 +8,7 @@
           margin-right: 1%;
           color: red;" id="totalmistake"> Total Mistake:</Span>
     <span style="
-          margin-left: 5%;
+
           font-size: 17px !important;
           margin-right: 1%;
           color: red;" id="errorpercent"> Error Percent:</span>
