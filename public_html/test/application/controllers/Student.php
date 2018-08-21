@@ -244,7 +244,7 @@ class Student extends CI_Controller {
 
         //      echo count($data["topic"]);
 
-        $this->template->load('exam_frontend','frontend/student/essay_result',$data);
+        $this->template->load('frontend','frontend/student/essay_result',$data);
 
     }
     function essay_evalution(){
