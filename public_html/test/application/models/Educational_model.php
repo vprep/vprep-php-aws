@@ -979,6 +979,7 @@ echo $decoded;
 		$this->db->select("created_by");
 		$this->db->where("id", $userId);
 		$created_by_user = $this->db->get('users')->result();
+		echo $created_by_user;
 		//$created_by_user = $this->user->get_user_details($created_by);
 		
 	//	foreach($tuts as $t){
