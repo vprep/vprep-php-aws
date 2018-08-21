@@ -12,18 +12,20 @@
                         <div class="row">
                             <?php if (!empty($my_score)): ?>
                                 <?php foreach ($my_score as $val): ?>
-                                    <div class="edugate-layout-1"> 
+                                    <div class="edugate-layout-1">
                                         <div class="col-lg-12">
                                             <div class="media text-left">
                                                 <div class="media-body">
                                                     <h3>
-                                                        <?php echo anchor('show_result/' . $val['id'], $val['title']); ?>
-                                                       
+                                                        <?php echo anchor('show_result/' . urlencrypt($val['id']), $val['title']); ?>
+                                                        <a href="http://test.vprep.in/student/my_solution/<?php echo $val['exam_id']; ?>" style="
+    float: right;
+">Solution</a>
                                                     </h3>
                                                     <hr style="margin:8px auto">
-                                                    <p> 
-                                                        <i aria-hidden="true" class="fa fa-calendar"></i> 
-                                                        <strong>Exam given on : <?php echo date('d M Y H:i:s', $val['test_date']); ?></strong> 
+                                                    <p>
+                                                        <i aria-hidden="true" class="fa fa-calendar"></i>
+                                                        <strong>Exam given on : <?php echo date('d M Y H:i:s', $val['test_date']); ?></strong>
                                                     </p>
                                                 </div>
                                             </div>
@@ -41,7 +43,7 @@
                                     </div>
                                 </div>
                             <?php endif; ?>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
