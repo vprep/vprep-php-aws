@@ -13,7 +13,7 @@
 
 </div>
 <script>
-    s1=<?php echo $topic['answer']; ?>
+   var s1=<?php echo $topic['answer']; ?>
 
   //  s1 = s1.replace(/(^\s*)|(\s*$)/gi,"");
    // s1 = s1.replace(/[ ]{2,}/gi," ");
