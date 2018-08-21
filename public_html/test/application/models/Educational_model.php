@@ -979,13 +979,13 @@ echo $decoded;
 		$this->db->select("created_by");
 		$this->db->where("id", $userId);
 		$created_by_user = $this->db->get('users')->result_array()[0];
-		echo $created_by_user['created_by'];
+        $created_by_user1 = $created_by_user['created_by'];
 		//$created_by_user = $this->user->get_user_details($created_by);
 		
 	//	foreach($tuts as $t){
 	//		$cb = $t['si_institute_id'];
 			$arr = $this->db->query("SELECT el.exam_id, el.course_id, el.subject_id, el.exam_name, el.exam_tutor_name, el.exam_time, el.exam_max_ques, el.exam_detail, el.marks_for_correct, el.marks_for_correct, el.marks_for_wrong, el.marks_for_unattemp, el.start_date, el.end_date, el.created_by, el.created_on, el.exam_status, el.is_mock, et.taken_status FROM `exam_list` el left join exam_taken et
-on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('$dt') and `end_date` >= date('$dt') and exam_status=1 ")->result_array();
+on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('$dt') and `end_date` >= date('$dt') and exam_status=1 and created_by=$created_by_user1 ")->result_array();
 			$zz = array_merge($zz, $arr);
 	//	}
 		
