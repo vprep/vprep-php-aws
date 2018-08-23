@@ -243,6 +243,17 @@ class Student extends CI_Controller {
         $topic=$this->db->query('select answer from essay_results where  generated=0 and answer!=""')->result_array()[0];
         echo $topic['answer'];
     }
+
+    #function my score page
+    function setRandomEssayResult()
+    {
+        $answer=$_POST['essayAns'];
+
+       echo $answer;
+    }
+
+
+
     function essayResult($essayId){
         $userId = $this->session->userdata('userdata')['userid'];
 
