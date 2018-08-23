@@ -248,6 +248,9 @@ class Student extends CI_Controller {
     function setRandomEssayResult()
     {
         $answer=$_POST['essayAns'];
+        $topic=$this->db->query('select id from essay_results where  generated=0 and answer!=""')->result_array()[0];
+        $id=$topic['id'];
+        $this->db->query("update essay_results set evaluation=$answer where id=$id")->result_array()[0];
 
        echo $answer;
     }
