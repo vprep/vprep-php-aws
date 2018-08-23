@@ -240,7 +240,7 @@ class Student extends CI_Controller {
     {
 
 
-        $topic=$this->db->query('select answer from essay_results where  and generated!=1 and answer!=""')->result_array()[0];
+        $topic=$this->db->query('select answer from essay_results where  generated=0 and answer!=""')->result_array()[0];
         echo $topic['answer'];
     }
     function essayResult($essayId){
