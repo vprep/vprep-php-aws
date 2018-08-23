@@ -235,6 +235,14 @@ class Student extends CI_Controller {
         $this->template->load('exam_frontend','frontend/student/essayWrite',$data);
 
     }
+    #function my score page
+    function getRandomEssayResult()
+    {
+
+
+        $topic=$this->db->query('select answer from essay_results where  and generated!=1 and answer!=""')->result_array()[0];
+        echo $topic['answer'];
+    }
     function essayResult($essayId){
         $userId = $this->session->userdata('userdata')['userid'];
 
@@ -997,6 +1005,8 @@ public function sample_test($exam_id){
         $data['my_score']=$this->stu->my_score($userid);
         $this->template->load('frontend','frontend/student/my_score',$data);
     }
+
+
     function my_solution($eid){
 
         $userid=$this->getCurrentUserId();
