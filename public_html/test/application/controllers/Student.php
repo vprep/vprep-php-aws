@@ -274,7 +274,8 @@ class Student extends CI_Controller {
             $data["topic"]=$data["topic"][0];
         $this->template->load('exam_frontend','frontend/student/essay_result',$data);}
         else
-            echo "Currently you dont have any submission or you submitted empty.";
+            $this->template->load('frontend','frontend/student/essay_fail',$data);
+
 
     }
     function essay_evalution(){
