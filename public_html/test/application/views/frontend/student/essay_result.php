@@ -1,5 +1,4 @@
-<div style="margin-left: 5%;margin-right: 5%;background: darkgray;/* padding-left: 1%; */background: white;font-size: 20px;color: blue;">Topic: Effect of pollution</div>
-<div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">Answer: <?php echo $topic['answer']; ?></div>
+<div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">You Wrote: <?php echo $topic['answer']; ?></div>
 
 
     <Span style="
