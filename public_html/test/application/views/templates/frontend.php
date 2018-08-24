@@ -164,7 +164,7 @@
                         <?php echo anchor('my_score', '<i class="flaticon-man hidden-lg"></i> My Score'); ?>
                     </li>
                     <li>
-                        <?php echo anchor('essayResult/11', '<i class="flaticon-man hidden-lg"></i> Essay Score'); ?>
+                        <?php echo anchor('student/essayResult/11', '<i class="flaticon-man hidden-lg"></i> Essay Score'); ?>
                     </li>
                     <li>
                         <?php echo anchor('student/community', '<i class="flaticon-man hidden-lg"></i> Vprep Community'); ?>
