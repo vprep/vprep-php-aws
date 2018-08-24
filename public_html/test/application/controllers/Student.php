@@ -266,13 +266,15 @@ class Student extends CI_Controller {
     function essayResult($essayId){
         $userId = $this->session->userdata('userdata')['userid'];
 
-        $data["topic"]=$this->db->query("select * from essay_results where user_id=$userId and essay_writing_id=$essayId")->result_array()[0];
+        $data["topic"]=$this->db->query("select * from essay_results where user_id=$userId and essay_writing_id=$essayId")->result_array();
         $data["essayId"]=$essayId;
 
 
-        //      echo count($data["topic"]);
-
-        $this->template->load('exam_frontend','frontend/student/essay_result',$data);
+        if(count($data["topic"])>0){
+            $data["topic"]=$data["topic"][0];
+        $this->template->load('exam_frontend','frontend/student/essay_result',$data);}
+        else
+            echo "Currently you dont have any submission or you submitted empty.";
 
     }
     function essay_evalution(){
