@@ -532,7 +532,7 @@ html * {
                                             html +=  '     <input class="'+value.id+'" type="radio" checked value="option2" name="'+value.id+'-option" id="'+value.id+'-2"> ' +
                                                 '     <label for="'+value.id+'-1"> ';
                                         } else {
-                                            html +=   '     <input class="'+value.id+'" type="radio"  value="option2" name="'+value.id+'-option" id="'+value.id+'-2"> ' +
+                                            html +=   '     <input class="'+value.id+'" type="radio"  abc value="option2" name="'+value.id+'-option" id="'+value.id+'-2"> ' +
                                                 '    <label for="'+value.id+'-2"><span></span> ' ;
                                         }
 
