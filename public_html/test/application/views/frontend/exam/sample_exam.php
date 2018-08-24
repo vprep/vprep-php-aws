@@ -924,7 +924,7 @@ html * {
                                             ' </div> ' +
                                             '   <div  class="col-md-12 down"> ' +
                                             '       <button class="btn btn-warning btn-circle" type="button">D</button> ' ;
-                                        if(jsonObj_73[value.id]!= null && "option1"==jsonObj_73[value.id]['option']){
+                                        if(jsonObj_73[value.id]!= null && "option4"==jsonObj_73[value.id]['option']){
                                             html +=  '     <input class="'+value.id+'" type="radio" checked value="option4" name="'+value.id+'-option" id="'+value.id+'-4"> ' +
                                                 '     <label for="'+value.id+'-4"> ';
                                         } else {
