@@ -1,4 +1,4 @@
-<div style="margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">You Wrote: <?php echo $topic['answer']; ?></div>
+<div style="margin-top: 10px;margin-left: 5%;margin-right: 5%;background: darkgray;color: white;padding-left: 1%;font-style: oblique;">You Wrote: <?php echo $topic['answer']; ?></div>
 
 
     <Span style="
@@ -37,14 +37,14 @@
    console.log(s11);
     document.getElementById("totalmistake").innerHTML ="Total Mistake: " + s11.error_grammar_count_total;
     document.getElementById("errorpercent").innerHTML ="Error Percent: " + s11.error_grammar_percent;
-    var total_marks = 25*(100-parseInt(s11.error_grammar_percent))/100;
+    var total_marks = 25*(100-parseInt(s11.error_grammar_percent*2))/100;
    document.getElementById("totalmarks").innerHTML ="Total Marks: " + total_marks+"/30";
     if(<?php echo $topic['generated']; ?>==1)
     {
         var json1 =<?php echo $topic['evaluation']; ?>;
 
 
-        for (var i = 0; json1.check_grammar_feedback.length; i++) {
+        for (var i = 1; i<=json1.check_grammar_feedback.length; i++) {
             var div = document.createElement('div');
 
             var html1 = "<br><span style='font-size:20px;'>" + i + ":</span> " + "<div style='color: green;font-style: italic;'><b>Sentence: </b>" + json1.check_grammar_feedback[i]["context"] + "</div><div style='color:red; font-size:18px;font-weight: bold;'><b> Error Place: </b>" + json1.check_grammar_feedback[i]["error_grammar"] + "</div><div style='font-size: 18px;'><b>Feedback Grammer:</b>" + json1.check_grammar_feedback[i]["feedback_grammar"] + "</div> ";
