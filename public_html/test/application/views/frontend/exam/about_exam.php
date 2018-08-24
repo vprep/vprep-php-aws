@@ -66,11 +66,11 @@
                                     </strong>
                                 </h5>
                                 <?php if($test_cat['exam_id']>119) { ?>
-                                <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);?>">
+                                <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/sample_test/'.urlencrypt1($test_cat['exam_id']);?>">
                                 <?php }else {?>
-                                <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);?>">
+                                <input id=exam_url type="hidden" value="<?php echo 'http://test.vprep.in/sample_test/'.urlencrypt1($test_cat['exam_id']);?>">
                                 <?php } ?>
-                                <input id=exam_url2 type="hidden" value="<?php echo 'http://test.vprep.in/progress_exam/'.urlencrypt($test_cat['exam_id']);?>">
+                                <input id=exam_url2 type="hidden" value="<?php echo 'http://test.vprep.in/progress_exam/'.urlencrypt1($test_cat['exam_id']);?>">
                                 <input id="examGivenId" type="hidden" value="<?php echo $exam_given; ?>">
                               <!--  <?php /*if(!count($progress)>0) { */?>
                                 <a href="<?php /*echo 'http://test.vprep.in/sample_test/'.urlencrypt($test_cat['exam_id']);*/?>" class="btn icon-btn btn-success btn-contact btn-block"

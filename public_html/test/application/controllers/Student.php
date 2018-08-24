@@ -495,7 +495,7 @@ class Student extends CI_Controller {
     
 public function sample_test($exam_id){
 
-
+    $exam_id=urldecrypt($exam_id);
 
             $userId = $this->session->userdata('userdata')['userid'];
 
@@ -645,7 +645,7 @@ public function sample_test($exam_id){
         
         
 
-        $exam_id=urldecrypt($exam_id);
+        $exam_id=urldecrypt1($exam_id);
         $userId = $this->session->userdata('userdata')['userid'];
         $result = $this->db->query("select id from exam_taken where exam_id = $exam_id && user_id = $userId and taken_status = '2' ")->result_array();
         if(sizeof($result) > 0){
