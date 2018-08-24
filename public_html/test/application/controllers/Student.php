@@ -5,9 +5,9 @@ class Student extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('student_model','stu');
-      //  if(!check_student_login()){
-       //     redirect(base_url());
-       // }
+        if(!check_student_login()){
+            redirect(base_url());
+        }
 // testing
         $this->load->model('educational_model','edu');
         $this->load->model('users_model','user');
