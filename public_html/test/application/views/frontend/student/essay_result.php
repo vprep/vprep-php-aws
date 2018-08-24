@@ -38,6 +38,7 @@
     document.getElementById("totalmistake").innerHTML ="Total Mistake: " + s11.error_grammar_count_total;
     document.getElementById("errorpercent").innerHTML ="Error Percent: " + s11.error_grammar_percent;
     var total_marks = 25*(100-parseInt(s11.error_grammar_percent)*2)/100;
+    if(total_marks<0) total_marks=0;
    document.getElementById("totalmarks").innerHTML ="Total Marks: " + total_marks+"/30";
     if(<?php echo $topic['generated']; ?>==1)
     {
