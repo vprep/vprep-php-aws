@@ -495,7 +495,7 @@ class Student extends CI_Controller {
     
 public function sample_test($exam_id){
 
-    $exam_id=urldecrypt($exam_id);
+    $exam_id=urldecrypt1($exam_id);
 
             $userId = $this->session->userdata('userdata')['userid'];
 
