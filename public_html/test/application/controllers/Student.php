@@ -1031,7 +1031,7 @@ public function sample_test($exam_id){
 
 
     function my_solution($eid){
-        $eid = urldecrypt($eid);
+        $eid = urldecrypt1($eid);
 
         $userid=$this->getCurrentUserId();
         $data['test_ques']=$this->edu->get_test_exam_questions($eid,0);

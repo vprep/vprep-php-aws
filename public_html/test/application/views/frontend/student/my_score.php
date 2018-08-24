@@ -18,7 +18,7 @@
                                                 <div class="media-body">
                                                     <h3>
                                                         <?php echo anchor('show_result/' . urlencrypt($val['id']), $val['title']); ?>
-                                                        <a href="http://test.vprep.in/student/my_solution/<?php echo urlencrypt($val['exam_id']); ?>" style="
+                                                        <a href="http://test.vprep.in/student/my_solution/<?php echo urlencrypt1($val['exam_id']); ?>" style="
     float: right;
 ">Solution</a>
                                                     </h3>

@@ -40,10 +40,18 @@ function urlencrypt($input) {
   return $input;  
 //return urlencode(strtr(base64_encode($input), '+/=', '-_,'));
 }
+function urlencrypt1($input) {
+  //  return $input;
+return urlencode(strtr(base64_encode($input), '+/=', '-_,'));
+}
 
 function urldecrypt($input) {
 return $input;   
 // return base64_decode(strtr(urldecode($input), '-_,', '+/='));
+}
+function urldecrypt1($input) {
+   // return $input;
+return base64_decode(strtr(urldecode($input), '-_,', '+/='));
 }
 
 function get_report_test_name($test_array) {
