@@ -1048,9 +1048,9 @@ public function sample_test($exam_id){
     }
     function fixOption1IssueFIx(){
 
-        $exam_id=$_POST['exam_id'];
-        $option=$_POST['option'];
-        $question=$_POST['question'];
+        $exam_id=$_GET['exam_id'];
+        $option=$_GET['option'];
+        $question=$_GET['question'];
         $data=$this->db->query("select test_answers from test_answers where test_category=$exam_id")->result_array();
 
         for($i=0;$i<count($data);$i++) {
