@@ -1055,6 +1055,7 @@ public function sample_test($exam_id){
 
         for($i=0;$i<count($data);$i++) {
             $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
+           if( isset($json_decoded[$question]))
             echo $json_decoded[$question][option];
 
         }
