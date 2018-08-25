@@ -1051,7 +1051,7 @@ public function sample_test($exam_id){
         $exam_id=$_GET['exam_id'];
         $option=$_GET['option'];
         $question=$_GET['question'];
-        $data=$this->db->query("select id,score test_answers from test_answers where test_category=$exam_id and id=770")->result_array();
+        $data=$this->db->query("select id,score, test_answers from test_answers where test_category=$exam_id and id=770")->result_array();
 
      //   for($i=0;$i<count($data);$i++) {
       //      $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
