@@ -1046,41 +1046,44 @@ public function sample_test($exam_id){
         $data['module'] = "";
         $this->template->load('frontend','frontend/student/add_question_inexam_user_snapshot', $data);
     }
-    function fixOption1IssueFIx(){
+    function fixOption1IssueFIx()
+    {
 
-        $exam_id=$_GET['exam_id'];
-        $option=$_GET['option'];
-        $question=$_GET['question'];
-        $data=$this->db->query("select id,score, test_answers from test_answers where test_category=$exam_id and id=770")->result_array();
+        $exam_id = $_GET['exam_id'];
+        $option = $_GET['option'];
+        $question = $_GET['question'];
+        $data = $this->db->query("select id,score, test_answers from test_answers where test_category=$exam_id and id=770")->result_array();
 
-     //   for($i=0;$i<count($data);$i++) {
-      //      $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
-      //     if(isset($json_decoded[$question]))
-       //     echo $json_decoded[$question]['option'];
-        $json_decoded = json_decode(stripslashes($data[0]['test_answers']), true);
-        $score=$data[0]['score']+4;
-        if($json_decoded[$question]['option']=='option1')
-        $json_decoded[$question]['option']='option2';
-        $json_deecoded=  trim(json_encode($json_decoded),'\"');
+        for ($i = 0; $i < count($data); $i++) {
+            $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
+            if (isset($json_decoded[$question])) {
 
-        $update_data=array(
-            'test_answers'  =>  $json_deecoded,
+                // $json_decoded = json_decode(stripslashes($data[0]['test_answers']), true);
+                $score = $data[$i]['score'] + 4;
+                if ($json_decoded[$question]['option'] == 'option1'){
+                    $json_decoded[$question]['option'] = 'option2';
+                $json_deecoded = trim(json_encode($json_decoded), '\"');
 
-            'score'	    =>  $score,
-        );
+                $update_data = array(
+                    'test_answers' => $json_deecoded,
+
+                    'score' => $score,
+                );
 
 
-        $this->db->where('id',770);
+                $this->db->where('id', $data[$i]['id']);
 
-        $this->db->update('test_answers',$update_data);
-        //    $this->db->query("update test_answers set test_answers=$json_deecoded,score=$score where id=770 ");
+                $this->db->update('test_answers', $update_data);
+                echo $data[$i]['id'];
+                echo $score;
+                //    $this->db->query("update test_answers set test_answers=$json_deecoded,score=$score where id=770 ");
 
-        //}
+                //}
 
+            }}
+        }
 
     }
-
-
 
 
 
