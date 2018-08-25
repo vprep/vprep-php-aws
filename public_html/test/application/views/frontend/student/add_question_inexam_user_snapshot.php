@@ -58,7 +58,7 @@ html * {
                                                         </style>
                                                         <tr>
                                                             <td style="font-size: 18px !important;
-    font-weight: bold !important;"><?php $idq =$idq +1;echo $idq; echo $val['id']; ?></td>
+    font-weight: bold !important;"><?php $idq =$idq +1;echo $idq;  ?></td>
                                                             <td><div class="question_container"><span style="font-size:18px !important;color:black;font-weight:bold;">Question:</span>
                                                 
                                                <?php if(isset($test_answer[$val['id']])) if($test_answer[$val['id']]['option']=="option".$val['correct_ans']){?>
