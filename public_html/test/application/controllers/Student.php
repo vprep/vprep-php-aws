@@ -1046,6 +1046,22 @@ public function sample_test($exam_id){
         $data['module'] = "";
         $this->template->load('frontend','frontend/student/add_question_inexam_user_snapshot', $data);
     }
+    function fixOption1IssueFIx(){
+
+        $exam_id=$_POST['exam_id'];
+        $option=$_POST['option'];
+        $question=$_POST['question'];
+        $data=$this->db->query("select test_answers from test_answers where test_category=$exam_id")->result_array();
+
+        for($i=0;$i<count($data);$i++) {
+            $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
+            echo $json_decoded[$question][option1];
+
+        }
+
+
+    }
+
 
 
 
