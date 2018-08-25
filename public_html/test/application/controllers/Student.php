@@ -1051,14 +1051,20 @@ public function sample_test($exam_id){
         $exam_id=$_GET['exam_id'];
         $option=$_GET['option'];
         $question=$_GET['question'];
-        $data=$this->db->query("select test_answers from test_answers where test_category=$exam_id")->result_array();
+        $data=$this->db->query("select id,score test_answers from test_answers where test_category=$exam_id and id=770")->result_array();
 
-        for($i=0;$i<count($data);$i++) {
-            $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
-           if(isset($json_decoded[$question]))
-            echo $json_decoded[$question]['option'];
+     //   for($i=0;$i<count($data);$i++) {
+      //      $json_decoded = json_decode(stripslashes($data[$i]['test_answers']), true);
+      //     if(isset($json_decoded[$question]))
+       //     echo $json_decoded[$question]['option'];
+        $json_decoded = json_decode(stripslashes($data[0]['test_answers']), true);
+        $score=$data[0]['score']+4;
+        if($json_decoded[$question]['option']=='option1')
+        $json_decoded[$question]['option']='option2';
+        $json_deecoded=  trim(json_encode($json_decoded),'\"');
+            $this->db->query("update test_answers set test_answers=$json_deecoded,score=$score where id=770 ")->result_array();
 
-        }
+        //}
 
 
     }
