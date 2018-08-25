@@ -43,6 +43,9 @@ html * {
             var ansJson2_73 = new Object();
             var lastDivId_73 = 'div-73-1';
             var obj_73 = new Object();
+            var currentQue1 = 1;
+            var currentQue2 = 1;
+            var currentQue3 = 1;
             var startTime = Math.round(new Date() / 1000);
 
             $('.global-loader').show();
@@ -217,8 +220,8 @@ html * {
                                 $(".nxt-btn").click(function(){
                                     var currentVal = parseInt($(this).attr("data-next"));
 
-
                                     shownDiv = (currentVal+1);
+                                    currentQue1 = shownDiv;
                                     var visitVal = currentVal;
                                     var currentDiv = 'div-71-'+currentVal;
                                     lastDivId_71 = currentDiv;
@@ -262,6 +265,7 @@ html * {
                                 $(".prev-btn").click(function(){
                                     var currentVal = parseInt($(this).attr("data-prev"));
                                     shownDiv = currentVal-1;
+                                    currentQue1 = shownDiv;
                                     var currentDiv = 'div-71-'+currentVal;
                                     var prevDiv = 'div-71-'+(currentVal -1);
                                     lastDivId_71 = prevDiv;
@@ -297,6 +301,7 @@ html * {
                                 $(".jump-btn").click(function(){
 
                                     var currentVal = parseInt($(this).attr("data-jump"));
+                                    currentQue1 = currentVal;
                                     var visitVal = currentVal;
                                     var currentDiv = 'div-71-'+shownDiv;
                                     var startTime = parseInt($('.'+currentDiv).data("start_time"));
@@ -369,15 +374,32 @@ html * {
 
 
                                 $("#examSubmitId").click(function () {
+
                                     var startTime = parseInt($('.'+lastDivId_71).data("start_time"));
                                     var endTime = Math.round(new Date() / 1000);
                                     var totalTime = parseInt($('.'+lastDivId_71).data("total_time"));
                                     totalTime += (endTime-startTime);
+
                                     var currentQueId = $('.'+lastDivId_71).data("ques_id");
                                     var selectedOption = $('.'+currentQueId+':checked').val();
                                     if(selectedOption != null && selectedOption.length >0 ){
                                         jsonObj_71[currentQueId] = {time: totalTime, option:selectedOption};
                                     }
+
+                                    var currentQueDiv = 'div-71-'+currentQue1;
+
+                                    var currentQueStart = parseInt($('.'+currentQueDiv).data("start_time"));
+                                    var currentQueEnd = Math.round(new Date() / 1000);
+
+                                    var currentQueTime = parseInt($('.'+currentQueDiv).data("total_time"));
+                                    currentQueTime += (currentQueEnd-currentQueStart);
+                                    var currentQueDivId = $('.'+currentQueDiv).data("ques_id");
+                                    var currentSelectedOption = $('.'+currentQueDivId+':checked').val();
+                                    if(currentSelectedOption != null && currentSelectedOption.length >0 ){
+                                        jsonObj_71[currentQueDivId] = {time: currentQueTime, option:currentSelectedOption};
+                                    }
+                                    console.log("queId: "+currentQueDivId+" time: "+currentQueTime+" option: "+currentSelectedOption);
+
                                     var score = calculateScore(jsonObj_71,ansJson2_71, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                 <?php $this->session->set_userdata('exam_progress_71',"2"); ?>
                                     $('#progress_71').val('2');
@@ -601,6 +623,7 @@ html * {
                                     var currentExam = parseInt($(this).data("current_exam"));
 
                                     shownDiv = (currentVal+1);
+                                    currentQue2 = shownDiv;
                                     var visitVal = currentVal;
                                     var currentDiv = 'div-72-'+currentVal;
                                     lastDivId_72 = currentDiv;
@@ -642,6 +665,7 @@ html * {
                                 $(".prev-btn-2").click(function(){
                                     var currentVal = parseInt($(this).attr("data-prev"));
                                     shownDiv = currentVal-1;
+                                    currentQue2 = shownDiv;
                                     var currentDiv = 'div-72-'+currentVal;
                                     var prevDiv = 'div-72-'+(currentVal -1);
                                     lastDivId_72 = prevDiv;
@@ -677,6 +701,7 @@ html * {
                                     var currentVal = parseInt($(this).attr("data-jump-2"));
                                     var visitVal = currentVal;
                                     var currentDiv = 'div-72-'+shownDiv;
+                                    currentQue2 = currentVal;
 
                                     var startTime = parseInt($('.'+currentDiv).data("start_time"));
                                     var endTime = Math.round(new Date() / 1000);
@@ -752,6 +777,18 @@ html * {
                                     var selectedOption = $('.'+currentQueId+':checked').val();
                                     if(selectedOption != null && selectedOption.length >0 ){
                                         jsonObj_72[currentQueId] = {time: totalTime, option:selectedOption};
+                                    }
+                                    var currentQueDiv = 'div-72-'+currentQue2;
+
+                                    var currentQueStart = parseInt($('.'+currentQueDiv).data("start_time"));
+                                    var currentQueEnd = Math.round(new Date() / 1000);
+
+                                    var currentQueTime = parseInt($('.'+currentQueDiv).data("total_time"));
+                                    currentQueTime += (currentQueEnd-currentQueStart);
+                                    var currentQueDivId = $('.'+currentQueDiv).data("ques_id");
+                                    var currentSelectedOption = $('.'+currentQueDivId+':checked').val();
+                                    if(currentSelectedOption != null && currentSelectedOption.length >0 ){
+                                        jsonObj_72[currentQueDivId] = {time: currentQueTime, option:currentSelectedOption};
                                     }
                                     var score = calculateScore(jsonObj_72,ansJson2_72, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                 <?php $this->session->set_userdata('exam_progress_72',"2"); ?>
@@ -962,6 +999,8 @@ html * {
                                     var currentExam = parseInt($(this).data("current_exam"));
 
                                     shownDiv = (currentVal+1);
+
+                                    currentQue3 = shownDiv;
                                     var visitVal = currentVal;
                                     var currentDiv = 'div-73-'+currentVal;
                                     lastDivId_73 = currentDiv;
@@ -1002,6 +1041,7 @@ html * {
                                 $(".prev-btn-3").click(function(){
                                     var currentVal = parseInt($(this).attr("data-prev"));
                                     shownDiv = currentVal-1;
+                                    currentQue3 = shownDiv;
                                     var currentDiv = 'div-73-'+currentVal;
                                     var prevDiv = 'div-73-'+(currentVal -1);
                                     lastDivId_73 = prevDiv;
@@ -1039,6 +1079,8 @@ html * {
                                     var currentVal = parseInt($(this).attr("data-jump-3"));
                                     var visitVal = currentVal;
                                     var currentDiv = 'div-73-'+shownDiv;
+
+                                    currentQue3 = currentVal;
 
                                     var startTime = parseInt($('.'+currentDiv).data("start_time"));
                                     var endTime = Math.round(new Date() / 1000);
@@ -1119,6 +1161,21 @@ html * {
                                     if(selectedOption != null && selectedOption.length >0 ){
                                         jsonObj_73[currentQueId] = {time: totalTime, option:selectedOption};
                                     }
+
+                                    var currentQueDiv = 'div-73-'+currentQue3;
+
+                                    var currentQueStart = parseInt($('.'+currentQueDiv).data("start_time"));
+                                    var currentQueEnd = Math.round(new Date() / 1000);
+
+                                    var currentQueTime = parseInt($('.'+currentQueDiv).data("total_time"));
+                                    currentQueTime += (currentQueEnd-currentQueStart);
+                                    var currentQueDivId = $('.'+currentQueDiv).data("ques_id");
+                                    var currentSelectedOption = $('.'+currentQueDivId+':checked').val();
+                                    if(currentSelectedOption != null && currentSelectedOption.length >0 ){
+                                        jsonObj_73[currentQueDivId] = {time: currentQueTime, option:currentSelectedOption};
+                                    }
+
+
                                     var score = calculateScore(jsonObj_73,ansJson2_73, obj.marks_for_wrong,obj.marks_for_unattempt, obj.marks_for_correct);
                                 <?php $this->session->set_userdata('exam_progress_73',"2"); ?>
                                     $('#progress_73').val('2');
