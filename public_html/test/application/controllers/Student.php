@@ -1062,7 +1062,7 @@ public function sample_test($exam_id){
         if($json_decoded[$question]['option']=='option1')
         $json_decoded[$question]['option']='option2';
         $json_deecoded=  trim(json_encode($json_decoded),'\"');
-            $this->db->query("update test_answers set test_answers=$json_deecoded,score=$score where id=770 ")->result_array();
+            $this->db->query("update test_answers set test_answers=$json_deecoded,score=$score where id=770 ");
 
         //}
 
