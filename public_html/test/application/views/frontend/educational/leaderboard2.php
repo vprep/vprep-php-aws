@@ -344,9 +344,9 @@
                                     <th>Group</th>
                                     <th>Username</th>
                                     <th>Name</th>
-                                    <th>Score 1</th>
-                                    <th>Score 2</th>
-                                    <th>Score 3</th>
+                                    <th>Score1 [15]</th>
+                                    <th>Score2 [10]</th>
+                                    <th>Score3 [40]</th>
                                     <th>Total Score</th>
                                     <th>Percentile</th>
                                 </tr>
