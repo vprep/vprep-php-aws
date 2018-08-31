@@ -90,12 +90,15 @@
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
-                                {"width": "15%", "targets": 1},
-                                {"width": "15%", "targets": 2},
-                                {"width": "15%", "targets": 3},
-                                {"width": "15%", "targets": 4},
-                                {"width": "15%", "targets": 5},
-                                {"width": "15%", "targets": 6}
+                                {"width": "10%", "targets": 1},
+                                {"width": "10%", "targets": 2},
+                                {"width": "10%", "targets": 3},
+                                {"width": "10%", "targets": 4},
+                                {"width": "10%", "targets": 5},
+                                {"width": "10%", "targets": 6},
+                                {"width": "10%", "targets": 7},
+                                {"width": "10%", "targets": 8},
+                                {"width": "10%", "targets": 9}
                             ],
                             "columns": [
                                 {
@@ -122,7 +125,16 @@
                                     data: 'name'
                                 },
                                 {
-                                    data: 'score'
+                                    data: 'score1'
+                                },
+                                {
+                                    data: 'score2'
+                                },
+                                {
+                                    data: 'score3'
+                                },
+                                {
+                                    data: 'total_score'
                                 },
                                 {
                                     data: 'percentile',
@@ -197,12 +209,16 @@
                             ],
                             "columnDefs": [
                                 {"width": "10%", "targets": 0},
-                                {"width": "15%", "targets": 1},
-                                {"width": "15%", "targets": 2},
-                                {"width": "15%", "targets": 3},
-                                {"width": "15%", "targets": 4},
-                                {"width": "15%", "targets": 5},
-                                {"width": "15%", "targets": 6}
+                                {"width": "10%", "targets": 1},
+                                {"width": "10%", "targets": 2},
+                                {"width": "10%", "targets": 3},
+                                {"width": "10%", "targets": 4},
+                                {"width": "10%", "targets": 5},
+                                {"width": "10%", "targets": 6},
+                                {"width": "10%", "targets": 7},
+                                {"width": "10%", "targets": 8},
+                                {"width": "10%", "targets": 9}
+
                             ],
                             "columns": [
                                 {
@@ -229,7 +245,16 @@
                                     data: 'name'
                                 },
                                 {
-                                    data: 'score'
+                                    data: 'score1'
+                                },
+                                {
+                                    data: 'score2'
+                                },
+                                {
+                                    data: 'score3'
+                                },
+                                {
+                                    data: 'total_score'
                                 },
                                 {
                                     data: 'percentile',
@@ -319,7 +344,10 @@
                                     <th>Group</th>
                                     <th>Username</th>
                                     <th>Name</th>
-                                    <th>Score</th>
+                                    <th>Score 1</th>
+                                    <th>Score 2</th>
+                                    <th>Score 3</th>
+                                    <th>Total Score</th>
                                     <th>Percentile</th>
                                 </tr>
                                 </thead>
