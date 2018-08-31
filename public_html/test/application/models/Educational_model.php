@@ -2216,13 +2216,22 @@ on el.exam_id = et.exam_id and et.user_id = $userId WHERE `start_date` <= date('
 
 	function rankWiseList($examId,$group){
         $userId = $this->session->userdata('userdata')['userid'];
+        $exam_2 = $examId+1;
+        $exam_3 = $examId+2;
 
         $max_score = $this->db->query("SELECT max(score) as cal_score from test_answers ta INNER join users u on u.id = ta.userid and u.created_by = $userId
 where ta.test_category = $examId")->result_array()[0];
 
+        $max_score2 = $this->db->query("SELECT max(ta1.score+ta2.score+ta3.score) as cal_score from users u INNER JOIN test_answers ta1 on ta1.userid = u.id and ta1.test_category = $examId
+LEFT  JOIN test_answers ta2 on ta2.userid = u.id and ta2.test_category = $exam_2
+left JOIN test_answers ta3 on ta3.userid = u.id and ta3.test_category = $exam_3
+where u.created_by = $userId ")->result_array()[0];
 
-        if(count($max_score) > 0){
-            $compute_score = $max_score['cal_score'];
+
+        if(count($max_score2) > 0 ){
+                $compute_score = $max_score2['cal_score'];
+
+
         } else {
             $compute_score = 0;
         }
@@ -2235,21 +2244,31 @@ where ta.test_category = $examId")->result_array()[0];
 
             if($group != null && strlen($group) > 0){
 
-                $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile, end_at as start_at FROM (SELECT
-        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile, ta.end_at,
-        (@rnk := IF(@curscore = score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = score, @rank, @rnk))   rank,
-        (@curscore := score)  newscore FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and u.created_by = $userId
-        inner join exam_list el on el.exam_id = ta.test_category
-      WHERE test_category = $examId and u.group = '$group'  ORDER BY score DESC ) a ")->result_array();
+                $result = $this->db->query("select username, group_name, name, city, score1, score2, score3, rank, total_score, percentile from (
+SELECT username, group_name, name, city, score1, score2, score3, total_score, marks_for_correct, exam_max_ques, percentile, end_at as start_at,
+  (@rnk := IF(@curscore = total_score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = total_score, @rank, @rnk))   rank,
+  (@curscore := total_score)  newscore FROM (SELECT
+u.username, u.group as group_name, u.name, ta.score as score1,ta2.score as score2, ta3.score as score3,
+ (ta.score+ta2.score+ta3.score) as total_score, u.city, el.marks_for_correct, el.exam_max_ques, ((ta.score+ta2.score+ta3.score)/$compute_score)*100 as percentile, ta.end_at
+ FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and ta.test_category = $examId
+  LEFT JOIN test_answers ta2 on ta2.userid = u.id and ta2.test_category = $exam_2
+  LEFT JOIN test_answers ta3 on ta3.userid = u.id and ta3.test_category = $exam_3
+  inner join exam_list el on el.exam_id = ta.test_category where u.created_by = $userId and u.group = $group
+ ) a ORDER BY total_score desc) b ")->result_array();
 
                 return json_encode($result);
             } else {
-                $result = $this->db->query("SELECT username, group_name, name, city, score, rank, marks_for_correct, exam_max_ques, percentile, end_at as start_at FROM (SELECT
-        u.username, u.group as group_name, u.name, ta.score, u.city, el.marks_for_correct, el.exam_max_ques, (ta.score/$compute_score)*100 as percentile, ta.end_at,
-        (@rnk := IF(@curscore = score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = score, @rank, @rnk))   rank,
-        (@curscore := score)  newscore FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and u.created_by = $userId
-        inner join exam_list el on el.exam_id = ta.test_category
-      WHERE test_category = $examId  ORDER BY score DESC ) a ")->result_array();
+                $result = $this->db->query("select username, group_name, name, city, score1, score2, score3, rank, total_score, percentile from (
+SELECT username, group_name, name, city, score1, score2, score3, total_score, marks_for_correct, exam_max_ques, percentile, end_at as start_at,
+  (@rnk := IF(@curscore = total_score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = total_score, @rank, @rnk))   rank,
+  (@curscore := total_score)  newscore FROM (SELECT
+u.username, u.group as group_name, u.name, ta.score as score1,ta2.score as score2, ta3.score as score3,
+ (ta.score+ta2.score+ta3.score) as total_score, u.city, el.marks_for_correct, el.exam_max_ques, ((ta.score+ta2.score+ta3.score)/$compute_score)*100 as percentile, ta.end_at
+ FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and ta.test_category = $examId
+  LEFT JOIN test_answers ta2 on ta2.userid = u.id and ta2.test_category = $exam_2
+  LEFT JOIN test_answers ta3 on ta3.userid = u.id and ta3.test_category = $exam_3
+  inner join exam_list el on el.exam_id = ta.test_category where u.created_by = $userId
+ ) a ORDER BY total_score desc) b ")->result_array();
 
                 return json_encode($result);
             }
