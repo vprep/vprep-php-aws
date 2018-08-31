@@ -2244,7 +2244,7 @@ where u.created_by = $userId ")->result_array()[0];
 
             if($group != null && strlen($group) > 0){
 
-                $result = $this->db->query("select username, group_name, name, city, score1, score2, score3, rank, total_score, percentile from (
+                $result = $this->db->query("select username, group_name, name, city, score1, score2, score3, rank, total_score, percentile, start_at from (
 SELECT username, group_name, name, city, score1, score2, score3, total_score, marks_for_correct, exam_max_ques, percentile, end_at as start_at,
   (@rnk := IF(@curscore = total_score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = total_score, @rank, @rnk))   rank,
   (@curscore := total_score)  newscore FROM (SELECT
@@ -2258,7 +2258,7 @@ u.username, u.group as group_name, u.name, ta.score as score1,ta2.score as score
 
                 return json_encode($result);
             } else {
-                $result = $this->db->query("select username, group_name, name, city, score1, score2, score3, rank, total_score, percentile from (
+                $result = $this->db->query("select username, group_name, name, city, score1, score2, score3, rank, total_score, percentile, start_at from (
 SELECT username, group_name, name, city, score1, score2, score3, total_score, marks_for_correct, exam_max_ques, percentile, end_at as start_at,
   (@rnk := IF(@curscore = total_score, @rnk, @rnk + 1)) rnk, (@rank := IF(@curscore = total_score, @rank, @rnk))   rank,
   (@curscore := total_score)  newscore FROM (SELECT
