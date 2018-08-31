@@ -2253,7 +2253,7 @@ u.username, u.group as group_name, u.name, ta.score as score1,ta2.score as score
  FROM test_answers ta INNER JOIN users u ON ta.userid = u.id and ta.test_category = $examId
   LEFT JOIN test_answers ta2 on ta2.userid = u.id and ta2.test_category = $exam_2
   LEFT JOIN test_answers ta3 on ta3.userid = u.id and ta3.test_category = $exam_3
-  inner join exam_list el on el.exam_id = ta.test_category where u.created_by = $userId and u.group = $group
+  inner join exam_list el on el.exam_id = ta.test_category where u.created_by = $userId and u.group = '$group'
  ) a ORDER BY total_score desc) b ")->result_array();
 
                 return json_encode($result);
