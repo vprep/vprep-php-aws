@@ -572,6 +572,22 @@ public function sample_test($exam_id){
                  }
 
              } else {
+                 $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
+
+                 if(sizeof($result2) > 0 ){
+
+                     $this->session->set_userdata('exam_progress_72',"2");
+                     $this->session->set_userdata('score_flag', true);
+
+                 } else {
+
+                     $this->session->set_userdata('exam_progress_72',"1");
+                     $this->session->set_userdata('score_flag', false);
+
+                 }
+
+                 $exam_72 = $this->session->userdata('exam_progress_72');
+
                  if(($exam_71 == '2') && ($exam_72 == '2')){
                      redirect("my_score");
 
