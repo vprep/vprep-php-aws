@@ -500,7 +500,7 @@
                             startTime = Math.round(new Date() / 1000);
                             var savedStart2 =  Math.round(new Date() / 1000);
 
-                            html += '<input type="hidden" id="72" value="10"> ';
+                            html += '<input type="hidden" id="72" value="30"> ';
                             $.each(obj.total_questions, function(key,value) {
 
 
