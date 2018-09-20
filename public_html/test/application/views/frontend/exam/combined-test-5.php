@@ -70,7 +70,7 @@
                         jsonObj_71 = JSON.parse(data);
 
                         $.each(jsonObj_71, function (key,value) {
-                            if(parseInt(value["time"])<1400&&resumeTime_71<1400){
+                            if(parseInt(value["time"])<3000&&resumeTime_71<3000){
                                 resumeTime_71+=parseInt(value["time"]);
                             }
                         });
@@ -86,11 +86,11 @@
                         url: "http://test.vprep.in/read_exam_data?exam_id="+<?php echo $exam_1;?>,
                         method: "GET",
                         success: function(data) {
-                            min=25;
+                            min=60;
 
                             if(resumeTime_71 != null && resumeTime_71 >0 ){
 
-                                min = (25 - Math.floor(resumeTime_71/60));
+                                min = (60 - Math.floor(resumeTime_71/60));
 
                             }
                             sec = 0;
@@ -412,7 +412,7 @@
                                 //$(".prev-btn-2").show();
                                 $('.div-72-1').data("start_time",Math.round(new Date()/1000));
                                 activeExam2();
-                                min = 35;
+                                min = 60;
                                 sec = 0;
 
                                 var includeUrl_1 = "http://test.vprep.in/save_exam_json?exam_id="+<?php echo $exam_1;?>+"&ans_json="+JSON.stringify(jsonObj_71)+"&score="+score+"&start_at="+startTime+"&taken_status=2&save_status=71";
@@ -460,7 +460,7 @@
                         console.log("json: "+JSON.stringify(jsonObj_72));
                         $.each(jsonObj_72, function (key,value) {
                             console.log("time::::::"+value["time"]);
-                            if(parseInt(value["time"])<2000&&resumeTime_72<2000){
+                            if(parseInt(value["time"])<3000&&resumeTime_72<3000){
                                 resumeTime_72+=parseInt(value["time"]);
                             }
 
@@ -480,10 +480,10 @@
                         method: "GET",
                         success: function(data) {
                             if((exam_progress_71 == 2)){
-                                min = 35;
+                                min = 60;
                                 if( resumeTime_72 != null && resumeTime_72 >0 ){
 
-                                    min = (35 - Math.floor(resumeTime_72/60));
+                                    min = (60 - Math.floor(resumeTime_72/60));
 
                                 }
                             }
@@ -853,10 +853,10 @@
                         method: "GET",
                         success: function(data) {
                             if((exam_progress_72 == 2)){
-                                min = 35;
+                                min = 60;
                                 if( resumeTime_73 != null && resumeTime_73 >0 ){
 
-                                    min = (35 - Math.floor(resumeTime_73/60));
+                                    min = (60 - Math.floor(resumeTime_73/60));
 
                                 }
                             }
@@ -1294,10 +1294,10 @@
     <ul class="nav">
         <li class="col-sm-6" id="exam-tab-id-1" style="position: relative;display: block;float: left;">  <a style="
     color: lightsalmon;
-">Arithmetic Reasoning and Analytical Thinking</a></li>
+">Aptitude</a></li>
         <li class="col-sm-6"> <a style="
     color: lightsalmon;
-" id="exam-tab-id-2" >Mathematical Critical Thinking and Logical Reasoning</a></li>
+" id="exam-tab-id-2" >Technical</a></li>
     </ul>
 
 
@@ -1416,7 +1416,7 @@
 
                             <?php
 
-                            for($kp = 0; $kp < 10; $kp++){
+                            for($kp = 0; $kp < 30; $kp++){
 
                                 ?>
                                 <button type="button" class="btn btn-default btn-circle jump-72-<?php echo $kp+1; ?> jump-btn-2" data-jump-2="<?php echo $kp+1;?>"><?php echo $kp+1; ?></button>
@@ -1560,7 +1560,7 @@
 
 <script type="text/javascript">
     var hour =0;
-    var min =25;
+    var min =60;
 
     var sec =0;
 
