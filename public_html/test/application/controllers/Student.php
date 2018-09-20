@@ -572,12 +572,12 @@ public function sample_test($exam_id){
                  }
 
              } else {
-                 if(($exam_71 == '2')){
+                 if(($exam_71 == '2') && ($exam_72 == '2')){
                      redirect("my_score");
 
                  }     else {
 
-                     $this->template->load('exam_frontend','frontend/exam/combined-test-4',$data);
+                     $this->template->load('exam_frontend','frontend/exam/sample_exam',$data);
 
                  }
 
