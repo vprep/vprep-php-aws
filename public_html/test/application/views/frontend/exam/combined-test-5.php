@@ -125,7 +125,7 @@
                                     '     <label class="btn btn-success btn-circle">'+index+'</label>' +
                                     ' <strong> ' +value.title ;
                                 if(value.ques_img != null && value.ques_img.length >0){
-                                    html += '<div><img src="<?php echo base_url(); ?>/uploads/'+ value.ques_img +'" style="height:auto;width:auto;"></div>'
+                                    html += '<div><img src="<?php echo base_url(); ?>/uploads/'+ value.ques_img +'" style="height:300px;width:auto;"></div>'
                                 }
                                 html +=        ' </strong>' +
                                     '  <br><br> ' +
@@ -522,7 +522,7 @@
                                     '     <label class="btn btn-success btn-circle">'+index+'</label>' +
                                     ' <strong> ' +value.title ;
                                 if(value.ques_img != null && value.ques_img.length >0){
-                                    html += '<div><img src="<?php echo base_url(); ?>/uploads/'+ value.ques_img +'" style="height:auto;width:auto;"></div>'
+                                    html += '<div><img src="<?php echo base_url(); ?>/uploads/'+ value.ques_img +'" style="height:300px;width:auto;"></div>'
                                 }
                                 html +=        ' </strong>' +
                                     '  <br><br> ' +
@@ -892,7 +892,7 @@
                                     '     <label class="btn btn-success btn-circle">'+index+'</label>' +
                                     ' <strong> ' +value.title ;
                                 if(value.ques_img != null && value.ques_img.length >0){
-                                    html += '<div><img src="<?php echo base_url(); ?>/uploads/'+ value.ques_img +'" style="height:auto;width:auto;"></div>'
+                                    html += '<div><img src="<?php echo base_url(); ?>/uploads/'+ value.ques_img +'" style="height:300px;width:auto;"></div>'
                                 }
                                 html +=        ' </strong>' +
                                     '  <br><br> ' +
