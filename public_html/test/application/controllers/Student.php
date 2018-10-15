@@ -592,6 +592,7 @@ public function sample_test($exam_id){
 
                  $data["exam_1_name"] = "Verbal Ability Mock";
                  $data["exam_1_max_ques"] = 40;
+                 $data["exam_1_time"] = 35;
 
                  if(($exam_71 == '2')) {
                      redirect("my_score");
