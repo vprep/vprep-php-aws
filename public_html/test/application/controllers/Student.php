@@ -590,6 +590,8 @@ public function sample_test($exam_id){
 
                  $exam_72 = $this->session->userdata('exam_progress_72');*/
 
+                 $data["exam_1_name"] = "Verbal Ability Mock";
+
                  if(($exam_71 == '2')) {
                      redirect("my_score");
 
