@@ -2423,7 +2423,7 @@ $userId = $this->getCurrentUserId();
                 if(!(!isset($userid) || trim($userid)===''));
                 else
                 $userid=$this->getCurrentUserId();
-                if(($userid==1126||$userid==1127)) $userid=3;
+             //   if(($userid==1126||$userid==1127)) $userid=3;
                 
 		
 		$data['subject_listing']=$this->edu->getSubjectList("1");
@@ -2643,7 +2643,7 @@ $userId = $this->getCurrentUserId();
                 
                 $userid=$this->getCurrentUserId();
                 
-		$data['course_list']=$this->edu->getAllCourse($userid);
+	
 		
 		$data['exam_id'] = $this->input->post("exam_id");
 		$data['course'] = $this->input->post("course");
@@ -2656,18 +2656,22 @@ $userId = $this->getCurrentUserId();
 		$ec = $this->edu->getExamCourse($data['exam_id']); $data['exam_course'] = $ec;
 		$response = $this->edu->getSubjects($userid, $ec['exam_id'], $ec['course_id']); $subject_num = [];
 		$count_num=0;
-		foreach($response as $resSub){
-		$subject_num[$count_num]["title"] = $resSub["subject_title"];
-		$subject_num[$count_num]["title_id"] = $resSub["subject_id"];
-		$subject_num[$count_num]["num"] = $this->edu->getSubjectQuestionNumber(trim($this->input->post("exam_id")), trim($resSub["subject_id"]));
-		$subject_num[$count_num]["count"] = count($this->edu->getFilterQuestionsUserSubject(0,$userid,$resSub["subject_id"]));
-		 $count_num = $count_num+1;
-		 }
+	//	foreach($response as $resSub){
+	//	$subject_num[$count_num]["title"] = $resSub["subject_title"];
+	//	$subject_num[$count_num]["title_id"] = $resSub["subject_id"];
+	//	$subject_num[$count_num]["num"] = $this->edu->getSubjectQuestionNumber(trim($this->input->post("exam_id")), trim($resSub["subject_id"]));
+	//	$subject_num[$count_num]["count"] = count($this->edu->getFilterQuestionsUserSubject(0,$userid,$resSub["subject_id"]));
+	//	 $count_num = $count_num+1;
+		 //}
+                $subject_num[0]["title"]="Aptitude";
+                $subject_num[0]["title_id"]=34;
+                $subject_num[0]["num"]=0;
+                $subject_num[0]["count"]=0;
 		$data['subject_num']=$subject_num;		
 		$page=0;
 		$data['test']="display:none";
 		$data['total_number']= $this->edu->getSubjectQuestionNumber(trim($this->input->post("exam_id")), trim($this->input->post("subject_id")));
-		$data['test_ques']=$this->edu->getFilterQuestionsUser($page,$userid);
+		$data['test_ques']=[];
 		 
 		$this->template->load('educational','frontend/educational/add_question_inexam_user',$data);
 	}
