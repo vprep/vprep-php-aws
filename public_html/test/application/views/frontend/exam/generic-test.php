@@ -77,7 +77,7 @@
                             var html = "";
 
 
-                            html += '<input type="hidden" id="71" value="20"> ';
+                            html += '<input type="hidden" id="71" value="40"> ';
                             $.each(obj.total_questions, function(key,value) {
 
                                 if(jsonObj_71[value.id]!= null) {
@@ -217,7 +217,7 @@
                                 $('.'+nextDiv).data('start_time',Math.round(new Date()/1000));
 
                                 var questionCount = $('#71').val();
-                                if(currentVal == 20){
+                                if(currentVal == 40){
                                     $(".nxt-btn").hide();
                                 }
                                 if((currentVal-2)==0){
