@@ -494,14 +494,15 @@ class Student extends CI_Controller {
     
     
 public function sample_test($exam_id){
+    $exam_1 = $exam_id;
+    $exam_2 = $exam_id+1;
+    $exam_3 = $exam_id+2;
 
     $exam_id=urldecrypt1($exam_id);
 
             $userId = $this->session->userdata('userdata')['userid'];
 
-            $exam_1 = $exam_id;
-            $exam_2 = $exam_id+1;
-            $exam_3 = $exam_id+2;
+
 
     $data['exam_1']=$exam_1;
     $data['exam_2']=$exam_2;
@@ -524,7 +525,7 @@ public function sample_test($exam_id){
 
              $result3 = $this->db->query("select * from users where created_by = 1126 and id = $userId ")->result_array();
 
-             if(sizeof($result3) > 0) {
+             if(sizeof($result3) > 0 && $exam_1  < 200 ) {
                  $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
 
                  if(sizeof($result2) > 0 ){
@@ -572,7 +573,7 @@ public function sample_test($exam_id){
                  }
 
              } else {
-                 $result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
+                 /*$result2 = $this->db->query("select * from exam_taken where exam_id = $exam_2 and user_id = $userId and taken_status = '2' ")->result_array();
 
                  if(sizeof($result2) > 0 ){
 
@@ -586,14 +587,14 @@ public function sample_test($exam_id){
 
                  }
 
-                 $exam_72 = $this->session->userdata('exam_progress_72');
+                 $exam_72 = $this->session->userdata('exam_progress_72');*/
 
-                 if(($exam_71 == '2') && ($exam_72 == '2')){
+                 if(($exam_71 == '2')) {
                      redirect("my_score");
 
                  }     else {
 
-                     $this->template->load('exam_frontend','frontend/exam/combined-test-5',$data);
+                     $this->template->load('exam_frontend','frontend/exam/generic-test',$data);
 
                  }
 
